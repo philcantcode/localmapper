@@ -1,0 +1,3 @@
+[02-08-2022 23:10:58] NMAP is installed at C:\Program Files (x86)\Nmap\nmap
+[02-08-2022 23:10:58] Attempting to open SQL database: res/database.db
+[02-08-2022 23:10:58] Server hosted at http://localhost:8008

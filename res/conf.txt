@@ -1,0 +1,19 @@
+// Version Control
+VERSION, 1.0
+PATCH, 1
+
+// Controls
+MODE, Interactive
+
+// File locations
+RUNTIME_LOG, res/logs/runtime.txt
+ERROR_LOG, res/logs/error.txt
+PRINT_LOG, res/logs/print.txt
+CONFIG_FILE, res/conf.txt
+DATABASE_PATH, res/database.db
+
+// 3rd Party install locations
+NMAP_PATH, C:\Program Files (x86)\Nmap\nmap
+
+// Server configs
+SERVER_PORT, 8008
