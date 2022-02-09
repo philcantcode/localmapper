@@ -1,11 +1,14 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 	"github.com/philcantcode/localmapper/api"
+	"github.com/philcantcode/localmapper/console"
 	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/discovery"
 	"github.com/philcantcode/localmapper/installers"
@@ -36,12 +39,12 @@ func main() {
 }
 
 func interactiveCLI() {
-	var input string
+	scanner := bufio.NewScanner(os.Stdin)
 
-	for input != "q" {
+	for scanner.Text() != "q" {
 		fmt.Print("[>] ")
-		fmt.Scanf("%s\n", &input)
-		RunCMD(input)
+		scanner.Scan()
+		RunCMD(scanner.Text())
 	}
 }
 
@@ -51,7 +54,7 @@ func RunCMD(cmd string) {
 		utils.PrettyPrint(discovery.IpInfo())
 	case "os":
 		utils.PrettyPrint(discovery.OSInfo())
-	case "add nmap":
-		discovery.RegisterNmapCapability()
+	case "register command":
+		console.RegisterCmdCapability()
 	}
 }

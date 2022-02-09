@@ -1,6 +1,9 @@
 package installers
 
-import "github.com/philcantcode/localmapper/utils"
+import (
+	"github.com/philcantcode/localmapper/console"
+	"github.com/philcantcode/localmapper/utils"
+)
 
 func Check3rdPartyPrerequisites() {
 	appInstallChecker("Nmap", "NMAP_PATH", "-v")
@@ -11,7 +14,7 @@ func appInstallChecker(appName string, appPath_Config string, testStrings ...str
 	var success bool = false
 
 	for !success {
-		_, success = utils.Run(utils.Configs[appPath_Config], testStrings...)
+		_, success = console.Run(utils.Configs[appPath_Config], testStrings...)
 
 		if !success {
 			utils.Log("NMAP not installed at "+utils.Configs[appPath_Config], false)

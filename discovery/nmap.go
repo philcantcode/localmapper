@@ -3,10 +3,10 @@ package discovery
 import (
 	"database/sql"
 	"encoding/xml"
-	"fmt"
 	"time"
 
 	_ "github.com/mattn/go-sqlite3"
+	"github.com/philcantcode/localmapper/console"
 	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/utils"
 )
@@ -16,7 +16,7 @@ var NMAP_PATH string
 func PingScan(ip string) NmapRun {
 	utils.Log("Performing NMAP ping scan", true)
 
-	xml, _ := utils.Run("nmap", "-sn", ip, "-oX", "-")
+	xml, _ := console.Run("nmap", "-sn", ip, "-oX", "-")
 	xmlStruct := ConvertNmapXMLtoStruct(xml)
 
 	utils.PrintLog(xml)
@@ -29,7 +29,7 @@ func PingScan(ip string) NmapRun {
 func StealthScan(ip string) NmapRun {
 	utils.Log("Performing NMAP Sealth scan (no ping)", true)
 
-	xml, _ := utils.Run("nmap", "-sS", "-Pn", ip, "-oX", "-")
+	xml, _ := console.Run("nmap", "-sS", "-Pn", ip, "-oX", "-")
 	xmlStruct := ConvertNmapXMLtoStruct(xml)
 
 	go insertHosts(xmlStruct)
@@ -40,7 +40,7 @@ func StealthScan(ip string) NmapRun {
 func OSDetectionScan(ip string) NmapRun {
 	utils.Log("Performing NMAP OS Detection scan (no ping)", true)
 
-	xml, _ := utils.Run("nmap", "-O", "-Pn", ip, "-oX", "-")
+	xml, _ := console.Run("nmap", "-O", "-Pn", ip, "-oX", "-")
 	xmlStruct := ConvertNmapXMLtoStruct(xml)
 
 	utils.PrintLog(xml)
@@ -54,7 +54,7 @@ func OSDetectionScan(ip string) NmapRun {
 func TestNmap() NmapRun {
 	utils.Log("Testing Nmap by scanning 127.0.0.1", false)
 
-	xmlOut, _ := utils.Run("nmap", "-sS", "127.0.0.1", "-oX", "-")
+	xmlOut, _ := console.Run("nmap", "-sS", "127.0.0.1", "-oX", "-")
 	utils.PrettyPrint(ConvertNmapXMLtoStruct(xmlOut))
 
 	return ConvertNmapXMLtoStruct(xmlOut)
@@ -126,12 +126,4 @@ func insertHosts(xml NmapRun) {
 			stmt.Close()
 		}
 	}
-}
-
-func RegisterNmapCapability() {
-	var command string
-
-	fmt.Println("Enter the ")
-	fmt.Print("[>] ")
-	fmt.Scanf("%s\n", &command)
 }

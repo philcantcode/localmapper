@@ -29,10 +29,13 @@ func Initialise() {
 	stmt.Exec()
 
 	stmt, err = Connection.Prepare(
-		"CREATE TABLE IF NOT EXISTS NmapScripts" +
+		"CREATE TABLE IF NOT EXISTS CommandCapability" +
 			"(id INTEGER PRIMARY KEY UNIQUE, " +
 			"command TEXT, " +
 			"params TEXT, " +
+			"type TEXT, " +
+			"name TEXT, " +
+			"description TEXT, " +
 			"dispalyFields TEXT)")
 	utils.ErrorHandle("Couldn't create SQL database NmapScripts", err, true)
 	stmt.Exec()
