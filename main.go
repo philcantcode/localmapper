@@ -56,5 +56,7 @@ func RunCMD(cmd string) {
 		utils.PrettyPrint(discovery.OSInfo())
 	case "register command":
 		console.RegisterCmdCapability()
+	case "help":
+		fmt.Println("Available Commands: ip, os, register command, help")
 	}
 }

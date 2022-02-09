@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"strings"
 
 	"github.com/philcantcode/localmapper/utils"
 )
@@ -20,7 +21,6 @@ func Run(command string, args ...string) (string, bool) {
 	}
 
 	return string(resultByte), true
-
 }
 
 func RunOnTop(command string, args ...string) {
@@ -30,6 +30,13 @@ func RunOnTop(command string, args ...string) {
 
 	err := cmd.Run()
 	utils.ErrorHandle("Couldn't run on top: "+command, err, false)
+}
+
+func interpret(result string, interpreter string) {
+	switch interpreter {
+	case "nmapJSON":
+
+	}
 }
 
 func RegisterCmdCapability() {
@@ -49,14 +56,17 @@ func RegisterCmdCapability() {
 	fmt.Println("Enter a type for the command (metadata)")
 	fmt.Print("[>] ")
 	scanner.Scan()
-	cmdtype = scanner.Text()
+	cmdtype = strings.ToLower(scanner.Text())
 
 	fmt.Println("Enter the base command (e.g., nmap or ping)")
 	fmt.Print("[>] ")
 	scanner.Scan()
 	command = scanner.Text()
 
-	fmt.Println("Enter a series of individual flags (e.g., -sS -Pn -v) one at a time, when finished enter q")
+	fmt.Println("Enter a series of individual flags (e.g., -sS -Pn -v) one at a time")
+	fmt.Println("For user input use notation '<string:ip>' or '<int:port>'")
+	fmt.Println("Types Include string:int:port:ip:iprange:email")
+	fmt.Println("When finished type 'q'")
 
 	for scanner.Text() != "q" {
 		fmt.Print("[>] ")
