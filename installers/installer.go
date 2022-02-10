@@ -14,7 +14,7 @@ func appInstallChecker(appName string, appPath_Config string, testStrings ...str
 	var success bool = false
 
 	for !success {
-		_, success = console.Run(utils.Configs[appPath_Config], testStrings...)
+		_, success = console.Run("default", utils.Configs[appPath_Config], testStrings...)
 
 		if !success {
 			utils.Log("NMAP not installed at "+utils.Configs[appPath_Config], false)

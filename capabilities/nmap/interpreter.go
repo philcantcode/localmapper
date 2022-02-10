@@ -16,5 +16,8 @@ func MakeStructured(xmlstr string) NmapRun {
 	if xmlerr != nil {
 		utils.ErrorHandle("Error unmarshaling Nmap XML string", xmlerr, false)
 	}
+
+	InsertHosts(nmapRun)
+
 	return nmapRun
 }

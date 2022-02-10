@@ -1,0 +1,908 @@
+[02-10-2022 18:11:39] {
+  "scanner": "nmap",
+  "args": "nmap -sn -oX - 192.168.0.0/24",
+  "start": 1644516689,
+  "startstr": "Thu Feb 10 18:11:29 2022",
+  "version": "7.92",
+  "profile_name": "",
+  "xmloutputversion": "1.05",
+  "scaninfo": {
+    "type": "",
+    "protocol": "",
+    "numservices": 0,
+    "services": "",
+    "scanflags": ""
+  },
+  "verbose": {
+    "level": 0
+  },
+  "debugging": {
+    "level": 0
+  },
+  "taskbegin": null,
+  "taskprogress": null,
+  "taskend": null,
+  "prescripts": null,
+  "postscripts": null,
+  "hosts": [
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.1",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "00:31:92:F2:E2:98",
+          "addrtype": "mac",
+          "vendor": "TP-Link Limited"
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "10000",
+        "rttv": "10250",
+        "to": "100000"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.100",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "CC:D3:C1:23:6E:54",
+          "addrtype": "mac",
+          "vendor": "Vestel Elektronik San ve Tic. A.."
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "135000",
+        "rttv": "135000",
+        "to": "675000"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.101",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "00:31:92:36:84:1B",
+          "addrtype": "mac",
+          "vendor": "TP-Link Limited"
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "192000",
+        "rttv": "192000",
+        "to": "960000"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.102",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "04:D6:AA:09:F3:97",
+          "addrtype": "mac",
+          "vendor": "Samsung Electro-mechanics(thailand)"
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "135000",
+        "rttv": "135000",
+        "to": "675000"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.104",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "34:15:13:F9:3E:3D",
+          "addrtype": "mac",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "201000",
+        "rttv": "201000",
+        "to": "1005000"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.105",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "82:E2:78:3D:55:2C",
+          "addrtype": "mac",
+          "vendor": ""
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "107531",
+        "rttv": "84812",
+        "to": "446779"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.107",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "00:31:92:36:90:74",
+          "addrtype": "mac",
+          "vendor": "TP-Link Limited"
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "183000",
+        "rttv": "183000",
+        "to": "915000"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.113",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "60:32:B1:ED:B4:5F",
+          "addrtype": "mac",
+          "vendor": "Tp-link Technologies"
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "266000",
+        "rttv": "266000",
+        "to": "1330000"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.114",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "00:31:92:36:7C:A2",
+          "addrtype": "mac",
+          "vendor": "TP-Link Limited"
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "270000",
+        "rttv": "270000",
+        "to": "1350000"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.115",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "7C:2E:BD:31:CD:BA",
+          "addrtype": "mac",
+          "vendor": "Google"
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "270000",
+        "rttv": "270000",
+        "to": "1350000"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.116",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "7C:49:EB:A1:EE:63",
+          "addrtype": "mac",
+          "vendor": "Xiaomi Electronics,co."
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "271000",
+        "rttv": "271000",
+        "to": "1355000"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.119",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "30:58:90:84:BB:DC",
+          "addrtype": "mac",
+          "vendor": "Frontier Silicon"
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "51000",
+        "rttv": "51000",
+        "to": "255000"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "arp-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.120",
+          "addrtype": "ipv4",
+          "vendor": ""
+        },
+        {
+          "addr": "68:37:E9:16:14:6E",
+          "addrtype": "mac",
+          "vendor": "Amazon Technologies"
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "61500",
+        "rttv": "60500",
+        "to": "303500"
+      }
+    },
+    {
+      "starttime": -62135596800,
+      "endtime": -62135596800,
+      "comment": "",
+      "status": {
+        "state": "up",
+        "reason": "localhost-response",
+        "reason_ttl": 0
+      },
+      "addresses": [
+        {
+          "addr": "192.168.0.118",
+          "addrtype": "ipv4",
+          "vendor": ""
+        }
+      ],
+      "hostnames": null,
+      "smurfs": null,
+      "ports": null,
+      "extraports": null,
+      "os": {
+        "portsused": null,
+        "osmatches": null,
+        "osfingerprints": null
+      },
+      "distance": {
+        "value": 0
+      },
+      "uptime": {
+        "seconds": 0,
+        "lastboot": ""
+      },
+      "tcpsequence": {
+        "index": 0,
+        "difficulty": "",
+        "vaules": ""
+      },
+      "ipidsequence": {
+        "class": "",
+        "values": ""
+      },
+      "tcptssequence": {
+        "class": "",
+        "values": ""
+      },
+      "hostscripts": null,
+      "trace": {
+        "proto": "",
+        "port": 0,
+        "hops": null
+      },
+      "times": {
+        "srtt": "",
+        "rttv": "",
+        "to": ""
+      }
+    }
+  ],
+  "targets": null,
+  "runstats": {
+    "finished": {
+      "time": 1644516699,
+      "timestr": "Thu Feb 10 18:11:39 2022",
+      "elapsed": 9.79,
+      "summary": "Nmap done at Thu Feb 10 18:11:39 2022; 256 IP addresses (14 hosts up) scanned in 9.79 seconds",
+      "exit": "success",
+      "errormsg": ""
+    },
+    "hosts": {
+      "up": 14,
+      "down": 242,
+      "total": 256
+    }
+  }
+}

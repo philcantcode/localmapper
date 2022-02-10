@@ -1,10 +1,8 @@
 package api
 
 import (
-	"encoding/json"
 	"net/http"
 
-	"github.com/philcantcode/localmapper/discovery"
 	"github.com/philcantcode/localmapper/utils"
 )
 
@@ -21,9 +19,9 @@ func NmapPingScan(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	xml := discovery.PingScan(target)
+	//xml := discovery.PingScan(target)
 
-	json.NewEncoder(w).Encode(xml.Hosts)
+	//json.NewEncoder(w).Encode(xml.Hosts)
 }
 
 func NmapOSDetectionScan(w http.ResponseWriter, r *http.Request) {
@@ -35,7 +33,7 @@ func NmapOSDetectionScan(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	xml := discovery.OSDetectionScan(target)
+	//xml := discovery.OSDetectionScan(target)
 
-	json.NewEncoder(w).Encode(xml)
+	//json.NewEncoder(w).Encode(xml)
 }

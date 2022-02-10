@@ -11,6 +11,7 @@ import (
 
 // Run commands from the console return: (output, error)
 func Run(interpreter string, command string, args ...string) (interface{}, bool) {
+	utils.Log("Attempting to run command: "+command, true)
 	resultByte, err := exec.Command(command, args...).CombinedOutput()
 
 	if err != nil {
@@ -32,14 +33,19 @@ func RunOnTop(command string, args ...string) {
 
 func interpret(result string, interpreter string) interface{} {
 	switch interpreter {
-
 	case "nmap:json":
+		utils.Log("Interpreting nmap result", false)
 		structuredResult := nmap.MakeStructured(result)
-		utils.PrintLog(result)
+		utils.PrintLog(utils.PrettyPrintToStr(structuredResult))
 		go nmap.InsertHosts(structuredResult)
 		return structuredResult
 
+	case "default":
+		utils.Log("Interpreting default result", false)
+		return result
+
 	default:
-		return nil
+		utils.Log("Interpreting defaulted result", false)
+		return result
 	}
 }

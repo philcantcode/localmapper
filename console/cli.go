@@ -5,7 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
+
+	"github.com/philcantcode/localmapper/utils"
 )
 
 func RegisterCmdCapability() {
@@ -71,5 +74,54 @@ func RegisterCmdCapability() {
 }
 
 func RunCapability() {
-	GetAllCapabilities()
+	capabilities := GetAllCapabilities()
+	scanner := bufio.NewScanner(os.Stdin)
+	var capID int
+
+	fmt.Println("Enter a capability number: ")
+
+	for _, k := range capabilities {
+		fmt.Printf("    %d - %s, %s (%s)\n", k.id, k.name, k.desc, k.cmdType)
+	}
+
+	fmt.Print("[>] ")
+	scanner.Scan()
+	capID, _ = strconv.Atoi(scanner.Text())
+
+	for _, k := range capabilities {
+		if capID == k.id {
+			result, success := Run(k.interpreter, k.command, paramsToCliInputs(k.params)...)
+
+			utils.Log(fmt.Sprintf("Command status: %v\n", success), true)
+			utils.PrettyPrint(result)
+		}
+	}
+
+	utils.Log("RunCapability done", true)
+}
+
+func paramsToCliInputs(params []string) []string {
+	scanner := bufio.NewScanner(os.Stdin)
+
+	for i, param := range params {
+		param = strings.Replace(param, "<", "", -1)
+		param = strings.Replace(param, ">", "", -1)
+
+		switch param {
+		case "string":
+			fmt.Printf("Please enter a String for the parameter: %s\n", param)
+			scanner.Scan()
+			params[i] = scanner.Text()
+		case "string:iprange":
+			fmt.Printf("Please enter an IP Range for the parameter: %s\n", param)
+			scanner.Scan()
+			params[i] = scanner.Text()
+		case "string:ip":
+			fmt.Printf("Please enter an IP Address string for the parameter: %s\n", param)
+			scanner.Scan()
+			params[i] = scanner.Text()
+		}
+	}
+
+	return params
 }

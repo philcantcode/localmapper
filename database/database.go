@@ -35,9 +35,9 @@ func Initialise() {
 			"params TEXT, " +
 			"type TEXT, " +
 			"name TEXT, " +
-			"description TEXT, " +
-			"interpreter TEXT, " +
-			"dispalyFields TEXT)")
+			"description TEXT DEFAULT '', " +
+			"interpreter TEXT DEFAULT '', " +
+			"displayFields TEXT DEFAULT '')")
 	utils.ErrorHandle("Couldn't create SQL database NmapScripts", err, true)
 	stmt.Exec()
 

@@ -3,7 +3,6 @@ package console
 import (
 	"database/sql"
 	"encoding/json"
-	"fmt"
 
 	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/utils"
@@ -60,14 +59,14 @@ type Capabilities struct {
 	interpreter   string
 }
 
-func GetAllCapabilities() {
+func GetAllCapabilities() []Capabilities {
 	utils.Log("Querying capabilities from CommandCapability DB", false)
 	stmt, err := database.Connection.Prepare("SELECT `id`, `command`, `params`, `type`, `name`, `description`, `displayFields`, `interpreter` FROM `CommandCapability`")
 	utils.ErrorHandle("Couldn't select all from CommandCapability GetAllCapabilities", err, true)
 
 	rows, err := stmt.Query()
-	defer rows.Close()
 	utils.ErrorHandle("Couldn't recieve rows from CommandCapability GetAllCapabilities", err, true)
+	defer rows.Close()
 
 	capabilities := []Capabilities{}
 
@@ -76,12 +75,12 @@ func GetAllCapabilities() {
 		params := ""
 		var paramArr []string
 
-		rows.Scan(capability.id, capability.command, params, capability.cmdType, capability.name, capability.desc, capability.displayFields, capability.interpreter)
+		rows.Scan(&capability.id, &capability.command, &params, &capability.cmdType, &capability.name, &capability.desc, &capability.displayFields, &capability.interpreter)
 		json.Unmarshal([]byte(params), &paramArr)
 		capability.params = paramArr
 
 		capabilities = append(capabilities, capability)
-
-		fmt.Printf("+ %v\n", capability)
 	}
+
+	return capabilities
 }
