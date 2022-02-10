@@ -1,9 +1,3 @@
-[02-09-2022 14:56:06] NMAP is installed at C:\Program Files (x86)\Nmap\nmap
-[02-09-2022 14:56:06] Attempting to open SQL database: res/database.db
-[02-09-2022 14:56:06] Server hosted at http://localhost:8008
-[02-09-2022 15:00:55] Querying Hosts from CommandCapability DB
-[02-09-2022 15:00:55] Inserting Hosts from CommandCapability DB
-[02-09-2022 15:06:37] Querying Hosts from CommandCapability DB
-[02-09-2022 15:06:37] Inserting Hosts from CommandCapability DB
-[02-09-2022 15:07:37] Querying Hosts from CommandCapability DB
-[02-09-2022 15:07:37] Inserting Hosts from CommandCapability DB
+[02-10-2022 15:18:18] NMAP is installed at C:\Program Files (x86)\Nmap\nmap
+[02-10-2022 15:18:18] Attempting to open SQL database: res/database.db
+[02-10-2022 15:18:18] Server hosted at http://localhost:8008

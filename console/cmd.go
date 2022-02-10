@@ -1,26 +1,24 @@
 package console
 
 import (
-	"bufio"
-	"encoding/json"
 	"fmt"
 	"os"
 	"os/exec"
-	"strings"
 
+	"github.com/philcantcode/localmapper/capabilities/nmap"
 	"github.com/philcantcode/localmapper/utils"
 )
 
 // Run commands from the console return: (output, error)
-func Run(command string, args ...string) (string, bool) {
+func Run(interpreter string, command string, args ...string) (interface{}, bool) {
 	resultByte, err := exec.Command(command, args...).CombinedOutput()
 
 	if err != nil {
-		utils.ErrorHandle("Error returned running a command", err, true)
-		return string(resultByte), false
+		utils.ErrorHandle(fmt.Sprintf("Error returned running a command: %s", command), err, true)
+		return nil, false
 	}
 
-	return string(resultByte), true
+	return interpret(string(resultByte), interpreter), true
 }
 
 func RunOnTop(command string, args ...string) {
@@ -32,71 +30,16 @@ func RunOnTop(command string, args ...string) {
 	utils.ErrorHandle("Couldn't run on top: "+command, err, false)
 }
 
-func interpret(result string, interpreter string) {
+func interpret(result string, interpreter string) interface{} {
 	switch interpreter {
-	case "nmapJSON":
 
-	}
-}
+	case "nmap:json":
+		structuredResult := nmap.MakeStructured(result)
+		utils.PrintLog(result)
+		go nmap.InsertHosts(structuredResult)
+		return structuredResult
 
-func RegisterCmdCapability() {
-	var command string
-	var params []string
-	var cmdtype string
-	var name string
-	var desc string
-
-	scanner := bufio.NewScanner(os.Stdin)
-
-	fmt.Println("Enter a name for the command (metadata)")
-	fmt.Print("[>] ")
-	scanner.Scan()
-	name = scanner.Text()
-
-	fmt.Println("Enter a type for the command (metadata)")
-	fmt.Print("[>] ")
-	scanner.Scan()
-	cmdtype = strings.ToLower(scanner.Text())
-
-	fmt.Println("Enter the base command (e.g., nmap or ping)")
-	fmt.Print("[>] ")
-	scanner.Scan()
-	command = scanner.Text()
-
-	fmt.Println("Enter a series of individual flags (e.g., -sS -Pn -v) one at a time")
-	fmt.Println("For user input use notation '<string:ip>' or '<int:port>'")
-	fmt.Println("Types Include string:int:port:ip:iprange:email")
-	fmt.Println("When finished type 'q'")
-
-	for scanner.Text() != "q" {
-		fmt.Print("[>] ")
-		scanner.Scan()
-
-		if scanner.Text() != "q" {
-			params = append(params, scanner.Text())
-		}
-	}
-
-	fmt.Println("Enter a description for the command (metadata)")
-	fmt.Print("[>] ")
-	scanner.Scan()
-	desc = scanner.Text()
-
-	var answer string
-	fmt.Printf("Is this correct? (y/n): %s %v\n%s\n%s\n%s\n", command, params, name, desc, cmdtype)
-	fmt.Print("[>] ")
-	scanner.Scan()
-	answer = scanner.Text()
-
-	if answer != "y" {
-		return
-	}
-
-	paramJson, _ := json.Marshal(params)
-
-	id := CheckCommandExists(command, string(paramJson))
-
-	if id == -1 {
-		InsertCommand(command, string(paramJson), name, cmdtype, desc)
+	default:
+		return nil
 	}
 }

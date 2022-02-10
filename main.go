@@ -8,9 +8,9 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/philcantcode/localmapper/api"
+	"github.com/philcantcode/localmapper/capabilities/localhost"
 	"github.com/philcantcode/localmapper/console"
 	"github.com/philcantcode/localmapper/database"
-	"github.com/philcantcode/localmapper/discovery"
 	"github.com/philcantcode/localmapper/installers"
 	"github.com/philcantcode/localmapper/utils"
 )
@@ -51,12 +51,14 @@ func interactiveCLI() {
 func RunCMD(cmd string) {
 	switch cmd {
 	case "ip":
-		utils.PrettyPrint(discovery.IpInfo())
+		utils.PrettyPrint(localhost.IpInfo())
 	case "os":
-		utils.PrettyPrint(discovery.OSInfo())
-	case "register command":
+		utils.PrettyPrint(localhost.OSInfo())
+	case "register capability":
 		console.RegisterCmdCapability()
+	case "run capability":
+		console.RunCapability()
 	case "help":
-		fmt.Println("Available Commands: ip, os, register command, help")
+		fmt.Println("Available Commands: ip, os, {register:run} capability, help")
 	}
 }

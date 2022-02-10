@@ -1,4 +1,4 @@
-package discovery
+package nmap
 
 import (
 	"encoding/xml"
