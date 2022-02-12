@@ -31,10 +31,9 @@ func Initialise() {
 	stmt, err = Connection.Prepare(
 		"CREATE TABLE IF NOT EXISTS CommandCapability" +
 			"(id INTEGER PRIMARY KEY UNIQUE, " +
-			"command TEXT, " +
-			"params TEXT, " +
-			"type TEXT, " +
-			"name TEXT, " +
+			"name TEXT NOT NULL, " +
+			"type TEXT NOT NULL, " +
+			"cmdParams TEXT NOT NULL, " +
 			"description TEXT DEFAULT '', " +
 			"interpreter TEXT DEFAULT '', " +
 			"displayFields TEXT DEFAULT '')")

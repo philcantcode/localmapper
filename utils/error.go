@@ -3,6 +3,7 @@ package utils
 import (
 	"fmt"
 	"log"
+	"os"
 )
 
 func ErrorHandle(context string, e error, print bool) {
@@ -14,6 +15,17 @@ func ErrorHandle(context string, e error, print bool) {
 		AppendLine("["+Now()+"] "+context, Configs["ERROR_LOG"])
 
 		log.Fatalf("%s: %v\n", context, e)
+	}
+}
+
+func FatalErrorHandle(context string, e error) {
+	if e != nil {
+		fmt.Println(context)
+
+		AppendLine("["+Now()+"] "+context, Configs["ERROR_LOG"])
+
+		log.Fatalf("%s: %v\n", context, e)
+		os.Exit(0)
 	}
 }
 

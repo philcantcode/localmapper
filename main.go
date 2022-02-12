@@ -7,10 +7,9 @@ import (
 	"os"
 
 	"github.com/gorilla/mux"
-	"github.com/philcantcode/localmapper/api"
 	"github.com/philcantcode/localmapper/capabilities/localhost"
-	"github.com/philcantcode/localmapper/console"
 	"github.com/philcantcode/localmapper/database"
+	"github.com/philcantcode/localmapper/execute"
 	"github.com/philcantcode/localmapper/installers"
 	"github.com/philcantcode/localmapper/utils"
 )
@@ -29,8 +28,9 @@ func main() {
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/get/nmap/pingsweep", api.NmapPingScan)
-	router.HandleFunc("/get/nmap/osdetection", api.NmapOSDetectionScan)
+	router.HandleFunc("/capability/run", execute.CapabilityRunAPI)
+	router.HandleFunc("/capability/list", execute.CapabilityListAPI)
+	router.HandleFunc("/capability/displayfields/update", execute.CapabilityDisplayFieldsUpdateAPI)
 
 	fileServer := http.FileServer(http.Dir("web/src"))
 	router.PathPrefix("/").Handler(http.StripPrefix("/", fileServer))
@@ -55,9 +55,9 @@ func RunCMD(cmd string) {
 	case "os":
 		utils.PrettyPrint(localhost.OSInfo())
 	case "register capability":
-		console.RegisterCmdCapability()
+		execute.RegisterCmdCapability()
 	case "run capability":
-		console.RunCapability()
+		execute.RunCapability()
 	case "help":
 		fmt.Println("Available Commands: ip, os, {register:run} capability, help")
 	}

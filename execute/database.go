@@ -1,4 +1,4 @@
-package console
+package execute
 
 import (
 	"database/sql"
@@ -8,13 +8,13 @@ import (
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func CheckCommandExists(command string, params string) int {
+func CheckCommandExists(params string) int {
 	utils.Log("Querying Hosts from CommandCapability DB", false)
 	stmt, err := database.Connection.Prepare("SELECT `id` FROM `CommandCapability` WHERE" +
-		"`command` = ? AND `params` = ?;")
+		"`cmdParams` = ?;")
 	utils.ErrorHandle("Couldn't select id from CommandCapability CheckCommandExists", err, true)
 
-	row := stmt.QueryRow(command, params)
+	row := stmt.QueryRow(params)
 	utils.ErrorHandle("Couldn't recieve rows from CommandCapability CheckCommandExists", err, true)
 
 	var id int
@@ -27,20 +27,20 @@ func CheckCommandExists(command string, params string) int {
 	return id
 }
 
-func InsertCapability(command string, params string, name string, cmdType string, desc string) {
+func InsertCapability(params string, name string, cmdType string, desc string, interpreter string) {
 	utils.Log("Inserting Hosts from CommandCapability DB", false)
 	stmt, err := database.Connection.Prepare("INSERT INTO `CommandCapability`" +
-		"(`command`, `params`, `type`, `name`, `description`) VALUES (?, ?, ?, ?, ?);")
+		"(`cmdParams`, `type`, `name`, `description`, `interpreter`) VALUES (?, ?, ?, ?, ?);")
 	utils.ErrorHandle("Couldn't prepare InsertCommand CommandCapability", err, true)
 
-	_, err = stmt.Exec(command, params, cmdType, name, desc)
+	_, err = stmt.Exec(params, cmdType, name, desc, interpreter)
 	utils.ErrorHandle("Error executing CommandCapability insertHosts", err, true)
 	stmt.Close()
 }
 
 func UpdateCommandDisplayField(displayFields string, id int) {
 	utils.Log("Updating Hosts from CommandCapability DB", false)
-	stmt, err := database.Connection.Prepare("UPDATE `CommandCapability` SET `dispalyFields` = ? WHERE `id` = ?;")
+	stmt, err := database.Connection.Prepare("UPDATE `CommandCapability` SET `displayFields` = ? WHERE `id` = ?;")
 	utils.ErrorHandle("Couldn't update CommandCapability", err, true)
 
 	_, err = stmt.Exec(displayFields, id)
@@ -49,19 +49,18 @@ func UpdateCommandDisplayField(displayFields string, id int) {
 }
 
 type Capabilities struct {
-	id            int
-	command       string
-	params        []string
-	cmdType       string
-	name          string
-	desc          string
-	displayFields string
-	interpreter   string
+	ID            int
+	Params        []string
+	Type          string
+	Name          string
+	Desc          string
+	DisplayFields string
+	Interpreter   string
 }
 
 func GetAllCapabilities() []Capabilities {
 	utils.Log("Querying capabilities from CommandCapability DB", false)
-	stmt, err := database.Connection.Prepare("SELECT `id`, `command`, `params`, `type`, `name`, `description`, `displayFields`, `interpreter` FROM `CommandCapability`")
+	stmt, err := database.Connection.Prepare("SELECT `id`, `cmdParams`, `type`, `name`, `description`, `displayFields`, `interpreter` FROM `CommandCapability`")
 	utils.ErrorHandle("Couldn't select all from CommandCapability GetAllCapabilities", err, true)
 
 	rows, err := stmt.Query()
@@ -75,9 +74,9 @@ func GetAllCapabilities() []Capabilities {
 		params := ""
 		var paramArr []string
 
-		rows.Scan(&capability.id, &capability.command, &params, &capability.cmdType, &capability.name, &capability.desc, &capability.displayFields, &capability.interpreter)
+		rows.Scan(&capability.ID, &params, &capability.Type, &capability.Name, &capability.Desc, &capability.DisplayFields, &capability.Interpreter)
 		json.Unmarshal([]byte(params), &paramArr)
-		capability.params = paramArr
+		capability.Params = paramArr
 
 		capabilities = append(capabilities, capability)
 	}

@@ -14,8 +14,8 @@
   <body class="">
   	<div class="container">
 		<h3>
-			Nmap Output
-			<small class="text-muted">With faded secondary text</small>
+			Capability Explorer
+			<small class="text-muted">Run all supported commands</small>
 		</h3>  
 
 		<div class="row">
@@ -27,15 +27,31 @@
 				</ol>
 			</nav>
 		</div>
-		
+
 		<div class="row mt-3">
 			<div class="input-group mb-3">
 				<div class="input-group-prepend">
-				  <span class="input-group-text api-url" id="basic-addon3">/get/nmap/pingsweep</span>
+				  <span class="input-group-text">List Capability</span>
 				</div>
-				<input type="text" value="127.0.0.1" class="form-control api-target" id="basic-url" aria-describedby="basic-addon3">
-				<button class="btn btn-primary api-run" type="button" id="button-addon2">Run</button>
+				<input id="capability-list-id" type="text" value="all" class="form-control">
+				<button id="capability-list" class="btn btn-primary" type="button">List</button>
 			</div>
+		</div>
+		
+		<div class="row mt-3">
+			<div class="col-3 mt-1">
+				<select btn-block id="api-url" class="form-select">
+				</select>
+
+				<button id="capability-run" class="btn w-100 btn-primary mt-1" type="button">Run</button>
+				<button id="capability-update-displayFields" class="btn w-100 btn-primary mt-1" type="button">Update Display Fields</button>
+				<button id="show-displayFields" class="btn w-100 btn-primary mt-1" type="button">Show All Display Fields</button>
+			</div>
+
+			<div id="api-param-area" class="col-9">
+
+			</div>
+
 		</div>
 
 		<div class="row mt-3">
@@ -61,21 +77,64 @@
 	
 	<script type="text/javascript">
 		var JBSCount = 0; // JSON Button Set Counter
+		var domain = "http://localhost:8008";
+		var displayFields = [];
+		var showAllDisplayFields = false;
 
-		$(".api-run").on("click", function(e)
+		$("#show-displayFields").on("click", function(e)
 		{
-			var domain = "http://localhost:8008"
-			var url = $(this).closest(".input-group").find(".api-url").text();
-			var target = $(this).closest(".input-group").find(".api-target").val();
+			if (showAllDisplayFields) {
+				showAllDisplayFields = false;
+			} else {
+				showAllDisplayFields = true;
+			}
+		});
 
-			console.log("[api-url] : " + url);
-			console.log("[api-target] : " + target);
+		$("#capability-update-displayFields").on("click", function(e)
+		{
+			console.log(displayFields);
+			
+			$('.displayFieldGroup').each(function() 
+			{
+				var displayItem = $(this).attr("data-row");
+				var isChecked = $(this).children(".displayFieldHidden").is(":checked");
+
+				if (isChecked && !displayFields.includes(displayItem))
+				{
+					console.log("Hiding displayField: " + displayItem);
+					displayFields.push(displayItem);
+				}
+				else if (!isChecked && displayFields.includes(displayItem))
+				{
+					console.log("Unhiding displayField: " + displayItem);
+					displayFields = displayFields.filter(v => v !== displayItem); 
+				}
+			});
 
 			$.ajax({
-				url: domain + url,
+				url: domain + "/capability/displayfields/update",
 				type: "get",
 				data: { 
-					target: target,
+					id: $("#api-url").find(":selected").val(),
+					displayFields: JSON.stringify(displayFields),
+				},
+				success: function(response) {
+					console.log(response);
+					loadAPIParamArea($("#api-url").find(":selected").val());
+				},
+				error: function(xhr) {
+					console.log(xhr);
+				}
+			});
+		});
+
+		$("#capability-list").on("click", function(e)
+		{
+			$.ajax({
+				url: domain + "/capability/list",
+				type: "get",
+				data: { 
+					id: $("#capability-list-id").val(),
 				},
 				success: function(response) {
 					console.log(response);
@@ -86,7 +145,37 @@
 				error: function(xhr) {
 					console.log(xhr);
 				}
-			});    
+			});
+		});
+
+		$("#capability-run").on("click", function(e)
+		{
+			let params = [];
+
+			$('.api-param-val').each(function() {
+				paramID = $(this).attr("data-param-id");
+				paramVal = $(this).val();
+
+				params.push(paramVal);
+			});
+
+			$.ajax({
+				url: domain + "/capability/run",
+				type: "get",
+				data: { 
+					id: $("#api-url").find(":selected").val(),
+					params: JSON.stringify(params),
+				},
+				success: function(response) {
+					console.log(response);
+					
+					$("#results").html(jsonToList(JSON.parse(response)));
+
+				},
+				error: function(xhr) {
+					console.log(xhr);
+				}
+			});
 		});
 
 		function jsonToList(obj) 
@@ -102,24 +191,45 @@
 			}
 			else if (obj instanceof Object && !(obj instanceof String)) {
 				var ul = document.createElement('div');
-				ul.classList.add("list-group")
+				ul.classList.add("list-group");
 
-				for (var child in obj) {
+				for (var child in obj) 
+				{
 					var li = document.createElement('div');
-					li.classList.add("list-group-item")
+					li.classList.add("list-group-item");
+					li.classList.add("display-row")
 					li.appendChild(document.createTextNode(child + ": "));
 					li.setAttribute("data-row-name", child);
 					li.appendChild(jsonToList(obj[child]));
-					
-					// Show and hide labels for each JSON Button Set
-					li.innerHTML += `
-						<div class='btn-group float-end' role='group'>
+
+					if (displayFields.includes(child)) 
+					{
+						li.innerHTML += `
+						<div class='btn-group float-end displayFieldGroup' data-row='` + child + `' role='group'>
+						<input type='radio' class='btn-check' name='JBS-` + JBSCount + `' id='JBS-SHOW-` + JBSCount + `' autocomplete='off'>
+						<label class='btn btn-outline-primary' for='JBS-SHOW-` + JBSCount + `'>Show</label>
+
+						<input type='radio' class='btn-check displayFieldHidden' name='JBS-` + JBSCount + `' id='JBS-HIDE-` + JBSCount + `' autocomplete='off' checked>
+						<label data-bs-toggle='tooltip' data-bs-placement='top' title='Hide: ` + child +`' class='btn btn-outline-primary' for='JBS-HIDE-` + JBSCount + `'>Hide</label>
+						</div>`;
+
+						if (showAllDisplayFields == false) 
+						{
+							li.classList.add("collapse");
+						}
+					}
+					else
+					{
+						li.innerHTML += `
+						<div class='btn-group float-end displayFieldGroup' data-row='` + child + `' role='group'>
 						<input type='radio' class='btn-check' name='JBS-` + JBSCount + `' id='JBS-SHOW-` + JBSCount + `' autocomplete='off' checked>
 						<label class='btn btn-outline-primary' for='JBS-SHOW-` + JBSCount + `'>Show</label>
 
-						<input type='radio' class='btn-check' name='JBS-` + JBSCount + `' id='JBS-HIDE-` + JBSCount + `' autocomplete='off'>
-						<label class='btn btn-outline-primary' for='JBS-HIDE-` + JBSCount + `'>Hide</label>
+						<input type='radio' class='btn-check displayFieldHidden' name='JBS-` + JBSCount + `' id='JBS-HIDE-` + JBSCount + `' autocomplete='off'>
+						<label data-bs-toggle='tooltip' data-bs-placement='top' title='Hide: ` + child +`' class='btn btn-outline-primary' for='JBS-HIDE-` + JBSCount + `'>Hide</label>
 						</div>`;
+					}
+
 					ul.appendChild(li);
 
 					JBSCount++;
@@ -130,6 +240,48 @@
 				return document.createTextNode(obj);
 			}
 		}
+
+		function loadAPIParamArea(id)
+		{
+			$.getJSON(domain + "/capability/list?id=" + id, (data) => 
+			{
+				$('#api-param-area').empty();
+
+				for (var i = 0; i < data.Params.length; i++)
+				{
+					if (data.Params[i].includes('<') && data.Params[i].includes('>')) 
+					{
+						$('#api-param-area').append("<input class='form-control mt-1 api-param-val' data-param-id='" + i + "' placeholder='" + data.Params[i] + "'>");
+					}
+					else
+					{
+						$('#api-param-area').append("<input disabled class='form-control mt-1 api-param-val' data-param-id='" + i + "' placeholder='" + data.Params[i] + "'>");
+					}
+				}
+
+				displayFields = [];
+				displayFields = JSON.parse(data.DisplayFields);
+				console.log("Hidden Fields: " + displayFields);
+			});
+		}
+
+		$(document).ready(function()
+		{
+			$.getJSON(domain + "/capability/list?id=all", (data) => 
+			{
+				for (var i = 0; i < data.length; i++)
+				{
+					$('#api-url').append('<option value="'+ data[i].ID +'">'+ data[i].Name +' (' + data[i].Type + ')</option>');
+				}
+
+				loadAPIParamArea(data[0].ID);
+			});
+		});
+
+		$(document).on('change','#api-url',function()
+		{
+			loadAPIParamArea($(this).find(":selected").val());
+		});
 	</script>
 </body>
 </html>
