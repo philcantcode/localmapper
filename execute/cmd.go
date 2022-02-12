@@ -6,6 +6,7 @@ import (
 	"os/exec"
 
 	"github.com/philcantcode/localmapper/capabilities/nmap"
+	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/utils"
 )
 
@@ -38,6 +39,7 @@ func interpret(result string, interpreter string) interface{} {
 		structuredResult := nmap.MakeStructured(result)
 		utils.PrintLog(utils.PrettyPrintToStr(structuredResult))
 		go nmap.InsertHosts(structuredResult)
+		go database.InsertMong(structuredResult)
 		return structuredResult
 
 	case "default":

@@ -18,6 +18,7 @@ func main() {
 	utils.LoadGlobalConfigs()
 	installers.Check3rdPartyPrerequisites()
 	database.Initialise()
+	database.MongoConnect()
 
 	utils.Log("Server hosted at http://localhost:"+utils.Configs["SERVER_PORT"], true)
 
