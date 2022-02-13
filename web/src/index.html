@@ -80,6 +80,7 @@
 		var domain = "http://localhost:8008";
 		var displayFields = [];
 		var showAllDisplayFields = false;
+		var buttonDupes = [];
 
 		$("#show-displayFields").on("click", function(e)
 		{
@@ -204,14 +205,21 @@
 
 					if (displayFields.includes(child)) 
 					{
-						li.innerHTML += `
-						<div class='btn-group float-end displayFieldGroup' data-row='` + child + `' role='group'>
-						<input type='radio' class='btn-check' name='JBS-` + JBSCount + `' id='JBS-SHOW-` + JBSCount + `' autocomplete='off'>
-						<label class='btn btn-outline-primary' for='JBS-SHOW-` + JBSCount + `'>Show</label>
+						if (!buttonDupes.includes(child))
+						{
+							li.innerHTML += `
+							<div class='btn-group float-end displayFieldGroup' data-row='` + child + `' role='group'>
+							<input type='radio' class='btn-check' name='JBS-` + JBSCount + `' id='JBS-SHOW-` + JBSCount + `' autocomplete='off'>
+							<label class='btn btn-outline-primary' for='JBS-SHOW-` + JBSCount + `'>Show</label>
 
-						<input type='radio' class='btn-check displayFieldHidden' name='JBS-` + JBSCount + `' id='JBS-HIDE-` + JBSCount + `' autocomplete='off' checked>
-						<label data-bs-toggle='tooltip' data-bs-placement='top' title='Hide: ` + child +`' class='btn btn-outline-primary' for='JBS-HIDE-` + JBSCount + `'>Hide</label>
-						</div>`;
+							<input type='radio' class='btn-check displayFieldHidden' name='JBS-` + JBSCount + `' id='JBS-HIDE-` + JBSCount + `' autocomplete='off' checked>
+							<label data-bs-toggle='tooltip' data-bs-placement='top' title='Hide: ` + child +`' class='btn btn-outline-primary' for='JBS-HIDE-` + JBSCount + `'>Hide</label>
+							</div>`;
+						}
+						else
+						{
+							buttonDupes.push(child);
+						}
 
 						if (showAllDisplayFields == false) 
 						{
@@ -220,14 +228,21 @@
 					}
 					else
 					{
-						li.innerHTML += `
-						<div class='btn-group float-end displayFieldGroup' data-row='` + child + `' role='group'>
-						<input type='radio' class='btn-check' name='JBS-` + JBSCount + `' id='JBS-SHOW-` + JBSCount + `' autocomplete='off' checked>
-						<label class='btn btn-outline-primary' for='JBS-SHOW-` + JBSCount + `'>Show</label>
+						if (!buttonDupes.includes(child))
+						{
+							li.innerHTML += `
+							<div class='btn-group float-end displayFieldGroup' data-row='` + child + `' role='group'>
+							<input type='radio' class='btn-check' name='JBS-` + JBSCount + `' id='JBS-SHOW-` + JBSCount + `' autocomplete='off' checked>
+							<label class='btn btn-outline-primary' for='JBS-SHOW-` + JBSCount + `'>Show</label>
 
-						<input type='radio' class='btn-check displayFieldHidden' name='JBS-` + JBSCount + `' id='JBS-HIDE-` + JBSCount + `' autocomplete='off'>
-						<label data-bs-toggle='tooltip' data-bs-placement='top' title='Hide: ` + child +`' class='btn btn-outline-primary' for='JBS-HIDE-` + JBSCount + `'>Hide</label>
-						</div>`;
+							<input type='radio' class='btn-check displayFieldHidden' name='JBS-` + JBSCount + `' id='JBS-HIDE-` + JBSCount + `' autocomplete='off'>
+							<label data-bs-toggle='tooltip' data-bs-placement='top' title='Hide: ` + child +`' class='btn btn-outline-primary' for='JBS-HIDE-` + JBSCount + `'>Hide</label>
+							</div>`;
+						}
+						else
+						{
+							buttonDupes.push(child);
+						}
 					}
 
 					ul.appendChild(li);
@@ -239,6 +254,8 @@
 			else {
 				return document.createTextNode(obj);
 			}
+
+			buttonDupes = [];
 		}
 
 		function loadAPIParamArea(id)
