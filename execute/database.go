@@ -30,10 +30,10 @@ func CheckCommandExists(params string) int {
 func InsertCapability(params string, name string, cmdType string, desc string, interpreter string) {
 	utils.Log("Inserting Hosts from CommandCapability DB", false)
 	stmt, err := database.Connection.Prepare("INSERT INTO `CommandCapability`" +
-		"(`cmdParams`, `type`, `name`, `description`, `interpreter`) VALUES (?, ?, ?, ?, ?);")
+		"(`cmdParams`, `type`, `name`, `description`, `interpreter`, `displayFields`) VALUES (?, ?, ?, ?, ?, ?);")
 	utils.ErrorHandle("Couldn't prepare InsertCommand CommandCapability", err, true)
 
-	_, err = stmt.Exec(params, cmdType, name, desc, interpreter)
+	_, err = stmt.Exec(params, cmdType, name, desc, interpreter, "")
 	utils.ErrorHandle("Error executing CommandCapability insertHosts", err, true)
 	stmt.Close()
 }

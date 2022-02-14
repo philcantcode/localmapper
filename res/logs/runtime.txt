@@ -1,66 +1,27 @@
-[02-13-2022 00:14:51] Attempting to run command: C:\Program Files (x86)\Nmap\nmap
-[02-13-2022 00:14:51] Interpreting default result
-[02-13-2022 00:14:51] NMAP is installed at C:\Program Files (x86)\Nmap\nmap
-[02-13-2022 00:14:51] Attempting to open SQL database: res/database.db
-[02-13-2022 00:14:51] Server hosted at http://localhost:8008
-[02-13-2022 00:14:55] Querying capabilities from CommandCapability DB
-[02-13-2022 00:14:55] Querying capabilities from CommandCapability DB
-[02-13-2022 00:15:04] Querying capabilities from CommandCapability DB
-[02-13-2022 00:15:04] Attempting to run command: nmap
-[02-13-2022 00:15:22] Interpreting nmap result
-[02-13-2022 00:15:22] Converting from XML to an NMAP struct
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Command status: true
+[02-13-2022 23:56:59] Attempting to run command: C:\Program Files (x86)\Nmap\nmap
+[02-13-2022 23:56:59] Interpreting default result
+[02-13-2022 23:56:59] NMAP is installed at C:\Program Files (x86)\Nmap\nmap
+[02-13-2022 23:56:59] Attempting to open SQL database: res/database.db
+[02-13-2022 23:56:59] Server hosted at http://localhost:8008
+[02-13-2022 23:58:09] Querying Hosts from CommandCapability DB
+[02-13-2022 23:58:09] Inserting Hosts from CommandCapability DB
+[02-13-2022 23:58:17] Querying capabilities from CommandCapability DB
+[02-13-2022 23:58:17] Querying capabilities from CommandCapability DB
+[02-13-2022 23:58:19] Querying capabilities from CommandCapability DB
+[02-13-2022 23:58:25] Querying capabilities from CommandCapability DB
+[02-13-2022 23:58:25] Attempting to run command: nmap
+[02-13-2022 23:59:22] Interpreting defaulted result
+[02-13-2022 23:59:22] Command status: true
 
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] Querying Hosts from HostTracking DB
-[02-13-2022 00:15:22] Updating Hosts from HostTracking DB
-[02-13-2022 00:15:22] RunCapability done
+[02-13-2022 23:59:22] RunCapability done
+[02-14-2022 00:00:01] Querying capabilities from CommandCapability DB
+[02-14-2022 00:00:01] Attempting to run command: nmap
+[02-14-2022 00:00:10] Querying capabilities from CommandCapability DB
+[02-14-2022 00:00:10] Querying capabilities from CommandCapability DB
+[02-14-2022 00:00:12] Querying capabilities from CommandCapability DB
+[02-14-2022 00:00:15] Querying capabilities from CommandCapability DB
+[02-14-2022 00:00:15] Attempting to run command: nmap
+[02-14-2022 00:00:52] Interpreting defaulted result
+[02-14-2022 00:00:52] Command status: true
+
+[02-14-2022 00:00:52] RunCapability done

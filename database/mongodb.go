@@ -5,18 +5,23 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 // Connection URI
-const uri = "mongodb://root:rootpassword@192.168.0.125:27017"
-
+var uri string
 var client *mongo.Client
 var collection *mongo.Collection
 
 func MongoConnect() {
 	var err error
+	uri = fmt.Sprintf("mongodb://%s:%s@%s:%s",
+		utils.Configs["MONGO_USER"],
+		utils.Configs["MONGO_PASSWORD"],
+		utils.Configs["MONGO_IP"],
+		utils.Configs["MONGO_PORT"])
 
 	// Create a new client and connect to the server
 	client, err = mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))

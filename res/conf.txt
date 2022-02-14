@@ -17,3 +17,10 @@ NMAP_PATH, C:\Program Files (x86)\Nmap\nmap
 
 // Server configs
 SERVER_PORT, 8008
+
+// Database configs
+USE_MONGO, 0
+MONGO_USER, root
+MONGO_PASSWORD, rootpassword
+MONGO_IP, 192.168.0.125
+MONGO_PORT, 27017
