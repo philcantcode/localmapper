@@ -55,11 +55,9 @@ func RunCMD(cmd string) {
 		utils.PrettyPrint(localhost.IpInfo())
 	case "os":
 		utils.PrettyPrint(localhost.OSInfo())
-	case "register capability":
-		execute.RegisterCmdCapability()
 	case "run capability":
 		execute.RunCapability()
 	case "help":
-		fmt.Println("Available Commands: ip, os, {register:run} capability, help")
+		fmt.Println("Available Commands: ip, os, run capability, help")
 	}
 }

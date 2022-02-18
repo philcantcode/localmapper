@@ -140,7 +140,8 @@
 				success: function(response) {
 					console.log(response);
 					
-					$("#results").html(jsonToList(JSON.parse(response)));
+					oliversGlob = JSON.parse(response);
+					$("#results").html(jsonToDisplay(JSON.parse(response)));
 
 				},
 				error: function(xhr) {
@@ -170,7 +171,7 @@
 				success: function(response) {
 					console.log(response);
 					
-					$("#results").html(jsonToList(JSON.parse(response)));
+					$("#results").html(jsonToDisplay(JSON.parse(response)));
 
 				},
 				error: function(xhr) {
@@ -178,6 +179,61 @@
 				}
 			});
 		});
+
+		var count = 0;
+		var oliversGlob;
+		function jsonToDisplay(jsonDat) 
+		{
+			if (jsonDat instanceof Array) // Array
+			{
+				var arrayHtml = "<div>";
+
+				for (var key in Object.keys(jsonDat)) 
+				{
+					arrayHtml += "<span class='badge bg-primary'>Index: " + key + "</span>";
+					arrayHtml += jsonToDisplay(jsonDat[key]);
+				}
+
+				arrayHtml += "</div>";
+				return arrayHtml;
+			}
+			else if (jsonDat instanceof Object && !(jsonDat instanceof String)) //Array Object
+			{
+				var objectHtml = "";
+
+				for (var key in jsonDat) 
+				{
+					if (jsonDat[key] instanceof Array) 
+					{
+						objectHtml += jsonToDisplay(jsonDat[key]);
+					}
+					else
+					{
+						objectHtml += "<span class='badge bg-warning'>Object Key: " + key + " > " + jsonDat[key] + "</span>";
+					}
+					
+				}
+
+				return objectHtml;
+			}
+			else // String
+			{
+				var stringHtml = "";
+
+				try {
+					if (JSON.parse(jsonDat) instanceof Array)
+					{
+						
+					}
+				} 
+				catch {
+					console.log("String: " + jsonDat);
+					stringHtml += "<p>STR: " + jsonDat + "</p>";
+				}
+
+				return stringHtml;
+			}
+		}
 
 		function jsonToList(obj) 
 		{
