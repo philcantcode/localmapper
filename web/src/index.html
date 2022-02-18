@@ -203,11 +203,11 @@
 
 				for (var key in jsonDat) 
 				{
-					if (jsonDat[key] instanceof Array) 
+					if (jsonDat[key] instanceof Array) // Child is an array
 					{
 						objectHtml += jsonToDisplay(jsonDat[key]);
 					}
-					else
+					else // Child is an object or string
 					{
 						objectHtml += "<span class='badge bg-warning'>Object Key: " + key + " > " + jsonDat[key] + "</span>";
 					}

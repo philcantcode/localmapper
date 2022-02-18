@@ -54,7 +54,7 @@ type Capabilities struct {
 	Type          string
 	Name          string
 	Desc          string
-	DisplayFields string
+	DisplayFields []string
 	Interpreter   string
 }
 
