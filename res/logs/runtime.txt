@@ -1,10 +1,6 @@
-[02-18-2022 16:08:38] Attempting to run command: C:\Program Files (x86)\Nmap\nmap
-[02-18-2022 16:08:39] Interpreting default result
-[02-18-2022 16:08:39] NMAP is installed at C:\Program Files (x86)\Nmap\nmap
-[02-18-2022 16:08:39] Attempting to open SQL database: res/database.db
-[02-18-2022 16:08:39] Attempting to connect MongoDB to: 
-[02-18-2022 16:08:39] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
-[02-18-2022 16:08:39] Server hosted at http://localhost:8008
-[02-18-2022 16:08:44] Querying capabilities from CommandCapability DB
-[02-18-2022 16:08:44] Querying capabilities from CommandCapability DB
-[02-18-2022 16:08:45] Querying capabilities from CommandCapability DB
+[02-19-2022 20:25:44] Attempting to open SQL database: res/database.db
+[02-19-2022 20:25:44] Attempting to connect MongoDB to: 
+[02-19-2022 20:25:44] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
+[02-19-2022 20:25:44] Server hosted at http://localhost:8008
+[02-19-2022 20:25:45] Querying capabilities from CommandCapability DB
+[02-19-2022 20:25:45] Querying capabilities from CommandCapability DB

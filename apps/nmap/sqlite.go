@@ -4,12 +4,12 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/philcantcode/localmapper/database"
+	"github.com/philcantcode/localmapper/apps/database"
 	"github.com/philcantcode/localmapper/utils"
 )
 
 // Check whether a host already exists in DB, update or insert the details
-func InsertHosts(xml NmapRun) {
+func SqliteInsertHosts(xml NmapRun) {
 	for i := range xml.Hosts {
 		var ipv4 = ""
 		var ipv6 = ""
@@ -34,10 +34,10 @@ func InsertHosts(xml NmapRun) {
 		utils.Log("Querying Hosts from HostTracking DB", false)
 		stmt, err := database.Connection.Prepare("SELECT `id` FROM `HostTracking` WHERE" +
 			"`mac` = ? OR `ipv4` = ? OR `ipv6` = ? AND `mac` != '' AND ipv4 != '' AND ipv6 != '';")
-		utils.ErrorHandle("Couldn't select id from HostTracking", err, true)
+		utils.ErrorLog("Couldn't select id from HostTracking", err, true)
 
 		row := stmt.QueryRow(mac, ipv4, ipv6)
-		utils.ErrorHandle("Couldn't recieve rows from HostTracking", err, true)
+		utils.ErrorLog("Couldn't recieve rows from HostTracking", err, true)
 
 		var id int
 		err = row.Scan(&id)
@@ -47,18 +47,18 @@ func InsertHosts(xml NmapRun) {
 			utils.Log("Inserting Hosts from HostTracking DB", false)
 			stmt, err = database.Connection.Prepare("INSERT INTO `HostTracking`" +
 				"(`mac`, `ipv4`, `ipv6`, `firstSeen`) VALUES (?, ?, ?, ?);")
-			utils.ErrorHandle("Couldn't prepare insertHosts", err, true)
+			utils.ErrorLog("Couldn't prepare insertHosts", err, true)
 
 			_, err = stmt.Exec(mac, ipv4, ipv6, time.Now().Unix())
-			utils.ErrorHandle("Error executing insertHosts", err, true)
+			utils.ErrorLog("Error executing insertHosts", err, true)
 			stmt.Close()
 		} else { // If already exists, update it
 			utils.Log("Updating Hosts from HostTracking DB", false)
 			stmt, err = database.Connection.Prepare("UPDATE `HostTracking` SET `mac` = ?, `ipv4` = ?, `ipv6` = ?, `lastSeen` = ? WHERE `id` = ?;")
-			utils.ErrorHandle("Couldn't update HostTracking", err, true)
+			utils.ErrorLog("Couldn't update HostTracking", err, true)
 
 			_, err = stmt.Exec(mac, ipv4, ipv6, time.Now().Unix(), id)
-			utils.ErrorHandle("Results error from HostTracking", err, true)
+			utils.ErrorLog("Results error from HostTracking", err, true)
 			stmt.Close()
 		}
 	}

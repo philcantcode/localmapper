@@ -16,15 +16,15 @@ func CapabilityDisplayFieldsUpdateAPI(w http.ResponseWriter, r *http.Request) {
 	var displayFields []string
 
 	err := json.Unmarshal([]byte(r.FormValue("displayFields")), &displayFields)
-	utils.FatalErrorHandle("Couldn't convert CapabilityDisplayFieldsUpdateAPI displayFields to JSON", err)
+	utils.ErrorFatal("Couldn't convert CapabilityDisplayFieldsUpdateAPI displayFields to JSON", err)
 
 	if r.FormValue("displayFields") == "" {
-		utils.ErrorHandleLog("No displayFields specified for CapabilityDisplayFieldsUpdateAPI", true)
+		utils.ErrorContextLog("No displayFields specified for CapabilityDisplayFieldsUpdateAPI", true)
 		os.Exit(0)
 	}
 
 	if id == "" {
-		utils.ErrorHandleLog("No id specified for CapabilityDisplayFieldsUpdateAPI", true)
+		utils.ErrorContextLog("No id specified for CapabilityDisplayFieldsUpdateAPI", true)
 		os.Exit(0)
 	}
 
@@ -41,7 +41,7 @@ func CapabilityListAPI(w http.ResponseWriter, r *http.Request) {
 	id := r.FormValue("id")
 
 	if id == "" {
-		utils.ErrorHandleLog("No id specified for CapabilityListAPI", true)
+		utils.ErrorContextLog("No id specified for CapabilityListAPI", true)
 		os.Exit(0)
 	}
 
@@ -53,7 +53,7 @@ func CapabilityListAPI(w http.ResponseWriter, r *http.Request) {
 	}
 
 	idInt, err := strconv.Atoi(id)
-	utils.FatalErrorHandle("Couldn't convert ID in CapabilityListAPI", err)
+	utils.ErrorFatal("Couldn't convert ID in CapabilityListAPI", err)
 
 	for _, capability := range capabilities {
 		if capability.ID == idInt {
@@ -69,12 +69,12 @@ func CapabilityRunAPI(w http.ResponseWriter, r *http.Request) {
 	json.Unmarshal([]byte(r.FormValue("params")), &params)
 
 	if r.FormValue("params") == "" {
-		utils.ErrorHandleLog("No params specified for CapabilityRunAPI", true)
+		utils.ErrorContextLog("No params specified for CapabilityRunAPI", true)
 		os.Exit(0)
 	}
 
 	if id == "" {
-		utils.ErrorHandleLog("No id specified for CapabilityRunAPI", true)
+		utils.ErrorContextLog("No id specified for CapabilityRunAPI", true)
 		os.Exit(0)
 	}
 
@@ -82,19 +82,22 @@ func CapabilityRunAPI(w http.ResponseWriter, r *http.Request) {
 	var capID int
 
 	capID, err := strconv.Atoi(id)
-	utils.FatalErrorHandle("Couldn't convert ID", err)
+	utils.ErrorFatal("Couldn't convert ID", err)
 
-	for _, k := range capabilities {
+	for i, k := range capabilities {
 		if capID == k.ID {
-			result, success := Run(k.Interpreter, k.Params[0], swapCapabilityParamsWithAPIValues(k.Params, params)...)
+			capabilities[i].Params = swapCapabilityParamsWithAPIValues(k.Params, params)
+			result := Run(capabilities[i])
 
-			utils.Log(fmt.Sprintf("Command status: %v\n", success), true)
 			utils.PrettyPrint(result)
 			json.NewEncoder(w).Encode(result)
+
+			utils.Log(fmt.Sprintf("Capability Complete: [%s] %s", k.Type, k.Name), true)
+			return
 		}
 	}
 
-	utils.Log("RunCapability done", true)
+	utils.ErrorForceFatal("Could not find a patching capability")
 	return
 }
 

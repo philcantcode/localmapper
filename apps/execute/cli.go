@@ -27,14 +27,17 @@ func RunCapability() {
 
 	for _, k := range capabilities {
 		if capID == k.ID {
-			result, success := Run(k.Interpreter, k.Params[0], swapOutCapabilityParamsWithCLIValues(k.Params[1:])...)
+			capability := k
+			k.Params = swapOutCapabilityParamsWithCLIValues(k.Params[1:])
+			result := Run(capability)
 
-			utils.Log(fmt.Sprintf("Command status: %v\n", success), true)
+			utils.Log(fmt.Sprintf("Capability Complete: [%s] %s", k.Type, k.Name), true)
 			utils.PrettyPrint(result)
+			return
 		}
 	}
 
-	utils.Log("RunCapability done", true)
+	utils.ErrorForceFatal("Could not find a patching capability")
 }
 
 func swapOutCapabilityParamsWithCLIValues(params []string) []string {

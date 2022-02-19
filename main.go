@@ -7,18 +7,17 @@ import (
 	"os"
 
 	"github.com/gorilla/mux"
-	"github.com/philcantcode/localmapper/capabilities/localhost"
-	"github.com/philcantcode/localmapper/database"
-	"github.com/philcantcode/localmapper/execute"
-	"github.com/philcantcode/localmapper/installers"
+	"github.com/philcantcode/localmapper/apps/database"
+	"github.com/philcantcode/localmapper/apps/execute"
+	"github.com/philcantcode/localmapper/apps/localhost"
 	"github.com/philcantcode/localmapper/utils"
 )
 
 func main() {
 	utils.LoadGlobalConfigs()
-	installers.Check3rdPartyPrerequisites()
-	database.Initialise()
-	database.MongoConnect()
+	//installers.Check3rdPartyPrerequisites()
+	database.InitSqlite()
+	database.InitMongo()
 
 	utils.Log("Server hosted at http://localhost:"+utils.Configs["SERVER_PORT"], true)
 
@@ -33,7 +32,7 @@ func main() {
 	router.HandleFunc("/capability/list", execute.CapabilityListAPI)
 	router.HandleFunc("/capability/displayfields/update", execute.CapabilityDisplayFieldsUpdateAPI)
 
-	fileServer := http.FileServer(http.Dir("web/src"))
+	fileServer := http.FileServer(http.Dir("apps/web/src"))
 	router.PathPrefix("/").Handler(http.StripPrefix("/", fileServer))
 
 	http.ListenAndServe(":"+utils.Configs["SERVER_PORT"], router)

@@ -12,11 +12,9 @@ import (
 
 // Connection URI
 var uri string
-var client *mongo.Client
+var Client *mongo.Client
 
-var NmapCollection *mongo.Collection
-
-func MongoConnect() {
+func InitMongo() {
 	var err error
 
 	utils.Log("Attempting to connect MongoDB to: "+uri, false)
@@ -34,21 +32,11 @@ func MongoConnect() {
 	}
 
 	// Create a new client and connect to the server
-	client, err = mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
-	utils.FatalErrorHandle("MongoDB couldn't make initial connection to "+uri, err)
+	Client, err = mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
+	utils.ErrorFatal("MongoDB couldn't make initial connection to "+uri, err)
 
 	// Ping the primary
-	err = client.Ping(context.TODO(), readpref.Primary())
-	utils.FatalErrorHandle("MongoDB couldn't ping "+uri, err)
-
-	NmapCollection = client.Database("Network").Collection("Nmap")
-
+	err = Client.Ping(context.TODO(), readpref.Primary())
+	utils.ErrorFatal("MongoDB couldn't ping "+uri, err)
 	utils.Log("Successfully connected MongoDB to: "+uri, true)
-}
-
-func InsertNmapCollection(v interface{}) {
-	insertResult, err := NmapCollection.InsertOne(context.TODO(), v)
-
-	utils.ErrorHandle("Couldn't InsertNmapCollection (mongodb)", err, true)
-	utils.Log(fmt.Sprintf("New InsertNmapCollection at: %s", insertResult), true)
 }

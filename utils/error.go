@@ -6,8 +6,8 @@ import (
 	"os"
 )
 
-// ErrorHandle requires an err, non fatal
-func ErrorHandle(context string, e error, print bool) {
+// ErrorLog requires an err, non fatal
+func ErrorLog(context string, e error, print bool) {
 	if e != nil {
 		if print {
 			fmt.Println(context)
@@ -17,8 +17,8 @@ func ErrorHandle(context string, e error, print bool) {
 	}
 }
 
-// FatalErrorHandle throws the error then exits
-func FatalErrorHandle(context string, e error) {
+// ErrorFatal throws the error then exits
+func ErrorFatal(context string, e error) {
 	if e != nil {
 		fmt.Println(context)
 
@@ -29,8 +29,16 @@ func FatalErrorHandle(context string, e error) {
 	}
 }
 
-// ErrorHandleLog logs a custom error, doesn't require a err to be passed
-func ErrorHandleLog(context string, print bool) {
+// ErrorForceFatal throws the error then exits
+func ErrorForceFatal(context string) {
+	fmt.Println(context)
+
+	AppendLine("["+Now()+"] "+context, Configs["ERROR_LOG"])
+	os.Exit(0)
+}
+
+// ErrorContextLog logs a custom error, doesn't require a err to be passed
+func ErrorContextLog(context string, print bool) {
 	if print {
 		fmt.Println(context)
 	}

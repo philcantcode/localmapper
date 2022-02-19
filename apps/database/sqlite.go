@@ -9,12 +9,12 @@ import (
 
 var Connection *sql.DB
 
-func Initialise() {
+func InitSqlite() {
 	utils.Log("Attempting to open SQL database: "+utils.Configs["DATABASE_PATH"], true)
 	var err error
 	Connection, err = sql.Open("sqlite3", utils.Configs["DATABASE_PATH"])
 
-	utils.ErrorHandle("Couldn't open SQLite3 database", err, true)
+	utils.ErrorLog("Couldn't open SQLite3 database", err, true)
 
 	stmt, err := Connection.Prepare(
 		"CREATE TABLE IF NOT EXISTS HostTracking" +
@@ -25,7 +25,7 @@ func Initialise() {
 			"metadata TEXT, " +
 			"firstSeen DATETIME, " +
 			"lastSeen DATETIME)")
-	utils.ErrorHandle("Couldn't create SQL database HostTracking", err, true)
+	utils.ErrorLog("Couldn't create SQL database HostTracking", err, true)
 	stmt.Exec()
 
 	stmt, err = Connection.Prepare(
@@ -37,7 +37,7 @@ func Initialise() {
 			"description TEXT DEFAULT '', " +
 			"interpreter TEXT DEFAULT '', " +
 			"displayFields TEXT DEFAULT '')")
-	utils.ErrorHandle("Couldn't create SQL database NmapScripts", err, true)
+	utils.ErrorLog("Couldn't create SQL database NmapScripts", err, true)
 	stmt.Exec()
 
 	stmt.Close()

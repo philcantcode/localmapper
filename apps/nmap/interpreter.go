@@ -14,10 +14,10 @@ func MakeStructured(xmlstr string) NmapRun {
 	xmlerr := xml.Unmarshal([]byte(xmlstr), &nmapRun)
 
 	if xmlerr != nil {
-		utils.ErrorHandle("Error unmarshaling Nmap XML string", xmlerr, false)
+		utils.ErrorLog("Error unmarshaling Nmap XML string", xmlerr, false)
 	}
 
-	InsertHosts(nmapRun)
+	SqliteInsertHosts(nmapRun)
 
 	return nmapRun
 }
