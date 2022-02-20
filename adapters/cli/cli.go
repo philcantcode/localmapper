@@ -1,4 +1,4 @@
-package execute
+package cli
 
 import (
 	"bufio"
@@ -7,11 +7,13 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/philcantcode/localmapper/application/database"
+	"github.com/philcantcode/localmapper/application/nmap"
 	"github.com/philcantcode/localmapper/utils"
 )
 
 func RunCapability() {
-	capabilities := GetAllCapabilities()
+	capabilities := database.SelectAllCapabilities()
 	scanner := bufio.NewScanner(os.Stdin)
 	var capID int
 
@@ -29,10 +31,16 @@ func RunCapability() {
 		if capID == k.ID {
 			capability := k
 			k.Params = swapOutCapabilityParamsWithCLIValues(k.Params[1:])
-			result := Run(capability)
+
+			switch capability.Type {
+			case "nmap":
+				nmapRun := nmap.RunNmapCommand(capability)
+				utils.PrettyPrint(nmapRun)
+			default:
+				utils.ErrorForceFatal("No capability type to run in RunCapability")
+			}
 
 			utils.Log(fmt.Sprintf("Capability Complete: [%s] %s", k.Type, k.Name), true)
-			utils.PrettyPrint(result)
 			return
 		}
 	}

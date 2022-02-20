@@ -1,6 +1,8 @@
-[02-19-2022 20:25:44] Attempting to open SQL database: res/database.db
-[02-19-2022 20:25:44] Attempting to connect MongoDB to: 
-[02-19-2022 20:25:44] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
-[02-19-2022 20:25:44] Server hosted at http://localhost:8008
-[02-19-2022 20:25:45] Querying capabilities from CommandCapability DB
-[02-19-2022 20:25:45] Querying capabilities from CommandCapability DB
+[02-20-2022 13:26:45] Attempting to open SQL database: res/database.db
+[02-20-2022 13:26:45] Attempting to connect MongoDB to: 
+[02-20-2022 13:26:45] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
+[02-20-2022 13:26:45] Server hosted at http://localhost:8008
+[02-20-2022 13:26:46] Querying capabilities from Capabilities DB
+[02-20-2022 13:26:46] Querying capabilities from Capabilities DB
+[02-20-2022 13:26:48] Querying capabilities from Capabilities DB
+[02-20-2022 13:26:56] Querying capabilities from Capabilities DB

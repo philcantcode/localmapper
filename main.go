@@ -7,15 +7,16 @@ import (
 	"os"
 
 	"github.com/gorilla/mux"
-	"github.com/philcantcode/localmapper/apps/database"
-	"github.com/philcantcode/localmapper/apps/execute"
-	"github.com/philcantcode/localmapper/apps/localhost"
+
+	"github.com/philcantcode/localmapper/adapters/cli"
+	"github.com/philcantcode/localmapper/adapters/web"
+	"github.com/philcantcode/localmapper/application/database"
+	"github.com/philcantcode/localmapper/application/localhost"
 	"github.com/philcantcode/localmapper/utils"
 )
 
 func main() {
 	utils.LoadGlobalConfigs()
-	//installers.Check3rdPartyPrerequisites()
 	database.InitSqlite()
 	database.InitMongo()
 
@@ -28,11 +29,11 @@ func main() {
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/capability/run", execute.CapabilityRunAPI)
-	router.HandleFunc("/capability/list", execute.CapabilityListAPI)
-	router.HandleFunc("/capability/displayfields/update", execute.CapabilityDisplayFieldsUpdateAPI)
+	router.HandleFunc("/capability/run", web.RunCapability)
+	router.HandleFunc("/capability/get", web.GetCapabilities)
+	router.HandleFunc("/capability/update", web.UpdateCapability)
 
-	fileServer := http.FileServer(http.Dir("apps/web/src"))
+	fileServer := http.FileServer(http.Dir("application/web/src"))
 	router.PathPrefix("/").Handler(http.StripPrefix("/", fileServer))
 
 	http.ListenAndServe(":"+utils.Configs["SERVER_PORT"], router)
@@ -55,7 +56,7 @@ func RunCMD(cmd string) {
 	case "os":
 		utils.PrettyPrint(localhost.OSInfo())
 	case "run capability":
-		execute.RunCapability()
+		cli.RunCapability()
 	case "help":
 		fmt.Println("Available Commands: ip, os, run capability, help")
 	}

@@ -33,7 +33,7 @@
 				<div class="input-group-prepend">
 				  <span class="input-group-text">List Capability</span>
 				</div>
-				<input id="capability-list-id" type="text" value="all" class="form-control">
+				<input id="capability-list-id" type="text" class="form-control">
 				<button id="capability-list" class="btn btn-primary" type="button">List</button>
 			</div>
 		</div>
@@ -113,7 +113,7 @@
 			});
 
 			$.ajax({
-				url: domain + "/capability/displayfields/update",
+				url: domain + "/capability/update",
 				type: "get",
 				data: { 
 					id: $("#api-url").find(":selected").val(),
@@ -132,7 +132,7 @@
 		$("#capability-list").on("click", function(e)
 		{
 			$.ajax({
-				url: domain + "/capability/list",
+				url: domain + "/capability/get",
 				type: "get",
 				data: { 
 					id: $("#capability-list-id").val(),
@@ -316,7 +316,7 @@
 
 		function loadAPIParamArea(id)
 		{
-			$.getJSON(domain + "/capability/list?id=" + id, (data) => 
+			$.getJSON(domain + "/capability/get?id=" + id, (data) => 
 			{
 				$('#api-param-area').empty();
 
@@ -340,7 +340,7 @@
 
 		$(document).ready(function()
 		{
-			$.getJSON(domain + "/capability/list?id=all", (data) => 
+			$.getJSON(domain + "/capability/get", (data) => 
 			{
 				for (var i = 0; i < data.length; i++)
 				{

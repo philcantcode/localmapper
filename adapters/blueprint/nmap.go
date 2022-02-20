@@ -1,4 +1,4 @@
-package nmap
+package blueprint
 
 import (
 	"encoding/xml"

@@ -12,7 +12,7 @@ import (
 
 // Connection URI
 var uri string
-var Client *mongo.Client
+var client *mongo.Client
 
 func InitMongo() {
 	var err error
@@ -32,11 +32,11 @@ func InitMongo() {
 	}
 
 	// Create a new client and connect to the server
-	Client, err = mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
+	client, err = mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
 	utils.ErrorFatal("MongoDB couldn't make initial connection to "+uri, err)
 
 	// Ping the primary
-	err = Client.Ping(context.TODO(), readpref.Primary())
+	err = client.Ping(context.TODO(), readpref.Primary())
 	utils.ErrorFatal("MongoDB couldn't ping "+uri, err)
 	utils.Log("Successfully connected MongoDB to: "+uri, true)
 }
