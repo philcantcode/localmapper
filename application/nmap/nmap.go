@@ -19,7 +19,7 @@ func RunNmapCommand(capability blueprint.Capability) blueprint.NmapRun {
 }
 
 func interpret(result []byte) blueprint.NmapRun {
-	utils.Log("Converting from []byte to NmapRun struct", true)
+	utils.Log("Converting from []byte to NmapRun struct", false)
 
 	var nmapRun blueprint.NmapRun
 	err := xml.Unmarshal(result, &nmapRun)

@@ -2,6 +2,7 @@ package web
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"strconv"
 
@@ -57,10 +58,10 @@ func RunCapability(w http.ResponseWriter, r *http.Request) {
 	switch capability.Type {
 	case "nmap":
 		nmapRun := nmap.RunNmapCommand(capability)
-		utils.PrettyPrint(nmapRun)
+		utils.PrintLog(utils.PrettyPrintToStr(nmapRun))
 		json.NewEncoder(w).Encode(nmapRun)
 		return
 	default:
-		utils.ErrorForceFatal("No capability type to run in RunCapability")
+		utils.ErrorForceFatal(fmt.Sprintf("No capability type to run in adapters.api.RunCapability: %v", capability))
 	}
 }

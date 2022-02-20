@@ -81,6 +81,7 @@
 		var displayFields = [];
 		var showAllDisplayFields = false;
 		var buttonDupes = [];
+		var capabilities = [];
 
 		$("#show-displayFields").on("click", function(e)
 		{
@@ -152,21 +153,31 @@
 
 		$("#capability-run").on("click", function(e)
 		{
-			let params = [];
+			var selectedCapability = {};
+
+			for (const capability of capabilities) 
+			{
+				if (capability.ID == $("#api-url").find(":selected").val())
+				{
+					selectedCapability = capability;
+					continue;
+				}
+			}
 
 			$('.api-param-val').each(function() {
 				paramID = $(this).attr("data-param-id");
 				paramVal = $(this).val();
 
-				params.push(paramVal);
+				if (paramVal != "") {
+					selectedCapability.Params[paramID] = paramVal;
+				}
 			});
 
 			$.ajax({
 				url: domain + "/capability/run",
 				type: "get",
 				data: { 
-					id: $("#api-url").find(":selected").val(),
-					params: JSON.stringify(params),
+					capability: JSON.stringify(selectedCapability),
 				},
 				success: function(response) {
 					console.log(response);
@@ -344,6 +355,7 @@
 			{
 				for (var i = 0; i < data.length; i++)
 				{
+					capabilities.push(data[i]);
 					$('#api-url').append('<option value="'+ data[i].ID +'">'+ data[i].Name +' (' + data[i].Type + ')</option>');
 				}
 
