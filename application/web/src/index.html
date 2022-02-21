@@ -168,9 +168,7 @@
 				paramID = $(this).attr("data-param-id");
 				paramVal = $(this).val();
 
-				if (paramVal != "") {
-					selectedCapability.Params[paramID] = paramVal;
-				}
+				selectedCapability.Command.Params[paramID].Value = paramVal;
 			});
 
 			$.ajax({
@@ -331,15 +329,25 @@
 			{
 				$('#api-param-area').empty();
 
-				for (var i = 0; i < data.Params.length; i++)
+				for (var i = 0; i < data.Command.Params.length; i++)
 				{
-					if (data.Params[i].includes('<') && data.Params[i].includes('>')) 
+					if (data.Command.Params[i].MetaType == 7) // Disabled area
 					{
-						$('#api-param-area').append("<input class='form-control mt-1 api-param-val' data-param-id='" + i + "' placeholder='" + data.Params[i] + "'>");
+						$('#api-param-area').append(`
+							<h6>` + data.Command.Params[i].MetaInfo + `</h6>
+							<div class='input-group mt-1'>
+								<span style='min-width:50px;' class='input-group-text'>` + data.Command.Params[i].Flag + `</span>
+								<input readonly class='form-control api-param-val' data-param-id='` + i + `' placeholder='` + data.Command.Params[i].MetaDefault + `'>
+							</div>`);
 					}
 					else
 					{
-						$('#api-param-area').append("<input disabled class='form-control mt-1 api-param-val' data-param-id='" + i + "' placeholder='" + data.Params[i] + "'>");
+						$('#api-param-area').append(`
+							<h6>` + data.Command.Params[i].MetaInfo + `</h6>
+							<div disable class='input-group mt-1'>
+								<span style='min-width:50px;' class='input-group-text'>` + data.Command.Params[i].Flag + `</span>
+								<input class='form-control api-param-val' data-param-id='` + i + `' placeholder='` + data.Command.Params[i].MetaDefault + `'>
+							</div>`);
 					}
 				}
 

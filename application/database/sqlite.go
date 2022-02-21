@@ -33,7 +33,7 @@ func InitSqlite() {
 			"(id INTEGER PRIMARY KEY UNIQUE, " +
 			"name TEXT NOT NULL, " +
 			"type TEXT NOT NULL, " +
-			"params TEXT NOT NULL, " +
+			"command TEXT NOT NULL, " +
 			"description TEXT DEFAULT '', " +
 			"displayFields TEXT DEFAULT '')")
 	utils.ErrorLog("Couldn't create SQL database NmapScripts", err, true)

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-	"strings"
 
+	"github.com/philcantcode/localmapper/adapters/blueprint"
 	"github.com/philcantcode/localmapper/application/database"
 	"github.com/philcantcode/localmapper/application/nmap"
 	"github.com/philcantcode/localmapper/utils"
@@ -30,7 +30,7 @@ func runCapability() {
 	for _, k := range capabilities {
 		if capID == k.ID {
 			capability := k
-			k.Params = swapOutCapabilityParamsWithCLIValues(k.Params[1:])
+			capability = setCapabilityParamValues(capability)
 
 			switch capability.Type {
 			case "nmap":
@@ -40,7 +40,7 @@ func runCapability() {
 				utils.ErrorForceFatal("No capability type to run in RunCapability")
 			}
 
-			utils.Log(fmt.Sprintf("Capability Complete: [%s] %s", k.Type, k.Name), true)
+			utils.Log(fmt.Sprintf("Capability Complete: [%s] %s", capability.Type, capability.Name), true)
 			return
 		}
 	}
@@ -48,28 +48,22 @@ func runCapability() {
 	utils.ErrorForceFatal("Could not find a patching capability")
 }
 
-func swapOutCapabilityParamsWithCLIValues(params []string) []string {
+func setCapabilityParamValues(capability blueprint.Capability) blueprint.Capability {
 	scanner := bufio.NewScanner(os.Stdin)
 
-	for i, param := range params {
-		param = strings.Replace(param, "<", "", -1)
-		param = strings.Replace(param, ">", "", -1)
+	capabilityCopy := capability
 
-		switch param {
-		case "string":
-			fmt.Printf("Please enter a String for the parameter: %s\n", param)
+	for i, param := range capability.Command.Params {
+		switch param.MetaType {
+		//TODO: Add input type validation for blueprint.DataType
+		case blueprint.None:
+
+		default:
+			fmt.Printf("Please input a type of: %d\n", param.MetaType)
 			scanner.Scan()
-			params[i] = scanner.Text()
-		case "string:iprange":
-			fmt.Printf("Please enter an IP Range for the parameter: %s\n", param)
-			scanner.Scan()
-			params[i] = scanner.Text()
-		case "string:ip":
-			fmt.Printf("Please enter an IP Address string for the parameter: %s\n", param)
-			scanner.Scan()
-			params[i] = scanner.Text()
+			capabilityCopy.Command.Params[i].Value = scanner.Text()
 		}
 	}
 
-	return params
+	return capabilityCopy
 }

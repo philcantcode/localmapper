@@ -10,10 +10,13 @@ import (
 )
 
 func RunNmapCommand(capability blueprint.Capability) blueprint.NmapRun {
-	utils.Log(fmt.Sprintf("Attempting to run Nmap Command: %v", capability), true)
-	resultByte, err := exec.Command(capability.Params[0], capability.Params[1:]...).CombinedOutput()
 
-	utils.ErrorFatal(fmt.Sprintf("Error returned running a command: %v", capability), err)
+	prog := capability.Command.Program
+	params := blueprint.ParamsToArray(capability.Command.Params)
+
+	utils.Log(fmt.Sprintf("Attempting to run Nmap Command: %s > %v", prog, params), true)
+	resultByte, err := exec.Command(prog, params...).CombinedOutput()
+	utils.ErrorFatal(fmt.Sprintf("Error returned running a command: %s > %v", prog, params), err)
 
 	return interpret(resultByte)
 }
