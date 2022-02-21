@@ -12,9 +12,9 @@ import (
 	"github.com/philcantcode/localmapper/utils"
 )
 
-/* UpdateCapability takes in a single capability (JSON object)
+/* updateCapability takes in a single capability (JSON object)
    and updates it via the ID */
-func UpdateCapability(w http.ResponseWriter, r *http.Request) {
+func updateCapability(w http.ResponseWriter, r *http.Request) {
 	capabilityParam := r.FormValue("capability")
 	var capability blueprint.Capability
 
@@ -25,10 +25,10 @@ func UpdateCapability(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(200)
 }
 
-/* GetCapabilities returns all capabilities as JSON,
+/* getCapabilities returns all capabilities as JSON,
    if an ID is specified, it returns that capability,
    otherwise all are returned */
-func GetCapabilities(w http.ResponseWriter, r *http.Request) {
+func getCapabilities(w http.ResponseWriter, r *http.Request) {
 	id := r.FormValue("id")
 	capabilities := database.SelectAllCapabilities()
 
@@ -48,8 +48,8 @@ func GetCapabilities(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-/* RunCapability executes one specific capability */
-func RunCapability(w http.ResponseWriter, r *http.Request) {
+/* runCapability executes one specific capability */
+func runCapability(w http.ResponseWriter, r *http.Request) {
 	capabilityParam := r.FormValue("capability")
 	var capability blueprint.Capability
 
@@ -58,6 +58,7 @@ func RunCapability(w http.ResponseWriter, r *http.Request) {
 	switch capability.Type {
 	case "nmap":
 		nmapRun := nmap.RunNmapCommand(capability)
+		database.InsertNetworkNmap(nmapRun)
 		utils.PrintLog(utils.PrettyPrintToStr(nmapRun))
 		json.NewEncoder(w).Encode(nmapRun)
 		return

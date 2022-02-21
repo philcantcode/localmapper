@@ -12,7 +12,7 @@ import (
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func RunCapability() {
+func runCapability() {
 	capabilities := database.SelectAllCapabilities()
 	scanner := bufio.NewScanner(os.Stdin)
 	var capID int

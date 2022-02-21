@@ -1,9 +1,4 @@
-[02-20-2022 14:00:16] Attempting to open SQL database: res/database.db
-[02-20-2022 14:00:16] Attempting to connect MongoDB to: 
-[02-20-2022 14:00:16] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
-[02-20-2022 14:00:16] Server hosted at http://localhost:8008
-[02-20-2022 14:00:19] Querying capabilities from Capabilities DB
-[02-20-2022 14:00:19] Querying capabilities from Capabilities DB
-[02-20-2022 14:00:21] Querying capabilities from Capabilities DB
-[02-20-2022 14:00:24] Attempting to run Nmap Command: {3 [nmap -sS -Pn localhost -oX -] nmap Stealth Scan Perform a stealthy scan on an IP range []}
-[02-20-2022 14:00:30] Converting from []byte to NmapRun struct
+[02-20-2022 23:00:31] Attempting to open SQL database: res/database.db
+[02-20-2022 23:00:31] Attempting to connect MongoDB to: 
+[02-20-2022 23:00:31] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
+[02-20-2022 23:00:31] Hosting Server at http://localhost:8008
