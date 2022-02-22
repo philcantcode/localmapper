@@ -1,8 +1,5 @@
-[02-21-2022 21:08:07] Attempting to open SQL database: res/database.db
-[02-21-2022 21:08:07] Attempting to connect MongoDB to: 
-[02-21-2022 21:08:07] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
-[02-21-2022 21:08:07] Hosting Server at http://localhost:8008
-[02-21-2022 21:08:11] Attempting to run Nmap Command: nmap > [-sS -Pn localhost -oX -]
-[02-21-2022 21:08:17] Converting from []byte to NmapRun struct
-[02-21-2022 21:08:17] Attempting to Insert_Network_Nmap
-[02-21-2022 21:08:17] New Insert at: &{ObjectID("6213ff4111edf8daaa1aeebe")}
+[02-22-2022 23:07:27] Attempting to open SQL database: res/database.db
+[02-22-2022 23:07:27] Attempting to connect MongoDB to: 
+[02-22-2022 23:07:27] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
+[02-22-2022 23:07:27] Successfully setup mongo database collections: 
+[02-22-2022 23:07:27] Hosting Server at http://localhost:8008

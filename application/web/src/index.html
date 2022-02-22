@@ -55,7 +55,7 @@
 		</div>
 
 		<div class="row mt-3">
-			<div id="results">
+			<div id="results" class="row">
 
 			</div>
 
@@ -142,7 +142,7 @@
 					console.log(response);
 					
 					oliversGlob = JSON.parse(response);
-					$("#results").html(jsonToDisplay(JSON.parse(response)));
+					$("#results").html(jsonToList(JSON.parse(response)));
 
 				},
 				error: function(xhr) {
@@ -190,58 +190,91 @@
 		});
 
 		var count = 0;
-		var oliversGlob;
 		function jsonToDisplay(jsonDat) 
 		{
-			if (jsonDat instanceof Array) // Array
-			{
-				var arrayHtml = "<div>";
+			console.log(jsonDat.toString() + " A: " + (jsonDat instanceof Array) + " OO: " + (jsonDat.toString().startsWith("[object Object]")));
 
-				for (var key in Object.keys(jsonDat)) 
-				{
-					arrayHtml += "<span class='badge bg-primary'>Index: " + key + "</span>";
-					arrayHtml += jsonToDisplay(jsonDat[key]);
-				}
-
-				arrayHtml += "</div>";
-				return arrayHtml;
-			}
-			else if (jsonDat instanceof Object && !(jsonDat instanceof String)) //Array Object
+			if (jsonDat instanceof Array)
 			{
-				var objectHtml = "";
+				var html = "";
 
 				for (var key in jsonDat) 
 				{
-					if (jsonDat[key] instanceof Array) // Child is an array
-					{
-						objectHtml += jsonToDisplay(jsonDat[key]);
-					}
-					else // Child is an object or string
-					{
-						objectHtml += "<span class='badge bg-warning'>Object Key: " + key + " > " + jsonDat[key] + "</span>";
-					}
-					
+					html += "<div class='row'>";
+					html += "<h2>" + key + "</h2>";
+					html += "</div>";
 				}
 
-				return objectHtml;
+				return html;
 			}
-			else // String
+			else if (jsonDat.toString().startsWith("[object Object]"))
 			{
-				var stringHtml = "";
+				var html = "<div class='accordion'>";
 
-				try {
-					if (JSON.parse(jsonDat) instanceof Array)
-					{
-						
-					}
-				} 
-				catch {
-					console.log("String: " + jsonDat);
-					stringHtml += "<p>STR: " + jsonDat + "</p>";
+				for (var key in jsonDat) 
+				{
+					html += `
+					<div class="accordion" id="acc-`  `">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Accordion Item #1
+								</button>
+							</h2>
+							<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+							</div>
+							</div>
+						</div>`;
 				}
 
-				return stringHtml;
+				html += "</div>";
+
+				return html;
 			}
+			// else if (jsonDat instanceof Array)
+			// {
+			// 	var arrayHtml = "<div class='row offset-" + count++ +"'>";
+
+			// 	for (var key in Object.keys(jsonDat)) 
+			// 	{
+			// 		arrayHtml += "<span class='badge bg-primary'>Index: " + key + "</span>";
+			// 		arrayHtml += jsonToDisplay(jsonDat[key]);
+			// 	}
+
+			// 	arrayHtml += "</div>";
+			// 	return arrayHtml;
+			// }
+			// else if (jsonDat instanceof Object && !(jsonDat instanceof String)) //Array Object
+			// {
+			// 	var objectHtml = "<div class='row'>";
+
+			// 	for (var key in jsonDat) 
+			// 	{
+			// 		objectHtml += "<div class='row offset-'" + count++ + ">";
+
+			// 		if (jsonDat[key] instanceof Array) // Child is an array
+			// 		{
+			// 			objectHtml += jsonToDisplay(jsonDat[key]);
+			// 		}
+			// 		else // Child is an object or string
+			// 		{
+			// 			objectHtml += "<span class='badge bg-warning col-1'>" + key + "</span>";
+			// 			objectHtml += jsonToDisplay(jsonDat[key]);
+			// 		}
+
+			// 		objectHtml += "</div>";
+			// 	}
+
+				
+
+			// 	return objectHtml;
+			// }
+			// else // String
+			// {
+			// 	return "<span class='col-1'>" + jsonDat + "</span>";
+			// }
 		}
 
 		function jsonToList(obj) 
@@ -353,7 +386,7 @@
 
 				displayFields = [];
 				displayFields = JSON.parse(data.DisplayFields);
-				console.log("Hidden Fields: " + displayFields);
+				console.log("Display Fields: " + displayFields);
 			});
 		}
 

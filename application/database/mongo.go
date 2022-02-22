@@ -13,6 +13,7 @@ import (
 // Connection URI
 var uri string
 var client *mongo.Client
+var nmapDB *mongo.Collection
 
 func InitMongo() {
 	var err error
@@ -39,4 +40,7 @@ func InitMongo() {
 	err = client.Ping(context.TODO(), readpref.Primary())
 	utils.ErrorFatal("MongoDB couldn't ping "+uri, err)
 	utils.Log("Successfully connected MongoDB to: "+uri, true)
+
+	nmapDB = client.Database("Network").Collection("Nmap")
+	utils.Log("Successfully setup mongo database collections: ", true)
 }

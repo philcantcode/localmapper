@@ -1,5 +1,7 @@
 package blueprint
 
+import "github.com/philcantcode/localmapper/utils"
+
 type Capability struct {
 	ID            int
 	Command       Command
@@ -35,6 +37,31 @@ const (
 	Bool
 	None
 )
+
+func ReverseDataTypeLookup(datType DataType) string {
+	switch datType {
+	case 0:
+		return "String"
+	case 1:
+		return "IP"
+	case 2:
+		return "IPRange"
+	case 3:
+		return "MAC"
+	case 4:
+		return "Integer"
+	case 5:
+		return "Decimal"
+	case 6:
+		return "Bool"
+	case 7:
+		return "None"
+	default:
+		utils.ErrorForceFatal("Couldn't do a reverse lookup for DataType (blueprint)")
+	}
+
+	return "nil"
+}
 
 func ParamsToArray(params []Param) []string {
 	var paramArr []string

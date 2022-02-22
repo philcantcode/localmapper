@@ -54,12 +54,14 @@ func setCapabilityParamValues(capability blueprint.Capability) blueprint.Capabil
 	capabilityCopy := capability
 
 	for i, param := range capability.Command.Params {
+
+		fmt.Println(param)
 		switch param.MetaType {
 		//TODO: Add input type validation for blueprint.DataType
 		case blueprint.None:
-
+			continue
 		default:
-			fmt.Printf("Please input a type of: %d\n", param.MetaType)
+			fmt.Printf("Please input a type of: %s\n", blueprint.ReverseDataTypeLookup(param.MetaType))
 			scanner.Scan()
 			capabilityCopy.Command.Params[i].Value = scanner.Text()
 		}
