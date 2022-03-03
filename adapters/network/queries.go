@@ -6,6 +6,8 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
+// ListAllAddresses finds all unique IP addresses from the database
+// and returns a list
 func ListAllAddresses() []blueprint.Address {
 	var returnArray []blueprint.Address
 

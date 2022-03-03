@@ -57,3 +57,16 @@ func SelectAllCapabilities() []blueprint.Capability {
 
 	return capabilities
 }
+
+func SelectCapability(name string) blueprint.Capability {
+	capabilities := SelectAllCapabilities()
+
+	for _, k := range capabilities {
+		if k.Name == name {
+			return k
+		}
+	}
+
+	utils.ErrorForceFatal("Could not SelectCapability for: " + name)
+	return blueprint.Capability{}
+}

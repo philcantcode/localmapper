@@ -5,12 +5,17 @@ PATCH, 1
 // Controls
 MODE, Interactive
 
-// File locations
+// Log file locations
 RUNTIME_LOG, res/logs/runtime.txt
 ERROR_LOG, res/logs/error.txt
 PRINT_LOG, res/logs/print.txt
+
+// System file locations
 CONFIG_FILE, res/conf.txt
 DATABASE_PATH, res/database.db
+
+// Definition file locations
+VLAN_FILE, res/data/vlans.txt
 
 // 3rd Party install locations
 NMAP_PATH, C:\Program Files (x86)\Nmap\nmap

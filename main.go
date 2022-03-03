@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/philcantcode/localmapper/adapters/cli"
 	"github.com/philcantcode/localmapper/adapters/network"
 	"github.com/philcantcode/localmapper/adapters/web"
@@ -16,7 +14,7 @@ func main() {
 	database.InitSqlite()
 	database.InitMongo()
 
-	fmt.Println(utils.PrettyPrint(network.ListAllAddresses()))
+	network.PingSweepVlans()
 
 	cli.InitCLI()
 	web.InitServer()

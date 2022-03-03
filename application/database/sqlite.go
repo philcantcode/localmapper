@@ -36,7 +36,17 @@ func InitSqlite() {
 			"command TEXT NOT NULL, " +
 			"description TEXT DEFAULT '', " +
 			"displayFields TEXT DEFAULT '')")
-	utils.ErrorLog("Couldn't create SQL database NmapScripts", err, true)
+	utils.ErrorLog("Couldn't create SQL database Capabilities", err, true)
+	stmt.Exec()
+
+	stmt, err = connection.Prepare(
+		"CREATE TABLE IF NOT EXISTS Vlans" +
+			"(id INTEGER PRIMARY KEY UNIQUE, " +
+			"name TEXT NOT NULL Unique, " +
+			"description TEXT NOT NULL, " +
+			"highIP TEXT NOT NULL, " +
+			"lowIP TEXT NOT NULL)")
+	utils.ErrorLog("Couldn't create SQL database Vlans", err, true)
 	stmt.Exec()
 
 	stmt.Close()
