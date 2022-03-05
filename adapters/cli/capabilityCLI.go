@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/philcantcode/localmapper/adapters/blueprint"
+	"github.com/philcantcode/localmapper/adapters/definitions"
 	"github.com/philcantcode/localmapper/application/database"
 	"github.com/philcantcode/localmapper/application/nmap"
 	"github.com/philcantcode/localmapper/utils"
@@ -48,7 +48,7 @@ func runCapability() {
 	utils.ErrorForceFatal("Could not find a patching capability")
 }
 
-func setCapabilityParamValues(capability blueprint.Capability) blueprint.Capability {
+func setCapabilityParamValues(capability definitions.Capability) definitions.Capability {
 	scanner := bufio.NewScanner(os.Stdin)
 
 	capabilityCopy := capability
@@ -57,11 +57,11 @@ func setCapabilityParamValues(capability blueprint.Capability) blueprint.Capabil
 
 		fmt.Println(param)
 		switch param.MetaType {
-		//TODO: Add input type validation for blueprint.DataType
-		case blueprint.None:
+		//TODO: Add input type validation for definitions.DataType
+		case definitions.None:
 			continue
 		default:
-			fmt.Printf("Please input a type of: %s\n", blueprint.ReverseDataTypeLookup(param.MetaType))
+			fmt.Printf("Please input a type of: %s\n", definitions.ReverseDataTypeLookup(param.MetaType))
 			scanner.Scan()
 			capabilityCopy.Command.Params[i].Value = scanner.Text()
 		}

@@ -1,4 +1,4 @@
-package blueprint
+package definitions
 
 import (
 	"encoding/xml"

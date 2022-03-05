@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"os/exec"
 
-	"github.com/philcantcode/localmapper/adapters/blueprint"
+	"github.com/philcantcode/localmapper/adapters/definitions"
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func RunNmapCommand(capability blueprint.Capability) blueprint.NmapRun {
+func RunNmapCommand(capability definitions.Capability) definitions.NmapRun {
 
 	prog := capability.Command.Program
-	params := blueprint.ParamsToArray(capability.Command.Params)
+	params := definitions.ParamsToArray(capability.Command.Params)
 
 	utils.Log(fmt.Sprintf("Attempting to run Nmap Command: %s > %v", prog, params), true)
 	resultByte, err := exec.Command(prog, params...).CombinedOutput()
@@ -21,10 +21,10 @@ func RunNmapCommand(capability blueprint.Capability) blueprint.NmapRun {
 	return interpret(resultByte)
 }
 
-func interpret(result []byte) blueprint.NmapRun {
+func interpret(result []byte) definitions.NmapRun {
 	utils.Log("Converting from []byte to NmapRun struct", false)
 
-	var nmapRun blueprint.NmapRun
+	var nmapRun definitions.NmapRun
 	err := xml.Unmarshal(result, &nmapRun)
 
 	utils.ErrorFatal("Couldn't unmarshal result from Nmap console", err)

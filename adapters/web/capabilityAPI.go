@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/philcantcode/localmapper/adapters/blueprint"
+	"github.com/philcantcode/localmapper/adapters/definitions"
 	"github.com/philcantcode/localmapper/application/database"
 	"github.com/philcantcode/localmapper/application/nmap"
 	"github.com/philcantcode/localmapper/utils"
@@ -16,7 +16,7 @@ import (
    and updates it via the ID */
 func updateCapability(w http.ResponseWriter, r *http.Request) {
 	capabilityParam := r.FormValue("capability")
-	var capability blueprint.Capability
+	var capability definitions.Capability
 
 	err := json.Unmarshal([]byte(capabilityParam), &capability)
 	utils.ErrorFatal("Error converting capability (json string) > capability (struct)", err)
@@ -51,7 +51,7 @@ func getCapabilities(w http.ResponseWriter, r *http.Request) {
 /* runCapability executes one specific capability */
 func runCapability(w http.ResponseWriter, r *http.Request) {
 	capabilityParam := r.FormValue("capability")
-	var capability blueprint.Capability
+	var capability definitions.Capability
 
 	json.Unmarshal([]byte(capabilityParam), &capability)
 

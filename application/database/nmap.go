@@ -4,13 +4,13 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/philcantcode/localmapper/adapters/blueprint"
+	"github.com/philcantcode/localmapper/adapters/definitions"
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func InsertNetworkNmap(nmapResult blueprint.NmapRun) {
+func InsertNetworkNmap(nmapResult definitions.NmapRun) {
 	utils.Log("Attempting to Insert_Network_Nmap", false)
 
 	insertResult, err := nmapDB.InsertOne(context.Background(), nmapResult)
@@ -23,15 +23,15 @@ func InsertNetworkNmap(nmapResult blueprint.NmapRun) {
    1. filter bson.M{"startstr": "xyz"} select specifc values
    2. projection bson.M{"version": 1} to limit the fields returned
 */
-func FilterNetworkNmap(filter bson.M, projection bson.M) []blueprint.NmapRun {
+func FilterNetworkNmap(filter bson.M, projection bson.M) []definitions.NmapRun {
 	cursor, err := nmapDB.Find(context.Background(), filter, options.Find().SetProjection(projection))
 	utils.ErrorFatal("Couldn't FilterNetworkMap", err)
 	defer cursor.Close(context.Background())
 
-	var results []blueprint.NmapRun
+	var results []definitions.NmapRun
 
 	for cursor.Next(context.Background()) {
-		var nmapRun blueprint.NmapRun
+		var nmapRun definitions.NmapRun
 
 		err = cursor.Decode(&nmapRun)
 		utils.ErrorFatal("Couldn't decode application.nmap.SelectAllNetworkNmap", err)

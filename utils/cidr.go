@@ -41,7 +41,6 @@ func IPv4RangeToCIDRRange(ipStart string, ipEnd string) (cidrs []string, err err
 				break
 			}
 			maxSize--
-
 		}
 
 		x := math.Log(float64(ipEndUint32-ipStartUint32+1)) / math.Log(2)

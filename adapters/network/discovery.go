@@ -28,6 +28,7 @@ func PingSweepVlans() {
 				}
 			}
 
+			// Log and insert results into DB
 			result := nmap.RunNmapCommand(capability)
 			database.InsertNetworkNmap(result)
 			utils.PrintLog(utils.PrettyPrintToStr(result))

@@ -1,4 +1,4 @@
-package blueprint
+package definitions
 
 type Vlan struct {
 	ID          int    `json:"ID"`

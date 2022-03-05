@@ -1,4 +1,4 @@
-package blueprint
+package definitions
 
 import "github.com/philcantcode/localmapper/utils"
 
@@ -57,7 +57,7 @@ func ReverseDataTypeLookup(datType DataType) string {
 	case 7:
 		return "None"
 	default:
-		utils.ErrorForceFatal("Couldn't do a reverse lookup for DataType (blueprint)")
+		utils.ErrorForceFatal("Couldn't do a reverse lookup for DataType (definitions)")
 	}
 
 	return "nil"

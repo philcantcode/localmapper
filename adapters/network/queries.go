@@ -1,15 +1,15 @@
 package network
 
 import (
-	"github.com/philcantcode/localmapper/adapters/blueprint"
+	"github.com/philcantcode/localmapper/adapters/definitions"
 	"github.com/philcantcode/localmapper/application/database"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
 // ListAllAddresses finds all unique IP addresses from the database
 // and returns a list
-func ListAllAddresses() []blueprint.Address {
-	var returnArray []blueprint.Address
+func ListAllAddresses() []definitions.Address {
+	var returnArray []definitions.Address
 
 	results := database.FilterNetworkNmap(
 		bson.M{},
