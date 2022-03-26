@@ -14,6 +14,8 @@ func InitServer() {
 	router := mux.NewRouter()
 
 	router.HandleFunc("/", handlers.IndexPage)
+	router.HandleFunc("/cmdb", handlers.CMDBPage)
+
 	router.HandleFunc("/capability/run", runCapability)
 	router.HandleFunc("/capability/get", getCapabilities)
 	router.HandleFunc("/capability/update", updateCapability)

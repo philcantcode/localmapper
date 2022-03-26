@@ -1,13 +1,6 @@
 /*
     DEMO STYLE
 */
-
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
-}
-
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
@@ -26,11 +19,12 @@ a:focus {
 
 .navbar {
     padding: 15px 10px;
-    background: #fff;
+    background: #1A2342;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    color:white;
 }
 
 .navbar-btn {
@@ -59,9 +53,10 @@ a:focus {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: #667292;
     color: #fff;
     transition: all 0.3s;
+    background-color:#101A33;
 }
 
 #sidebar.active {
@@ -70,7 +65,7 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #1A2342;
 }
 
 #sidebar ul.components {
@@ -79,7 +74,7 @@ a:focus {
 }
 
 #sidebar ul p {
-    color: #fff;
+    color: rgb(204, 20, 20);
     padding: 10px;
 }
 
