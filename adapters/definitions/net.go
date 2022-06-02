@@ -6,4 +6,5 @@ type Vlan struct {
 	Description string `json:"Description"`
 	HighIP      string `json:"HighIP"`
 	LowIP       string `json:"LowIP"`
+	Tags        string `json:"Tags"`
 }

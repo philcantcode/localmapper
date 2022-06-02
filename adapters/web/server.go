@@ -4,7 +4,6 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/philcantcode/localmapper/application/web/handlers"
 	"github.com/philcantcode/localmapper/utils"
 )
 
@@ -12,9 +11,6 @@ func InitServer() {
 	utils.Log("Hosting Server at http://localhost:"+utils.Configs["SERVER_PORT"], true)
 
 	router := mux.NewRouter()
-
-	router.HandleFunc("/", handlers.IndexPage)
-	router.HandleFunc("/cmdb", handlers.CMDBPage)
 
 	router.HandleFunc("/capability/run", runCapability)
 	router.HandleFunc("/capability/get", getCapabilities)
