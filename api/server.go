@@ -1,9 +1,10 @@
-package web
+package api
 
 import (
 	"net/http"
 
 	"github.com/gorilla/mux"
+	"github.com/philcantcode/localmapper/capabilities/local"
 	"github.com/philcantcode/localmapper/utils"
 )
 
@@ -16,7 +17,11 @@ func InitServer() {
 	router.HandleFunc("/capability/get", getCapabilities)
 	router.HandleFunc("/capability/update", updateCapability)
 
-	fileServer := http.FileServer(http.Dir("application/web/src"))
+	router.HandleFunc("/local/get-network-adapters", local.HTTP_JSON_GetNetworkAdapters)
+	router.HandleFunc("/local/get-os-info", local.HTTP_JSON_GetOSInfo)
+	router.HandleFunc("/local/get-date-time", local.HTTP_JSON_GetDateTime)
+
+	fileServer := http.FileServer(http.Dir("/"))
 
 	router.PathPrefix("/").Handler(http.StripPrefix("/", fileServer))
 

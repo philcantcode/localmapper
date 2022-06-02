@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/philcantcode/localmapper/adapters/definitions"
+	"github.com/philcantcode/localmapper/definitions"
 	"github.com/philcantcode/localmapper/utils"
 )
 

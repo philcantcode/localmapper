@@ -1,8 +1,5 @@
-[06-02-2022 18:59:28] Attempting to open SQL database: res/database.db
-[06-02-2022 18:59:28] Attempting to connect MongoDB to: 
-[06-02-2022 18:59:28] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
-[06-02-2022 18:59:28] Successfully setup mongo database collections: 
-[06-02-2022 18:59:28] Querying capabilities from Capabilities DB
-[06-02-2022 18:59:28] Hosting Server at http://localhost:8008
-[06-02-2022 18:59:28] SelectAllVlans from Vlans Db (sqlite)
-[06-02-2022 18:59:28] Attempting to run Nmap Command: nmap > [-sn 192.168.0.0/16 -oX -]
+[06-02-2022 23:08:59] Attempting to open SQL database: res/database.db
+[06-02-2022 23:08:59] Attempting to connect MongoDB to: 
+[06-02-2022 23:08:59] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
+[06-02-2022 23:08:59] Successfully setup mongo database collections: 
+[06-02-2022 23:08:59] Hosting Server at http://localhost:8008

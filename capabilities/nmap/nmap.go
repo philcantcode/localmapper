@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"os/exec"
 
-	"github.com/philcantcode/localmapper/adapters/definitions"
+	"github.com/philcantcode/localmapper/definitions"
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func RunNmapCommand(capability definitions.Capability) definitions.NmapRun {
+func RunNmapCommand(capability definitions.Capability) NmapRun {
 
 	prog := capability.Command.Program
 	params := definitions.ParamsToArray(capability.Command.Params)
@@ -21,10 +21,10 @@ func RunNmapCommand(capability definitions.Capability) definitions.NmapRun {
 	return interpret(resultByte)
 }
 
-func interpret(result []byte) definitions.NmapRun {
+func interpret(result []byte) NmapRun {
 	utils.Log("Converting from []byte to NmapRun struct", false)
 
-	var nmapRun definitions.NmapRun
+	var nmapRun NmapRun
 	err := xml.Unmarshal(result, &nmapRun)
 
 	utils.ErrorFatal("Couldn't unmarshal result from Nmap console", err)

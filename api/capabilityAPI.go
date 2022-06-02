@@ -1,4 +1,4 @@
-package web
+package api
 
 import (
 	"encoding/json"
@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/philcantcode/localmapper/adapters/definitions"
-	"github.com/philcantcode/localmapper/application/database"
-	"github.com/philcantcode/localmapper/application/nmap"
+	"github.com/philcantcode/localmapper/capabilities/nmap"
+	"github.com/philcantcode/localmapper/database"
+	"github.com/philcantcode/localmapper/definitions"
 	"github.com/philcantcode/localmapper/utils"
 )
 

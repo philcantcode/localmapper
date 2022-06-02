@@ -3,7 +3,7 @@ package database
 import (
 	"encoding/json"
 
-	"github.com/philcantcode/localmapper/adapters/definitions"
+	"github.com/philcantcode/localmapper/definitions"
 	"github.com/philcantcode/localmapper/utils"
 )
 
