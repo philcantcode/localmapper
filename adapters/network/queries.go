@@ -1,15 +1,15 @@
 package network
 
 import (
-	"github.com/philcantcode/localmapper/adapters/definitions"
-	"github.com/philcantcode/localmapper/application/database"
+	"github.com/philcantcode/localmapper/capabilities/nmap"
+	"github.com/philcantcode/localmapper/database"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
 // ListAllAddresses finds all unique IP addresses from the database
 // and returns a list
-func ListAllAddresses() []definitions.Address {
-	var returnArray []definitions.Address
+func ListAllAddresses() []nmap.Address {
+	var returnArray []nmap.Address
 
 	results := database.FilterNetworkNmap(
 		bson.M{},

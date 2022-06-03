@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"os/exec"
 
-	"github.com/philcantcode/localmapper/definitions"
+	"github.com/philcantcode/localmapper/core"
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func RunNmapCommand(capability definitions.Capability) NmapRun {
+func RunNmapCommand(capability core.Capability) NmapRun {
 
 	prog := capability.Command.Program
-	params := definitions.ParamsToArray(capability.Command.Params)
+	params := core.ParamsToArray(capability.Command.Params)
 
 	utils.Log(fmt.Sprintf("Attempting to run Nmap Command: %s > %v", prog, params), true)
 	resultByte, err := exec.Command(prog, params...).CombinedOutput()

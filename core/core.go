@@ -1,6 +1,8 @@
-package definitions
+package core
 
-import "github.com/philcantcode/localmapper/utils"
+import (
+	"github.com/philcantcode/localmapper/utils"
+)
 
 type Capability struct {
 	ID            int

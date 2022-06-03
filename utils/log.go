@@ -4,10 +4,21 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"reflect"
+	"runtime"
 )
 
-func Print(msg string) {
-	fmt.Println(msg)
+type JsonLog struct {
+	Type     string
+	DateTime string
+	Context  string
+}
+
+func Print(context string) {
+	fmt.Println(context)
+
+	jsonErr, _ := json.Marshal(JsonLog{Type: "Info", DateTime: Now(), Context: context})
+	AppendJson(string(jsonErr), Configs["JSON_LOG"])
 }
 
 // Log resets after every new run
@@ -16,16 +27,27 @@ func Log(context string, print bool) {
 		fmt.Println(context)
 	}
 
-	AppendLine("["+Now()+"] "+context, Configs["RUNTIME_LOG"])
+	jsonErr, _ := json.Marshal(JsonLog{Type: "Info", DateTime: Now(), Context: context})
+
+	AppendJson(string(jsonErr), Configs["JSON_LOG"])
+	AppendLine("[i]["+Now()+"] "+context, Configs["RUNTIME_LOG"])
 }
 
 // PrintDump is intended to store the outputs of scan results
 func PrintLog(context string) {
+
+	jsonErr, _ := json.Marshal(JsonLog{Type: "Info", DateTime: Now(), Context: context})
+	AppendJson(string(jsonErr), Configs["JSON_LOG"])
+
 	AppendLine("["+Now()+"] "+context, Configs["PRINT_LOG"])
 }
 
-func FatalAlert(message string) {
-	fmt.Println(message)
+func FatalAlert(context string) {
+	fmt.Println(context)
+
+	jsonErr, _ := json.Marshal(JsonLog{Type: "Fatal", DateTime: Now(), Context: context})
+	AppendJson(string(jsonErr), Configs["JSON_LOG"])
+
 	os.Exit(0)
 }
 
@@ -44,4 +66,8 @@ func PrettyPrintToStr(v interface{}) string {
 	}
 
 	return "ERROR PrettyPrintToStr"
+}
+
+func GetFunctionName(i interface{}) string {
+	return runtime.FuncForPC(reflect.ValueOf(i).Pointer()).Name()
 }

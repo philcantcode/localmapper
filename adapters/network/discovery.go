@@ -2,9 +2,11 @@ package network
 
 import (
 	"fmt"
+	"net"
 
-	"github.com/philcantcode/localmapper/application/database"
-	"github.com/philcantcode/localmapper/application/nmap"
+	"github.com/philcantcode/localmapper/capabilities/local"
+	"github.com/philcantcode/localmapper/capabilities/nmap"
+	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/utils"
 )
 
@@ -34,4 +36,22 @@ func PingSweepVlans() {
 			utils.PrintLog(utils.PrettyPrintToStr(result))
 		}
 	}
+}
+
+/* GenerateListOfGatewaysFromNetworkAdapters calculates the first IP on every
+   network adapter attached. */
+func GenerateListOfGatewaysFromNetworkAdapters() map[string]string {
+	netAdapters := local.GetNetworkAdapters()
+
+	// {Adapter Name : IP Address}
+	for key, addr := range netAdapters {
+		ip := []byte(net.ParseIP(addr).To4())
+		gateway := []byte{ip[0], ip[1], ip[2], 1}
+
+		fmt.Printf("%d -> %d\n", ip, gateway)
+		netAdapters[key] = string(net.IPv4(ip[0], ip[1], ip[2], 1).String())
+		utils.Log(fmt.Sprintf("Calculating gateway: %d -> %d", ip, gateway), false)
+	}
+
+	return netAdapters
 }

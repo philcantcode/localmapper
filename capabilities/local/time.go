@@ -4,11 +4,14 @@ import (
 	"encoding/json"
 	"net/http"
 	"time"
+
+	"github.com/philcantcode/localmapper/utils"
 )
 
 type DateTime struct {
 	DDMMYYYY string
 	HHMMSS   string
+	DateTime string
 }
 
 func GetDateTime() DateTime {
@@ -17,6 +20,9 @@ func GetDateTime() DateTime {
 
 	dts.DDMMYYYY = dt.Format("02-01-2006")
 	dts.HHMMSS = dt.Format("15:04:05")
+	dts.DateTime = dt.Format("02-01-2006 15:04:05")
+
+	utils.Log("Returning the date & time.", false)
 
 	return dts
 }

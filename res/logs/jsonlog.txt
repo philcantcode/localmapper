@@ -1,0 +1,152 @@
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Calculating gateway: [169 254 177 173] -\u003e [169 254 177 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Calculating gateway: [192 168 56 1] -\u003e [192 168 56 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Calculating gateway: [169 254 56 196] -\u003e [169 254 56 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Calculating gateway: [169 254 130 6] -\u003e [169 254 130 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Calculating gateway: [169 254 178 194] -\u003e [169 254 178 1]"}
+{"Type":"Fatal","DateTime":"06-03-2022 01:24:13","Context":"Calculating gateway: [192 168 1 111] -\u003e [192 168 1 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Calculating gateway: [127 0 0 1] -\u003e [127 0 0 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:13","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Successfully setup mongo database collections: "}
+{"Type":"Error","DateTime":"06-03-2022 01:24:49","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Calculating gateway: [169 254 56 196] -\u003e [169 254 56 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Calculating gateway: [169 254 130 6] -\u003e [169 254 130 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Calculating gateway: [169 254 178 194] -\u003e [169 254 178 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Calculating gateway: [192 168 1 111] -\u003e [192 168 1 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Calculating gateway: [127 0 0 1] -\u003e [127 0 0 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Calculating gateway: [169 254 177 173] -\u003e [169 254 177 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Calculating gateway: [192 168 56 1] -\u003e [192 168 56 1]"}
+{"Type":"Info","DateTime":"06-03-2022 01:24:49","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Calculating gateway: [169 254 130 6] -\u003e [169 254 130 1]"}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Calculating gateway: [169 254 178 194] -\u003e [169 254 178 1]"}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Calculating gateway: [192 168 1 111] -\u003e [192 168 1 1]"}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Calculating gateway: [127 0 0 1] -\u003e [127 0 0 1]"}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Calculating gateway: [169 254 177 173] -\u003e [169 254 177 1]"}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Calculating gateway: [192 168 56 1] -\u003e [192 168 56 1]"}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Calculating gateway: [169 254 56 196] -\u003e [169 254 56 1]"}
+{"Type":"Info","DateTime":"06-03-2022 11:41:34","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Calculating gateway: [169 254 178 194] -\u003e [169 254 178 1]"}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Calculating gateway: [192 168 1 111] -\u003e [192 168 1 1]"}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Calculating gateway: [127 0 0 1] -\u003e [127 0 0 1]"}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Calculating gateway: [169 254 177 173] -\u003e [169 254 177 1]"}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Calculating gateway: [192 168 56 1] -\u003e [192 168 56 1]"}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Calculating gateway: [169 254 56 196] -\u003e [169 254 56 1]"}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Calculating gateway: [169 254 130 6] -\u003e [169 254 130 1]"}
+{"Type":"Info","DateTime":"03-06-2022 11:59:44","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Calculating gateway: [169 254 56 196] -\u003e [169 254 56 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Calculating gateway: [169 254 130 6] -\u003e [169 254 130 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Calculating gateway: [169 254 178 194] -\u003e [169 254 178 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Calculating gateway: [192 168 1 111] -\u003e [192 168 1 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Calculating gateway: [127 0 0 1] -\u003e [127 0 0 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Calculating gateway: [169 254 177 173] -\u003e [169 254 177 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Calculating gateway: [192 168 56 1] -\u003e [192 168 56 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:02","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Calculating gateway: [169 254 177 173] -\u003e [169 254 177 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Calculating gateway: [192 168 56 1] -\u003e [192 168 56 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Calculating gateway: [169 254 56 196] -\u003e [169 254 56 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Calculating gateway: [169 254 130 6] -\u003e [169 254 130 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Calculating gateway: [169 254 178 194] -\u003e [169 254 178 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Calculating gateway: [192 168 1 111] -\u003e [192 168 1 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Calculating gateway: [127 0 0 1] -\u003e [127 0 0 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:04:14","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"03-06-2022 12:07:31","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"03-06-2022 12:07:31","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"03-06-2022 12:07:32","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"03-06-2022 12:07:32","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"03-06-2022 12:07:32","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:07:32","Context":"Calculating gateway: [169 254 130 6] -\u003e [169 254 130 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:07:32","Context":"Calculating gateway: [169 254 178 194] -\u003e [169 254 178 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:07:32","Context":"Calculating gateway: [192 168 1 111] -\u003e [192 168 1 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:07:32","Context":"Calculating gateway: [127 0 0 1] -\u003e [127 0 0 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:07:32","Context":"Calculating gateway: [169 254 177 173] -\u003e [169 254 177 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:07:32","Context":"Calculating gateway: [192 168 56 1] -\u003e [192 168 56 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:07:32","Context":"Calculating gateway: [169 254 56 196] -\u003e [169 254 56 1]"}
+{"Type":"Info","DateTime":"03-06-2022 12:07:32","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"03-06-2022 12:25:47","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"03-06-2022 12:25:47","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"03-06-2022 12:25:47","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"03-06-2022 12:25:47","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"03-06-2022 12:25:47","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"03-06-2022 12:26:35","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"03-06-2022 12:26:35","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"03-06-2022 12:26:35","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"03-06-2022 12:26:35","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"03-06-2022 12:26:35","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"03-06-2022 12:26:46","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"03-06-2022 12:26:46","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"03-06-2022 12:26:46","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"03-06-2022 12:26:46","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"03-06-2022 12:26:46","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"03-06-2022 12:27:04","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:27:04","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:27:04","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:32:38","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"03-06-2022 12:32:38","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"03-06-2022 12:32:38","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"03-06-2022 12:32:38","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"03-06-2022 12:32:38","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"03-06-2022 12:33:12","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"03-06-2022 12:33:12","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"03-06-2022 12:33:12","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"03-06-2022 12:33:12","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"03-06-2022 12:33:12","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"03-06-2022 12:34:28","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:34:28","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:34:28","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:34:28","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:34:28","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:35:23","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:35:23","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:35:23","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:35:23","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:35:47","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:35:47","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:35:47","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:35:58","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:35:58","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:35:58","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:36:07","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:36:07","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:36:07","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:36:34","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:36:34","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:36:34","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:36:58","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:36:58","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:36:58","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:37:24","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:37:24","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:37:24","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:38:33","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:38:33","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:38:33","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"03-06-2022 12:38:35","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:38:35","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"03-06-2022 12:38:35","Context":"Getting a list of network adapters \u0026 IP addresses."}

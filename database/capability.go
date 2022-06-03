@@ -3,11 +3,11 @@ package database
 import (
 	"encoding/json"
 
-	"github.com/philcantcode/localmapper/definitions"
+	"github.com/philcantcode/localmapper/core"
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func InsertCapability(capability definitions.Capability) {
+func InsertCapability(capability core.Capability) {
 	utils.Log("Inserting Hosts from CommandCapability DB", false)
 	stmt, err := connection.Prepare("INSERT INTO `Capabilities`" +
 		"(`name`, `type`, `command`, `description`, `displayFields`) VALUES (?, ?, ?, ?, ?);")
@@ -21,7 +21,7 @@ func InsertCapability(capability definitions.Capability) {
 	stmt.Close()
 }
 
-func UpdateCapability(capability definitions.Capability) {
+func UpdateCapability(capability core.Capability) {
 	utils.Log("Updating Capabilities database", false)
 	stmt, err := connection.Prepare("UPDATE `Capabilities` SET `name` = ?, `type` = ?, `command` = ?, `description` = ?, `displayFields` = ? WHERE `id` = ?;")
 	utils.ErrorFatal("Couldn't update Capabilities database", err)
@@ -34,7 +34,7 @@ func UpdateCapability(capability definitions.Capability) {
 	stmt.Close()
 }
 
-func SelectAllCapabilities() []definitions.Capability {
+func SelectAllCapabilities() []core.Capability {
 	utils.Log("Querying capabilities from Capabilities DB", false)
 	stmt, err := connection.Prepare("SELECT `id`, `command`, `type`, `name`, `description`, `displayFields` FROM `Capabilities`")
 	utils.ErrorLog("Couldn't select all from Capabilities GetAllCapabilities", err, true)
@@ -43,10 +43,10 @@ func SelectAllCapabilities() []definitions.Capability {
 	utils.ErrorLog("Couldn't recieve rows from SelectAllCapabilities", err, true)
 	defer rows.Close()
 
-	capabilities := []definitions.Capability{}
+	capabilities := []core.Capability{}
 
 	for rows.Next() {
-		capability := definitions.Capability{}
+		capability := core.Capability{}
 		command := ""
 
 		rows.Scan(&capability.ID, &command, &capability.Type, &capability.Name, &capability.Desc, &capability.DisplayFields)
@@ -58,7 +58,7 @@ func SelectAllCapabilities() []definitions.Capability {
 	return capabilities
 }
 
-func SelectCapability(name string) definitions.Capability {
+func SelectCapability(name string) core.Capability {
 	capabilities := SelectAllCapabilities()
 
 	for _, k := range capabilities {
@@ -68,5 +68,5 @@ func SelectCapability(name string) definitions.Capability {
 	}
 
 	utils.ErrorForceFatal("Could not SelectCapability for: " + name)
-	return definitions.Capability{}
+	return core.Capability{}
 }

@@ -1,4 +1,4 @@
-package definitions
+package core
 
 type Vlan struct {
 	ID          int    `json:"ID"`

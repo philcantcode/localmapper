@@ -7,8 +7,8 @@ import (
 	"strconv"
 
 	"github.com/philcantcode/localmapper/capabilities/nmap"
+	"github.com/philcantcode/localmapper/core"
 	"github.com/philcantcode/localmapper/database"
-	"github.com/philcantcode/localmapper/definitions"
 	"github.com/philcantcode/localmapper/utils"
 )
 
@@ -16,7 +16,7 @@ import (
    and updates it via the ID */
 func updateCapability(w http.ResponseWriter, r *http.Request) {
 	capabilityParam := r.FormValue("capability")
-	var capability definitions.Capability
+	var capability core.Capability
 
 	err := json.Unmarshal([]byte(capabilityParam), &capability)
 	utils.ErrorFatal("Error converting capability (json string) > capability (struct)", err)
@@ -51,7 +51,7 @@ func getCapabilities(w http.ResponseWriter, r *http.Request) {
 /* runCapability executes one specific capability */
 func runCapability(w http.ResponseWriter, r *http.Request) {
 	capabilityParam := r.FormValue("capability")
-	var capability definitions.Capability
+	var capability core.Capability
 
 	json.Unmarshal([]byte(capabilityParam), &capability)
 

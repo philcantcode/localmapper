@@ -9,6 +9,7 @@ MODE, Interactive
 RUNTIME_LOG, res/logs/runtime.txt
 ERROR_LOG, res/logs/error.txt
 PRINT_LOG, res/logs/print.txt
+JSON_LOG, res/logs/jsonlog.txt
 
 // System file locations
 CONFIG_FILE, res/conf.txt
