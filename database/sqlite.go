@@ -49,5 +49,30 @@ func InitSqlite() {
 	utils.ErrorLog("Couldn't create SQL database Vlans", err, true)
 	stmt.Exec()
 
+	stmt, err = connection.Prepare(
+		"CREATE TABLE IF NOT EXISTS Propositions" +
+			"(id INTEGER PRIMARY KEY UNIQUE, " +
+			"type TEXT, " +
+			"date DATETIME DEFAULT CURRENT_TIMESTAMP, " +
+			"description TEXT, " +
+			"proposition TEXT, " +
+			"correction TEXT, " +
+			"status INTEGER default 0, " +
+			"user INTEGER)")
+	utils.ErrorLog("Couldn't create SQL database Propositions", err, true)
+	stmt.Exec()
+
+	stmt, err = connection.Prepare(
+		"CREATE TABLE IF NOT EXISTS CMDB" +
+			"(id INTEGER PRIMARY KEY UNIQUE, " +
+			"osiLayer INTEGER NOT NULL, " +
+			"dateSeen TEXT NOT NULL, " +
+			"description TEXT NOT NULL, " +
+			"statusTags TEXT NOT NULL, " +
+			"userTags TEXT NOT NULL, " +
+			"infoTags TEXT NOT NULL)")
+	utils.ErrorLog("Couldn't create SQL database CMDB", err, true)
+	stmt.Exec()
+
 	stmt.Close()
 }

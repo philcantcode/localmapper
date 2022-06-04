@@ -15,30 +15,57 @@ type DefaultIPGateway struct {
 	DefaultGateway string
 }
 
-func GetNetworkAdapters() map[string]string {
-	var ipInfo = make(map[string]string)
+type NetworkAdapter struct {
+	Name string
+	IP   string
+	IP6  string
+	MAC  string
+	MAC6 string
+}
+
+func GetNetworkAdapters() []NetworkAdapter {
+	var adapters = []NetworkAdapter{}
 
 	ifaces, _ := net.Interfaces()
-	// handle err
+
 	for _, i := range ifaces {
 		addrs, _ := i.Addrs()
-		// handle err
+
+		adapter := NetworkAdapter{Name: i.Name, MAC: i.HardwareAddr.String()}
+
 		for _, addr := range addrs {
-			var ip net.IP
 			switch v := addr.(type) {
 			case *net.IPNet:
-				ip = v.IP
+				adapter.IP = fmt.Sprintf("%s", v.IP)
 			case *net.IPAddr:
-				ip = v.IP
+				adapter.IP6 = fmt.Sprintf("%s", v.IP)
 			}
 
-			ipInfo[i.Name] = fmt.Sprintf("%s", ip)
 		}
+
+		adapters = append(adapters, adapter)
 	}
 
 	utils.Log("Getting a list of network adapters & IP addresses.", false)
 
-	return ipInfo
+	return adapters
+}
+
+/* GenerateListOfGatewaysFromNetworkAdapters calculates the first IP on every
+   network adapter attached. */
+func GenerateListOfGatewaysFromNetworkAdapters() []NetworkAdapter {
+	netAdapters := GetNetworkAdapters()
+
+	// {Adapter Name : IP Address}
+	for key, addr := range netAdapters {
+		ip := []byte(net.ParseIP(addr.IP).To4())
+		gateway := []byte{ip[0], ip[1], ip[2], 1}
+
+		netAdapters[key].IP = string(net.IPv4(ip[0], ip[1], ip[2], 1).String())
+		utils.Log(fmt.Sprintf("Calculating gateway: %d -> %d", ip, gateway), false)
+	}
+
+	return netAdapters
 }
 
 /* HTTP_JSON_GetNetworkAdapters returns all network adapters on the server */

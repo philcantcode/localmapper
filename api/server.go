@@ -5,6 +5,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/philcantcode/localmapper/capabilities/local"
+	"github.com/philcantcode/localmapper/propositions"
 	"github.com/philcantcode/localmapper/utils"
 )
 
@@ -22,6 +23,9 @@ func InitServer() {
 	router.HandleFunc("/local/get-date-time", local.HTTP_JSON_GetDateTime)
 	router.HandleFunc("/local/get-logs", local.HTTP_JSON_GetLogs)
 	router.HandleFunc("/local/get-default-ip-gateway", local.HTTP_JSON_GetDefaultGatewayIP)
+
+	router.HandleFunc("/propositions/get-all", propositions.HTTP_JSON_GetPropositions)
+	router.HandleFunc("/propositions/accept-defaults", propositions.ProcessAcceptDefaults)
 
 	fileServer := http.FileServer(http.Dir("/"))
 

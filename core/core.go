@@ -27,6 +27,43 @@ type Param struct {
 	MetaInfo    string
 }
 
+type Proposition struct {
+	ID          int
+	Type        string
+	Date        string
+	Description string
+	Proposition PropositionItem
+	Correction  PropositionItem
+	Status      int
+	User        int
+}
+
+type PropositionItem struct {
+	Name     string
+	Value    string
+	DataType DataType
+	Options  []string
+}
+
+/* OSI Layer:
+   7 - Firewalls, IDS
+   6 -
+   5 -
+   4 - Firewalls (some)
+   3 - Routers, L3 switches
+   2 - L2 switches, Bridges
+   1 - Hubs, repeaters, modems
+*/
+type CMDBItem struct {
+	ID          int
+	OSILayer    int      // 1 - 7
+	DateSeen    []string //[] Array of dates seen
+	Description string
+	StatusTags  map[string]string // [Stopped, Running] etc
+	UserTags    map[string]string // [Project-X, Bob's Server] etc
+	InfoTags    map[string]string // [IP: xxx, MAC: xxx, URL: xxx] etc
+}
+
 type DataType int
 
 const (

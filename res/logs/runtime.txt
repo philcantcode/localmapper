@@ -1,38 +1,20 @@
-[i][03-06-2022 12:33:12] Attempting to open SQL database: res/database.db
-[i][03-06-2022 12:33:12] Attempting to connect MongoDB to: 
-[i][03-06-2022 12:33:12] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
-[i][03-06-2022 12:33:12] Successfully setup mongo database collections: 
-[i][03-06-2022 12:33:12] Hosting Server at http://localhost:8008
-[i][03-06-2022 12:34:28] Returning the date & time.
-[i][03-06-2022 12:34:28] Returning the date & time.
-[i][03-06-2022 12:34:28] Returning the date & time.
-[i][03-06-2022 12:34:28] Returning the date & time.
-[i][03-06-2022 12:34:28] Getting a list of network adapters & IP addresses.
-[i][03-06-2022 12:35:23] Returning the date & time.
-[i][03-06-2022 12:35:23] Returning the date & time.
-[i][03-06-2022 12:35:23] Returning the date & time.
-[i][03-06-2022 12:35:23] Getting a list of network adapters & IP addresses.
-[i][03-06-2022 12:35:47] Returning the date & time.
-[i][03-06-2022 12:35:47] Returning the date & time.
-[i][03-06-2022 12:35:47] Getting a list of network adapters & IP addresses.
-[i][03-06-2022 12:35:58] Returning the date & time.
-[i][03-06-2022 12:35:58] Returning the date & time.
-[i][03-06-2022 12:35:58] Getting a list of network adapters & IP addresses.
-[i][03-06-2022 12:36:07] Returning the date & time.
-[i][03-06-2022 12:36:07] Returning the date & time.
-[i][03-06-2022 12:36:07] Getting a list of network adapters & IP addresses.
-[i][03-06-2022 12:36:34] Returning the date & time.
-[i][03-06-2022 12:36:34] Returning the date & time.
-[i][03-06-2022 12:36:34] Getting a list of network adapters & IP addresses.
-[i][03-06-2022 12:36:58] Returning the date & time.
-[i][03-06-2022 12:36:58] Returning the date & time.
-[i][03-06-2022 12:36:58] Getting a list of network adapters & IP addresses.
-[i][03-06-2022 12:37:24] Returning the date & time.
-[i][03-06-2022 12:37:24] Returning the date & time.
-[i][03-06-2022 12:37:24] Getting a list of network adapters & IP addresses.
-[i][03-06-2022 12:38:33] Returning the date & time.
-[i][03-06-2022 12:38:33] Returning the date & time.
-[i][03-06-2022 12:38:33] Getting a list of network adapters & IP addresses.
-[i][03-06-2022 12:38:35] Returning the date & time.
-[i][03-06-2022 12:38:35] Returning the date & time.
-[i][03-06-2022 12:38:35] Getting a list of network adapters & IP addresses.
+[i][04-06-2022 16:23:29] Attempting to open SQL database: res/database.db
+[i][04-06-2022 16:23:29] Attempting to connect MongoDB to: 
+[i][04-06-2022 16:23:29] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
+[i][04-06-2022 16:23:29] Successfully setup mongo database collections: 
+[i][04-06-2022 16:23:29] SelectAllCMDB from CMDB DB (sqlite)
+[i][04-06-2022 16:23:29] SelectAllPropositions from Proposotions Db (sqlite)
+[i][04-06-2022 16:23:29] Getting a list of network adapters & IP addresses.
+[i][04-06-2022 16:23:29] Returning the date & time.
+[i][04-06-2022 16:23:29] Inserting Proposition from Proposition DB
+[i][04-06-2022 16:23:29] Hosting Server at http://localhost:8008
+[i][04-06-2022 16:23:33] SelectAllPropositions from Proposotions Db (sqlite)
+[i][04-06-2022 16:23:35] SelectPropositionByID from Proposotions Db (sqlite)
+[i][04-06-2022 16:23:35] Getting a list of network adapters & IP addresses.
+[i][04-06-2022 16:23:35] Returning the date & time.
+[i][04-06-2022 16:23:35] InsertCMDBItem from CMDB DB
+[i][04-06-2022 16:23:35] SetPropositionStatusByID from Proposotions Db (sqlite)
+[i][04-06-2022 16:23:37] SelectAllPropositions from Proposotions Db (sqlite)
+[i][04-06-2022 16:24:14] Returning the date & time.
+[i][04-06-2022 16:24:14] Returning the date & time.
+[i][04-06-2022 16:24:14] Getting a list of network adapters & IP addresses.
