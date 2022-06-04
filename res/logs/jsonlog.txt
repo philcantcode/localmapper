@@ -956,3 +956,54 @@
 {"Type":"Info","DateTime":"04-06-2022 16:24:14","Context":"Returning the date \u0026 time."}
 {"Type":"Info","DateTime":"04-06-2022 16:24:14","Context":"Returning the date \u0026 time."}
 {"Type":"Info","DateTime":"04-06-2022 16:24:14","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 16:28:15","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:15","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 16:28:15","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:15","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 16:28:15","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:15","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:15","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:24","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:24","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 16:28:24","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:24","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 16:28:24","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:24","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:24","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:24","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 16:28:24","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 16:28:24","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:24","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:28","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:31","Context":"SelectPropositionByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:31","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 16:28:31","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 16:28:31","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:31","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 16:28:32","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:14:27","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 19:14:27","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 19:14:27","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 19:14:27","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 19:14:27","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:14:27","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 19:14:27","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 19:15:19","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:18:10","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 19:18:10","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 19:18:10","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 19:18:10","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 19:18:10","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:18:10","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 19:18:10","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 19:22:17","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:22:17","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:22:17","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:37:28","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 19:37:28","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 19:37:28","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 19:37:28","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 19:37:28","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:37:28","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 19:37:28","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 19:38:24","Context":"SelectAllCMDB from CMDB DB (sqlite)"}

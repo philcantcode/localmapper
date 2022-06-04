@@ -1,4 +1,4 @@
-package api
+package capability
 
 import (
 	"encoding/json"
@@ -6,31 +6,29 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/philcantcode/localmapper/capabilities/nmap"
-	"github.com/philcantcode/localmapper/core"
-	"github.com/philcantcode/localmapper/database"
+	"github.com/philcantcode/localmapper/capability/nmap"
 	"github.com/philcantcode/localmapper/utils"
 )
 
 /* updateCapability takes in a single capability (JSON object)
    and updates it via the ID */
-func updateCapability(w http.ResponseWriter, r *http.Request) {
+func Update(w http.ResponseWriter, r *http.Request) {
 	capabilityParam := r.FormValue("capability")
-	var capability core.Capability
+	var capability Capability
 
 	err := json.Unmarshal([]byte(capabilityParam), &capability)
 	utils.ErrorFatal("Error converting capability (json string) > capability (struct)", err)
 
-	database.UpdateCapability(capability)
+	UpdateCapability(capability)
 	w.WriteHeader(200)
 }
 
 /* getCapabilities returns all capabilities as JSON,
    if an ID is specified, it returns that capability,
    otherwise all are returned */
-func getCapabilities(w http.ResponseWriter, r *http.Request) {
+func Get(w http.ResponseWriter, r *http.Request) {
 	id := r.FormValue("id")
-	capabilities := database.SelectAllCapabilities()
+	capabilities := SelectAllCapabilities()
 
 	if id == "" {
 		json.NewEncoder(w).Encode(capabilities)
@@ -49,16 +47,16 @@ func getCapabilities(w http.ResponseWriter, r *http.Request) {
 }
 
 /* runCapability executes one specific capability */
-func runCapability(w http.ResponseWriter, r *http.Request) {
+func Run(w http.ResponseWriter, r *http.Request) {
 	capabilityParam := r.FormValue("capability")
-	var capability core.Capability
+	var capability Capability
 
 	json.Unmarshal([]byte(capabilityParam), &capability)
 
 	switch capability.Type {
 	case "nmap":
-		nmapRun := nmap.RunNmapCommand(capability)
-		database.InsertNetworkNmap(nmapRun)
+		nmapRun := nmap.Execute(ParamsToArray(capability.Command.Params))
+		nmap.InsertNetworkNmap(nmapRun)
 		utils.PrintLog(utils.PrettyPrintToStr(nmapRun))
 		json.NewEncoder(w).Encode(nmapRun)
 		return

@@ -3,16 +3,17 @@ package network
 import (
 	"fmt"
 
-	"github.com/philcantcode/localmapper/capabilities/nmap"
-	"github.com/philcantcode/localmapper/database"
+	"github.com/philcantcode/localmapper/capability"
+	"github.com/philcantcode/localmapper/capability/nmap"
+	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/utils"
 )
 
 /* PingSweepVlans performs a sweep of all IP ranges
    from the Vlan database. */
 func PingSweepVlans() {
-	capability := database.SelectCapability("Ping Sweep")
-	vlans := database.SelectAllVlans()
+	pingCapability := capability.SelectCapability("Ping Sweep")
+	vlans := cmdb.SelectAllVlans()
 
 	// Enumerate each VLan
 	for _, vlan := range vlans {
@@ -22,15 +23,15 @@ func PingSweepVlans() {
 
 		// For each CIDR range, replace the value and run an nmap sweep
 		for _, cidrIP := range cidr {
-			for i, p := range capability.Command.Params {
+			for i, p := range pingCapability.Command.Params {
 				if p.Flag == "" {
-					capability.Command.Params[i].Value = cidrIP
+					pingCapability.Command.Params[i].Value = cidrIP
 				}
 			}
 
 			// Log and insert results into DB
-			result := nmap.RunNmapCommand(capability)
-			database.InsertNetworkNmap(result)
+			result := nmap.Execute(capability.ParamsToArray(pingCapability.Command.Params))
+			nmap.InsertNetworkNmap(result)
 			utils.PrintLog(utils.PrettyPrintToStr(result))
 		}
 	}

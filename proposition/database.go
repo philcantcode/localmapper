@@ -1,15 +1,15 @@
-package database
+package proposition
 
 import (
 	"encoding/json"
 
-	"github.com/philcantcode/localmapper/core"
+	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func InsertProposition(proposition core.Proposition) {
+func InsertProposition(proposition Proposition) {
 	utils.Log("Inserting Proposition from Proposition DB", false)
-	stmt, err := connection.Prepare("INSERT INTO `Propositions`" +
+	stmt, err := database.Con.Prepare("INSERT INTO `Propositions`" +
 		"(`type`, `description`, `proposition`, `correction`, `status`, `user`) VALUES (?, ?, ?, ?, ?, ?);")
 	utils.ErrorLog("Couldn't prepare InsertProposition into Proposition", err, true)
 
@@ -24,19 +24,19 @@ func InsertProposition(proposition core.Proposition) {
 	stmt.Close()
 }
 
-func SelectAllPropositions() []core.Proposition {
+func SelectAllPropositions() []Proposition {
 	utils.Log("SelectAllPropositions from Proposotions Db (sqlite)", false)
-	stmt, err := connection.Prepare("SELECT `id`, `type`, `date`, `description`, `proposition`, `correction`, `status`, `user` FROM `Propositions` ORDER BY `id` DESC")
+	stmt, err := database.Con.Prepare("SELECT `id`, `type`, `date`, `description`, `proposition`, `correction`, `status`, `user` FROM `Propositions` ORDER BY `id` DESC")
 	utils.ErrorLog("Couldn't select all from Propositions", err, true)
 
 	rows, err := stmt.Query()
 	utils.ErrorLog("Couldn't recieve rows from SelectAllPropositions", err, true)
 	defer rows.Close()
 
-	props := []core.Proposition{}
+	props := []Proposition{}
 
 	for rows.Next() {
-		prop := core.Proposition{}
+		prop := Proposition{}
 
 		propString := ""
 		correctionString := ""
@@ -52,9 +52,9 @@ func SelectAllPropositions() []core.Proposition {
 	return props
 }
 
-func SelectPropositionByID(ID int) core.Proposition {
+func SelectPropositionByID(ID int) Proposition {
 	utils.Log("SelectPropositionByID from Proposotions Db (sqlite)", false)
-	stmt, err := connection.Prepare("SELECT `id`, `type`, `date`, `description`, `proposition`, `correction`, `status`, `user` FROM `Propositions` WHERE `id` = ?")
+	stmt, err := database.Con.Prepare("SELECT `id`, `type`, `date`, `description`, `proposition`, `correction`, `status`, `user` FROM `Propositions` WHERE `id` = ?")
 	utils.ErrorLog("Couldn't select all from Propositions", err, true)
 
 	rows, err := stmt.Query(ID)
@@ -62,7 +62,7 @@ func SelectPropositionByID(ID int) core.Proposition {
 	defer rows.Close()
 
 	for rows.Next() {
-		prop := core.Proposition{}
+		prop := Proposition{}
 
 		propString := ""
 		correctionString := ""
@@ -76,7 +76,7 @@ func SelectPropositionByID(ID int) core.Proposition {
 	}
 
 	utils.ErrorContextLog("Couldn't find proposition by ID", true)
-	return core.Proposition{}
+	return Proposition{}
 }
 
 /* 0 = Open
@@ -84,7 +84,7 @@ func SelectPropositionByID(ID int) core.Proposition {
    2 = Disabled */
 func SetPropositionStatusByID(ID int, status int) {
 	utils.Log("SetPropositionStatusByID from Proposotions Db (sqlite)", false)
-	stmt, err := connection.Prepare("UPDATE `Propositions` SET `status` = ? WHERE `id` = ?")
+	stmt, err := database.Con.Prepare("UPDATE `Propositions` SET `status` = ? WHERE `id` = ?")
 	utils.ErrorLog("Couldn't select all from Propositions", err, true)
 
 	_, err = stmt.Exec(status, ID)

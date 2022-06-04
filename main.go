@@ -1,9 +1,8 @@
 package main
 
 import (
-	"github.com/philcantcode/localmapper/api"
 	"github.com/philcantcode/localmapper/database"
-	"github.com/philcantcode/localmapper/propositions"
+	"github.com/philcantcode/localmapper/proposition"
 	"github.com/philcantcode/localmapper/utils"
 )
 
@@ -13,7 +12,7 @@ func main() {
 	database.InitSqlite()
 	database.InitMongo()
 
-	propositions.SetupJobs()
+	proposition.SetupJobs()
 
-	api.InitServer()
+	initServer()
 }

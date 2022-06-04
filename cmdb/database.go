@@ -1,15 +1,15 @@
-package database
+package cmdb
 
 import (
 	"encoding/json"
 
-	"github.com/philcantcode/localmapper/core"
+	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func InsertCMDBItem(cmdb core.CMDBItem) {
+func InsertCMDBItem(cmdb CMDBItem) {
 	utils.Log("InsertCMDBItem from CMDB DB", false)
-	stmt, err := connection.Prepare("INSERT INTO `CMDB`" +
+	stmt, err := database.Con.Prepare("INSERT INTO `CMDB`" +
 		"(`osiLayer`, `dateSeen`, `description`, `statusTags`, `userTags`, `infoTags`) VALUES (?, ?, ?, ?, ?, ?);")
 	utils.ErrorLog("Couldn't prepare InsertCMDBItem into CMDB", err, true)
 
@@ -31,19 +31,19 @@ func InsertCMDBItem(cmdb core.CMDBItem) {
 }
 
 // SelectCMDBItemByLayer returns all items at an OSI layer
-func SelectCMDBItemByLayer(osiLayer int) []core.CMDBItem {
+func SelectCMDBItemByLayer(osiLayer int) []CMDBItem {
 	utils.Log("SelectCMDBItemByLayer from CMDB DB (sqlite)", false)
-	stmt, err := connection.Prepare("SELECT `id`, `osiLayer`, `dateSeen`, `description`, `statusTags`, `userTags`, `infoTags` FROM `CMDB` WHERE `osiLayer` = ?")
+	stmt, err := database.Con.Prepare("SELECT `id`, `osiLayer`, `dateSeen`, `description`, `statusTags`, `userTags`, `infoTags` FROM `CMDB` WHERE `osiLayer` = ?")
 	utils.ErrorLog("Couldn't select CMDB items by iosLayer from CMDB", err, true)
 
 	rows, err := stmt.Query(osiLayer)
 	utils.ErrorLog("Couldn't recieve rows from SelectCMDBItemByLayer", err, true)
 	defer rows.Close()
 
-	cmdbs := []core.CMDBItem{}
+	cmdbs := []CMDBItem{}
 
 	for rows.Next() {
-		cmdb := core.CMDBItem{}
+		cmdb := CMDBItem{}
 
 		rows.Scan(&cmdb.ID, &cmdb.OSILayer, &cmdb.DateSeen, &cmdb.Description, &cmdb.StatusTags, &cmdb.UserTags, &cmdb.InfoTags)
 
@@ -53,19 +53,19 @@ func SelectCMDBItemByLayer(osiLayer int) []core.CMDBItem {
 	return cmdbs
 }
 
-func SelectAllCMDB() []core.CMDBItem {
+func SelectAllCMDB() []CMDBItem {
 	utils.Log("SelectAllCMDB from CMDB DB (sqlite)", false)
-	stmt, err := connection.Prepare("SELECT `id`, `osiLayer`, `dateSeen`, `description`, `statusTags`, `userTags`, `infoTags` FROM `CMDB`")
+	stmt, err := database.Con.Prepare("SELECT `id`, `osiLayer`, `dateSeen`, `description`, `statusTags`, `userTags`, `infoTags` FROM `CMDB`")
 	utils.ErrorLog("Couldn't select SelectAllCMDB from CMDB", err, true)
 
 	rows, err := stmt.Query()
 	utils.ErrorLog("Couldn't recieve rows from SelectAllCMDB", err, true)
 	defer rows.Close()
 
-	cmdbs := []core.CMDBItem{}
+	cmdbs := []CMDBItem{}
 
 	for rows.Next() {
-		cmdb := core.CMDBItem{}
+		cmdb := CMDBItem{}
 		var statusTags string
 		var userTags string
 		var infoTags string
@@ -82,4 +82,27 @@ func SelectAllCMDB() []core.CMDBItem {
 	}
 
 	return cmdbs
+}
+
+// Descending Order
+func SelectAllVlans() []Vlan {
+	utils.Log("SelectAllVlans from Vlans Db (sqlite)", false)
+	stmt, err := database.Con.Prepare("SELECT `id`, `name`, `description`, `highIP`, `lowIP`, `tags` FROM `Vlans` ORDER BY `id` DESC")
+	utils.ErrorLog("Couldn't select all from Vlans", err, true)
+
+	rows, err := stmt.Query()
+	utils.ErrorLog("Couldn't recieve rows from SelectAllVlans", err, true)
+	defer rows.Close()
+
+	vlans := []Vlan{}
+
+	for rows.Next() {
+		vlan := Vlan{}
+
+		rows.Scan(&vlan.ID, &vlan.Name, &vlan.Description, &vlan.HighIP, &vlan.LowIP, &vlan.Tags)
+
+		vlans = append(vlans, vlan)
+	}
+
+	return vlans
 }

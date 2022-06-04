@@ -1,15 +1,15 @@
-package database
+package capability
 
 import (
 	"encoding/json"
 
-	"github.com/philcantcode/localmapper/core"
+	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func InsertCapability(capability core.Capability) {
+func InsertCapability(capability Capability) {
 	utils.Log("Inserting Hosts from CommandCapability DB", false)
-	stmt, err := connection.Prepare("INSERT INTO `Capabilities`" +
+	stmt, err := database.Con.Prepare("INSERT INTO `Capabilities`" +
 		"(`name`, `type`, `command`, `description`, `displayFields`) VALUES (?, ?, ?, ?, ?);")
 	utils.ErrorLog("Couldn't prepare InsertCommand CommandCapability", err, true)
 
@@ -21,9 +21,9 @@ func InsertCapability(capability core.Capability) {
 	stmt.Close()
 }
 
-func UpdateCapability(capability core.Capability) {
+func UpdateCapability(capability Capability) {
 	utils.Log("Updating Capabilities database", false)
-	stmt, err := connection.Prepare("UPDATE `Capabilities` SET `name` = ?, `type` = ?, `command` = ?, `description` = ?, `displayFields` = ? WHERE `id` = ?;")
+	stmt, err := database.Con.Prepare("UPDATE `Capabilities` SET `name` = ?, `type` = ?, `command` = ?, `description` = ?, `displayFields` = ? WHERE `id` = ?;")
 	utils.ErrorFatal("Couldn't update Capabilities database", err)
 
 	command, err := json.Marshal(capability.Command)
@@ -34,19 +34,19 @@ func UpdateCapability(capability core.Capability) {
 	stmt.Close()
 }
 
-func SelectAllCapabilities() []core.Capability {
+func SelectAllCapabilities() []Capability {
 	utils.Log("Querying capabilities from Capabilities DB", false)
-	stmt, err := connection.Prepare("SELECT `id`, `command`, `type`, `name`, `description`, `displayFields` FROM `Capabilities`")
+	stmt, err := database.Con.Prepare("SELECT `id`, `command`, `type`, `name`, `description`, `displayFields` FROM `Capabilities`")
 	utils.ErrorLog("Couldn't select all from Capabilities GetAllCapabilities", err, true)
 
 	rows, err := stmt.Query()
 	utils.ErrorLog("Couldn't recieve rows from SelectAllCapabilities", err, true)
 	defer rows.Close()
 
-	capabilities := []core.Capability{}
+	capabilities := []Capability{}
 
 	for rows.Next() {
-		capability := core.Capability{}
+		capability := Capability{}
 		command := ""
 
 		rows.Scan(&capability.ID, &command, &capability.Type, &capability.Name, &capability.Desc, &capability.DisplayFields)
@@ -58,7 +58,7 @@ func SelectAllCapabilities() []core.Capability {
 	return capabilities
 }
 
-func SelectCapability(name string) core.Capability {
+func SelectCapability(name string) Capability {
 	capabilities := SelectAllCapabilities()
 
 	for _, k := range capabilities {
@@ -68,5 +68,5 @@ func SelectCapability(name string) core.Capability {
 	}
 
 	utils.ErrorForceFatal("Could not SelectCapability for: " + name)
-	return core.Capability{}
+	return Capability{}
 }

@@ -7,16 +7,16 @@ import (
 	"github.com/philcantcode/localmapper/utils"
 )
 
-var connection *sql.DB
+var Con *sql.DB
 
 func InitSqlite() {
 	utils.Log("Attempting to open SQL database: "+utils.Configs["DATABASE_PATH"], true)
 	var err error
-	connection, err = sql.Open("sqlite3", utils.Configs["DATABASE_PATH"])
+	Con, err = sql.Open("sqlite3", utils.Configs["DATABASE_PATH"])
 
 	utils.ErrorLog("Couldn't open SQLite3 database", err, true)
 
-	stmt, err := connection.Prepare(
+	stmt, err := Con.Prepare(
 		"CREATE TABLE IF NOT EXISTS HostTracking" +
 			"(id INTEGER PRIMARY KEY UNIQUE, " +
 			"mac TEXT, " +
@@ -28,7 +28,7 @@ func InitSqlite() {
 	utils.ErrorLog("Couldn't create SQL database HostTracking", err, true)
 	stmt.Exec()
 
-	stmt, err = connection.Prepare(
+	stmt, err = Con.Prepare(
 		"CREATE TABLE IF NOT EXISTS Capabilities" +
 			"(id INTEGER PRIMARY KEY UNIQUE, " +
 			"name TEXT NOT NULL, " +
@@ -39,7 +39,7 @@ func InitSqlite() {
 	utils.ErrorLog("Couldn't create SQL database Capabilities", err, true)
 	stmt.Exec()
 
-	stmt, err = connection.Prepare(
+	stmt, err = Con.Prepare(
 		"CREATE TABLE IF NOT EXISTS Vlans" +
 			"(id INTEGER PRIMARY KEY UNIQUE, " +
 			"name TEXT NOT NULL Unique, " +
@@ -49,7 +49,7 @@ func InitSqlite() {
 	utils.ErrorLog("Couldn't create SQL database Vlans", err, true)
 	stmt.Exec()
 
-	stmt, err = connection.Prepare(
+	stmt, err = Con.Prepare(
 		"CREATE TABLE IF NOT EXISTS Propositions" +
 			"(id INTEGER PRIMARY KEY UNIQUE, " +
 			"type TEXT, " +
@@ -62,7 +62,7 @@ func InitSqlite() {
 	utils.ErrorLog("Couldn't create SQL database Propositions", err, true)
 	stmt.Exec()
 
-	stmt, err = connection.Prepare(
+	stmt, err = Con.Prepare(
 		"CREATE TABLE IF NOT EXISTS CMDB" +
 			"(id INTEGER PRIMARY KEY UNIQUE, " +
 			"osiLayer INTEGER NOT NULL, " +

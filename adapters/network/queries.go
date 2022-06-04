@@ -1,8 +1,7 @@
 package network
 
 import (
-	"github.com/philcantcode/localmapper/capabilities/nmap"
-	"github.com/philcantcode/localmapper/database"
+	"github.com/philcantcode/localmapper/capability/nmap"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
@@ -11,7 +10,7 @@ import (
 func ListAllAddresses() []nmap.Address {
 	var returnArray []nmap.Address
 
-	results := database.FilterNetworkNmap(
+	results := nmap.FilterNetworkNmap(
 		bson.M{},
 		bson.M{
 			"hosts": bson.M{
