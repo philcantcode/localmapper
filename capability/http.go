@@ -2,17 +2,15 @@ package capability
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"strconv"
 
-	"github.com/philcantcode/localmapper/capability/nmap"
 	"github.com/philcantcode/localmapper/utils"
 )
 
 /* updateCapability takes in a single capability (JSON object)
    and updates it via the ID */
-func Update(w http.ResponseWriter, r *http.Request) {
+func HTTP_JSON_Update(w http.ResponseWriter, r *http.Request) {
 	capabilityParam := r.FormValue("capability")
 	var capability Capability
 
@@ -26,7 +24,7 @@ func Update(w http.ResponseWriter, r *http.Request) {
 /* getCapabilities returns all capabilities as JSON,
    if an ID is specified, it returns that capability,
    otherwise all are returned */
-func Get(w http.ResponseWriter, r *http.Request) {
+func HTTP_JSON_Get(w http.ResponseWriter, r *http.Request) {
 	id := r.FormValue("id")
 	capabilities := SelectAllCapabilities()
 
@@ -47,20 +45,13 @@ func Get(w http.ResponseWriter, r *http.Request) {
 }
 
 /* runCapability executes one specific capability */
-func Run(w http.ResponseWriter, r *http.Request) {
+func HTTP_JSON_Run(w http.ResponseWriter, r *http.Request) {
 	capabilityParam := r.FormValue("capability")
 	var capability Capability
 
 	json.Unmarshal([]byte(capabilityParam), &capability)
 
-	switch capability.Type {
-	case "nmap":
-		nmapRun := nmap.Execute(ParamsToArray(capability.Command.Params))
-		nmap.InsertNetworkNmap(nmapRun)
-		utils.PrintLog(utils.PrettyPrintToStr(nmapRun))
-		json.NewEncoder(w).Encode(nmapRun)
-		return
-	default:
-		utils.ErrorForceFatal(fmt.Sprintf("No capability type to run in adapters.api.RunCapability: %v", capability))
-	}
+	result := ProcessCapability(capability)
+
+	json.NewEncoder(w).Encode(result)
 }

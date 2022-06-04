@@ -1,8 +1,22 @@
-[i][04-06-2022 19:37:28] Attempting to open SQL database: res/database.db
-[i][04-06-2022 19:37:28] Attempting to connect MongoDB to: 
-[i][04-06-2022 19:37:28] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
-[i][04-06-2022 19:37:28] Successfully setup mongo database collections: 
-[i][04-06-2022 19:37:28] SelectAllCMDB from CMDB DB (sqlite)
-[i][04-06-2022 19:37:28] Identity local already found in CMDB
-[i][04-06-2022 19:37:28] Hosting Server at http://localhost:8008
-[i][04-06-2022 19:38:24] SelectAllCMDB from CMDB DB (sqlite)
+[i][04-06-2022 23:27:41] Attempting to open SQL database: res/database.db
+[i][04-06-2022 23:27:41] Attempting to connect MongoDB to: 
+[i][04-06-2022 23:27:41] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
+[i][04-06-2022 23:27:41] Successfully setup mongo database collections: 
+[i][04-06-2022 23:27:41] SelectAllCMDB from CMDB DB (sqlite)
+[i][04-06-2022 23:27:41] Identity local already found in CMDB
+[i][04-06-2022 23:27:41] Hosting Server at http://localhost:8008
+[i][04-06-2022 23:27:45] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:31:01] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:31:26] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:31:31] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:32:33] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:35:41] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:35:53] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:35:55] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:36:00] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:36:01] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:36:01] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:36:02] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:36:06] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:36:15] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][04-06-2022 23:37:20] SELECT_JobSpec_All from JobSpec Db (sqlite)

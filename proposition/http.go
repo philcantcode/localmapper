@@ -16,7 +16,7 @@ func ProcessAcceptDefaults(w http.ResponseWriter, r *http.Request) {
 	utils.ErrorLog("Couldn't convert ID to integer while running ProcessAcceptDefaults", err, true)
 
 	// Set the result to accept by default
-	prop := SelectPropositionByID(idInt)
+	prop := SELECT_Proposition_ByID(idInt)
 	prop.Status = 0
 	prop.Correction = prop.Proposition
 
@@ -25,5 +25,13 @@ func ProcessAcceptDefaults(w http.ResponseWriter, r *http.Request) {
 
 /* HTTP_JSON_GetDefaultGatewayIP both the deafult IP and the Gateway */
 func HTTP_JSON_GetPropositions(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(SelectAllPropositions())
+	json.NewEncoder(w).Encode(SELECT_Propositions_All())
+}
+
+// HTTP_JSON_Refresh is called when the user visits http://server.com/propositions to referesh them
+func HTTP_JSON_Refresh(w http.ResponseWriter, r *http.Request) {
+	utils.Log("Refreshing propositions (http req)", false)
+
+	SetupJobs()
+	json.NewEncoder(w).Encode("Done")
 }

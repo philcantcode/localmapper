@@ -58,7 +58,7 @@ func SelectAllCapabilities() []Capability {
 	return capabilities
 }
 
-func SelectCapability(name string) Capability {
+func SELECT_Capability_ByName(name string) Capability {
 	capabilities := SelectAllCapabilities()
 
 	for _, k := range capabilities {
@@ -68,5 +68,18 @@ func SelectCapability(name string) Capability {
 	}
 
 	utils.ErrorForceFatal("Could not SelectCapability for: " + name)
+	return Capability{}
+}
+
+func SELECT_Capability_ByID(id int) Capability {
+	capabilities := SelectAllCapabilities()
+
+	for _, k := range capabilities {
+		if k.ID == id {
+			return k
+		}
+	}
+
+	utils.ErrorForceFatal("Could not SELECT_Capability_ByID for")
 	return Capability{}
 }

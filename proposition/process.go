@@ -29,6 +29,6 @@ func processProposition(proposition Proposition) {
 		serverCMDB := cmdb.CMDBItem{OSILayer: 7, Description: "local-mapper Server", StatusTags: statusTags, InfoTags: infoTags, DateSeen: time}
 		cmdb.InsertCMDBItem(serverCMDB)
 
-		SetPropositionStatusByID(proposition.ID, 1)
+		UPDATE_Proposition_Status_ByID(proposition.ID, 1)
 	}
 }

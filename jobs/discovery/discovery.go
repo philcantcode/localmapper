@@ -12,7 +12,7 @@ import (
 /* PingSweepVlans performs a sweep of all IP ranges
    from the Vlan database. */
 func PingSweepVlans() {
-	pingCapability := capability.SelectCapability("Ping Sweep")
+	pingCapability := capability.SELECT_Capability_ByName("Ping Sweep")
 	vlans := cmdb.SelectAllVlans()
 
 	// Enumerate each VLan

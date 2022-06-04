@@ -25,9 +25,9 @@ func setupSelfIdentity() {
 	}
 
 	// Delete old propositions from previous reboots
-	for _, proposition := range SelectAllPropositions() {
+	for _, proposition := range SELECT_Propositions_All() {
 		if proposition.Type == "local-net-iface" {
-			SetPropositionStatusByID(proposition.ID, 2) // 2 = disabled
+			UPDATE_Proposition_Status_ByID(proposition.ID, 2) // 2 = disabled
 		}
 	}
 
@@ -41,5 +41,5 @@ func setupSelfIdentity() {
 	propItem := PropositionItem{Name: "Server IP", Value: local.GetDefaultIPGateway().DefaultIP, DataType: utils.IP, Options: optionIPs}
 	prop := Proposition{Type: "local-net-iface", Date: local.GetDateTime().DateTime, Description: "Please choose the IP address for this server.", Correction: PropositionItem{}, Proposition: propItem}
 
-	InsertProposition(prop)
+	INSERT_Proposition(prop)
 }

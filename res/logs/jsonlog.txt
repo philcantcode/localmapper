@@ -1007,3 +1007,684 @@
 {"Type":"Info","DateTime":"04-06-2022 19:37:28","Context":"Identity local already found in CMDB"}
 {"Type":"Info","DateTime":"04-06-2022 19:37:28","Context":"Hosting Server at http://localhost:8008"}
 {"Type":"Info","DateTime":"04-06-2022 19:38:24","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:38:58","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:39:03","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:40:25","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:42:47","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 19:42:52","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:43:37","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:43:37","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:43:37","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:43:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:43:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:43:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:43:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:43:37","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:43:37","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:43:37","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:43:37","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:13","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:14","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:14","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:14","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:14","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:14","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:14","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:14","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:14","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:15","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:45:16","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:20","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:21","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:39","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:49","Context":"SelectPropositionByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:49","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:46:49","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:46:49","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:49","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:50","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:50","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:50","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 19:46:50","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:48:40","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:48:40","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:48:40","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 19:48:40","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:48:57","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:48:57","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:48:57","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:49:06","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:50:36","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:50:36","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:50:36","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:50:55","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:50:55","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:50:55","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:50:55","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:51:05","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:51:05","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:51:05","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:51:05","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:51:09","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:34","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:56:34","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:56:34","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:34","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:56:51","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:57:01","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:08","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:44","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:48","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:58:48","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 19:58:48","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 19:58:49","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 19:59:33","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:01:08","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:01:08","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:01:08","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:01:08","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:01:45","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:01:45","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:01:45","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:01:45","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:02:12","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:02:12","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:02:12","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:02:12","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:03:02","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:03:02","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:03:02","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:03:02","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:04:32","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:04:32","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:04:32","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:32","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:35","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 20:04:37","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SelectPropositionByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:34","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:36","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:36","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:36","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:36","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:51","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:05:52","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:06:59","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:06:59","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:06:59","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:06:59","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:08","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:08","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:08","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:08","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:47","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:47","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:47","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:48","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"Inserting Proposition from Proposition DB"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:50","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:52","Context":"SelectPropositionByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:52","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:52","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:52","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:52","Context":"SetPropositionStatusByID from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:55","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:55","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:07:55","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:07:55","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:09:01","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 20:09:01","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:09:01","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 20:09:01","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:09:03","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:09:03","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:09:03","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:09:03","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:10:19","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 20:10:19","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:10:19","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 20:10:19","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:18:21","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"04-06-2022 20:18:57","Context":"Refreshing propositions"}
+{"Type":"Info","DateTime":"04-06-2022 20:18:57","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:18:57","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 20:18:57","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:19:00","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:19:00","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:19:00","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:19:00","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:19:38","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:19:38","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:19:38","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:19:38","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:20:07","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:20:07","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 20:20:07","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:20:07","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 20:32:39","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 20:32:39","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 20:32:39","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 20:32:39","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 20:32:39","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:32:39","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 20:32:39","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 20:32:49","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 20:36:46","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 21:10:37","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 21:11:05","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 21:39:46","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 21:39:46","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"04-06-2022 21:39:46","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 21:39:47","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"04-06-2022 22:00:52","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 22:00:52","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 22:00:52","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 22:00:52","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 22:00:52","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 22:00:52","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 22:00:52","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 22:33:54","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 22:33:54","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 22:33:54","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 22:33:54","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 22:33:54","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 22:33:54","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 22:33:54","Context":"SelectAllVlans from Vlans Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 22:33:54","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 22:41:06","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 22:41:06","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 22:41:06","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 22:41:06","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 22:41:06","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 22:41:06","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 22:41:06","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 22:41:44","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 22:41:44","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 22:41:44","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 22:41:44","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 22:41:44","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 22:41:44","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 22:41:44","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 22:42:04","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 22:42:04","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 22:42:04","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 22:42:04","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 22:42:04","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 22:42:04","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 22:42:04","Context":"SelectAllVlans from Vlans Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 22:42:04","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 22:47:48","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:13:47","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 23:13:47","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 23:13:47","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 23:13:47","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 23:13:47","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:13:47","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 23:13:47","Context":"TEST_JobSpecCreator Ran"}
+{"Type":"Info","DateTime":"04-06-2022 23:13:47","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"TEST_JobSpecCreator Ran"}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"job_1_PingSweepVLANs recieved JobSpec {JobID:1 Name:Ping Sweep Description:Perform a Ping Sweep of an IP range. DataType:2 Targets:[] Capabilities:[2]}\n"}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"SelectAllVlans from Vlans Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"Running Job Capability: {ID:2 Command:{Program:nmap Params:[{Flag:-sn Value: MetaType:7 MetaDefault: MetaInfo:Ping Sweep flag} {Flag: Value:192.168.0.0/16 MetaType:2 MetaDefault: MetaInfo:IP Range input} {Flag:-oX Value:- MetaType:0 MetaDefault:- MetaInfo:Export to XML}]} Type:nmap Name:Ping Sweep Desc:Perform an Nmap Ping Sweep of the network DisplayFields:[]}\n"}
+{"Type":"Info","DateTime":"04-06-2022 23:15:11","Context":"Attempting to run Nmap Command: nmap \u003e [-sn 192.168.0.0/16 -oX -]"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"TEST_JobSpecCreator Ran"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"job_1_PingSweepVLANs recieved JobSpec {JobID:1 Name:Ping Sweep Description:Perform a Ping Sweep of an IP range. DataType:2 Targets:[] Capabilities:[2]}\n"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"SelectAllVlans from Vlans Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Running Job Capability: {ID:2 Command:{Program:nmap Params:[{Flag:-sn Value: MetaType:7 MetaDefault: MetaInfo:Ping Sweep flag} {Flag: Value:192.168.0.0/16 MetaType:2 MetaDefault: MetaInfo:IP Range input} {Flag:-oX Value:- MetaType:0 MetaDefault:- MetaInfo:Export to XML}]} Type:nmap Name:Ping Sweep Desc:Perform an Nmap Ping Sweep of the network DisplayFields:[]}\n"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Attempting to run Nmap Command: nmap \u003e [-sn 192.168.0.0/16 -oX -]"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Running Job Capability: {ID:2 Command:{Program:nmap Params:[{Flag:-sn Value: MetaType:7 MetaDefault: MetaInfo:Ping Sweep flag} {Flag: Value:172.16.0.0/12 MetaType:2 MetaDefault: MetaInfo:IP Range input} {Flag:-oX Value:- MetaType:0 MetaDefault:- MetaInfo:Export to XML}]} Type:nmap Name:Ping Sweep Desc:Perform an Nmap Ping Sweep of the network DisplayFields:[]}\n"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Attempting to run Nmap Command: nmap \u003e [-sn 172.16.0.0/12 -oX -]"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Running Job Capability: {ID:2 Command:{Program:nmap Params:[{Flag:-sn Value: MetaType:7 MetaDefault: MetaInfo:Ping Sweep flag} {Flag: Value:10.0.0.0/8 MetaType:2 MetaDefault: MetaInfo:IP Range input} {Flag:-oX Value:- MetaType:0 MetaDefault:- MetaInfo:Export to XML}]} Type:nmap Name:Ping Sweep Desc:Perform an Nmap Ping Sweep of the network DisplayFields:[]}\n"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 23:16:57","Context":"Attempting to run Nmap Command: nmap \u003e [-sn 10.0.0.0/8 -oX -]"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"TEST_JobSpecCreator Ran"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"job_1_PingSweepVLANs recieved JobSpec {JobID:1 Name:Ping Sweep Description:Perform a Ping Sweep of an IP range. DataType:2 Targets:[] Capabilities:[2]}\n"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"SelectAllVlans from Vlans Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"Running Job Capability: {ID:2 Command:{Program:nmap Params:[{Flag:-sn Value: MetaType:7 MetaDefault: MetaInfo:Ping Sweep flag} {Flag: Value:192.168.0.0/16 MetaType:2 MetaDefault: MetaInfo:IP Range input} {Flag:-oX Value:- MetaType:0 MetaDefault:- MetaInfo:Export to XML}]} Type:nmap Name:Ping Sweep Desc:Perform an Nmap Ping Sweep of the network DisplayFields:[]}\n"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:09","Context":"Attempting to run Nmap Command: nmap \u003e [-sn 192.168.0.0/16 -oX -]"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:44","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:44","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 23:26:44","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:44","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 23:26:44","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:44","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:44","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:55","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:26:55","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:55","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:26:55","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:55","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:26:55","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:56","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:26:56","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:56","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:26:56","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:26:56","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:26:56","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:01","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:27:01","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:01","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:27:01","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:01","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:27:01","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:31","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:27:31","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:31","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:27:31","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:31","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Error","DateTime":"04-06-2022 23:27:31","Context":"Couldn't select all from JobSpec"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:41","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:41","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"04-06-2022 23:27:41","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:41","Context":"Successfully setup mongo database collections: "}
+{"Type":"Info","DateTime":"04-06-2022 23:27:41","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:41","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:41","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"04-06-2022 23:27:45","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:31:01","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:31:26","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:31:31","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:32:33","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:35:41","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:35:53","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:35:55","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:36:00","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:36:01","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:36:01","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:36:02","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:36:06","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:36:15","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"04-06-2022 23:37:20","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}

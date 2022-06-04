@@ -20,3 +20,7 @@ func HTTP_JSON_GetSelf(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(CMDBItem{})
 }
+
+func HTTP_JSON_GetAll(w http.ResponseWriter, r *http.Request) {
+	json.NewEncoder(w).Encode(SelectAllCMDB())
+}

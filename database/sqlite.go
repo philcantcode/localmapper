@@ -74,5 +74,12 @@ func InitSqlite() {
 	utils.ErrorLog("Couldn't create SQL database CMDB", err, true)
 	stmt.Exec()
 
+	stmt, err = Con.Prepare(
+		"CREATE TABLE IF NOT EXISTS JobSpecs" +
+			"(id INTEGER PRIMARY KEY UNIQUE, " +
+			"job TEXT NOT NULL)")
+	utils.ErrorLog("Couldn't create SQL database JobSpecs", err, true)
+	stmt.Exec()
+
 	stmt.Close()
 }

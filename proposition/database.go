@@ -7,7 +7,7 @@ import (
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func InsertProposition(proposition Proposition) {
+func INSERT_Proposition(proposition Proposition) {
 	utils.Log("Inserting Proposition from Proposition DB", false)
 	stmt, err := database.Con.Prepare("INSERT INTO `Propositions`" +
 		"(`type`, `description`, `proposition`, `correction`, `status`, `user`) VALUES (?, ?, ?, ?, ?, ?);")
@@ -24,7 +24,7 @@ func InsertProposition(proposition Proposition) {
 	stmt.Close()
 }
 
-func SelectAllPropositions() []Proposition {
+func SELECT_Propositions_All() []Proposition {
 	utils.Log("SelectAllPropositions from Proposotions Db (sqlite)", false)
 	stmt, err := database.Con.Prepare("SELECT `id`, `type`, `date`, `description`, `proposition`, `correction`, `status`, `user` FROM `Propositions` ORDER BY `id` DESC")
 	utils.ErrorLog("Couldn't select all from Propositions", err, true)
@@ -52,7 +52,7 @@ func SelectAllPropositions() []Proposition {
 	return props
 }
 
-func SelectPropositionByID(ID int) Proposition {
+func SELECT_Proposition_ByID(ID int) Proposition {
 	utils.Log("SelectPropositionByID from Proposotions Db (sqlite)", false)
 	stmt, err := database.Con.Prepare("SELECT `id`, `type`, `date`, `description`, `proposition`, `correction`, `status`, `user` FROM `Propositions` WHERE `id` = ?")
 	utils.ErrorLog("Couldn't select all from Propositions", err, true)
@@ -82,7 +82,7 @@ func SelectPropositionByID(ID int) Proposition {
 /* 0 = Open
    1 = Complete
    2 = Disabled */
-func SetPropositionStatusByID(ID int, status int) {
+func UPDATE_Proposition_Status_ByID(ID int, status int) {
 	utils.Log("SetPropositionStatusByID from Proposotions Db (sqlite)", false)
 	stmt, err := database.Con.Prepare("UPDATE `Propositions` SET `status` = ? WHERE `id` = ?")
 	utils.ErrorLog("Couldn't select all from Propositions", err, true)
