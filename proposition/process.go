@@ -12,11 +12,11 @@ func processProposition(proposition Proposition) {
 		infoTags := make(map[string]string)
 
 		statusTags["Verified"] = "1"
-		infoTags["IP"] = proposition.Correction.Value
+		infoTags["IP"] = proposition.Predicate.Value
 		infoTags["identity"] = "local"
 
 		for _, net := range local.GetNetworkAdapters() {
-			if net.IP == proposition.Correction.Value {
+			if net.IP == proposition.Predicate.Value {
 				infoTags["MAC"] = net.MAC
 				infoTags["MAC6"] = net.MAC6
 				infoTags["NetAdapter"] = net.Name
@@ -27,8 +27,10 @@ func processProposition(proposition Proposition) {
 		time := []string{local.GetDateTime().DateTime}
 
 		serverCMDB := cmdb.CMDBItem{OSILayer: 7, Description: "local-mapper Server", StatusTags: statusTags, InfoTags: infoTags, DateSeen: time}
-		cmdb.InsertCMDBItem(serverCMDB)
+		cmdb.INSERT_CMDBItem(serverCMDB)
 
-		UPDATE_Proposition_Status_ByID(proposition.ID, 1)
+		proposition.Status = 1
+
+		UPDATE_Proposition(proposition)
 	}
 }

@@ -6,11 +6,12 @@ import (
 	"github.com/philcantcode/localmapper/capability"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/utils"
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 func PreProcess(job JobSpec) {
-	switch job.JobID {
-	case 1:
+	switch job.ID.String() {
+	case "629be82ed3bf3e32aa937364":
 		job = job_1_PingSweepVLANs(job)
 	}
 
@@ -37,10 +38,10 @@ func job_1_PingSweepVLANs(job JobSpec) JobSpec {
 func runCapabilities(job JobSpec) {
 	for _, capID := range job.Capabilities {
 		for _, target := range job.Targets {
-			runCapability := capability.SELECT_Capability_ByID(capID)
+			runCapability := capability.SELECT_Capability(bson.M{"id": capID}, bson.M{})[0] // TODO: handle case where > 1 result
 
 			for i, param := range runCapability.Command.Params {
-				if job.DataType == param.MetaType {
+				if job.DataType == param.DataType {
 					runCapability.Command.Params[i].Value = target
 				}
 			}

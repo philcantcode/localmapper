@@ -3,9 +3,9 @@ package capability
 import (
 	"encoding/json"
 	"net/http"
-	"strconv"
 
 	"github.com/philcantcode/localmapper/utils"
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 /* updateCapability takes in a single capability (JSON object)
@@ -17,7 +17,7 @@ func HTTP_JSON_Update(w http.ResponseWriter, r *http.Request) {
 	err := json.Unmarshal([]byte(capabilityParam), &capability)
 	utils.ErrorFatal("Error converting capability (json string) > capability (struct)", err)
 
-	UpdateCapability(capability)
+	UPDATE_Capability(capability)
 	w.WriteHeader(200)
 }
 
@@ -26,18 +26,15 @@ func HTTP_JSON_Update(w http.ResponseWriter, r *http.Request) {
    otherwise all are returned */
 func HTTP_JSON_Get(w http.ResponseWriter, r *http.Request) {
 	id := r.FormValue("id")
-	capabilities := SelectAllCapabilities()
+	capabilities := SELECT_Capability(bson.M{}, bson.M{})
 
 	if id == "" {
 		json.NewEncoder(w).Encode(capabilities)
 		return
 	}
 
-	capabilityID, err := strconv.Atoi(id)
-	utils.ErrorFatal("Couldn't convert ID in GetCapabilities", err)
-
 	for _, capability := range capabilities {
-		if capability.ID == capabilityID {
+		if capability.ID.String() == id {
 			json.NewEncoder(w).Encode(capability)
 			return
 		}

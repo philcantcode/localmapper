@@ -1688,3 +1688,1400 @@
 {"Type":"Info","DateTime":"04-06-2022 23:36:06","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
 {"Type":"Info","DateTime":"04-06-2022 23:36:15","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
 {"Type":"Info","DateTime":"04-06-2022 23:37:20","Context":"SELECT_JobSpec_All from JobSpec Db (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 00:12:54","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 00:12:54","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 00:12:54","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 00:12:54","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:12:54","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:12:54","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:12:54","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:12:54","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:12:54","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 00:12:54","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 00:12:54","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"Attempting to INSERT_JobSpec"}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"New Insert at: \u0026{ObjectID(\"629be82ed3bf3e32aa937364\")}"}
+{"Type":"Info","DateTime":"05-06-2022 00:18:06","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 00:22:12","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 00:22:12","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 00:22:12","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 00:22:12","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:22:12","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:22:12","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:22:12","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:22:12","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 00:22:12","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 00:22:12","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 00:22:12","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Attempting to INSERT_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"New Insert at: \u0026{ObjectID(\"629c91181ad82dcc55e83b2c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Attempting to INSERT_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"New Insert at: \u0026{ObjectID(\"629c91181ad82dcc55e83b2d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Attempting to INSERT_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"New Insert at: \u0026{ObjectID(\"629c91181ad82dcc55e83b2e\")}"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Attempting to INSERT_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"New Insert at: \u0026{ObjectID(\"629c91181ad82dcc55e83b2f\")}"}
+{"Type":"Info","DateTime":"05-06-2022 12:18:48","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Attempting to INSERT_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"New Insert at: \u0026{ObjectID(\"629c91ec12f921903dc47a1a\")}"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Attempting to INSERT_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"New Insert at: \u0026{ObjectID(\"629c91ec12f921903dc47a1b\")}"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Attempting to INSERT_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"New Insert at: \u0026{ObjectID(\"629c91ec12f921903dc47a1c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Attempting to INSERT_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"New Insert at: \u0026{ObjectID(\"629c91ec12f921903dc47a1d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 12:22:20","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Attempting to UPDATE_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"New Update made (0/1): \u0026{0 0 0 \u003cnil\u003e}"}
+{"Type":"Info","DateTime":"05-06-2022 12:23:49","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Attempting to UPDATE_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 12:24:37","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 12:25:19","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 12:25:19","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 12:25:19","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 12:25:19","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:25:19","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:25:19","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:25:19","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:25:19","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:25:19","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 12:25:19","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 12:25:20","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 12:25:20","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 12:25:20","Context":"Attempting to UPDATE_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 12:25:20","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 12:25:20","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Attempting to UPDATE_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 13:13:16","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 13:14:02","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 13:15:10","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:21:32","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Fatal","DateTime":"05-06-2022 13:21:32","Context":"Couldn't UPDATE_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 13:22:25","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:01","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Fatal","DateTime":"05-06-2022 13:23:01","Context":"Couldn't UPDATE_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:23:56","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Fatal","DateTime":"05-06-2022 13:23:56","Context":"Couldn't UPDATE_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 13:24:22","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 13:25:50","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"New Update made: 1"}
+{"Type":"Info","DateTime":"05-06-2022 13:26:48","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:16","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Fatal","DateTime":"05-06-2022 13:27:16","Context":"Couldn't UPDATE_Capability"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"New Update made: 1"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:32","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"New Update made: 1"}
+{"Type":"Info","DateTime":"05-06-2022 13:27:49","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Querying capabilities from Capabilities DB"}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Attempting to UPDATE_Capability (ID: 2)\n"}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"New Update made: 1"}
+{"Type":"Info","DateTime":"05-06-2022 13:28:12","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:06","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:27","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:33:50","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:34:01","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:47:59","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:49:11","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:57:49","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 13:57:59","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 14:01:10","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c661401b\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c661401c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c661401d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c661401e\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c661401f\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c6614020\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c6614021\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c6614022\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c6614023\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c6614024\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c6614025\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c6614026\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c6614027\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c6614028\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c6614029\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c661402a\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c661402b\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c661402c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c661402d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c661402e\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c661402f\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"New Insert at: \u0026{ObjectID(\"629cca7520e7ec94c6614030\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:23:33","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb3c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb3d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb3e\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb3f\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb40\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb41\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb42\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb43\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb44\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb45\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb46\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb47\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb48\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb49\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb4a\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb4b\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb4c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb4d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb4e\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb4f\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb50\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"New Insert at: \u0026{ObjectID(\"629ccd6107eae63afc6eeb51\")}"}
+{"Type":"Info","DateTime":"05-06-2022 16:36:01","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"SelectAllPropositions from Proposotions Db (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 16:50:30","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 16:52:22","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 16:56:32","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:04","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:04","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:04","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 22)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 21)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 20)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 19)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 18)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 17)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 16)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 15)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 14)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 13)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 12)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 11)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 10)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 9)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 8)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 7)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 6)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 5)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 4)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 3)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 2)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to UPDATE_Proposition (ID: 1)\n"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 16:57:23","Context":"New Insert at: \u0026{ObjectID(\"629cd26373be2455fefe044c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 22)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 21)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 20)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 19)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 18)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 17)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 16)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 15)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 14)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 13)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 12)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 11)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 10)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 9)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 8)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 7)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 6)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 5)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 4)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 3)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 2)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 1)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:16","Context":"New Insert at: \u0026{ObjectID(\"629cd31073be2455fefe044d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:39","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:39","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:39","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:00:39","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:00:39","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:00:39","Context":"New Insert at: \u0026{ObjectID(\"629cd32773be2455fefe044e\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"New Insert at: \u0026{ObjectID(\"629cd340270b0bde16baf059\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:04","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:13","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:13","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:13","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:13","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:13","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:01:13","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:01:13","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:01:13","Context":"New Insert at: \u0026{ObjectID(\"629cd349270b0bde16baf05a\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"New Insert at: \u0026{ObjectID(\"629cd38d9ee22ffd8656913f\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:21","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:26","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:26","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:26","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:26","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:26","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:02:26","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:02:26","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:26","Context":"New Insert at: \u0026{ObjectID(\"629cd3929ee22ffd86569140\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:41","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:41","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:41","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:41","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:41","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:41","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:41","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:02:41","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:02:41","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:02:41","Context":"New Insert at: \u0026{ObjectID(\"629cd3a19ee22ffd86569141\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:18","Context":"New Insert at: \u0026{ObjectID(\"629cd3c69ee22ffd86569142\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:03:22","Context":"New Insert at: \u0026{ObjectID(\"629cd3ca9ee22ffd86569143\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:05:32","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:05:32","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:05:32","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:05:32","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:05:32","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:05:32","Context":"New Insert at: \u0026{ObjectID(\"629cd44c9ee22ffd86569144\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:05:49","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:05:49","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:05:49","Context":"Attempting to UPDATE_Proposition (ID: 0)\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:05:49","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:05:49","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:05:49","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:05:49","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:05:49","Context":"New Insert at: \u0026{ObjectID(\"629cd45d9ee22ffd86569145\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:06:53","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 17:06:53","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 17:06:53","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 17:06:53","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:06:53","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:06:53","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:06:53","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:06:53","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:06:53","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:06:53","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Fatal","DateTime":"05-06-2022 17:06:53","Context":"Couldn't decode SELECT_Propositions"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Attempting to UPDATE_Proposition (ID: %!d(string=629cd44c9ee22ffd86569144))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Attempting to UPDATE_Proposition (ID: %!d(string=629cd45d9ee22ffd86569145))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:03","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:07:04","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:07:04","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:04","Context":"New Insert at: \u0026{}"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:04","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:07","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:07","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:07","Context":"Attempting to UPDATE_Proposition (ID: %!d(string=629cd44c9ee22ffd86569144))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:07","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:07","Context":"Attempting to UPDATE_Proposition (ID: %!d(string=629cd45d9ee22ffd86569145))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:07","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:07","Context":"Attempting to UPDATE_Proposition (ID: %!d(string=))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:07","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:07","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:07:07","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:07:07","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Fatal","DateTime":"05-06-2022 17:07:07","Context":"Couldn't INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"New Insert at: \u0026{}"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:41","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:46","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:46","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:46","Context":"Attempting to UPDATE_Proposition (ID: %!d(string=))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:46","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:07:46","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:07:46","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:07:46","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Fatal","DateTime":"05-06-2022 17:07:46","Context":"Couldn't INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"New Insert at: \u0026{ObjectID(\"000000000000000000000000\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:10:09","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 17:10:23","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:10:23","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:10:23","Context":"Attempting to UPDATE_Proposition (ID: [0 0 0 0 0 0 0 0 0 0 0 0])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:10:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:10:23","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:10:23","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:10:23","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Fatal","DateTime":"05-06-2022 17:10:23","Context":"Couldn't INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"New Insert at: \u0026{ObjectID(\"629cd74709799d54abc2e63d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:15","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:23","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:23","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:23","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 71 9 121 157 84 171 194 230 61])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:23","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:18:23","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:18:23","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:18:23","Context":"New Insert at: \u0026{ObjectID(\"629cd74f09799d54abc2e63e\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:20:46","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:20:46","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:20:46","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 71 9 121 157 84 171 194 230 61])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:20:46","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:20:46","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 79 9 121 157 84 171 194 230 62])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:20:46","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:20:46","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:20:46","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:20:46","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:20:46","Context":"New Insert at: \u0026{ObjectID(\"629cd7de09799d54abc2e63f\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 71 9 121 157 84 171 194 230 61])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 79 9 121 157 84 171 194 230 62])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 222 9 121 157 84 171 194 230 63])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:21:35","Context":"New Insert at: \u0026{ObjectID(\"629cd80f09799d54abc2e640\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 71 9 121 157 84 171 194 230 61])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 79 9 121 157 84 171 194 230 62])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 222 9 121 157 84 171 194 230 63])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"Attempting to UPDATE_Proposition (ID: [98 156 216 15 9 121 157 84 171 194 230 64])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:23:49","Context":"New Insert at: \u0026{ObjectID(\"629cd89509799d54abc2e641\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 71 9 121 157 84 171 194 230 61])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 79 9 121 157 84 171 194 230 62])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 222 9 121 157 84 171 194 230 63])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"Attempting to UPDATE_Proposition (ID: [98 156 216 15 9 121 157 84 171 194 230 64])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"Attempting to UPDATE_Proposition (ID: [98 156 216 149 9 121 157 84 171 194 230 65])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:24:10","Context":"New Insert at: \u0026{ObjectID(\"629cd8aa09799d54abc2e642\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 71 9 121 157 84 171 194 230 61])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 79 9 121 157 84 171 194 230 62])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"Attempting to UPDATE_Proposition (ID: [98 156 215 222 9 121 157 84 171 194 230 63])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"Attempting to UPDATE_Proposition (ID: [98 156 216 15 9 121 157 84 171 194 230 64])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"Attempting to UPDATE_Proposition (ID: [98 156 216 149 9 121 157 84 171 194 230 65])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"Attempting to UPDATE_Proposition (ID: [98 156 216 170 9 121 157 84 171 194 230 66])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:25:23","Context":"New Insert at: \u0026{ObjectID(\"629cd8f309799d54abc2e643\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"New Insert at: \u0026{ObjectID(\"629cd9a3a2131f84e0168bbe\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:19","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:35","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:35","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:35","Context":"Attempting to UPDATE_Proposition (ID: [98 156 217 163 162 19 31 132 224 22 139 190])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:35","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:28:35","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:28:35","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:28:35","Context":"New Insert at: \u0026{ObjectID(\"629cd9b3a2131f84e0168bbf\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Attempting to UPDATE_Proposition (ID: [98 156 217 163 162 19 31 132 224 22 139 190])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Attempting to UPDATE_Proposition (ID: [98 156 217 179 162 19 31 132 224 22 139 191])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"New Insert at: \u0026{ObjectID(\"629cdce282b1ec93b906b5ba\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:10","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"Attempting to UPDATE_Proposition (ID: [98 156 217 163 162 19 31 132 224 22 139 190])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"Attempting to UPDATE_Proposition (ID: [98 156 217 179 162 19 31 132 224 22 139 191])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"Attempting to UPDATE_Proposition (ID: [98 156 220 226 130 177 236 147 185 6 181 186])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:19","Context":"New Insert at: \u0026{ObjectID(\"629cdceb82b1ec93b906b5bb\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"Attempting to UPDATE_Proposition (ID: [98 156 217 163 162 19 31 132 224 22 139 190])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"Attempting to UPDATE_Proposition (ID: [98 156 217 179 162 19 31 132 224 22 139 191])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"Attempting to UPDATE_Proposition (ID: [98 156 220 226 130 177 236 147 185 6 181 186])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"Attempting to UPDATE_Proposition (ID: [98 156 220 235 130 177 236 147 185 6 181 187])\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:42:35","Context":"New Insert at: \u0026{ObjectID(\"629cdcfb82b1ec93b906b5bc\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdce282b1ec93b906b5ba\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"New Insert at: \u0026{ObjectID(\"629cddaffbc2836acd756f54\")}"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:35","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdce282b1ec93b906b5ba\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cddaffbc2836acd756f54\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 17:45:39","Context":"New Insert at: \u0026{ObjectID(\"629cddb3fbc2836acd756f55\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdce282b1ec93b906b5ba\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cddaffbc2836acd756f54\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cddb3fbc2836acd756f55\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"New Insert at: \u0026{ObjectID(\"629ce3258067f3ccc605114c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:53","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdce282b1ec93b906b5ba\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cddaffbc2836acd756f54\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cddb3fbc2836acd756f55\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629ce3258067f3ccc605114c\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:08:59","Context":"New Insert at: \u0026{ObjectID(\"629ce32b8067f3ccc605114d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdce282b1ec93b906b5ba\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cddaffbc2836acd756f54\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cddb3fbc2836acd756f55\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629ce3258067f3ccc605114c\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629ce32b8067f3ccc605114d\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"New Insert at: \u0026{ObjectID(\"629ce33e698f07948905f818\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:18","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdce282b1ec93b906b5ba\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cddaffbc2836acd756f54\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629cddb3fbc2836acd756f55\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629ce3258067f3ccc605114c\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629ce32b8067f3ccc605114d\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Attempting to UPDATE_Proposition (ID: ObjectID(\"629ce33e698f07948905f818\"))\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"New Update made: 0"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:09:22","Context":"New Insert at: \u0026{ObjectID(\"629ce342698f07948905f819\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:04","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:13:05","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:13:05","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:05","Context":"New Insert at: \u0026{ObjectID(\"629ce421f1c6b0a249070b05\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:05","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:13:09","Context":"New Insert at: \u0026{ObjectID(\"629ce425f1c6b0a249070b06\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"New Insert at: \u0026{ObjectID(\"629ce5074b77b61d48bc464c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:16:55","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:17:01","Context":"New Insert at: \u0026{ObjectID(\"629ce50d4b77b61d48bc464d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"New Insert at: \u0026{ObjectID(\"629ce6b8a8abcd0961bd507c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:08","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:24:12","Context":"New Insert at: \u0026{ObjectID(\"629ce6bca8abcd0961bd507d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"New Insert at: \u0026{ObjectID(\"629ce7fa4a974500e4b59f92\")}"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:30","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"New Insert at: \u0026{ObjectID(\"629ce7fe4a974500e4b59f93\")}"}

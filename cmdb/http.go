@@ -7,7 +7,7 @@ import (
 
 func HTTP_JSON_GetSelf(w http.ResponseWriter, r *http.Request) {
 
-	cmdbs := SelectAllCMDB()
+	cmdbs := SELECT_CMDBItem_All()
 
 	for _, cmdb := range cmdbs {
 		tag, exists := cmdb.InfoTags["identity"]
@@ -22,5 +22,5 @@ func HTTP_JSON_GetSelf(w http.ResponseWriter, r *http.Request) {
 }
 
 func HTTP_JSON_GetAll(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(SelectAllCMDB())
+	json.NewEncoder(w).Encode(SELECT_CMDBItem_All())
 }

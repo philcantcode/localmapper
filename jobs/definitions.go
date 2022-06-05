@@ -1,27 +1,20 @@
 package jobs
 
 import (
-	"encoding/json"
-	"fmt"
-
 	"github.com/philcantcode/localmapper/utils"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 type JobSpec struct {
-	JobID        int
+	ID           primitive.ObjectID `bson:"_id"`
 	Name         string
-	Description  string
+	Desc         string
 	DataType     utils.DataType // Value type
 	Targets      []string       // Targets (e.g., IPs)
 	Capabilities []int          // Capabilities to be performed on the data
 }
 
-func TEST_JobSpecCreator() {
-	utils.Log("TEST_JobSpecCreator Ran", true)
-	jobSpec := JobSpec{JobID: 1, Name: "Ping Sweep", Description: "Perform a Ping Sweep of an IP range.", DataType: utils.IPRange, Capabilities: []int{2}, Targets: []string{}}
-
-	jobString, _ := json.Marshal(jobSpec)
-
-	fmt.Printf("%+v\n\n%s\n\n", jobSpec, jobString)
-	PreProcess(jobSpec)
+func TEST_CreateJobSpec1() {
+	jobSpec := JobSpec{Name: "Ping Sweep", Desc: "Perform a Ping Sweep of an IP range.", DataType: utils.IPRange, Capabilities: []int{2}, Targets: []string{}}
+	INSERT_JobSpec(jobSpec)
 }

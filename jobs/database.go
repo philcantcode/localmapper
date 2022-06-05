@@ -1,36 +1,41 @@
 package jobs
 
 import (
-	"encoding/json"
+	"context"
+	"fmt"
 
 	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/utils"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func SELECT_JobSpec_All() []JobSpec {
-	utils.Log("SELECT_JobSpec_All from JobSpec Db (sqlite)", false)
-	stmt, err := database.Con.Prepare("SELECT `id`, `job` FROM `JobSpecs`")
-	utils.ErrorLog("Couldn't select all from JobSpec", err, true)
+func FILTER_JobSpec(filter bson.M, projection bson.M) []JobSpec {
+	cursor, err := database.JobsDB.Find(context.Background(), filter, options.Find().SetProjection(projection))
+	utils.ErrorFatal("Couldn't SELECT_JobSpec", err)
+	defer cursor.Close(context.Background())
 
-	rows, err := stmt.Query()
-	utils.ErrorLog("Couldn't recieve rows from SELECT_JobSpec_All", err, true)
-	defer rows.Close()
+	var results []JobSpec
 
-	jobs := []JobSpec{}
+	for cursor.Next(context.Background()) {
+		var jobSpec JobSpec
 
-	for rows.Next() {
-		job := JobSpec{}
+		err = cursor.Decode(&jobSpec)
+		utils.ErrorFatal("Couldn't decode JobSpec", err)
 
-		id := -1
-		jobString := ""
-
-		rows.Scan(&id, &jobString)
-
-		json.Unmarshal([]byte(jobString), &job)
-		job.JobID = id
-
-		jobs = append(jobs, job)
+		results = append(results, jobSpec)
 	}
 
-	return jobs
+	return results
+}
+
+func INSERT_JobSpec(job JobSpec) {
+	utils.Log("Attempting to INSERT_JobSpec", false)
+
+	job.ID = primitive.NewObjectID()
+	insertResult, err := database.JobsDB.InsertOne(context.Background(), job)
+
+	utils.ErrorFatal("Couldn't INSERT_JobSpec", err)
+	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), true)
 }

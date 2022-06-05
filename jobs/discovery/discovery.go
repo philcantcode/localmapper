@@ -7,12 +7,13 @@ import (
 	"github.com/philcantcode/localmapper/capability/nmap"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/utils"
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 /* PingSweepVlans performs a sweep of all IP ranges
    from the Vlan database. */
 func PingSweepVlans() {
-	pingCapability := capability.SELECT_Capability_ByName("Ping Sweep")
+	pingCapability := capability.SELECT_Capability(bson.M{"name": "Ping Sweep"}, bson.M{})[0] //TODO handle case where > 1 results
 	vlans := cmdb.SelectAllVlans()
 
 	// Enumerate each VLan
@@ -31,7 +32,7 @@ func PingSweepVlans() {
 
 			// Log and insert results into DB
 			result := nmap.Execute(capability.ParamsToArray(pingCapability.Command.Params))
-			nmap.InsertNetworkNmap(result)
+			nmap.INSERT_Nmap(result)
 			utils.PrintLog(utils.PrettyPrintToStr(result))
 		}
 	}

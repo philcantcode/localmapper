@@ -6,6 +6,7 @@ import (
 	"strconv"
 
 	"github.com/philcantcode/localmapper/utils"
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 /* ProcessAcceptDefaults runs when the user Accepts the default in the web gui
@@ -16,16 +17,15 @@ func ProcessAcceptDefaults(w http.ResponseWriter, r *http.Request) {
 	utils.ErrorLog("Couldn't convert ID to integer while running ProcessAcceptDefaults", err, true)
 
 	// Set the result to accept by default
-	prop := SELECT_Proposition_ByID(idInt)
+	prop := SELECT_Propositions(bson.M{"ID": idInt}, bson.M{})[0]
 	prop.Status = 0
-	prop.Correction = prop.Proposition
 
 	processProposition(prop)
 }
 
 /* HTTP_JSON_GetDefaultGatewayIP both the deafult IP and the Gateway */
 func HTTP_JSON_GetPropositions(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(SELECT_Propositions_All())
+	json.NewEncoder(w).Encode(SELECT_Propositions(bson.M{}, bson.M{}))
 }
 
 // HTTP_JSON_Refresh is called when the user visits http://server.com/propositions to referesh them

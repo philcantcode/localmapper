@@ -10,7 +10,7 @@ import (
 func ListAllAddresses() []nmap.Address {
 	var returnArray []nmap.Address
 
-	results := nmap.FilterNetworkNmap(
+	results := nmap.SELECT_Nmap(
 		bson.M{},
 		bson.M{
 			"hosts": bson.M{

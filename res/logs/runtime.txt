@@ -1,22 +1,91 @@
-[i][04-06-2022 23:27:41] Attempting to open SQL database: res/database.db
-[i][04-06-2022 23:27:41] Attempting to connect MongoDB to: 
-[i][04-06-2022 23:27:41] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
-[i][04-06-2022 23:27:41] Successfully setup mongo database collections: 
-[i][04-06-2022 23:27:41] SelectAllCMDB from CMDB DB (sqlite)
-[i][04-06-2022 23:27:41] Identity local already found in CMDB
-[i][04-06-2022 23:27:41] Hosting Server at http://localhost:8008
-[i][04-06-2022 23:27:45] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:31:01] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:31:26] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:31:31] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:32:33] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:35:41] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:35:53] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:35:55] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:36:00] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:36:01] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:36:01] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:36:02] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:36:06] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:36:15] SELECT_JobSpec_All from JobSpec Db (sqlite)
-[i][04-06-2022 23:37:20] SELECT_JobSpec_All from JobSpec Db (sqlite)
+[i][05-06-2022 18:29:30] Attempting to open SQL database: res/database.db
+[i][05-06-2022 18:29:30] Attempting to connect MongoDB to: 
+[i][05-06-2022 18:29:30] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
+[i][05-06-2022 18:29:30] Successfully setup mongo nmap database collections: 
+[i][05-06-2022 18:29:30] Successfully setup mongo cmdb database collections: 
+[i][05-06-2022 18:29:30] Successfully setup mongo vlan database collections: 
+[i][05-06-2022 18:29:30] Successfully setup mongo cmdb database collections: 
+[i][05-06-2022 18:29:30] Successfully setup mongo vlan database collections: 
+[i][05-06-2022 18:29:30] Successfully setup mongo capability database collections: 
+[i][05-06-2022 18:29:30] SelectAllCMDB from CMDB DB (sqlite)
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629cd9a3a2131f84e0168bbe"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629cd9b3a2131f84e0168bbf"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629cdce282b1ec93b906b5ba"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629cdceb82b1ec93b906b5bb"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629cdcfb82b1ec93b906b5bc"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629cddaffbc2836acd756f54"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629cddb3fbc2836acd756f55"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629ce3258067f3ccc605114c"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629ce32b8067f3ccc605114d"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629ce33e698f07948905f818"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629ce342698f07948905f819"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629ce421f1c6b0a249070b05"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629ce425f1c6b0a249070b06"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629ce5074b77b61d48bc464c"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629ce50d4b77b61d48bc464d"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629ce6b8a8abcd0961bd507c"), Result: 1
+
+[i][05-06-2022 18:29:30] UPDATE_Proposition ID: ObjectID("629ce6bca8abcd0961bd507d"), Result: 1
+
+[i][05-06-2022 18:29:30] Getting a list of network adapters & IP addresses.
+[i][05-06-2022 18:29:30] Returning the date & time.
+[i][05-06-2022 18:29:30] Attempting to INSERT_Proposition
+[i][05-06-2022 18:29:30] New Insert at: &{ObjectID("629ce7fa4a974500e4b59f92")}
+[i][05-06-2022 18:29:30] Hosting Server at http://localhost:8008
+[i][05-06-2022 18:29:34] Refreshing propositions (http req)
+[i][05-06-2022 18:29:34] SelectAllCMDB from CMDB DB (sqlite)
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629cd9a3a2131f84e0168bbe"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629cd9b3a2131f84e0168bbf"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629cdce282b1ec93b906b5ba"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629cdceb82b1ec93b906b5bb"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629cdcfb82b1ec93b906b5bc"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629cddaffbc2836acd756f54"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629cddb3fbc2836acd756f55"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629ce3258067f3ccc605114c"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629ce32b8067f3ccc605114d"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629ce33e698f07948905f818"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629ce342698f07948905f819"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629ce421f1c6b0a249070b05"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629ce425f1c6b0a249070b06"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629ce5074b77b61d48bc464c"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629ce50d4b77b61d48bc464d"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629ce6b8a8abcd0961bd507c"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629ce6bca8abcd0961bd507d"), Result: 0
+
+[i][05-06-2022 18:29:34] UPDATE_Proposition ID: ObjectID("629ce7fa4a974500e4b59f92"), Result: 1
+
+[i][05-06-2022 18:29:34] Getting a list of network adapters & IP addresses.
+[i][05-06-2022 18:29:34] Returning the date & time.
+[i][05-06-2022 18:29:34] Attempting to INSERT_Proposition
+[i][05-06-2022 18:29:34] New Insert at: &{ObjectID("629ce7fe4a974500e4b59f93")}

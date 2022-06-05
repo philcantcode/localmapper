@@ -1,92 +1,56 @@
 package proposition
 
 import (
-	"encoding/json"
+	"context"
+	"fmt"
 
 	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/utils"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 func INSERT_Proposition(proposition Proposition) {
-	utils.Log("Inserting Proposition from Proposition DB", false)
-	stmt, err := database.Con.Prepare("INSERT INTO `Propositions`" +
-		"(`type`, `description`, `proposition`, `correction`, `status`, `user`) VALUES (?, ?, ?, ?, ?, ?);")
-	utils.ErrorLog("Couldn't prepare InsertProposition into Proposition", err, true)
+	utils.Log("Attempting to INSERT_Proposition", false)
+	proposition.ID = primitive.NewObjectID()
+	insertResult, err := database.PropositionDB.InsertOne(context.Background(), proposition)
 
-	propositionString, err := json.Marshal(proposition.Proposition)
-	utils.ErrorLog("Couldn't convert proposition to JSON", err, true)
-
-	correctionString, err := json.Marshal(proposition.Correction)
-	utils.ErrorLog("Couldn't convert correction to JSON", err, true)
-
-	_, err = stmt.Exec(proposition.Type, proposition.Description, string(propositionString), string(correctionString), proposition.Status, proposition.User)
-	utils.ErrorLog("Error executing InsertProposition on Proposition", err, true)
-	stmt.Close()
+	utils.ErrorFatal("Couldn't INSERT_Proposition", err)
+	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), true)
 }
 
-func SELECT_Propositions_All() []Proposition {
-	utils.Log("SelectAllPropositions from Proposotions Db (sqlite)", false)
-	stmt, err := database.Con.Prepare("SELECT `id`, `type`, `date`, `description`, `proposition`, `correction`, `status`, `user` FROM `Propositions` ORDER BY `id` DESC")
-	utils.ErrorLog("Couldn't select all from Propositions", err, true)
+/* SELECT_Capability takes in a:
+   1. filter bson.M{"startstr": "xyz"} select specifc values
+   2. projection bson.M{"version": 1} to limit the fields returned
+*/
+func SELECT_Propositions(filter bson.M, projection bson.M) []Proposition {
+	cursor, err := database.PropositionDB.Find(context.Background(), filter, options.Find().SetProjection(projection))
+	utils.ErrorFatal("Couldn't SELECT_Propositions", err)
+	defer cursor.Close(context.Background())
 
-	rows, err := stmt.Query()
-	utils.ErrorLog("Couldn't recieve rows from SelectAllPropositions", err, true)
-	defer rows.Close()
+	var results []Proposition
 
-	props := []Proposition{}
+	for cursor.Next(context.Background()) {
+		var prop Proposition
 
-	for rows.Next() {
-		prop := Proposition{}
+		err = cursor.Decode(&prop)
+		utils.ErrorFatal("Couldn't decode SELECT_Propositions", err)
 
-		propString := ""
-		correctionString := ""
-
-		rows.Scan(&prop.ID, &prop.Type, &prop.Date, &prop.Description, &propString, &correctionString, &prop.Status, &prop.User)
-
-		json.Unmarshal([]byte(propString), &prop.Proposition)
-		json.Unmarshal([]byte(correctionString), &prop.Correction)
-
-		props = append(props, prop)
+		results = append(results, prop)
 	}
 
-	return props
+	return results
 }
 
-func SELECT_Proposition_ByID(ID int) Proposition {
-	utils.Log("SelectPropositionByID from Proposotions Db (sqlite)", false)
-	stmt, err := database.Con.Prepare("SELECT `id`, `type`, `date`, `description`, `proposition`, `correction`, `status`, `user` FROM `Propositions` WHERE `id` = ?")
-	utils.ErrorLog("Couldn't select all from Propositions", err, true)
+/*
+Status:
+0 = Open
+1 = Complete
+2 = Disabled */
+func UPDATE_Proposition(proposition Proposition) {
+	result, err := database.PropositionDB.ReplaceOne(context.Background(), bson.M{"_id": proposition.ID}, proposition)
+	utils.ErrorFatal("Couldn't UPDATE_Proposition", err)
 
-	rows, err := stmt.Query(ID)
-	utils.ErrorLog("Couldn't recieve rows from SelectPropositionByID", err, true)
-	defer rows.Close()
-
-	for rows.Next() {
-		prop := Proposition{}
-
-		propString := ""
-		correctionString := ""
-
-		rows.Scan(&prop.ID, &prop.Type, &prop.Date, &prop.Description, &propString, &correctionString, &prop.Status, &prop.User)
-
-		json.Unmarshal([]byte(propString), &prop.Proposition)
-		json.Unmarshal([]byte(correctionString), &prop.Correction)
-
-		return prop
-	}
-
-	utils.ErrorContextLog("Couldn't find proposition by ID", true)
-	return Proposition{}
-}
-
-/* 0 = Open
-   1 = Complete
-   2 = Disabled */
-func UPDATE_Proposition_Status_ByID(ID int, status int) {
-	utils.Log("SetPropositionStatusByID from Proposotions Db (sqlite)", false)
-	stmt, err := database.Con.Prepare("UPDATE `Propositions` SET `status` = ? WHERE `id` = ?")
-	utils.ErrorLog("Couldn't select all from Propositions", err, true)
-
-	_, err = stmt.Exec(status, ID)
-	utils.ErrorLog("Couldn't recieve rows from SetPropositionStatusByID", err, true)
+	utils.Log(fmt.Sprintf("UPDATE_Proposition ID: %s, Result: %d\n", proposition.ID, result.ModifiedCount), true)
 }

@@ -12,7 +12,7 @@ func ProcessCapability(capability Capability) []byte {
 	switch capability.Type {
 	case "nmap":
 		nmapRun := nmap.Execute(ParamsToArray(capability.Command.Params))
-		nmap.InsertNetworkNmap(nmapRun)
+		nmap.INSERT_Nmap(nmapRun)
 		utils.PrintLog(utils.PrettyPrintToStr(nmapRun))
 
 		result, err := json.Marshal(nmapRun)

@@ -7,7 +7,7 @@ import (
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func InsertCMDBItem(cmdb CMDBItem) {
+func INSERT_CMDBItem(cmdb CMDBItem) {
 	utils.Log("InsertCMDBItem from CMDB DB", false)
 	stmt, err := database.Con.Prepare("INSERT INTO `CMDB`" +
 		"(`osiLayer`, `dateSeen`, `description`, `statusTags`, `userTags`, `infoTags`) VALUES (?, ?, ?, ?, ?, ?);")
@@ -30,8 +30,8 @@ func InsertCMDBItem(cmdb CMDBItem) {
 	stmt.Close()
 }
 
-// SelectCMDBItemByLayer returns all items at an OSI layer
-func SelectCMDBItemByLayer(osiLayer int) []CMDBItem {
+// SELECT_CMDBItem_ByOSILayer returns all items at an OSI layer
+func SELECT_CMDBItem_ByOSILayer(osiLayer int) []CMDBItem {
 	utils.Log("SelectCMDBItemByLayer from CMDB DB (sqlite)", false)
 	stmt, err := database.Con.Prepare("SELECT `id`, `osiLayer`, `dateSeen`, `description`, `statusTags`, `userTags`, `infoTags` FROM `CMDB` WHERE `osiLayer` = ?")
 	utils.ErrorLog("Couldn't select CMDB items by iosLayer from CMDB", err, true)
@@ -53,7 +53,7 @@ func SelectCMDBItemByLayer(osiLayer int) []CMDBItem {
 	return cmdbs
 }
 
-func SelectAllCMDB() []CMDBItem {
+func SELECT_CMDBItem_All() []CMDBItem {
 	utils.Log("SelectAllCMDB from CMDB DB (sqlite)", false)
 	stmt, err := database.Con.Prepare("SELECT `id`, `osiLayer`, `dateSeen`, `description`, `statusTags`, `userTags`, `infoTags` FROM `CMDB`")
 	utils.ErrorLog("Couldn't select SelectAllCMDB from CMDB", err, true)
