@@ -1,87 +1,43 @@
 package cmdb
 
 import (
-	"encoding/json"
+	"context"
+	"fmt"
 
 	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/utils"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 func INSERT_CMDBItem(cmdb CMDBItem) {
-	utils.Log("InsertCMDBItem from CMDB DB", false)
-	stmt, err := database.Con.Prepare("INSERT INTO `CMDB`" +
-		"(`osiLayer`, `dateSeen`, `description`, `statusTags`, `userTags`, `infoTags`) VALUES (?, ?, ?, ?, ?, ?);")
-	utils.ErrorLog("Couldn't prepare InsertCMDBItem into CMDB", err, true)
+	utils.Log("Attempting to INSERT_CMDB", false)
 
-	statusTags, err := json.Marshal(cmdb.StatusTags)
-	utils.ErrorFatal("Couldn't unmarshall cmdb.StatusTags", err)
+	cmdb.ID = primitive.NewObjectID()
+	insertResult, err := database.CmdbDB.InsertOne(context.Background(), cmdb)
 
-	userTags, err := json.Marshal(cmdb.UserTags)
-	utils.ErrorFatal("Couldn't unmarshall cmdb.UserTags", err)
-
-	infoTags, err := json.Marshal(cmdb.InfoTags)
-	utils.ErrorFatal("Couldn't unmarshall cmdb.InfoTags", err)
-
-	dateSeen, err := json.Marshal(cmdb.DateSeen)
-	utils.ErrorFatal("Couldn't unmarshall cmdb.DateSeen", err)
-
-	_, err = stmt.Exec(cmdb.OSILayer, string(dateSeen), cmdb.Description, string(statusTags), string(userTags), string(infoTags))
-	utils.ErrorLog("Error executing InsertCMDBItem on CMDB", err, true)
-	stmt.Close()
+	utils.ErrorFatal("Couldn't INSERT_CMDB", err)
+	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 }
 
-// SELECT_CMDBItem_ByOSILayer returns all items at an OSI layer
-func SELECT_CMDBItem_ByOSILayer(osiLayer int) []CMDBItem {
-	utils.Log("SelectCMDBItemByLayer from CMDB DB (sqlite)", false)
-	stmt, err := database.Con.Prepare("SELECT `id`, `osiLayer`, `dateSeen`, `description`, `statusTags`, `userTags`, `infoTags` FROM `CMDB` WHERE `osiLayer` = ?")
-	utils.ErrorLog("Couldn't select CMDB items by iosLayer from CMDB", err, true)
+func SELECT_CMDBItem(filter bson.M, projection bson.M) []CMDBItem {
+	cursor, err := database.CmdbDB.Find(context.Background(), filter, options.Find().SetProjection(projection))
+	utils.ErrorFatal("Couldn't SELECT_CMDBItem", err)
+	defer cursor.Close(context.Background())
 
-	rows, err := stmt.Query(osiLayer)
-	utils.ErrorLog("Couldn't recieve rows from SelectCMDBItemByLayer", err, true)
-	defer rows.Close()
+	results := []CMDBItem{}
 
-	cmdbs := []CMDBItem{}
+	for cursor.Next(context.Background()) {
+		var cmdb CMDBItem
 
-	for rows.Next() {
-		cmdb := CMDBItem{}
+		err = cursor.Decode(&cmdb)
+		utils.ErrorFatal("Couldn't decode SELECT_CMDBItem", err)
 
-		rows.Scan(&cmdb.ID, &cmdb.OSILayer, &cmdb.DateSeen, &cmdb.Description, &cmdb.StatusTags, &cmdb.UserTags, &cmdb.InfoTags)
-
-		cmdbs = append(cmdbs, cmdb)
+		results = append(results, cmdb)
 	}
 
-	return cmdbs
-}
-
-func SELECT_CMDBItem_All() []CMDBItem {
-	utils.Log("SelectAllCMDB from CMDB DB (sqlite)", false)
-	stmt, err := database.Con.Prepare("SELECT `id`, `osiLayer`, `dateSeen`, `description`, `statusTags`, `userTags`, `infoTags` FROM `CMDB`")
-	utils.ErrorLog("Couldn't select SelectAllCMDB from CMDB", err, true)
-
-	rows, err := stmt.Query()
-	utils.ErrorLog("Couldn't recieve rows from SelectAllCMDB", err, true)
-	defer rows.Close()
-
-	cmdbs := []CMDBItem{}
-
-	for rows.Next() {
-		cmdb := CMDBItem{}
-		var statusTags string
-		var userTags string
-		var infoTags string
-		dateSeen := ""
-
-		rows.Scan(&cmdb.ID, &cmdb.OSILayer, &dateSeen, &cmdb.Description, &statusTags, &userTags, &infoTags)
-
-		json.Unmarshal([]byte(dateSeen), &cmdb.DateSeen)
-		json.Unmarshal([]byte(statusTags), &cmdb.StatusTags)
-		json.Unmarshal([]byte(userTags), &cmdb.UserTags)
-		json.Unmarshal([]byte(infoTags), &cmdb.InfoTags)
-
-		cmdbs = append(cmdbs, cmdb)
-	}
-
-	return cmdbs
+	return results
 }
 
 // Descending Order

@@ -13,7 +13,7 @@ func SetupJobs() {
 
 // setupSelfIdentity initialises IPs and local variables
 func setupSelfIdentity() {
-	cmdbs := cmdb.SELECT_CMDBItem_All()
+	cmdbs := cmdb.SELECT_CMDBItem(bson.M{}, bson.M{})
 
 	// Check if server is already in the database
 	for _, cmdb := range cmdbs {
@@ -22,14 +22,6 @@ func setupSelfIdentity() {
 		if found && ident == "local" {
 			utils.Log("Identity local already found in CMDB", true)
 			return
-		}
-	}
-
-	// Delete old propositions from previous reboots
-	for _, proposition := range SELECT_Propositions(bson.M{}, bson.M{}) {
-		if proposition.Type == "local-net-iface" {
-			proposition.Status = 2
-			UPDATE_Proposition(proposition) // 2 = disabled
 		}
 	}
 

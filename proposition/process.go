@@ -26,10 +26,8 @@ func processProposition(proposition Proposition) {
 
 		time := []string{local.GetDateTime().DateTime}
 
-		serverCMDB := cmdb.CMDBItem{OSILayer: 7, Description: "local-mapper Server", StatusTags: statusTags, InfoTags: infoTags, DateSeen: time}
+		serverCMDB := cmdb.CMDBItem{Label: "Local-Mapper Server (local)", OSILayer: 7, Desc: "The local-mapper backend server.", StatusTags: statusTags, InfoTags: infoTags, DateSeen: time}
 		cmdb.INSERT_CMDBItem(serverCMDB)
-
-		proposition.Status = 1
 
 		UPDATE_Proposition(proposition)
 	}

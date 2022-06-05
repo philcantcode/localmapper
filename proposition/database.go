@@ -29,7 +29,7 @@ func SELECT_Propositions(filter bson.M, projection bson.M) []Proposition {
 	utils.ErrorFatal("Couldn't SELECT_Propositions", err)
 	defer cursor.Close(context.Background())
 
-	var results []Proposition
+	results := []Proposition{}
 
 	for cursor.Next(context.Background()) {
 		var prop Proposition
@@ -52,5 +52,6 @@ func UPDATE_Proposition(proposition Proposition) {
 	result, err := database.PropositionDB.ReplaceOne(context.Background(), bson.M{"_id": proposition.ID}, proposition)
 	utils.ErrorFatal("Couldn't UPDATE_Proposition", err)
 
+	fmt.Printf("%+v\n", proposition)
 	utils.Log(fmt.Sprintf("UPDATE_Proposition ID: %s, Result: %d\n", proposition.ID, result.ModifiedCount), true)
 }

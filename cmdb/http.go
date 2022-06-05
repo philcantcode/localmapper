@@ -3,11 +3,13 @@ package cmdb
 import (
 	"encoding/json"
 	"net/http"
+
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 func HTTP_JSON_GetSelf(w http.ResponseWriter, r *http.Request) {
 
-	cmdbs := SELECT_CMDBItem_All()
+	cmdbs := SELECT_CMDBItem(bson.M{}, bson.M{})
 
 	for _, cmdb := range cmdbs {
 		tag, exists := cmdb.InfoTags["identity"]
@@ -22,5 +24,5 @@ func HTTP_JSON_GetSelf(w http.ResponseWriter, r *http.Request) {
 }
 
 func HTTP_JSON_GetAll(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(SELECT_CMDBItem_All())
+	json.NewEncoder(w).Encode(SELECT_CMDBItem(bson.M{}, bson.M{}))
 }

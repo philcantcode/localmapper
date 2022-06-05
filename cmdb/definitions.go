@@ -11,20 +11,21 @@ import "go.mongodb.org/mongo-driver/bson/primitive"
    2 - L2 switches, Bridges
    1 - Hubs, repeaters, modems */
 type CMDBItem struct {
-	ID          primitive.ObjectID `bson:"_id"`
-	OSILayer    int                // 1 - 7
-	DateSeen    []string           //[] Array of dates seen
-	Description string
-	StatusTags  map[string]string // [Stopped, Running] etc
-	UserTags    map[string]string // [Project-X, Bob's Server] etc
-	InfoTags    map[string]string // [IP: xxx, MAC: xxx, URL: xxx] etc
+	ID         primitive.ObjectID `bson:"_id"`
+	Label      string
+	Desc       string
+	OSILayer   int               // 1 - 7
+	DateSeen   []string          //[] Array of dates seen
+	StatusTags map[string]string // [Stopped, Running] etc
+	UserTags   map[string]string // [Project-X, Bob's Server] etc
+	InfoTags   map[string]string // [IP: xxx, MAC: xxx, URL: xxx] etc
 }
 
 type Vlan struct {
-	ID          int    `json:"ID"`
-	Name        string `json:"Name"`
-	Description string `json:"Description"`
-	HighIP      string `json:"HighIP"`
-	LowIP       string `json:"LowIP"`
-	Tags        string `json:"Tags"`
+	ID          int `bson:"_id"`
+	Name        string
+	Description string
+	HighIP      string
+	LowIP       string
+	Tags        string
 }

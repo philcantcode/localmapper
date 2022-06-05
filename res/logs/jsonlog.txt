@@ -3085,3 +3085,1475 @@
 {"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"Returning the date \u0026 time."}
 {"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"Attempting to INSERT_Proposition"}
 {"Type":"Info","DateTime":"05-06-2022 18:29:34","Context":"New Insert at: \u0026{ObjectID(\"629ce7fe4a974500e4b59f93\")}"}
+{"Type":"Error","DateTime":"05-06-2022 18:34:43","Context":"Couldn't convert ID to integer while running ProcessAcceptDefaults"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"New Insert at: \u0026{ObjectID(\"629d1834d143cd2c4e4e0362\")}"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:16","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 21:55:22","Context":"New Insert at: \u0026{ObjectID(\"629d183ad143cd2c4e4e0363\")}"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"New Insert at: \u0026{ObjectID(\"629d186dfbb6ae4597393dae\")}"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:13","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 21:56:16","Context":"New Insert at: \u0026{ObjectID(\"629d1870fbb6ae4597393daf\")}"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"New Insert at: \u0026{ObjectID(\"629d18cf19043c6191c88cc0\")}"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:51","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 21:57:55","Context":"New Insert at: \u0026{ObjectID(\"629d18d319043c6191c88cc1\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:00:16","Context":"New Insert at: \u0026{ObjectID(\"629d19606b322a90e9f3b303\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:16","Context":"New Insert at: \u0026{ObjectID(\"629d1b40bc4de13267e95230\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:08:28","Context":"New Insert at: \u0026{ObjectID(\"629d1b4caf77dc055d0b5015\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:36","Context":"New Insert at: \u0026{ObjectID(\"629d1bcc2a1dcd3dd87b1757\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:10:48","Context":"New Insert at: \u0026{ObjectID(\"629d1bd8ebf6e79af221122f\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:21","Context":"New Insert at: \u0026{ObjectID(\"629d1c715e2b8b3ffeea2c35\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"New Insert at: \u0026{ObjectID(\"629d1c78eaa188b835b8f040\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:28","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:33","Context":"New Insert at: \u0026{ObjectID(\"629d1c7deaa188b835b8f041\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:34","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:13:34","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:13:34","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:34","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:13:37","Context":"New Insert at: \u0026{ObjectID(\"629d1c81eaa188b835b8f042\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c81eaa188b835b8f042\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"New Insert at: \u0026{ObjectID(\"629d1d1e1f0a05a09e3941fb\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:14","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c81eaa188b835b8f042\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d1e1f0a05a09e3941fb\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:18","Context":"New Insert at: \u0026{ObjectID(\"629d1d221f0a05a09e3941fc\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:19","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:16:19","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:16:19","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:19","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d221f0a05a09e3941fc\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c81eaa188b835b8f042\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d1e1f0a05a09e3941fb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d221f0a05a09e3941fc\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:16:41","Context":"New Insert at: \u0026{ObjectID(\"629d1d391f0a05a09e3941fd\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c81eaa188b835b8f042\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d1e1f0a05a09e3941fb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d221f0a05a09e3941fc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d391f0a05a09e3941fd\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"New Insert at: \u0026{ObjectID(\"629d1d9d2691645202a273ac\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:21","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c81eaa188b835b8f042\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d1e1f0a05a09e3941fb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d221f0a05a09e3941fc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d391f0a05a09e3941fd\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d9d2691645202a273ac\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:25","Context":"New Insert at: \u0026{ObjectID(\"629d1da12691645202a273ad\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:27","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:18:27","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:18:27","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da12691645202a273ad\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c81eaa188b835b8f042\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d1e1f0a05a09e3941fb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d221f0a05a09e3941fc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d391f0a05a09e3941fd\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d9d2691645202a273ac\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da12691645202a273ad\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:18:29","Context":"New Insert at: \u0026{ObjectID(\"629d1da52691645202a273ae\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c81eaa188b835b8f042\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d1e1f0a05a09e3941fb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d221f0a05a09e3941fc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d391f0a05a09e3941fd\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d9d2691645202a273ac\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da12691645202a273ad\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da52691645202a273ae\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"New Insert at: \u0026{ObjectID(\"629d1e15a12f3b5d4af4cbe6\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:21","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c81eaa188b835b8f042\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d1e1f0a05a09e3941fb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d221f0a05a09e3941fc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d391f0a05a09e3941fd\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d9d2691645202a273ac\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:24","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da12691645202a273ad\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da52691645202a273ae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:25","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e15a12f3b5d4af4cbe6\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:25","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:25","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:25","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:25","Context":"New Insert at: \u0026{ObjectID(\"629d1e19a12f3b5d4af4cbe7\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:26","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:26","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:26","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:26","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e19a12f3b5d4af4cbe7\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c81eaa188b835b8f042\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d1e1f0a05a09e3941fb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d221f0a05a09e3941fc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d391f0a05a09e3941fd\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d9d2691645202a273ac\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da12691645202a273ad\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da52691645202a273ae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e15a12f3b5d4af4cbe6\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e19a12f3b5d4af4cbe7\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:27","Context":"New Insert at: \u0026{ObjectID(\"629d1e1ba12f3b5d4af4cbe8\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:29","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:29","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:29","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:29","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:30","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:30","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:30","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:30","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c81eaa188b835b8f042\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d1e1f0a05a09e3941fb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d221f0a05a09e3941fc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d391f0a05a09e3941fd\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d9d2691645202a273ac\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da12691645202a273ad\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da52691645202a273ae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e15a12f3b5d4af4cbe6\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e19a12f3b5d4af4cbe7\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e1ba12f3b5d4af4cbe8\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:31","Context":"New Insert at: \u0026{ObjectID(\"629d1e1fa12f3b5d4af4cbe9\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9a3a2131f84e0168bbe\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629cd9b3a2131f84e0168bbf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629cdce282b1ec93b906b5ba\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629cdceb82b1ec93b906b5bb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629cdcfb82b1ec93b906b5bc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629cddaffbc2836acd756f54\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629cddb3fbc2836acd756f55\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce3258067f3ccc605114c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce32b8067f3ccc605114d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce33e698f07948905f818\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce342698f07948905f819\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce421f1c6b0a249070b05\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce425f1c6b0a249070b06\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce5074b77b61d48bc464c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce50d4b77b61d48bc464d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6b8a8abcd0961bd507c\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce6bca8abcd0961bd507d\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fa4a974500e4b59f92\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629ce7fe4a974500e4b59f93\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1834d143cd2c4e4e0362\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d183ad143cd2c4e4e0363\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d186dfbb6ae4597393dae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1870fbb6ae4597393daf\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d18cf19043c6191c88cc0\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d18d319043c6191c88cc1\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d19606b322a90e9f3b303\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b40bc4de13267e95230\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1b4caf77dc055d0b5015\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bcc2a1dcd3dd87b1757\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1bd8ebf6e79af221122f\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c715e2b8b3ffeea2c35\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c78eaa188b835b8f040\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c7deaa188b835b8f041\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1c81eaa188b835b8f042\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d1e1f0a05a09e3941fb\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d221f0a05a09e3941fc\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d391f0a05a09e3941fd\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1d9d2691645202a273ac\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da12691645202a273ad\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1da52691645202a273ae\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e15a12f3b5d4af4cbe6\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e19a12f3b5d4af4cbe7\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e1ba12f3b5d4af4cbe8\"), Result: 0\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e1fa12f3b5d4af4cbe9\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:20:52","Context":"New Insert at: \u0026{ObjectID(\"629d1e34a12f3b5d4af4cbea\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:21:17","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:21:17","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:21:17","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"05-06-2022 22:21:17","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e34a12f3b5d4af4cbea\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"New Insert at: \u0026{ObjectID(\"629d1e953aaa74e0fc932eb7\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:29","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:34","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:34","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:34","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:34","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:34","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:34","Context":"New Insert at: \u0026{ObjectID(\"629d1e9a3aaa74e0fc932eb8\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:35","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:35","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:35","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:35","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:35","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:35","Context":"New Insert at: \u0026{ObjectID(\"629d1e9b3aaa74e0fc932eb9\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e953aaa74e0fc932eb7\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e9a3aaa74e0fc932eb8\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"UPDATE_Proposition ID: ObjectID(\"629d1e9b3aaa74e0fc932eb9\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"New Insert at: \u0026{ObjectID(\"629d1eacea7ce0f9bac55a69\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:52","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:55","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:55","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:55","Context":"UPDATE_Proposition ID: ObjectID(\"629d1eacea7ce0f9bac55a69\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:56","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:56","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:56","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:56","Context":"New Insert at: \u0026{ObjectID(\"629d1eb0ea7ce0f9bac55a6a\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:56","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:56","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:56","Context":"UPDATE_Proposition ID: ObjectID(\"629d1eb0ea7ce0f9bac55a6a\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:56","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:56","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:56","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:56","Context":"New Insert at: \u0026{ObjectID(\"629d1eb0ea7ce0f9bac55a6b\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:57","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:57","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:57","Context":"UPDATE_Proposition ID: ObjectID(\"629d1eb0ea7ce0f9bac55a6b\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:57","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:57","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:57","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:57","Context":"New Insert at: \u0026{ObjectID(\"629d1eb1ea7ce0f9bac55a6c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:58","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:58","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:58","Context":"UPDATE_Proposition ID: ObjectID(\"629d1eb1ea7ce0f9bac55a6c\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:58","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:58","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:58","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:58","Context":"New Insert at: \u0026{ObjectID(\"629d1eb2ea7ce0f9bac55a6d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:59","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:59","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:59","Context":"UPDATE_Proposition ID: ObjectID(\"629d1eb2ea7ce0f9bac55a6d\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:59","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:59","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:22:59","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:22:59","Context":"New Insert at: \u0026{ObjectID(\"629d1eb3ea7ce0f9bac55a6e\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:00","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:23:00","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:23:00","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:00","Context":"UPDATE_Proposition ID: ObjectID(\"629d1eb3ea7ce0f9bac55a6e\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:01","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:01","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:01","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:23:01","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:23:01","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:01","Context":"New Insert at: \u0026{ObjectID(\"629d1eb5ea7ce0f9bac55a6f\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:02","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:02","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:02","Context":"UPDATE_Proposition ID: ObjectID(\"629d1eb5ea7ce0f9bac55a6f\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:02","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:23:02","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:23:02","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:02","Context":"New Insert at: \u0026{ObjectID(\"629d1eb6ea7ce0f9bac55a70\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:03","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:03","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:03","Context":"UPDATE_Proposition ID: ObjectID(\"629d1eb6ea7ce0f9bac55a70\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:03","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:23:03","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:23:03","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:03","Context":"New Insert at: \u0026{ObjectID(\"629d1eb7ea7ce0f9bac55a71\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:06","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:23:06","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:23:06","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"05-06-2022 22:23:06","Context":"UPDATE_Proposition ID: ObjectID(\"629d1eb7ea7ce0f9bac55a71\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"New Insert at: \u0026{ObjectID(\"629d1f15cef613fb174f6e59\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:37","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:41","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:41","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:41","Context":"UPDATE_Proposition ID: ObjectID(\"629d1f15cef613fb174f6e59\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:41","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:41","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:41","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:41","Context":"New Insert at: \u0026{ObjectID(\"629d1f19cef613fb174f6e5a\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:45","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:45","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:45","Context":"UPDATE_Proposition ID: ObjectID(\"629d1f19cef613fb174f6e5a\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:45","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:45","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:45","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:45","Context":"New Insert at: \u0026{ObjectID(\"629d1f1dcef613fb174f6e5b\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:45","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:45","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:45","Context":"UPDATE_Proposition ID: ObjectID(\"629d1f1dcef613fb174f6e5b\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:45","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:46","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:46","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:46","Context":"New Insert at: \u0026{ObjectID(\"629d1f1ecef613fb174f6e5c\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:47","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:47","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:47","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:47","Context":"UPDATE_Proposition ID: ObjectID(\"629d1f1ecef613fb174f6e5c\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:48","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:48","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:48","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:48","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:48","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:48","Context":"New Insert at: \u0026{ObjectID(\"629d1f20cef613fb174f6e5d\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"UPDATE_Proposition ID: ObjectID(\"629d1f20cef613fb174f6e5d\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"New Insert at: \u0026{ObjectID(\"629d1f21cef613fb174f6e5e\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"UPDATE_Proposition ID: ObjectID(\"629d1f21cef613fb174f6e5e\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"New Insert at: \u0026{ObjectID(\"629d1f21cef613fb174f6e5f\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"UPDATE_Proposition ID: ObjectID(\"629d1f21cef613fb174f6e5f\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:49","Context":"New Insert at: \u0026{ObjectID(\"629d1f21cef613fb174f6e60\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"UPDATE_Proposition ID: ObjectID(\"629d1f21cef613fb174f6e60\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"New Insert at: \u0026{ObjectID(\"629d1f22cef613fb174f6e61\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"UPDATE_Proposition ID: ObjectID(\"629d1f22cef613fb174f6e61\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:24:50","Context":"New Insert at: \u0026{ObjectID(\"629d1f22cef613fb174f6e62\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:25:02","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:25:02","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:25:02","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"05-06-2022 22:25:02","Context":"UPDATE_Proposition ID: ObjectID(\"629d1f22cef613fb174f6e62\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:25:44","Context":"Refreshing propositions (http req)"}
+{"Type":"Info","DateTime":"05-06-2022 22:25:44","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:25:44","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:25:44","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:25:44","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:25:44","Context":"New Insert at: \u0026{ObjectID(\"629d1f58cef613fb174f6e63\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:33:35","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:33:35","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:33:35","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:33:35","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:33:35","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:33:35","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:33:35","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:33:35","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:33:35","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:33:35","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:33:35","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:35:53","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:35:53","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:35:53","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:35:53","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:35:53","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:35:53","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:35:53","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:35:53","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:35:53","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:35:53","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:35:53","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:36:01","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:36:01","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:36:01","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:36:01","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:36:51","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:36:51","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:36:51","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:36:51","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:36:51","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:36:51","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:36:51","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:36:51","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:36:51","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:36:51","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:36:51","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:37:32","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:37:32","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:32","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:37:32","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:32","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:32","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:32","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:32","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:32","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:32","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:37:32","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:37:49","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:37:49","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:49","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:37:49","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:49","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:37:49","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:37:49","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:04","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:04","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:04","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:04","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:04","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:04","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:04","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:04","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:04","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:04","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:04","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:18","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:18","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:18","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:18","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:18","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:18","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:18","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:18","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:18","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:18","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:18","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:38:19","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:38:19","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:19","Context":"New Insert at: \u0026{ObjectID(\"629d224b4b4928671673d2ea\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:19","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:27","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:38:27","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:38:27","Context":"InsertCMDBItem from CMDB DB"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d224b4b4928671673d2ea\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:41","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:41","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:41","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:41","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:41","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:41","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:41","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:41","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:41","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:38:41","Context":"SelectAllCMDB from CMDB DB (sqlite)"}
+{"Type":"Info","DateTime":"05-06-2022 22:38:41","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:46:49","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:46:49","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:46:49","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:46:49","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:46:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:46:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:46:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:46:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:46:49","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:46:49","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"New Insert at: \u0026{ObjectID(\"629d2495d8f67265f879da2f\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:48:05","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:48:16","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:48:16","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:48:16","Context":"Attempting to INSERT_CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 22:48:16","Context":"New Insert at: \u0026{ObjectID(\"629d24a0d8f67265f879da30\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:48:16","Context":"UPDATE_Proposition ID: ObjectID(\"629d2495d8f67265f879da2f\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:51:49","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:51:49","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:51:49","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:51:49","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:51:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:51:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:51:49","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:51:49","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:51:49","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:51:49","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"New Insert at: \u0026{ObjectID(\"629d25a513b08569f1641285\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:52:37","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:52:46","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:52:46","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:52:46","Context":"Attempting to INSERT_CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 22:52:46","Context":"New Insert at: \u0026{ObjectID(\"629d25ae13b08569f1641286\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:52:46","Context":"UPDATE_Proposition ID: ObjectID(\"629d25a513b08569f1641285\"), Result: 1\n"}
