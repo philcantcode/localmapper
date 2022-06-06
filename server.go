@@ -7,7 +7,6 @@ import (
 	"github.com/philcantcode/localmapper/capability"
 	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/cmdb"
-	"github.com/philcantcode/localmapper/jobs"
 	"github.com/philcantcode/localmapper/proposition"
 	"github.com/philcantcode/localmapper/utils"
 )
@@ -27,14 +26,11 @@ func initServer() {
 	router.HandleFunc("/local/get-logs", local.HTTP_JSON_GetLogs)
 	router.HandleFunc("/local/get-default-ip-gateway", local.HTTP_JSON_GetDefaultGatewayIP)
 
-	router.HandleFunc("/propositions/refresh", proposition.HTTP_None_Refresh)
 	router.HandleFunc("/propositions/get-all", proposition.HTTP_JSON_GetPropositions)
 	router.HandleFunc("/propositions/accept-defaults", proposition.HTTP_None_AcceptDefault)
 
 	router.HandleFunc("/cmdb/get-self", cmdb.HTTP_JSON_GetSelf)
 	router.HandleFunc("/cmdb/get-all", cmdb.HTTP_JSON_GetAll)
-
-	router.HandleFunc("/jobs/get-all", jobs.HTTP_JSON_GetAll)
 
 	fileServer := http.FileServer(http.Dir("/"))
 

@@ -14,9 +14,5 @@ func main() {
 
 	proposition.SetupJobs()
 
-	// for _, p := range proposition.SELECT_Propositions(bson.M{}, bson.M{}) {
-	// 	fmt.Printf("%+v\n\n", p)
-	// }
-
 	initServer()
 }

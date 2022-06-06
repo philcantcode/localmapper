@@ -13,12 +13,12 @@ import (
 // Connection URI
 var uri string
 var client *mongo.Client
-var NmapDB *mongo.Collection
-var CmdbDB *mongo.Collection
-var VlanDB *mongo.Collection
-var PropositionDB *mongo.Collection
-var JobsDB *mongo.Collection
-var CapabilityDB *mongo.Collection
+var Results_Nmap_DB *mongo.Collection
+var CMDB_Devices_DB *mongo.Collection
+var CMDB_VLAN_DB *mongo.Collection
+var Core_Proposition_DB *mongo.Collection
+var Core_Jobs_DB *mongo.Collection
+var Core_Capability_DB *mongo.Collection
 
 func InitMongo() {
 	var err error
@@ -46,21 +46,21 @@ func InitMongo() {
 	utils.ErrorFatal("MongoDB couldn't ping "+uri, err)
 	utils.Log("Successfully connected MongoDB to: "+uri, true)
 
-	NmapDB = client.Database("Network").Collection("Nmap")
+	Results_Nmap_DB = client.Database("Results").Collection("Nmap")
 	utils.Log("Successfully setup mongo nmap database collections: ", true)
 
-	CmdbDB = client.Database("CMDB").Collection("CMDB")
+	CMDB_Devices_DB = client.Database("CMDB").Collection("Devices")
 	utils.Log("Successfully setup mongo cmdb database collections: ", true)
 
-	VlanDB = client.Database("CMDB").Collection("VLAN")
+	CMDB_VLAN_DB = client.Database("CMDB").Collection("VLAN")
 	utils.Log("Successfully setup mongo vlan database collections: ", true)
 
-	PropositionDB = client.Database("Core").Collection("Proposition")
+	Core_Proposition_DB = client.Database("Core").Collection("Proposition")
 	utils.Log("Successfully setup mongo cmdb database collections: ", true)
 
-	JobsDB = client.Database("Core").Collection("Jobs")
+	Core_Jobs_DB = client.Database("Core").Collection("Jobs")
 	utils.Log("Successfully setup mongo vlan database collections: ", true)
 
-	CapabilityDB = client.Database("Core").Collection("Capability")
+	Core_Capability_DB = client.Database("Core").Collection("Capability")
 	utils.Log("Successfully setup mongo capability database collections: ", true)
 }

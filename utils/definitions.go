@@ -11,6 +11,7 @@ const (
 	Decimal
 	Bool
 	None
+	CIDR
 )
 
 func ReverseDataTypeLookup(datType DataType) string {
@@ -31,6 +32,8 @@ func ReverseDataTypeLookup(datType DataType) string {
 		return "Bool"
 	case 7:
 		return "None"
+	case 9:
+		return "CIDR"
 	default:
 		ErrorForceFatal("Couldn't do a reverse lookup for DataType (definitions)")
 	}

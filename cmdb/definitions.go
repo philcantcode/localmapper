@@ -22,10 +22,10 @@ type CMDBItem struct {
 }
 
 type Vlan struct {
-	ID          int `bson:"_id"`
-	Name        string
-	Description string
-	HighIP      string
-	LowIP       string
-	Tags        string
+	ID     primitive.ObjectID `bson:"_id"`
+	Label  string
+	Desc   string
+	HighIP string
+	LowIP  string
+	Tags   map[string]string
 }

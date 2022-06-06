@@ -13,7 +13,7 @@ import (
 func INSERT_Nmap(nmapResult NmapRun) {
 	utils.Log("Attempting to Insert_Network_Nmap", false)
 
-	insertResult, err := database.NmapDB.InsertOne(context.Background(), nmapResult)
+	insertResult, err := database.Results_Nmap_DB.InsertOne(context.Background(), nmapResult)
 
 	utils.ErrorFatal("Couldn't Insert_Network_Nmap", err)
 	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), true)
@@ -24,7 +24,7 @@ func INSERT_Nmap(nmapResult NmapRun) {
    2. projection bson.M{"version": 1} to limit the fields returned
 */
 func SELECT_Nmap(filter bson.M, projection bson.M) []NmapRun {
-	cursor, err := database.NmapDB.Find(context.Background(), filter, options.Find().SetProjection(projection))
+	cursor, err := database.Results_Nmap_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
 	utils.ErrorFatal("Couldn't FilterNetworkMap", err)
 	defer cursor.Close(context.Background())
 

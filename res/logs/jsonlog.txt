@@ -4557,3 +4557,197 @@
 {"Type":"Info","DateTime":"05-06-2022 22:52:46","Context":"Attempting to INSERT_CMDB"}
 {"Type":"Info","DateTime":"05-06-2022 22:52:46","Context":"New Insert at: \u0026{ObjectID(\"629d25ae13b08569f1641286\")}"}
 {"Type":"Info","DateTime":"05-06-2022 22:52:46","Context":"UPDATE_Proposition ID: ObjectID(\"629d25a513b08569f1641285\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:57:41","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:57:41","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:57:41","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:57:41","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:57:41","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:57:41","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:57:41","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:57:41","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:57:41","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:57:41","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:57:42","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:57:42","Context":"Attempting to INSERT_Proposition"}
+{"Type":"Info","DateTime":"05-06-2022 22:57:42","Context":"New Insert at: \u0026{ObjectID(\"629d26d6df061c0f2f8bb0c1\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:57:42","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:58:27","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 22:58:27","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:58:27","Context":"Attempting to INSERT_CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 22:58:27","Context":"New Insert at: \u0026{ObjectID(\"629d2703df061c0f2f8bb0c2\")}"}
+{"Type":"Info","DateTime":"05-06-2022 22:58:27","Context":"UPDATE_Proposition ID: ObjectID(\"629d26d6df061c0f2f8bb0c1\"), Result: 1\n"}
+{"Type":"Info","DateTime":"05-06-2022 22:59:07","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 22:59:07","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 22:59:07","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 22:59:07","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:59:07","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:59:07","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:59:07","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:59:07","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:59:07","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 22:59:07","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 22:59:07","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"05-06-2022 22:59:12","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:59:12","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 22:59:12","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 23:09:43","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 23:09:43","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 23:09:43","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 23:32:55","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 23:32:55","Context":"Returning the date \u0026 time."}
+{"Type":"Info","DateTime":"05-06-2022 23:32:55","Context":"Getting a list of network adapters \u0026 IP addresses."}
+{"Type":"Info","DateTime":"05-06-2022 23:40:33","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 23:40:33","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 23:40:33","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 23:40:33","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:40:33","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:40:33","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:40:33","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:40:33","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:40:33","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:40:33","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 23:40:33","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Fatal","DateTime":"05-06-2022 23:43:29","Context":"No capability type to run in Capability.ProcessCapability: {ObjectID(\"000000000000000000000000\") { []}    []}"}
+{"Type":"Info","DateTime":"05-06-2022 23:48:58","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"05-06-2022 23:48:58","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"05-06-2022 23:48:58","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"05-06-2022 23:48:58","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:48:58","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:48:58","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:48:58","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:48:58","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:48:58","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"05-06-2022 23:48:58","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"05-06-2022 23:48:58","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Attempting to INSERT_VLAN"}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"New Insert at: \u0026{ObjectID(\"629d3947a8d6b6b9d0c7039d\")}"}
+{"Type":"Info","DateTime":"06-06-2022 00:16:23","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Attempting to INSERT_VLAN"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"New Insert at: \u0026{ObjectID(\"629d397487005505eb3604ad\")}"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:08","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Attempting to INSERT_VLAN"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"New Insert at: \u0026{ObjectID(\"629d398a40dfafa48b24fd65\")}"}
+{"Type":"Info","DateTime":"06-06-2022 00:17:30","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Attempting to INSERT_JobSpec"}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"New Insert at: \u0026{ObjectID(\"629d3fbae8bc09b31abf2d0c\")}"}
+{"Type":"Info","DateTime":"06-06-2022 00:43:54","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Attempting to INSERT_JobSpec"}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"New Insert at: \u0026{ObjectID(\"629d415aa2507aac8bcd416f\")}"}
+{"Type":"Info","DateTime":"06-06-2022 00:50:50","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Processing Job at state: 0"}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Done Processing Job"}
+{"Type":"Info","DateTime":"06-06-2022 01:08:41","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Processing Job at state: 0"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Done Processing Job"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:29","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Processing Job at state: 0"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Done Processing Job"}
+{"Type":"Info","DateTime":"06-06-2022 01:09:43","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Processing Job at state: 0"}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Done Processing Job"}
+{"Type":"Info","DateTime":"06-06-2022 01:10:35","Context":"Hosting Server at http://localhost:8008"}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Attempting to open SQL database: res/database.db"}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Attempting to connect MongoDB to: "}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Successfully connected MongoDB to: mongodb://127.0.0.1:27017"}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Successfully setup mongo nmap database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Successfully setup mongo cmdb database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Successfully setup mongo vlan database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Successfully setup mongo capability database collections: "}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Identity local already found in CMDB"}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Attempting to INSERT_JobSpec"}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"New Insert at: \u0026{ObjectID(\"629d4665e36b887e9d574bcd\")}"}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Processing Job at state: 0"}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Done Processing Job"}
+{"Type":"Info","DateTime":"06-06-2022 01:12:21","Context":"Hosting Server at http://localhost:8008"}

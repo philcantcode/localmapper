@@ -15,19 +15,19 @@ func INSERT_Capability(capability Capability) {
 	utils.Log("Attempting to INSERT_Capability", false)
 
 	capability.ID = primitive.NewObjectID()
-	insertResult, err := database.CapabilityDB.InsertOne(context.Background(), capability)
+	insertResult, err := database.Core_Capability_DB.InsertOne(context.Background(), capability)
 
 	utils.ErrorFatal("Couldn't INSERT_Capability", err)
-	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), true)
+	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 }
 
 func UPDATE_Capability(capability Capability) {
 	utils.Log(fmt.Sprintf("Attempting to UPDATE_Capability (ID: %d)\n", capability.ID), true)
 
-	result, err := database.CapabilityDB.ReplaceOne(context.Background(), bson.M{"id": capability.ID}, capability)
+	result, err := database.Core_Capability_DB.ReplaceOne(context.Background(), bson.M{"id": capability.ID}, capability)
 
 	utils.ErrorFatal("Couldn't UPDATE_Capability", err)
-	utils.Log(fmt.Sprintf("New Update made: %b", result.ModifiedCount), true)
+	utils.Log(fmt.Sprintf("New Update made: %b", result.ModifiedCount), false)
 }
 
 /* SELECT_Capability takes in a:
@@ -35,7 +35,7 @@ func UPDATE_Capability(capability Capability) {
    2. projection bson.M{"version": 1} to limit the fields returned
 */
 func SELECT_Capability(filter bson.M, projection bson.M) []Capability {
-	cursor, err := database.CapabilityDB.Find(context.Background(), filter, options.Find().SetProjection(projection))
+	cursor, err := database.Core_Capability_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
 	utils.ErrorFatal("Couldn't SELECT_Capability", err)
 	defer cursor.Close(context.Background())
 

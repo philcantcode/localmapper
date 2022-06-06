@@ -6,7 +6,6 @@ import (
 	"net/http"
 
 	"github.com/philcantcode/localmapper/database"
-	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
@@ -26,11 +25,4 @@ func HTTP_None_AcceptDefault(w http.ResponseWriter, r *http.Request) {
 /* HTTP_JSON_GetDefaultGatewayIP both the deafult IP and the Gateway */
 func HTTP_JSON_GetPropositions(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(SELECT_Propositions(bson.M{}, bson.M{}))
-}
-
-// HTTP_None_Refresh is called when the user visits http://server.com/propositions to referesh them
-func HTTP_None_Refresh(w http.ResponseWriter, r *http.Request) {
-	utils.Log("Refreshing propositions (http req)", false)
-
-	SetupJobs()
 }

@@ -15,14 +15,14 @@ func INSERT_CMDBItem(cmdb CMDBItem) {
 	utils.Log("Attempting to INSERT_CMDB", false)
 
 	cmdb.ID = primitive.NewObjectID()
-	insertResult, err := database.CmdbDB.InsertOne(context.Background(), cmdb)
+	insertResult, err := database.CMDB_Devices_DB.InsertOne(context.Background(), cmdb)
 
 	utils.ErrorFatal("Couldn't INSERT_CMDB", err)
 	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 }
 
 func SELECT_CMDBItem(filter bson.M, projection bson.M) []CMDBItem {
-	cursor, err := database.CmdbDB.Find(context.Background(), filter, options.Find().SetProjection(projection))
+	cursor, err := database.CMDB_Devices_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
 	utils.ErrorFatal("Couldn't SELECT_CMDBItem", err)
 	defer cursor.Close(context.Background())
 
@@ -40,25 +40,31 @@ func SELECT_CMDBItem(filter bson.M, projection bson.M) []CMDBItem {
 	return results
 }
 
-// Descending Order
-func SelectAllVlans() []Vlan {
-	utils.Log("SelectAllVlans from Vlans Db (sqlite)", false)
-	stmt, err := database.Con.Prepare("SELECT `id`, `name`, `description`, `highIP`, `lowIP`, `tags` FROM `Vlans` ORDER BY `id` DESC")
-	utils.ErrorLog("Couldn't select all from Vlans", err, true)
+func INSERT_VLAN(vlan Vlan) {
+	utils.Log("Attempting to INSERT_VLAN", false)
 
-	rows, err := stmt.Query()
-	utils.ErrorLog("Couldn't recieve rows from SelectAllVlans", err, true)
-	defer rows.Close()
+	vlan.ID = primitive.NewObjectID()
+	insertResult, err := database.CMDB_VLAN_DB.InsertOne(context.Background(), vlan)
 
-	vlans := []Vlan{}
+	utils.ErrorFatal("Couldn't INSERT_VLAN", err)
+	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
+}
 
-	for rows.Next() {
-		vlan := Vlan{}
+func SELECT_Vlan(filter bson.M, projection bson.M) []Vlan {
+	cursor, err := database.CMDB_VLAN_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
+	utils.ErrorFatal("Couldn't SELECT_Vlan", err)
+	defer cursor.Close(context.Background())
 
-		rows.Scan(&vlan.ID, &vlan.Name, &vlan.Description, &vlan.HighIP, &vlan.LowIP, &vlan.Tags)
+	results := []Vlan{}
 
-		vlans = append(vlans, vlan)
+	for cursor.Next(context.Background()) {
+		var vlan Vlan
+
+		err = cursor.Decode(&vlan)
+		utils.ErrorFatal("Couldn't decode SELECT_Vlan", err)
+
+		results = append(results, vlan)
 	}
 
-	return vlans
+	return results
 }

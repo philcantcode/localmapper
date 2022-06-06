@@ -1,20 +1,15 @@
-[i][05-06-2022 22:52:37] Attempting to open SQL database: res/database.db
-[i][05-06-2022 22:52:37] Attempting to connect MongoDB to: 
-[i][05-06-2022 22:52:37] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
-[i][05-06-2022 22:52:37] Successfully setup mongo nmap database collections: 
-[i][05-06-2022 22:52:37] Successfully setup mongo cmdb database collections: 
-[i][05-06-2022 22:52:37] Successfully setup mongo vlan database collections: 
-[i][05-06-2022 22:52:37] Successfully setup mongo cmdb database collections: 
-[i][05-06-2022 22:52:37] Successfully setup mongo vlan database collections: 
-[i][05-06-2022 22:52:37] Successfully setup mongo capability database collections: 
-[i][05-06-2022 22:52:37] Getting a list of network adapters & IP addresses.
-[i][05-06-2022 22:52:37] Returning the date & time.
-[i][05-06-2022 22:52:37] Attempting to INSERT_Proposition
-[i][05-06-2022 22:52:37] New Insert at: &{ObjectID("629d25a513b08569f1641285")}
-[i][05-06-2022 22:52:37] Hosting Server at http://localhost:8008
-[i][05-06-2022 22:52:46] Getting a list of network adapters & IP addresses.
-[i][05-06-2022 22:52:46] Returning the date & time.
-[i][05-06-2022 22:52:46] Attempting to INSERT_CMDB
-[i][05-06-2022 22:52:46] New Insert at: &{ObjectID("629d25ae13b08569f1641286")}
-[i][05-06-2022 22:52:46] UPDATE_Proposition ID: ObjectID("629d25a513b08569f1641285"), Result: 1
-
+[i][06-06-2022 01:12:21] Attempting to open SQL database: res/database.db
+[i][06-06-2022 01:12:21] Attempting to connect MongoDB to: 
+[i][06-06-2022 01:12:21] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
+[i][06-06-2022 01:12:21] Successfully setup mongo nmap database collections: 
+[i][06-06-2022 01:12:21] Successfully setup mongo cmdb database collections: 
+[i][06-06-2022 01:12:21] Successfully setup mongo vlan database collections: 
+[i][06-06-2022 01:12:21] Successfully setup mongo cmdb database collections: 
+[i][06-06-2022 01:12:21] Successfully setup mongo vlan database collections: 
+[i][06-06-2022 01:12:21] Successfully setup mongo capability database collections: 
+[i][06-06-2022 01:12:21] Identity local already found in CMDB
+[i][06-06-2022 01:12:21] Attempting to INSERT_JobSpec
+[i][06-06-2022 01:12:21] New Insert at: &{ObjectID("629d4665e36b887e9d574bcd")}
+[i][06-06-2022 01:12:21] Processing Job at state: 0
+[i][06-06-2022 01:12:21] Done Processing Job
+[i][06-06-2022 01:12:21] Hosting Server at http://localhost:8008
