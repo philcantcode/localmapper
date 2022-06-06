@@ -2,7 +2,6 @@ package proposition
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"github.com/philcantcode/localmapper/database"
@@ -14,7 +13,6 @@ import (
 func HTTP_None_AcceptDefault(w http.ResponseWriter, r *http.Request) {
 	ID := r.PostFormValue("ID")
 
-	fmt.Println(ID)
 	// Set the result to accept by default
 	prop := SELECT_Propositions(bson.M{"_id": database.EncodeID(ID)}, bson.M{})[0]
 	prop.Status = 1

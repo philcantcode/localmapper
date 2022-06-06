@@ -3,14 +3,14 @@ package utils
 type DataType int
 
 const (
-	String DataType = iota
+	EMPTY DataType = iota
 	IP
-	IPRange
+	IP_RANGE
 	MAC
-	Integer
-	Decimal
-	Bool
-	None
+	INTEGER
+	DECIMAL
+	BOOL
+	STRING
 	CIDR
 	IP6
 	MAC6
@@ -19,21 +19,21 @@ const (
 func ReverseDataTypeLookup(datType DataType) string {
 	switch datType {
 	case 0:
-		return "String"
+		return "EMPTY"
 	case 1:
 		return "IP"
 	case 2:
-		return "IPRange"
+		return "IP_RANGE"
 	case 3:
 		return "MAC"
 	case 4:
-		return "Integer"
+		return "INTEGER"
 	case 5:
-		return "Decimal"
+		return "DECIMAL"
 	case 6:
-		return "Bool"
+		return "BOOL"
 	case 7:
-		return "None"
+		return "STRING"
 	case 9:
 		return "CIDR"
 	case 10:

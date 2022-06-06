@@ -37,12 +37,12 @@ func ParamsToArray(params []Param) []string {
 		}
 
 		// If the MetaType is NOT 'none' and the value is NOT empty, add the value
-		if param.DataType != utils.None && param.Value != "" {
+		if param.DataType != utils.EMPTY && param.Value != "" {
 			paramArr = append(paramArr, param.Value)
 		}
 
 		// If the MetaType and Value are empty, use the default
-		if param.DataType != utils.None && param.Value == "" && param.Default != "" {
+		if param.DataType != utils.EMPTY && param.Value == "" && param.Default != "" {
 			paramArr = append(paramArr, param.Default)
 		}
 

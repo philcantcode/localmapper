@@ -12,17 +12,28 @@ func processProposition(proposition Proposition) {
 		sysTags := []cmdb.EntryTag{}
 		usrTags := []cmdb.EntryTag{}
 
-		sysTags = append(sysTags, cmdb.EntryTag{Label: "verified", DataType: utils.Bool, Values: []string{"1"}})
-		sysTags = append(sysTags, cmdb.EntryTag{Label: "identity", DataType: utils.Bool, Values: []string{"local"}})
+		sysTags = append(sysTags, cmdb.EntryTag{Label: "verified", DataType: utils.BOOL, Values: []string{"1"}})
+		sysTags = append(sysTags, cmdb.EntryTag{Label: "identity", DataType: utils.STRING, Values: []string{"local"}})
 
-		usrTags = append(usrTags, cmdb.EntryTag{Label: "IP", DataType: utils.IP, Values: []string{proposition.Predicate.Value}})
+		sysTags = append(usrTags, cmdb.EntryTag{Label: "IP", DataType: utils.IP, Values: []string{proposition.Predicate.Value}})
 
 		for _, net := range local.GetNetworkAdapters() {
 			if net.IP == proposition.Predicate.Value {
-				usrTags = append(usrTags, cmdb.EntryTag{Label: "MAC", DataType: utils.MAC, Values: []string{net.MAC}})
-				usrTags = append(usrTags, cmdb.EntryTag{Label: "MAC6", DataType: utils.MAC6, Values: []string{net.MAC6}})
-				usrTags = append(usrTags, cmdb.EntryTag{Label: "NetAdapter", DataType: utils.String, Values: []string{net.Name}})
-				usrTags = append(usrTags, cmdb.EntryTag{Label: "IP6", DataType: utils.IP6, Values: []string{net.IP6}})
+				if net.MAC != "" {
+					sysTags = append(sysTags, cmdb.EntryTag{Label: "MAC", DataType: utils.MAC, Values: []string{net.MAC}})
+				}
+
+				if net.MAC6 != "" {
+					sysTags = append(sysTags, cmdb.EntryTag{Label: "MAC6", DataType: utils.MAC6, Values: []string{net.MAC6}})
+				}
+
+				if net.Name != "" {
+					sysTags = append(sysTags, cmdb.EntryTag{Label: "NetAdapter", DataType: utils.STRING, Values: []string{net.Name}})
+				}
+
+				if net.IP6 != "" {
+					sysTags = append(sysTags, cmdb.EntryTag{Label: "IP6", DataType: utils.IP6, Values: []string{net.IP6}})
+				}
 			}
 		}
 
@@ -33,6 +44,7 @@ func processProposition(proposition Proposition) {
 			OSILayer: 7,
 			Desc:     "The local-mapper backend server.",
 			DateSeen: time,
+			CMDBType: cmdb.SERVER,
 			UsrTags:  usrTags,
 			SysTags:  sysTags}
 

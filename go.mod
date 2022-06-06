@@ -8,11 +8,14 @@ require (
 	go.mongodb.org/mongo-driver v1.8.3
 )
 
+require github.com/felixge/httpsnoop v1.0.1 // indirect
+
 require (
 	github.com/go-ping/ping v0.0.0-20211130115550-779d1e919534 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/google/uuid v1.3.0 // indirect
+	github.com/gorilla/handlers v1.5.1
 	github.com/jackpal/gateway v1.0.7 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/pkg/errors v0.9.1 // indirect

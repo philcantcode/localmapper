@@ -9,3 +9,13 @@ func ArrayContains(str string, s []string) bool {
 
 	return false
 }
+
+func DTArrayContains(str DataType, s []DataType) bool {
+	for _, v := range s {
+		if v == str {
+			return true
+		}
+	}
+
+	return false
+}

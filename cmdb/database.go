@@ -44,6 +44,5 @@ func UPDATE_ENTRY(cmdb Entry) {
 	result, err := database.CMDB_Inventory_DB.ReplaceOne(context.Background(), bson.M{"_id": cmdb.ID}, cmdb)
 	utils.ErrorFatal("Couldn't UPDATE_CMDB", err)
 
-	fmt.Printf("%+v\n", cmdb)
 	utils.Log(fmt.Sprintf("UPDATE_CMDB ID: %s, Result: %d\n", cmdb.ID, result.ModifiedCount), false)
 }

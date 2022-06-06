@@ -1,9 +1,6 @@
 package proposition
 
 import (
-	"encoding/json"
-	"fmt"
-
 	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/utils"
@@ -18,6 +15,7 @@ func SetupJobs() {
 // setupSelfIdentity initialises IPs and local variables
 func setupSelfIdentity() {
 	entries := cmdb.SELECT_ENTRY(bson.M{}, bson.M{})
+	localInCMDB := false
 
 	// Check if server is already in the database
 	for _, entry := range entries {
@@ -30,9 +28,8 @@ func setupSelfIdentity() {
 	}
 
 	props := SELECT_Propositions(bson.M{"type": "local-net-iface"}, bson.M{})
-	fmt.Println(props)
 
-	if len(props) > 0 {
+	if localInCMDB && len(props) > 0 {
 		utils.Log("Proposition for self identity already exists", true)
 		return
 	}
@@ -51,7 +48,7 @@ func setupSelfIdentity() {
 }
 
 func calculateVlanCIDR() {
-	entries := cmdb.SELECT_ENTRY(bson.M{"CMDBType": cmdb.VLAN}, bson.M{})
+	entries := cmdb.SELECT_ENTRY(bson.M{"cmdbtype": int32(cmdb.VLAN)}, bson.M{})
 
 	for _, entry := range entries {
 		// Check CMDB entry is of type VLAN
@@ -70,10 +67,10 @@ func calculateVlanCIDR() {
 		cidr, err := utils.IPv4RangeToCIDRRange(lowIP.Values[0], highIP.Values[0])
 		utils.ErrorLog("Couldn't generate CIDR for: "+entry.Label, err, true)
 
-		cidrBytes, err := json.Marshal(cidr)
-		utils.ErrorLog("Couldn't marshall cidr", err, true)
+		// Remove old CMDB tags so new one can be calcualted
+		entry.SysTags = cmdb.RemoveTag(entry.SysTags, "CMDB")
 
-		entry.SysTags = append(entry.SysTags, cmdb.EntryTag{Label: "CIDR", Desc: "CIDR range for this VLAN.", DataType: utils.CIDR, Values: []string{string(cidrBytes)}})
+		entry.SysTags = append(entry.SysTags, cmdb.EntryTag{Label: "CIDR", Desc: "CIDR range for this VLAN.", DataType: utils.CIDR, Values: cidr})
 		cmdb.UPDATE_ENTRY(entry)
 	}
 }

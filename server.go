@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/philcantcode/localmapper/capability"
 	"github.com/philcantcode/localmapper/capability/local"
@@ -16,8 +17,11 @@ func initServer() {
 
 	router := mux.NewRouter()
 
+	router.HandleFunc("/capability/run/cmdb-compatible/{cmbd_id}/{capability_id}", capability.HTTP_JSON_RunCMDBCompatible)
 	router.HandleFunc("/capability/run", capability.HTTP_JSON_Run)
-	router.HandleFunc("/capability/get", capability.HTTP_JSON_Get)
+	router.HandleFunc("/capability/get/all", capability.HTTP_JSON_GetAll)
+	router.HandleFunc("/capability/get/cmdb-compatible/{id}", capability.HTTP_JSON_GetCMDBCompatible)
+	router.HandleFunc("/capability/get/{id}", capability.HTTP_JSON_GetByID)
 	router.HandleFunc("/capability/update", capability.HTTP_JSON_Update)
 
 	router.HandleFunc("/local/get-network-adapters", local.HTTP_JSON_GetNetworkAdapters)
@@ -34,9 +38,16 @@ func initServer() {
 	router.HandleFunc("/cmdb/inventory/get/type/{type}", cmdb.HTTP_JSON_GetByType)
 	router.HandleFunc("/cmdb/inventory/get/{id}", cmdb.HTTP_JSON_GetByID)
 
+	cors := handlers.CORS(
+		handlers.AllowedHeaders([]string{"content-type"}),
+		handlers.AllowedOrigins([]string{"*"}),
+		handlers.AllowCredentials(),
+		handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS"}),
+	)
+
 	fileServer := http.FileServer(http.Dir("/"))
 
 	router.PathPrefix("/").Handler(http.StripPrefix("/", fileServer))
 
-	http.ListenAndServe(":"+utils.Configs["SERVER_PORT"], router)
+	http.ListenAndServe(":"+utils.Configs["SERVER_PORT"], cors(router))
 }

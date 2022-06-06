@@ -21,3 +21,15 @@ func FindUsrTag(label string, entry Entry) (EntryTag, bool) {
 
 	return EntryTag{}, false
 }
+
+func RemoveTag(entryTagSet []EntryTag, label string) []EntryTag {
+	var result []EntryTag
+
+	for index, v := range entryTagSet {
+		if v.Label == label {
+			result = append(entryTagSet[:index], entryTagSet[index+1:]...)
+		}
+	}
+
+	return result
+}
