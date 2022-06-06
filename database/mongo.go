@@ -14,8 +14,7 @@ import (
 var uri string
 var client *mongo.Client
 var Results_Nmap_DB *mongo.Collection
-var CMDB_Devices_DB *mongo.Collection
-var CMDB_VLAN_DB *mongo.Collection
+var CMDB_Inventory_DB *mongo.Collection
 var Core_Proposition_DB *mongo.Collection
 var Core_Jobs_DB *mongo.Collection
 var Core_Capability_DB *mongo.Collection
@@ -49,17 +48,14 @@ func InitMongo() {
 	Results_Nmap_DB = client.Database("Results").Collection("Nmap")
 	utils.Log("Successfully setup mongo nmap database collections: ", true)
 
-	CMDB_Devices_DB = client.Database("CMDB").Collection("Devices")
-	utils.Log("Successfully setup mongo cmdb database collections: ", true)
-
-	CMDB_VLAN_DB = client.Database("CMDB").Collection("VLAN")
-	utils.Log("Successfully setup mongo vlan database collections: ", true)
+	CMDB_Inventory_DB = client.Database("CMDB").Collection("Inventory")
+	utils.Log("Successfully setup mongo Inventory database collections: ", true)
 
 	Core_Proposition_DB = client.Database("Core").Collection("Proposition")
-	utils.Log("Successfully setup mongo cmdb database collections: ", true)
+	utils.Log("Successfully setup mongo Proposition database collections: ", true)
 
 	Core_Jobs_DB = client.Database("Core").Collection("Jobs")
-	utils.Log("Successfully setup mongo vlan database collections: ", true)
+	utils.Log("Successfully setup mongo Jobs database collections: ", true)
 
 	Core_Capability_DB = client.Database("Core").Collection("Capability")
 	utils.Log("Successfully setup mongo capability database collections: ", true)

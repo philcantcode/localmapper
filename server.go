@@ -29,8 +29,10 @@ func initServer() {
 	router.HandleFunc("/propositions/get-all", proposition.HTTP_JSON_GetPropositions)
 	router.HandleFunc("/propositions/accept-defaults", proposition.HTTP_None_AcceptDefault)
 
-	router.HandleFunc("/cmdb/get-self", cmdb.HTTP_JSON_GetSelf)
-	router.HandleFunc("/cmdb/get-all", cmdb.HTTP_JSON_GetAll)
+	router.HandleFunc("/cmdb/inventory/get/local", cmdb.HTTP_JSON_GetLocal)
+	router.HandleFunc("/cmdb/inventory/get/all", cmdb.HTTP_JSON_GetAll)
+	router.HandleFunc("/cmdb/inventory/get/type/{type}", cmdb.HTTP_JSON_GetByType)
+	router.HandleFunc("/cmdb/inventory/get/{id}", cmdb.HTTP_JSON_GetByID)
 
 	fileServer := http.FileServer(http.Dir("/"))
 

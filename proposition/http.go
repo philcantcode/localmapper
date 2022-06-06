@@ -16,7 +16,7 @@ func HTTP_None_AcceptDefault(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Println(ID)
 	// Set the result to accept by default
-	prop := SELECT_Propositions(bson.M{"_id": database.ID_TO_Obj(ID)}, bson.M{})[0]
+	prop := SELECT_Propositions(bson.M{"_id": database.EncodeID(ID)}, bson.M{})[0]
 	prop.Status = 1
 
 	processProposition(prop)

@@ -5,9 +5,9 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-func ID_TO_Obj(id string) primitive.ObjectID {
+func EncodeID(id string) primitive.ObjectID {
 	objID, err := primitive.ObjectIDFromHex(id)
-	utils.ErrorFatal("Couldn't convert string ID to mongo ID Object", err)
+	utils.ErrorLog("Couldn't convert string ID to mongo ID Object", err, false)
 
 	return objID
 }

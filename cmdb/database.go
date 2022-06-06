@@ -11,25 +11,25 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func INSERT_CMDBItem(cmdb CMDBItem) {
+func INSERT_ENTRY(cmdb Entry) {
 	utils.Log("Attempting to INSERT_CMDB", false)
 
 	cmdb.ID = primitive.NewObjectID()
-	insertResult, err := database.CMDB_Devices_DB.InsertOne(context.Background(), cmdb)
+	insertResult, err := database.CMDB_Inventory_DB.InsertOne(context.Background(), cmdb)
 
 	utils.ErrorFatal("Couldn't INSERT_CMDB", err)
 	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 }
 
-func SELECT_CMDBItem(filter bson.M, projection bson.M) []CMDBItem {
-	cursor, err := database.CMDB_Devices_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
+func SELECT_ENTRY(filter bson.M, projection bson.M) []Entry {
+	cursor, err := database.CMDB_Inventory_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
 	utils.ErrorFatal("Couldn't SELECT_CMDBItem", err)
 	defer cursor.Close(context.Background())
 
-	results := []CMDBItem{}
+	results := []Entry{}
 
 	for cursor.Next(context.Background()) {
-		var cmdb CMDBItem
+		var cmdb Entry
 
 		err = cursor.Decode(&cmdb)
 		utils.ErrorFatal("Couldn't decode SELECT_CMDBItem", err)
@@ -40,31 +40,10 @@ func SELECT_CMDBItem(filter bson.M, projection bson.M) []CMDBItem {
 	return results
 }
 
-func INSERT_VLAN(vlan Vlan) {
-	utils.Log("Attempting to INSERT_VLAN", false)
+func UPDATE_ENTRY(cmdb Entry) {
+	result, err := database.CMDB_Inventory_DB.ReplaceOne(context.Background(), bson.M{"_id": cmdb.ID}, cmdb)
+	utils.ErrorFatal("Couldn't UPDATE_CMDB", err)
 
-	vlan.ID = primitive.NewObjectID()
-	insertResult, err := database.CMDB_VLAN_DB.InsertOne(context.Background(), vlan)
-
-	utils.ErrorFatal("Couldn't INSERT_VLAN", err)
-	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
-}
-
-func SELECT_Vlan(filter bson.M, projection bson.M) []Vlan {
-	cursor, err := database.CMDB_VLAN_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
-	utils.ErrorFatal("Couldn't SELECT_Vlan", err)
-	defer cursor.Close(context.Background())
-
-	results := []Vlan{}
-
-	for cursor.Next(context.Background()) {
-		var vlan Vlan
-
-		err = cursor.Decode(&vlan)
-		utils.ErrorFatal("Couldn't decode SELECT_Vlan", err)
-
-		results = append(results, vlan)
-	}
-
-	return results
+	fmt.Printf("%+v\n", cmdb)
+	utils.Log(fmt.Sprintf("UPDATE_CMDB ID: %s, Result: %d\n", cmdb.ID, result.ModifiedCount), false)
 }

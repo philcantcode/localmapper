@@ -12,6 +12,8 @@ const (
 	Bool
 	None
 	CIDR
+	IP6
+	MAC6
 )
 
 func ReverseDataTypeLookup(datType DataType) string {
@@ -34,6 +36,10 @@ func ReverseDataTypeLookup(datType DataType) string {
 		return "None"
 	case 9:
 		return "CIDR"
+	case 10:
+		return "IP6"
+	case 11:
+		return "MAC6"
 	default:
 		ErrorForceFatal("Couldn't do a reverse lookup for DataType (definitions)")
 	}

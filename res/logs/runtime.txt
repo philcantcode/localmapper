@@ -1,15 +1,18 @@
-[i][06-06-2022 01:12:21] Attempting to open SQL database: res/database.db
-[i][06-06-2022 01:12:21] Attempting to connect MongoDB to: 
-[i][06-06-2022 01:12:21] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
-[i][06-06-2022 01:12:21] Successfully setup mongo nmap database collections: 
-[i][06-06-2022 01:12:21] Successfully setup mongo cmdb database collections: 
-[i][06-06-2022 01:12:21] Successfully setup mongo vlan database collections: 
-[i][06-06-2022 01:12:21] Successfully setup mongo cmdb database collections: 
-[i][06-06-2022 01:12:21] Successfully setup mongo vlan database collections: 
-[i][06-06-2022 01:12:21] Successfully setup mongo capability database collections: 
-[i][06-06-2022 01:12:21] Identity local already found in CMDB
-[i][06-06-2022 01:12:21] Attempting to INSERT_JobSpec
-[i][06-06-2022 01:12:21] New Insert at: &{ObjectID("629d4665e36b887e9d574bcd")}
-[i][06-06-2022 01:12:21] Processing Job at state: 0
-[i][06-06-2022 01:12:21] Done Processing Job
-[i][06-06-2022 01:12:21] Hosting Server at http://localhost:8008
+[i][06-06-2022 18:38:49] Attempting to open SQL database: res/database.db
+[i][06-06-2022 18:38:49] Attempting to connect MongoDB to: 
+[i][06-06-2022 18:38:49] Successfully connected MongoDB to: mongodb://127.0.0.1:27017
+[i][06-06-2022 18:38:49] Successfully setup mongo nmap database collections: 
+[i][06-06-2022 18:38:49] Successfully setup mongo Inventory database collections: 
+[i][06-06-2022 18:38:49] Successfully setup mongo Proposition database collections: 
+[i][06-06-2022 18:38:49] Successfully setup mongo Jobs database collections: 
+[i][06-06-2022 18:38:49] Successfully setup mongo capability database collections: 
+[i][06-06-2022 18:38:49] Identity local already found in CMDB
+[i][06-06-2022 18:38:49] Hosting Server at http://localhost:8008
+[i][06-06-2022 18:46:29] Inventory request made for: 629e344b6ea6e979e54d4131
+[i][06-06-2022 18:47:28] Inventory request made for: 629e344b6ea6e979e54d4131
+[i][06-06-2022 18:48:24] Inventory request made for: 629e344b6ea6e979e54d4131
+[i][06-06-2022 18:48:42] Inventory request made for: 629e344b6ea6e979e54d4131
+[i][06-06-2022 18:48:54] Inventory request made for: 629e344b6ea6e979e54d4131
+[i][06-06-2022 18:49:14] Inventory request made for: 629e37716e8d6dec884aed53
+[i][06-06-2022 18:49:16] Inventory request made for: 629e3493b659ed30df24ef4a
+[i][06-06-2022 18:49:18] Inventory request made for: 629e344b6ea6e979e54d4131

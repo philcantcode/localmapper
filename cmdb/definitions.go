@@ -1,6 +1,17 @@
 package cmdb
 
-import "go.mongodb.org/mongo-driver/bson/primitive"
+import (
+	"github.com/philcantcode/localmapper/utils"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+)
+
+type CMDBType int
+
+const (
+	VLAN CMDBType = iota
+	SERVER
+	ENDPOINT
+)
 
 /* OSI Layer:
    7 - Firewalls, IDS
@@ -10,22 +21,20 @@ import "go.mongodb.org/mongo-driver/bson/primitive"
    3 - Routers, L3 switches
    2 - L2 switches, Bridges
    1 - Hubs, repeaters, modems */
-type CMDBItem struct {
-	ID         primitive.ObjectID `bson:"_id"`
-	Label      string
-	Desc       string
-	OSILayer   int               // 1 - 7
-	DateSeen   []string          //[] Array of dates seen
-	StatusTags map[string]string // [Stopped, Running] etc
-	UserTags   map[string]string // [Project-X, Bob's Server] etc
-	InfoTags   map[string]string // [IP: xxx, MAC: xxx, URL: xxx] etc
+type Entry struct {
+	ID       primitive.ObjectID `bson:"_id"`
+	Label    string
+	Desc     string
+	CMDBType CMDBType
+	OSILayer int        // 1 - 7
+	DateSeen []string   //[] Array of dates seen
+	UsrTags  []EntryTag // [Project-X, Bob's Server] etc
+	SysTags  []EntryTag // [IP: xxx, MAC: xxx, URL: xxx] etc
 }
 
-type Vlan struct {
-	ID     primitive.ObjectID `bson:"_id"`
-	Label  string
-	Desc   string
-	HighIP string
-	LowIP  string
-	Tags   map[string]string
+type EntryTag struct {
+	Label    string
+	Desc     string
+	DataType utils.DataType
+	Values   []string
 }
