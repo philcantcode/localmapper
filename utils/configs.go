@@ -27,6 +27,7 @@ func LoadGlobalConfigs() {
 func SaveGlobalConfigs() {
 	lines := ParseFile("res/conf.txt")
 
+	//TODO: Fix
 	fmt.Printf("%v\n", lines)
 	os.Exit(0)
 

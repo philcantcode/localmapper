@@ -7,7 +7,8 @@ import (
 	"strings"
 )
 
-func UserStringInput() string {
+func UserStringInput(prompt string) string {
+	fmt.Println(prompt)
 	reader := bufio.NewReader(os.Stdin)
 
 	input, err := reader.ReadString('\n')

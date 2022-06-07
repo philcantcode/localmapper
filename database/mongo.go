@@ -15,6 +15,7 @@ var uri string
 var client *mongo.Client
 var Results_Nmap_DB *mongo.Collection
 var CMDB_Inventory_DB *mongo.Collection
+var CMDB_Pending_DB *mongo.Collection
 var Core_Proposition_DB *mongo.Collection
 var Core_Jobs_DB *mongo.Collection
 var Core_Capability_DB *mongo.Collection
@@ -50,6 +51,9 @@ func InitMongo() {
 
 	CMDB_Inventory_DB = client.Database("CMDB").Collection("Inventory")
 	utils.Log("Successfully setup mongo Inventory database collections: ", true)
+
+	CMDB_Pending_DB = client.Database("CMDB").Collection("Pending")
+	utils.Log("Successfully setup mongo Pending database collections: ", true)
 
 	Core_Proposition_DB = client.Database("Core").Collection("Proposition")
 	utils.Log("Successfully setup mongo Proposition database collections: ", true)

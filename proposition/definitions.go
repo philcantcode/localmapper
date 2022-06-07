@@ -11,7 +11,7 @@ type Proposition struct {
 	DateTime  string
 	Desc      string
 	Predicate Predicate
-	Status    int
+	Status    int // 0 = Open, 1 = Accepted, 2 = Deleted
 	User      int
 }
 

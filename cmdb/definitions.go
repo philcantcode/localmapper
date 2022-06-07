@@ -5,12 +5,19 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
+/*
+0 = VLAN
+1 = SERVER
+2 = ENDPOINT
+3 = UNKNOWN
+*/
 type CMDBType int
 
 const (
 	VLAN CMDBType = iota
 	SERVER
 	ENDPOINT
+	PENDING
 )
 
 /* OSI Layer:

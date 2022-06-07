@@ -12,10 +12,10 @@ func processProposition(proposition Proposition) {
 		sysTags := []cmdb.EntryTag{}
 		usrTags := []cmdb.EntryTag{}
 
-		sysTags = append(sysTags, cmdb.EntryTag{Label: "verified", DataType: utils.BOOL, Values: []string{"1"}})
-		sysTags = append(sysTags, cmdb.EntryTag{Label: "identity", DataType: utils.STRING, Values: []string{"local"}})
+		sysTags = append(sysTags, cmdb.EntryTag{Label: "Verified", DataType: utils.BOOL, Values: []string{"1"}})
+		sysTags = append(sysTags, cmdb.EntryTag{Label: "Identity", DataType: utils.STRING, Values: []string{"local"}})
 
-		sysTags = append(usrTags, cmdb.EntryTag{Label: "IP", DataType: utils.IP, Values: []string{proposition.Predicate.Value}})
+		sysTags = append(sysTags, cmdb.EntryTag{Label: "IP", DataType: utils.IP, Values: []string{proposition.Predicate.Value}})
 
 		for _, net := range local.GetNetworkAdapters() {
 			if net.IP == proposition.Predicate.Value {
@@ -48,7 +48,7 @@ func processProposition(proposition Proposition) {
 			UsrTags:  usrTags,
 			SysTags:  sysTags}
 
-		cmdb.INSERT_ENTRY(serverCMDB)
+		cmdb.INSERT_ENTRY_Inventory(serverCMDB)
 
 		UPDATE_Proposition(proposition)
 	}

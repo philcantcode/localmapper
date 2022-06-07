@@ -1,6 +1,8 @@
 package capability
 
 import (
+	"fmt"
+
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
@@ -49,4 +51,58 @@ func ParamsToArray(params []Param) []string {
 	}
 
 	return paramArr
+}
+
+func TEST_NEW_CAPABILITY() {
+	cap := Capability{
+		Type: "nmap",
+		Name: "nbstat NetBIOS",
+		Desc: "Attempts to retrieve the target's NetBIOS names and MAC address.",
+		Command: Command{
+			Program: "nmap",
+			Params: []Param{
+				Param{
+					Desc:     "UDP Scan",
+					Flag:     "-sU",
+					DataType: utils.EMPTY,
+					Value:    "",
+					Default:  "",
+				},
+				Param{
+					Desc:     "Run Script",
+					Flag:     "--script",
+					DataType: utils.STRING,
+					Value:    "nbstat.nse",
+					Default:  "nbstat.nse",
+				},
+				Param{
+					Desc:     "IP Address Target",
+					Flag:     "",
+					DataType: utils.IP,
+					Value:    "",
+					Default:  "",
+				},
+				Param{
+					Desc:     "Port 137",
+					Flag:     "-p137",
+					DataType: utils.EMPTY,
+					Value:    "",
+					Default:  "",
+				},
+				Param{
+					Desc:     "XML Output",
+					Flag:     "-oX",
+					DataType: utils.STRING,
+					Value:    "-",
+					Default:  "-",
+				},
+			},
+		},
+	}
+
+	fmt.Printf("%+v\n", cap)
+
+	if utils.UserStringInput("Do you want to insert this capability?") == "y" {
+		INSERT_Capability(cap)
+	}
 }

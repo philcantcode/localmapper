@@ -35,7 +35,7 @@ func HTTP_JSON_GetCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	id := params["id"]
 	result := []Capability{}
 
-	entry := cmdb.SELECT_ENTRY(bson.M{"_id": database.EncodeID(id)}, bson.M{})[0]
+	entry := cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(id)}, bson.M{})[0]
 	caps := SELECT_Capability(bson.M{}, bson.M{})
 
 	entryDataTypes := []utils.DataType{}
@@ -89,7 +89,7 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	cap_id := params["capability_id"]
 
 	cap := SELECT_Capability(bson.M{"_id": database.EncodeID(cap_id)}, bson.M{})[0]
-	entry := cmdb.SELECT_ENTRY(bson.M{"_id": database.EncodeID(cmbd_id)}, bson.M{})[0]
+	entry := cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(cmbd_id)}, bson.M{})[0]
 
 	for k, param := range cap.Command.Params {
 		for _, tag := range entry.SysTags {
