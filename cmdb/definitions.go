@@ -37,6 +37,7 @@ type Entry struct {
 	DateSeen []string   //[] Array of dates seen
 	UsrTags  []EntryTag // [Project-X, Bob's Server] etc
 	SysTags  []EntryTag // [IP: xxx, MAC: xxx, URL: xxx] etc
+	//TODO: implement histories for tracking changes
 }
 
 type EntryTag struct {

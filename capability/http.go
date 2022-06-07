@@ -38,26 +38,12 @@ func HTTP_JSON_GetCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	entry := cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(id)}, bson.M{})[0]
 	caps := SELECT_Capability(bson.M{}, bson.M{})
 
-	entryDataTypes := []utils.DataType{}
-
-	for _, v := range entry.SysTags {
-		entryDataTypes = append(entryDataTypes, v.DataType)
-	}
-
-outer:
 	for _, cap := range caps {
-		for _, param := range cap.Command.Params {
-			switch param.DataType {
-			case utils.EMPTY:
-				continue
-			default:
-				if !utils.DTArrayContains(param.DataType, entryDataTypes) && param.Default == "" {
-					continue outer
-				}
-			}
-		}
+		isCompatible, parsedCap := CMP_Entry_Capability(cap, entry)
 
-		result = append(result, cap)
+		if isCompatible {
+			result = append(result, parsedCap)
+		}
 	}
 
 	json.NewEncoder(w).Encode(result)
@@ -83,6 +69,10 @@ func HTTP_JSON_Run(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(result)
 }
 
+/*
+HTTP_JSON_RunCMDBCompatible takes in 2 IDs for a capability and CMDB entry
+and finds any matching capabilities given the CMDB SysTags
+*/
 func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	cmbd_id := params["cmbd_id"]
@@ -91,14 +81,55 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	cap := SELECT_Capability(bson.M{"_id": database.EncodeID(cap_id)}, bson.M{})[0]
 	entry := cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(cmbd_id)}, bson.M{})[0]
 
-	for k, param := range cap.Command.Params {
-		for _, tag := range entry.SysTags {
-			if tag.DataType == param.DataType && param.Default == "" {
-				cap.Command.Params[k].Value = tag.Values[0]
+	isCompatible, parsedCap := CMP_Entry_Capability(cap, entry)
+
+	if isCompatible {
+		w.Write(ProcessCapability(parsedCap))
+		return
+	}
+
+	utils.ErrorContextLog("HTTP_JSON_RunCMDBCompatible was not compatible", true)
+}
+
+func CMP_Entry_Capability(capability Capability, entry cmdb.Entry) (bool, Capability) {
+	var success bool
+
+	for k, capParam := range capability.Command.Params {
+		success, capability.Command.Params[k] = CMP_CapabilityParam_Entry(capParam, entry.SysTags)
+
+		if !success {
+			return false, capability
+		}
+	}
+
+	return true, capability
+}
+
+/*
+Determines if given a capability param {"Value": "","DataType": 1, "Default": ""}
+Is there any SysTags that can fulfil the Values
+*/
+func CMP_CapabilityParam_Entry(capParam Param, entryTags []cmdb.EntryTag) (bool, Param) {
+	// For each: {DataType.CMDB, DataType.IP}
+	for _, pType := range capParam.DataType {
+		// If the value is already set, move on
+		if capParam.Value != "" {
+			return true, capParam
+		}
+
+		// Skip empty tags that don't require input
+		if pType == utils.EMPTY {
+			return true, capParam
+		}
+
+		for _, eTag := range entryTags {
+			// The DataType match
+			if pType == eTag.DataType {
+				capParam.Value = eTag.Values[len(eTag.Values)-1]
+				return true, capParam
 			}
 		}
 	}
 
-	result := ProcessCapability(cap)
-	w.Write(result)
+	return false, capParam
 }

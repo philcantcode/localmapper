@@ -11,19 +11,20 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func INSERT_ENTRY_Inventory(cmdb Entry) {
-	utils.Log("Attempting to INSERT_CMDB", false)
+func INSERT_ENTRY_Inventory(entry Entry) {
+	utils.Log("Attempting to INSERT_ENTRY_Inventory", false)
+	// Check the Inventory database for existing entries first
+	matchedEntry, entryExists := matchedEntryExists(entry, false)
 
-	cmdb.ID = primitive.NewObjectID()
-	insertResult, err := database.CMDB_Inventory_DB.InsertOne(context.Background(), cmdb)
+	if entryExists {
+		utils.Log("Entry in INSERT_ENTRY_Inventory is already registered", false)
 
-	utils.ErrorFatal("Couldn't INSERT_CMDB", err)
-	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
-}
+		updateEntry(matchedEntry, entry, true)
+		return
+	}
 
-func INSERT_ENTRY_Pending(entry Entry) {
-	utils.Log("Attempting to INSERT_ENTRY_Pending", false)
-	matchedEntry, entryExists := matchedEntryExists(entry, true)
+	// If doesn't exist in inventory, check it exists in Pending
+	matchedEntry, entryExists = matchedEntryExists(entry, true)
 
 	if entryExists {
 		utils.Log("Entry in INSERT_ENTRY_Pending is already registered", false)
@@ -32,6 +33,37 @@ func INSERT_ENTRY_Pending(entry Entry) {
 		return
 	}
 
+	entry.ID = primitive.NewObjectID()
+	insertResult, err := database.CMDB_Inventory_DB.InsertOne(context.Background(), entry)
+
+	utils.ErrorFatal("Couldn't INSERT_ENTRY_Inventory", err)
+	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
+}
+
+func INSERT_ENTRY_Pending(entry Entry) {
+	utils.Log("Attempting to INSERT_ENTRY_Pending", false)
+
+	// Check the Inventory database for existing entries first
+	matchedEntry, entryExists := matchedEntryExists(entry, false)
+
+	if entryExists {
+		utils.Log("Entry in INSERT_ENTRY_Inventory is already registered", false)
+
+		updateEntry(matchedEntry, entry, true)
+		return
+	}
+
+	// If doesn't exist in inventory, check it exists in Pending
+	matchedEntry, entryExists = matchedEntryExists(entry, true)
+
+	if entryExists {
+		utils.Log("Entry in INSERT_ENTRY_Pending is already registered", false)
+
+		updateEntry(matchedEntry, entry, true)
+		return
+	}
+
+	// Otherwise, add it to pending
 	entry.ID = primitive.NewObjectID()
 	insertResult, err := database.CMDB_Pending_DB.InsertOne(context.Background(), entry)
 
@@ -113,26 +145,26 @@ func matchedEntryExists(entry Entry, pendingDB bool) (Entry, bool) {
 		switch tag.DataType {
 		case utils.IP:
 			filter["systags.label"] = "IP"
-			filter["systags.values"] = tag.Values[0]
+			filter["systags.values"] = tag.Values[len(tag.Values)-1]
 
 		case utils.IP6:
 			filter["systags.label"] = "IP6"
-			filter["systags.values"] = tag.Values[0]
+			filter["systags.values"] = tag.Values[len(tag.Values)-1]
 
 		case utils.MAC:
 			filter["systags.label"] = "MAC"
-			filter["systags.values"] = tag.Values[0]
+			filter["systags.values"] = tag.Values[len(tag.Values)-1]
 
 		case utils.MAC6:
 			filter["systags.label"] = "MAC6"
-			filter["systags.values"] = tag.Values[0]
+			filter["systags.values"] = tag.Values[len(tag.Values)-1]
 		}
 
-		switch tag.Label {
-		case "HostName":
-			filter["systags.label"] = "HostName"
-			filter["systags.values"] = tag.Values[0]
-		}
+		// switch tag.Label {
+		// case "HostName":
+		// 	filter["systags.label"] = "HostName"
+		// 	filter["systags.values"] = tag.Values[len(tag.Values)-1]
+		// }
 	}
 
 	result := []Entry{}
@@ -145,11 +177,15 @@ func matchedEntryExists(entry Entry, pendingDB bool) (Entry, bool) {
 	}
 
 	//TODO: Case where the new entry matched multiple entries in DB
-	if len(result) > 1 {
-		utils.ErrorContextLog("Multiple matched entries have been returned, handle with proposition", true)
+	if len(result) > 0 {
+		if len(result) > 1 {
+			utils.ErrorContextLog("Multiple matched entries have been returned, handle with proposition", true)
+		}
+
+		return result[0], true
 	}
 
-	return result[0], len(result) != 0
+	return Entry{}, false
 }
 
 /* Updates old entry to new entry variables & merges variables where appropriate*/

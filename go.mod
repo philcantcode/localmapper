@@ -8,7 +8,10 @@ require (
 	go.mongodb.org/mongo-driver v1.8.3
 )
 
-require github.com/felixge/httpsnoop v1.0.1 // indirect
+require (
+	github.com/felixge/httpsnoop v1.0.1 // indirect
+	github.com/go-ole/go-ole v1.2.6 // indirect
+)
 
 require (
 	github.com/go-ping/ping v0.0.0-20211130115550-779d1e919534 // indirect

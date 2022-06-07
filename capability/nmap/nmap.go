@@ -51,17 +51,17 @@ func interpret(nmapRun NmapRun) {
 
 		// Hostnames
 		if len(host.Hostnames) > 0 {
-			sysTag := cmdb.EntryTag{
+			hostNameTag := cmdb.EntryTag{
 				Label:    "HostName",
 				DataType: utils.MAC,
 				Values:   []string{},
 			}
 
 			for _, name := range host.Hostnames {
-				sysTag.Values = append(sysTag.Values, name.Name)
+				hostNameTag.Values = append(hostNameTag.Values, name.Name)
 			}
 
-			sysTags = append(sysTags, sysTag)
+			sysTags = append(sysTags, hostNameTag)
 		}
 
 		entry := cmdb.Entry{

@@ -83,9 +83,14 @@ func calculateVlanCIDR() {
 		utils.ErrorLog("Couldn't generate CIDR for: "+entry.Label, err, true)
 
 		// Remove old CMDB tags so new one can be calcualted
-		entry.SysTags = cmdb.RemoveTag("CMDB", entry.SysTags)
+		_, found, index := cmdb.FindSysTag("CIDR", entry)
 
-		entry.SysTags = append(entry.SysTags, cmdb.EntryTag{Label: "CIDR", Desc: "CIDR range for this VLAN.", DataType: utils.CIDR, Values: cidr})
+		if found {
+			entry.SysTags[index] = cmdb.EntryTag{Label: "CIDR", Desc: "CIDR range for this VLAN.", DataType: utils.CIDR, Values: cidr}
+		} else {
+			entry.SysTags = append(entry.SysTags, cmdb.EntryTag{Label: "CIDR", Desc: "CIDR range for this VLAN.", DataType: utils.CIDR, Values: cidr})
+		}
+
 		cmdb.UPDATE_ENTRY_Inventory(entry)
 	}
 }

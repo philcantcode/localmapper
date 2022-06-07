@@ -1,8 +1,6 @@
 package capability
 
 import (
-	"fmt"
-
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
@@ -22,11 +20,11 @@ type Command struct {
 }
 
 type Param struct {
-	Flag     string         // Flag (e.g., -s)
-	Value    string         // Set value
-	Desc     string         // Contextual info about the flag
-	DataType utils.DataType // e.g., IP, IP Range, String
-	Default  string         // Default value that will be used if no value provided
+	Flag     string           // Flag (e.g., -s)
+	Value    string           // Set value
+	Desc     string           // Contextual info about the flag
+	DataType []utils.DataType // e.g., IP, IP Range, String
+	Default  string           // Default value that will be used if no value provided
 }
 
 func ParamsToArray(params []Param) []string {
@@ -38,61 +36,56 @@ func ParamsToArray(params []Param) []string {
 			paramArr = append(paramArr, param.Flag)
 		}
 
-		// If the MetaType is NOT 'none' and the value is NOT empty, add the value
-		if param.DataType != utils.EMPTY && param.Value != "" {
+		// If the MetaType is NOT 'EMPTY' and the value is NOT empty, add the value
+		if param.Value != "" {
 			paramArr = append(paramArr, param.Value)
 		}
-
-		// If the MetaType and Value are empty, use the default
-		if param.DataType != utils.EMPTY && param.Value == "" && param.Default != "" {
-			paramArr = append(paramArr, param.Default)
-		}
-
 	}
 
 	return paramArr
 }
 
-func TEST_NEW_CAPABILITY() {
-	cap := Capability{
+func TEST_GENERATE_CAPABILITIES() {
+
+	netBiosScan := Capability{
 		Type: "nmap",
 		Name: "nbstat NetBIOS",
 		Desc: "Attempts to retrieve the target's NetBIOS names and MAC address.",
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
-				Param{
+				{
 					Desc:     "UDP Scan",
 					Flag:     "-sU",
-					DataType: utils.EMPTY,
+					DataType: []utils.DataType{utils.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
-				Param{
+				{
 					Desc:     "Run Script",
 					Flag:     "--script",
-					DataType: utils.STRING,
+					DataType: []utils.DataType{utils.STRING},
 					Value:    "nbstat.nse",
 					Default:  "nbstat.nse",
 				},
-				Param{
-					Desc:     "IP Address Target",
+				{
+					Desc:     "Target",
 					Flag:     "",
-					DataType: utils.IP,
+					DataType: []utils.DataType{utils.CIDR, utils.IP},
 					Value:    "",
 					Default:  "",
 				},
-				Param{
+				{
 					Desc:     "Port 137",
 					Flag:     "-p137",
-					DataType: utils.EMPTY,
+					DataType: []utils.DataType{utils.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
-				Param{
+				{
 					Desc:     "XML Output",
 					Flag:     "-oX",
-					DataType: utils.STRING,
+					DataType: []utils.DataType{utils.STRING},
 					Value:    "-",
 					Default:  "-",
 				},
@@ -100,9 +93,215 @@ func TEST_NEW_CAPABILITY() {
 		},
 	}
 
-	fmt.Printf("%+v\n", cap)
+	sysDNSScan := Capability{
+		Type: "nmap",
+		Name: "System DNS Scan",
+		Desc: "Use system DNS resolver configured on this host to identify private hostnames.",
+		Command: Command{
+			Program: "nmap",
+			Params: []Param{
+				{
+					Desc:     "Disable Port Scan Flag",
+					Flag:     "-sn",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "Target",
+					Flag:     "",
+					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "System DNS Flag",
+					Flag:     "--system-dns",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "XML Output",
+					Flag:     "-oX",
+					DataType: []utils.DataType{utils.STRING},
+					Value:    "-",
+					Default:  "-",
+				},
+			},
+		},
+	}
 
-	if utils.UserStringInput("Do you want to insert this capability?") == "y" {
-		INSERT_Capability(cap)
+	pingSweep := Capability{
+		Type: "nmap",
+		Name: "Ping Sweep",
+		Desc: "Perform a discovery Ping Sweep against an IP Range.",
+		Command: Command{
+			Program: "nmap",
+			Params: []Param{
+				{
+					Desc:     "Disable Port Scan Flag",
+					Flag:     "-sn",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "IP CIDR Target",
+					Flag:     "",
+					DataType: []utils.DataType{utils.CIDR},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "XML Output",
+					Flag:     "-oX",
+					DataType: []utils.DataType{utils.STRING},
+					Value:    "-",
+					Default:  "-",
+				},
+			},
+		},
+	}
+
+	stealthScan := Capability{
+		Type: "nmap",
+		Name: "Stealth Scan",
+		Desc: "Scan thousands of ports on the target device.",
+		Command: Command{
+			Program: "nmap",
+			Params: []Param{
+				{
+					Desc:     "Stealth Scan Flag",
+					Flag:     "-sS",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "Disable Ping Flag",
+					Flag:     "-Pn",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "Target",
+					Flag:     "",
+					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "XML Output",
+					Flag:     "-oX",
+					DataType: []utils.DataType{utils.STRING},
+					Value:    "-",
+					Default:  "-",
+				},
+			},
+		},
+	}
+
+	osIdent := Capability{
+		Type: "nmap",
+		Name: "OS Identification Scan",
+		Desc: "Attempts to identify the operating system of the host.",
+		Command: Command{
+			Program: "nmap",
+			Params: []Param{
+				{
+					Desc:     "OS Scan Flag",
+					Flag:     "-O",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "Disable Ping Flag",
+					Flag:     "-Pn",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "Target",
+					Flag:     "",
+					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "XML Output",
+					Flag:     "-oX",
+					DataType: []utils.DataType{utils.STRING},
+					Value:    "-",
+					Default:  "-",
+				},
+			},
+		},
+	}
+
+	connectScan := Capability{
+		Type: "nmap",
+		Name: "TCP Connect Scan",
+		Desc: "TCP Connect Scan performs a full connection to the host.",
+		Command: Command{
+			Program: "nmap",
+			Params: []Param{
+				{
+					Desc:     "Connect Scan Flag",
+					Flag:     "-sT",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "Disable Ping Flag",
+					Flag:     "-Pn",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "IP Target",
+					Flag:     "",
+					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "XML Output",
+					Flag:     "-oX",
+					DataType: []utils.DataType{utils.STRING},
+					Value:    "-",
+					Default:  "-",
+				},
+			},
+		},
+	}
+
+	if utils.UserStringInput("Insert NetBios Scan?") == "y" {
+		INSERT_Capability(netBiosScan)
+	}
+
+	if utils.UserStringInput("Insert System DNS Scan?") == "y" {
+		INSERT_Capability(sysDNSScan)
+	}
+
+	if utils.UserStringInput("Insert Ping Sweep Scan?") == "y" {
+		INSERT_Capability(pingSweep)
+	}
+
+	if utils.UserStringInput("Insert OS Identificaiton Scan?") == "y" {
+		INSERT_Capability(osIdent)
+	}
+
+	if utils.UserStringInput("Insert Connect Scan?") == "y" {
+		INSERT_Capability(connectScan)
+	}
+
+	if utils.UserStringInput("Insert Stealth Scan?") == "y" {
+		INSERT_Capability(stealthScan)
 	}
 }
