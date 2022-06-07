@@ -15,6 +15,7 @@ func main() {
 	database.InitMongo()
 
 	proposition.SetupJobs()
+
 	//capability.TEST_GENERATE_CAPABILITIES()
 	//omiTest()
 

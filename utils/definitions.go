@@ -34,11 +34,11 @@ func ReverseDataTypeLookup(datType DataType) string {
 		return "BOOL"
 	case 7:
 		return "STRING"
-	case 9:
+	case 8:
 		return "CIDR"
-	case 10:
+	case 9:
 		return "IP6"
-	case 11:
+	case 10:
 		return "MAC6"
 	default:
 		ErrorForceFatal("Couldn't do a reverse lookup for DataType (definitions)")

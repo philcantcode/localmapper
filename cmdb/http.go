@@ -49,7 +49,7 @@ func HTTP_JSON_GetByID(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	id := params["id"]
 
-	utils.Log("Inventory request made for: "+id, false)
+	utils.Log("HTTP request made for: "+id, false)
 
 	if id == "" {
 		json.NewEncoder(w).Encode(SELECT_ENTRY_Inventory(bson.M{}, bson.M{}))
@@ -67,7 +67,8 @@ func HTTP_JSON_GetByID(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(Entry{SysTags: []EntryTag{}, UsrTags: []EntryTag{}})
 }
 
-func HTTP_INSERT_Pending(w http.ResponseWriter, r *http.Request) {
+//TODO: Add validation
+func HTTP_INSERT_Pending_Vlan(w http.ResponseWriter, r *http.Request) {
 	label := r.FormValue("Label")
 	desc := r.FormValue("Desc")
 	highIP := r.FormValue("HighIP")
@@ -97,9 +98,13 @@ func HTTP_INSERT_Pending(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	cidrArr, err := utils.IPv4RangeToCIDRRange(lowIP, highIP)
+	utils.ErrorLog("Couldn't create CIDR", err, true)
+
 	highIpTag := EntryTag{Label: "LowIP", DataType: utils.IP, Values: []string{lowIP}}
 	lowIpTag := EntryTag{Label: "HighIP", DataType: utils.IP, Values: []string{highIP}}
-	entry := Entry{Label: label, Desc: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{local.GetDateTime().DateTime}, SysTags: []EntryTag{lowIpTag, highIpTag}, UsrTags: []EntryTag{}}
+	cidr := EntryTag{Label: "CIDR", DataType: utils.CIDR, Values: cidrArr}
+	entry := Entry{Label: label, Desc: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{local.GetDateTime().DateTime}, SysTags: []EntryTag{lowIpTag, highIpTag, cidr}, UsrTags: []EntryTag{}}
 
 	INSERT_ENTRY_Pending(entry)
 

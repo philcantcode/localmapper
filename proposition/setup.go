@@ -10,7 +10,7 @@ import (
 func SetupJobs() {
 	setupSelfIdentity()
 	defaultVlanSetup()
-	calculateVlanCIDR()
+	recalcualteVlanCIDR()
 }
 
 // setupSelfIdentity initialises IPs and local variables
@@ -62,7 +62,7 @@ func setupSelfIdentity() {
 	INSERT_Proposition(prop)
 }
 
-func calculateVlanCIDR() {
+func recalcualteVlanCIDR() {
 	entries := cmdb.SELECT_ENTRY_Inventory(bson.M{"cmdbtype": int32(cmdb.VLAN)}, bson.M{})
 
 	for _, entry := range entries {
@@ -126,6 +126,17 @@ func defaultVlanSetup() {
 		sysDefault := cmdb.EntryTag{Label: "SysDefault", DataType: utils.BOOL, Values: []string{"1"}}
 
 		newVlan := cmdb.Entry{Label: "Private Range 3", Desc: "Default VLAN", CMDBType: cmdb.VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []cmdb.EntryTag{lowIP, highIP, sysDefault}}
+		cmdb.INSERT_ENTRY_Inventory(newVlan)
+	}
+
+	vlan4 := cmdb.SELECT_ENTRY_Inventory(bson.M{"label": "Test Home", "desc": "Test VLAN"}, bson.M{})
+
+	if len(vlan4) == 0 {
+		highIP := cmdb.EntryTag{Label: "LowIP", DataType: utils.IP, Values: []string{"192.168.1.0"}}
+		lowIP := cmdb.EntryTag{Label: "HighIP", DataType: utils.IP, Values: []string{"192.168.1.255"}}
+		sysDefault := cmdb.EntryTag{Label: "SysDefault", DataType: utils.BOOL, Values: []string{"1"}}
+
+		newVlan := cmdb.Entry{Label: "Test Home", Desc: "Test VLAN", CMDBType: cmdb.VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []cmdb.EntryTag{lowIP, highIP, sysDefault}}
 		cmdb.INSERT_ENTRY_Inventory(newVlan)
 	}
 }

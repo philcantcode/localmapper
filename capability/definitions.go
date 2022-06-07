@@ -281,6 +281,45 @@ func TEST_GENERATE_CAPABILITIES() {
 		},
 	}
 
+	arpScan := Capability{
+		Type: "nmap",
+		Name: "APR Scan",
+		Desc: "Perform a scan of the local network using ARP.",
+		Command: Command{
+			Program: "nmap",
+			Params: []Param{
+				{
+					Desc:     "Disable Port Scan Flag",
+					Flag:     "-sn",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "ARP Flag",
+					Flag:     "-PU",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "IP Target",
+					Flag:     "",
+					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "XML Output",
+					Flag:     "-oX",
+					DataType: []utils.DataType{utils.STRING},
+					Value:    "-",
+					Default:  "-",
+				},
+			},
+		},
+	}
+
 	if utils.UserStringInput("Insert NetBios Scan?") == "y" {
 		INSERT_Capability(netBiosScan)
 	}
@@ -303,5 +342,9 @@ func TEST_GENERATE_CAPABILITIES() {
 
 	if utils.UserStringInput("Insert Stealth Scan?") == "y" {
 		INSERT_Capability(stealthScan)
+	}
+
+	if utils.UserStringInput("Insert ARP Scan?") == "y" {
+		INSERT_Capability(arpScan)
 	}
 }

@@ -39,7 +39,7 @@ func initServer() {
 	router.HandleFunc("/cmdb/inventory/get/{id}", cmdb.HTTP_JSON_GetByID)
 
 	router.HandleFunc("/cmdb/pending/get/all", cmdb.HTTP_JSON_Pending_GetAll)
-	router.HandleFunc("/cmdb/pending/put", cmdb.HTTP_INSERT_Pending)
+	router.HandleFunc("/cmdb/pending/put", cmdb.HTTP_INSERT_Pending_Vlan)
 	router.HandleFunc("/cmdb/pending/approve", cmdb.HTTP_Pending_Approve)
 	router.HandleFunc("/cmdb/pending/deny/all", cmdb.HTTP_Pending_DenyAll)
 	router.HandleFunc("/cmdb/pending/deny", cmdb.HTTP_Pending_Deny)

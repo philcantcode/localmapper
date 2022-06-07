@@ -30,6 +30,11 @@ func interpret(nmapRun NmapRun) {
 	// For each host
 	for _, host := range nmapRun.Hosts {
 		sysTags := []cmdb.EntryTag{}
+		vendorTags := cmdb.EntryTag{
+			Label:    "Vendor",
+			DataType: utils.IP,
+			Values:   []string{},
+		}
 
 		for _, address := range host.Addresses {
 			if address.AddrType == "ipv4" {
@@ -47,6 +52,14 @@ func interpret(nmapRun NmapRun) {
 					Values:   []string{address.Addr},
 				})
 			}
+
+			if address.Vendor != "" {
+				vendorTags.Values = append(vendorTags.Values, address.Vendor)
+			}
+		}
+
+		if len(vendorTags.Values) > 0 {
+			sysTags = append(sysTags, vendorTags)
 		}
 
 		// Hostnames
@@ -79,6 +92,16 @@ func interpret(nmapRun NmapRun) {
 			entry.Label = tag.Values[0]
 		}
 
-		cmdb.INSERT_ENTRY_Pending(entry)
+		// Insert to pending or update both DBs
+		if cmdb.EntryExists_ByIP(entry) {
+			newInventoy := cmdb.UpdateInventoryEntries_ByIP(entry)
+			newPending := cmdb.UpdatePendingEntries_ByIP(entry)
+
+			if !newInventoy && !newPending {
+				utils.FatalAlert("Couldn't update inventory or pending in nmap")
+			}
+		} else {
+			cmdb.INSERT_ENTRY_Pending(entry)
+		}
 	}
 }
