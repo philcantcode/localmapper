@@ -4,6 +4,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"os/exec"
+	"strconv"
 
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/utils"
@@ -30,6 +31,32 @@ func interpret(nmapRun NmapRun) {
 	// For each host
 	for _, host := range nmapRun.Hosts {
 		sysTags := []cmdb.EntryTag{}
+
+		ports := cmdb.EntryTag{
+			Label:    "Ports",
+			Desc:     "Open Ports",
+			DataType: utils.INTEGER,
+			Values:   []string{},
+		}
+
+		services := cmdb.EntryTag{
+			Label:    "Services",
+			Desc:     "Open Services",
+			DataType: utils.STRING,
+			Values:   []string{},
+		}
+
+		for _, port := range host.Ports {
+			if port.State.State == "open" {
+				if !utils.ArrayContains(strconv.Itoa(port.PortId), ports.Values) {
+					ports.Values = append(ports.Values, strconv.Itoa(port.PortId))
+				}
+
+				if !utils.ArrayContains(port.Service.Name, services.Values) {
+					services.Values = append(services.Values, port.Service.Name)
+				}
+			}
+		}
 
 		vendorTags := cmdb.EntryTag{
 			Label:    "MACVendor",
@@ -75,20 +102,22 @@ func interpret(nmapRun NmapRun) {
 			}
 
 			for _, osClass := range match.OsClasses {
-				if osClass.OsFamily != "" {
+				if osClass.OsFamily != "" && !utils.ArrayContains(osClass.OsFamily, osFamily.Values) {
 					osFamily.Values = append(osFamily.Values, osClass.OsFamily)
 				}
 
-				if osClass.OsGen != "" {
+				if osClass.OsGen != "" && !utils.ArrayContains(osClass.OsGen, osGen.Values) {
 					osGen.Values = append(osGen.Values, osClass.OsGen)
 				}
 
-				if osClass.Vendor != "" {
+				if osClass.Vendor != "" && !utils.ArrayContains(osClass.Vendor, osVendor.Values) {
 					osVendor.Values = append(osVendor.Values, osClass.Vendor)
 				}
 
 				for _, cpe := range osClass.CPEs {
-					osCPE.Values = append(osCPE.Values, string(cpe))
+					if !utils.ArrayContains(string(cpe), osCPE.Values) {
+						osCPE.Values = append(osCPE.Values, string(cpe))
+					}
 				}
 			}
 		}
@@ -138,6 +167,14 @@ func interpret(nmapRun NmapRun) {
 
 		if len(osCPE.Values) > 0 {
 			sysTags = append(sysTags, osCPE)
+		}
+
+		if len(ports.Values) > 0 {
+			sysTags = append(sysTags, ports)
+		}
+
+		if len(services.Values) > 0 {
+			sysTags = append(sysTags, services)
 		}
 
 		// Hostnames

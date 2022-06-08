@@ -48,6 +48,7 @@ func HTTP_JSON_GetByType(w http.ResponseWriter, r *http.Request) {
 func HTTP_JSON_GetByID(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	id := params["id"]
+	device := []Entry{}
 
 	utils.Log("HTTP request made for: "+id, false)
 
@@ -57,7 +58,8 @@ func HTTP_JSON_GetByID(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// The inventory ID was a device
-	device := SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(id)}, bson.M{})
+	device = append(device, SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
+	device = append(device, SELECT_ENTRY_Pending(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
 
 	if len(device) > 0 {
 		json.NewEncoder(w).Encode(device)

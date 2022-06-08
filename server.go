@@ -39,7 +39,8 @@ func initServer() {
 	router.HandleFunc("/cmdb/inventory/get/local", cmdb.HTTP_JSON_GetLocal)
 	router.HandleFunc("/cmdb/inventory/get/all", cmdb.HTTP_JSON_Inventory_GetAll)
 	router.HandleFunc("/cmdb/inventory/get/type/{type}", cmdb.HTTP_JSON_GetByType)
-	router.HandleFunc("/cmdb/inventory/get/{id}", cmdb.HTTP_JSON_GetByID)
+
+	router.HandleFunc("/cmdb/get/{id}", cmdb.HTTP_JSON_GetByID)
 
 	router.HandleFunc("/cmdb/pending/get/all", cmdb.HTTP_JSON_Pending_GetAll)
 	router.HandleFunc("/cmdb/pending/put", cmdb.HTTP_INSERT_Pending_Vlan)

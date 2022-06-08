@@ -34,12 +34,20 @@ func HTTP_JSON_GetCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	id := params["id"]
 	result := []Capability{}
+	entries := []cmdb.Entry{}
 
-	entry := cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(id)}, bson.M{})[0]
+	entries = append(entries, cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
+	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
+
+	if len(entries) != 1 {
+		utils.ErrorContextLog("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
+		return
+	}
+
 	caps := SELECT_Capability(bson.M{}, bson.M{})
 
 	for _, cap := range caps {
-		isCompatible, parsedCap := CMP_Entry_Capability(cap, entry)
+		isCompatible, parsedCap := CMP_Entry_Capability(cap, entries[0])
 
 		if isCompatible {
 			result = append(result, parsedCap)
@@ -79,9 +87,17 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	cap_id := params["capability_id"]
 
 	cap := SELECT_Capability(bson.M{"_id": database.EncodeID(cap_id)}, bson.M{})[0]
-	entry := cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(cmbd_id)}, bson.M{})[0]
+	entries := []cmdb.Entry{}
 
-	isCompatible, parsedCap := CMP_Entry_Capability(cap, entry)
+	entries = append(entries, cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(cmbd_id)}, bson.M{})...)
+	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": database.EncodeID(cmbd_id)}, bson.M{})...)
+
+	if len(entries) != 1 {
+		utils.ErrorContextLog("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
+		return
+	}
+
+	isCompatible, parsedCap := CMP_Entry_Capability(cap, entries[0])
 
 	if isCompatible {
 		w.Write(ProcessCapability(parsedCap))
