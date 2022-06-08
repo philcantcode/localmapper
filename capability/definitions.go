@@ -45,7 +45,7 @@ func ParamsToArray(params []Param) []string {
 	return paramArr
 }
 
-func TEST_GENERATE_CAPABILITIES() {
+func InsertDefaultCapabilities() {
 
 	netBiosScan := Capability{
 		Type: "nmap",
@@ -223,6 +223,12 @@ func TEST_GENERATE_CAPABILITIES() {
 					DataType: []utils.DataType{utils.EMPTY},
 					Value:    "",
 					Default:  "",
+				}, {
+					Desc:     "Slows Down Scan",
+					Flag:     "--max-rate",
+					DataType: []utils.DataType{utils.INTEGER},
+					Value:    "100",
+					Default:  "100",
 				},
 				{
 					Desc:     "Target",
@@ -320,31 +326,68 @@ func TEST_GENERATE_CAPABILITIES() {
 		},
 	}
 
-	if utils.UserStringInput("Insert NetBios Scan?") == "y" {
-		INSERT_Capability(netBiosScan)
+	// nmap IP -sU -sS --script smb-os-discovery.nse -p U:137,T:139
+
+	smbScriptScan := Capability{
+		Type: "nmap",
+		Name: "SMB OS Discovery",
+		Desc: "Attempts to determine the operating system, computer name, domain, workgroup, and current time over the SMB protocol (ports 445 or 139). This is done by starting a session with the anonymous account, in response to a session starting, the server will send back all this information.",
+		Command: Command{
+			Program: "nmap",
+			Params: []Param{
+				{
+					Desc:     "UDP Scan Flag",
+					Flag:     "-sU",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "Stealth Scan Flag",
+					Flag:     "-sS",
+					DataType: []utils.DataType{utils.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "Script Flag",
+					Flag:     "--script",
+					DataType: []utils.DataType{utils.STRING},
+					Value:    "smb-os-discovery.nse",
+					Default:  "smb-os-discovery.nse",
+				},
+				{
+					Desc:     "Port Flag",
+					Flag:     "-p",
+					DataType: []utils.DataType{utils.STRING},
+					Value:    "U:137,T:139",
+					Default:  "U:137,T:139",
+				},
+				{
+					Desc:     "IP Target",
+					Flag:     "",
+					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "XML Output",
+					Flag:     "-oX",
+					DataType: []utils.DataType{utils.STRING},
+					Value:    "-",
+					Default:  "-",
+				},
+			},
+		},
 	}
 
-	if utils.UserStringInput("Insert System DNS Scan?") == "y" {
-		INSERT_Capability(sysDNSScan)
-	}
+	INSERT_Capability(netBiosScan)
+	INSERT_Capability(sysDNSScan)
+	INSERT_Capability(pingSweep)
+	INSERT_Capability(osIdent)
+	INSERT_Capability(connectScan)
+	INSERT_Capability(stealthScan)
+	INSERT_Capability(arpScan)
+	INSERT_Capability(smbScriptScan)
 
-	if utils.UserStringInput("Insert Ping Sweep Scan?") == "y" {
-		INSERT_Capability(pingSweep)
-	}
-
-	if utils.UserStringInput("Insert OS Identificaiton Scan?") == "y" {
-		INSERT_Capability(osIdent)
-	}
-
-	if utils.UserStringInput("Insert Connect Scan?") == "y" {
-		INSERT_Capability(connectScan)
-	}
-
-	if utils.UserStringInput("Insert Stealth Scan?") == "y" {
-		INSERT_Capability(stealthScan)
-	}
-
-	if utils.UserStringInput("Insert ARP Scan?") == "y" {
-		INSERT_Capability(arpScan)
-	}
 }

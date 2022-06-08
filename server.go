@@ -9,6 +9,7 @@ import (
 	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/proposition"
+	"github.com/philcantcode/localmapper/sysconfig"
 	"github.com/philcantcode/localmapper/utils"
 )
 
@@ -16,6 +17,8 @@ func initServer() {
 	utils.Log("Hosting Server at http://localhost:"+utils.Configs["SERVER_PORT"], true)
 
 	router := mux.NewRouter()
+
+	router.HandleFunc("/config/{id}", sysconfig.HTTP_JSON_Settings)
 
 	router.HandleFunc("/capability/run/cmdb-compatible/{cmbd_id}/{capability_id}", capability.HTTP_JSON_RunCMDBCompatible)
 	router.HandleFunc("/capability/run", capability.HTTP_JSON_Run)
@@ -43,6 +46,7 @@ func initServer() {
 	router.HandleFunc("/cmdb/pending/approve", cmdb.HTTP_Pending_Approve)
 	router.HandleFunc("/cmdb/pending/deny/all", cmdb.HTTP_Pending_DenyAll)
 	router.HandleFunc("/cmdb/pending/deny", cmdb.HTTP_Pending_Deny)
+	router.HandleFunc("/cmdb/identity-confidence/get/{id}", cmdb.HTTP_JSON_IdentityConfidence_Get)
 
 	cors := handlers.CORS(
 		handlers.AllowedHeaders([]string{"content-type"}),

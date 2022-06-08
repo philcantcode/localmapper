@@ -30,10 +30,67 @@ func interpret(nmapRun NmapRun) {
 	// For each host
 	for _, host := range nmapRun.Hosts {
 		sysTags := []cmdb.EntryTag{}
+
 		vendorTags := cmdb.EntryTag{
-			Label:    "Vendor",
-			DataType: utils.IP,
+			Label:    "MACVendor",
+			DataType: utils.STRING,
 			Values:   []string{},
+		}
+
+		osFamily := cmdb.EntryTag{
+			Label:    "OS",
+			DataType: utils.STRING,
+			Values:   []string{},
+		}
+
+		osGen := cmdb.EntryTag{
+			Label:    "OSGen",
+			DataType: utils.STRING,
+			Values:   []string{},
+		}
+
+		osAccuracy := cmdb.EntryTag{
+			Label:    "OSAccuracy",
+			DataType: utils.INTEGER,
+			Values:   []string{},
+		}
+
+		osVendor := cmdb.EntryTag{
+			Label:    "OSVendor",
+			DataType: utils.STRING,
+			Values:   []string{},
+		}
+
+		osCPE := cmdb.EntryTag{
+			Label:    "CPE",
+			DataType: utils.STRING,
+			Values:   []string{},
+		}
+
+		if len(host.Os.OsMatches) > 0 {
+			match := host.Os.OsMatches[0]
+
+			if match.Accuracy != "" {
+				osAccuracy.Values = append(osAccuracy.Values, match.Accuracy)
+			}
+
+			for _, osClass := range match.OsClasses {
+				if osClass.OsFamily != "" {
+					osFamily.Values = append(osFamily.Values, osClass.OsFamily)
+				}
+
+				if osClass.OsGen != "" {
+					osGen.Values = append(osGen.Values, osClass.OsGen)
+				}
+
+				if osClass.Vendor != "" {
+					osVendor.Values = append(osVendor.Values, osClass.Vendor)
+				}
+
+				for _, cpe := range osClass.CPEs {
+					osCPE.Values = append(osCPE.Values, string(cpe))
+				}
+			}
 		}
 
 		for _, address := range host.Addresses {
@@ -58,15 +115,36 @@ func interpret(nmapRun NmapRun) {
 			}
 		}
 
+		// Check that they're not empty.
 		if len(vendorTags.Values) > 0 {
 			sysTags = append(sysTags, vendorTags)
+		}
+
+		if len(osFamily.Values) > 0 {
+			sysTags = append(sysTags, osFamily)
+		}
+
+		if len(osGen.Values) > 0 {
+			sysTags = append(sysTags, osGen)
+		}
+
+		if len(osVendor.Values) > 0 {
+			sysTags = append(sysTags, osVendor)
+		}
+
+		if len(osAccuracy.Values) > 0 {
+			sysTags = append(sysTags, osAccuracy)
+		}
+
+		if len(osCPE.Values) > 0 {
+			sysTags = append(sysTags, osCPE)
 		}
 
 		// Hostnames
 		if len(host.Hostnames) > 0 {
 			hostNameTag := cmdb.EntryTag{
 				Label:    "HostName",
-				DataType: utils.MAC,
+				DataType: utils.STRING,
 				Values:   []string{},
 			}
 

@@ -5,15 +5,16 @@ type DataType int
 const (
 	EMPTY DataType = iota
 	IP
-	IP_RANGE
+	IP_RANGE // 192.168.0.0 - 192.168.0.1
 	MAC
 	INTEGER
 	DECIMAL
-	BOOL
+	BOOL // 1 or 0
 	STRING
-	CIDR
+	CIDR // 192.168.0.0/24
 	IP6
 	MAC6
+	CPE // Common Platform Enumeration: cpe:/o:linux:linux_kernel:2.6.39
 )
 
 func ReverseDataTypeLookup(datType DataType) string {
@@ -40,6 +41,8 @@ func ReverseDataTypeLookup(datType DataType) string {
 		return "IP6"
 	case 10:
 		return "MAC6"
+	case 11:
+		return "CPE"
 	default:
 		ErrorForceFatal("Couldn't do a reverse lookup for DataType (definitions)")
 	}

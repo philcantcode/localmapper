@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+const ENTRY_NOT_FOUND string = "404/CMDB Entry Not Found"
+
 // ErrorLog requires an err, non fatal
 func ErrorLog(context string, e error, print bool) {
 	if e != nil {

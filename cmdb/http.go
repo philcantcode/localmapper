@@ -64,7 +64,8 @@ func HTTP_JSON_GetByID(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	json.NewEncoder(w).Encode(Entry{SysTags: []EntryTag{}, UsrTags: []EntryTag{}})
+	// Not found return array of empty values
+	json.NewEncoder(w).Encode([]Entry{})
 }
 
 //TODO: Add validation
@@ -135,4 +136,22 @@ func HTTP_Pending_DenyAll(w http.ResponseWriter, r *http.Request) {
 	for _, entry := range pending {
 		DELETE_ENTRY_Pending(entry)
 	}
+}
+
+func HTTP_JSON_IdentityConfidence_Get(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	id := params["id"]
+
+	results := []Entry{}
+
+	results = append(results, SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
+	results = append(results, SELECT_ENTRY_Pending(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
+
+	if len(results) != 1 {
+		utils.ErrorContextLog("Incorrect number of results returned for IdentityConfidence IP", true)
+		w.Write([]byte("404/Failure"))
+		return
+	}
+
+	json.NewEncoder(w).Encode(CalcIdentityConfidenceScore(results[0]))
 }
