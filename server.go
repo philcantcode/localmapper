@@ -6,6 +6,7 @@ import (
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/philcantcode/localmapper/capability"
+	cookbook "github.com/philcantcode/localmapper/capability/cookbooks"
 	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/proposition"
@@ -26,6 +27,8 @@ func initServer() {
 	router.HandleFunc("/capability/get/cmdb-compatible/{id}", capability.HTTP_JSON_GetCMDBCompatible)
 	router.HandleFunc("/capability/get/{id}", capability.HTTP_JSON_GetByID)
 	router.HandleFunc("/capability/update", capability.HTTP_JSON_Update)
+
+	router.HandleFunc("/cookbook/run/{ccbi}/{id}", cookbook.HTTP_JSON_Run_Cookbook)
 
 	router.HandleFunc("/local/get-network-adapters", local.HTTP_JSON_GetNetworkAdapters)
 	router.HandleFunc("/local/get-os-info", local.HTTP_JSON_GetOSInfo)

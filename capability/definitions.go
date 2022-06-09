@@ -7,11 +7,13 @@ import (
 
 type Capability struct {
 	ID            primitive.ObjectID `bson:"_id"`
+	CCI           string             // Common Capability Identifier = cci:<tool>:<label>:<edition>
 	Command       Command            // Program and params
 	Type          string             // e.g., nmap
 	Name          string             // Capability name "Ping Sweep"
 	Desc          string             // Contextual description
 	DisplayFields []string           // For hiding results
+	ResultTags    []string           // The Result tags (e.g., IP, Port) gathered by this capability
 }
 
 type Command struct {
@@ -48,9 +50,11 @@ func ParamsToArray(params []Param) []string {
 func InsertDefaultCapabilities() {
 
 	netBiosScan := Capability{
-		Type: "nmap",
-		Name: "nbstat NetBIOS",
-		Desc: "Attempts to retrieve the target's NetBIOS names and MAC address.",
+		Type:       "nmap",
+		CCI:        "cci:nmap:nbstat-netbios-script:default",
+		Name:       "nbstat NetBIOS",
+		Desc:       "Attempts to retrieve the target's NetBIOS names and MAC address.",
+		ResultTags: []string{"MAC"},
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -94,9 +98,11 @@ func InsertDefaultCapabilities() {
 	}
 
 	sysDNSScan := Capability{
-		Type: "nmap",
-		Name: "System DNS Scan",
-		Desc: "Use system DNS resolver configured on this host to identify private hostnames.",
+		Type:       "nmap",
+		CCI:        "cci:nmap:sys-dns:default",
+		Name:       "System DNS Scan",
+		Desc:       "Use system DNS resolver configured on this host to identify private hostnames.",
+		ResultTags: []string{"HostName"},
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -133,9 +139,11 @@ func InsertDefaultCapabilities() {
 	}
 
 	pingSweep := Capability{
-		Type: "nmap",
-		Name: "Ping Sweep",
-		Desc: "Perform a discovery Ping Sweep against an IP Range.",
+		Type:       "nmap",
+		Name:       "Ping Sweep",
+		CCI:        "cci:nmap:ping-sweep:default",
+		Desc:       "Perform a discovery Ping Sweep against an IP Range.",
+		ResultTags: []string{"IP"},
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -165,9 +173,11 @@ func InsertDefaultCapabilities() {
 	}
 
 	stealthScan := Capability{
-		Type: "nmap",
-		Name: "Stealth Scan",
-		Desc: "Scan thousands of ports on the target device.",
+		Type:       "nmap",
+		CCI:        "cci:nmap:stealth:default",
+		Name:       "Stealth Scan",
+		Desc:       "Scan thousands of ports on the target device.",
+		ResultTags: []string{"Ports"},
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -204,9 +214,11 @@ func InsertDefaultCapabilities() {
 	}
 
 	osIdent := Capability{
-		Type: "nmap",
-		Name: "OS Identification Scan",
-		Desc: "Attempts to identify the operating system of the host.",
+		Type:       "nmap",
+		CCI:        "cci:nmap:os-ident:default",
+		Name:       "OS Identification Scan",
+		Desc:       "Attempts to identify the operating system of the host.",
+		ResultTags: []string{"OS", "OSGen", "OSVendor", "OSAccuracy"},
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -249,9 +261,11 @@ func InsertDefaultCapabilities() {
 	}
 
 	connectScan := Capability{
-		Type: "nmap",
-		Name: "TCP Connect Scan",
-		Desc: "TCP Connect Scan performs a full connection to the host.",
+		Type:       "nmap",
+		CCI:        "cci:nmap:tcp-connect:default",
+		Name:       "TCP Connect Scan",
+		Desc:       "TCP Connect Scan performs a full connection to the host.",
+		ResultTags: []string{"Ports"},
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -288,9 +302,11 @@ func InsertDefaultCapabilities() {
 	}
 
 	arpScan := Capability{
-		Type: "nmap",
-		Name: "APR Scan",
-		Desc: "Perform a scan of the local network using ARP.",
+		Type:       "nmap",
+		Name:       "APR Scan",
+		CCI:        "cci:nmap:arp:default",
+		Desc:       "Perform a scan of the local network using ARP.",
+		ResultTags: []string{"IP"},
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -329,9 +345,11 @@ func InsertDefaultCapabilities() {
 	// nmap IP -sU -sS --script smb-os-discovery.nse -p U:137,T:139
 
 	smbScriptScan := Capability{
-		Type: "nmap",
-		Name: "SMB OS Discovery",
-		Desc: "Attempts to determine the operating system, computer name, domain, workgroup, and current time over the SMB protocol (ports 445 or 139). This is done by starting a session with the anonymous account, in response to a session starting, the server will send back all this information.",
+		Type:       "nmap",
+		Name:       "SMB OS Discovery",
+		CCI:        "cci:nmap:smb-os-discovery:default",
+		Desc:       "Attempts to determine the operating system, computer name, domain, workgroup, and current time over the SMB protocol (ports 445 or 139). This is done by starting a session with the anonymous account, in response to a session starting, the server will send back all this information.",
+		ResultTags: []string{"HostName"},
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{

@@ -19,6 +19,7 @@ var CMDB_Pending_DB *mongo.Collection
 var Core_Proposition_DB *mongo.Collection
 var Core_Jobs_DB *mongo.Collection
 var Core_Capability_DB *mongo.Collection
+var Core_Cookbooks_DB *mongo.Collection
 
 func InitMongo() {
 	var err error
@@ -44,23 +45,26 @@ func InitMongo() {
 	// Ping the primary
 	err = client.Ping(context.TODO(), readpref.Primary())
 	utils.ErrorFatal("MongoDB couldn't ping "+uri, err)
-	utils.Log("Successfully connected MongoDB to: "+uri, true)
+	utils.Log("Successfully connected MongoDB to: "+uri, false)
 
 	Results_Nmap_DB = client.Database("Results").Collection("Nmap")
-	utils.Log("Successfully setup mongo nmap database collections: ", true)
+	utils.Log("Successfully setup mongo nmap database collections: ", false)
 
 	CMDB_Inventory_DB = client.Database("CMDB").Collection("Inventory")
-	utils.Log("Successfully setup mongo Inventory database collections: ", true)
+	utils.Log("Successfully setup mongo Inventory database collections: ", false)
 
 	CMDB_Pending_DB = client.Database("CMDB").Collection("Pending")
-	utils.Log("Successfully setup mongo Pending database collections: ", true)
+	utils.Log("Successfully setup mongo Pending database collections: ", false)
 
 	Core_Proposition_DB = client.Database("Core").Collection("Proposition")
-	utils.Log("Successfully setup mongo Proposition database collections: ", true)
+	utils.Log("Successfully setup mongo Proposition database collections: ", false)
 
 	Core_Jobs_DB = client.Database("Core").Collection("Jobs")
-	utils.Log("Successfully setup mongo Jobs database collections: ", true)
+	utils.Log("Successfully setup mongo Jobs database collections: ", false)
 
 	Core_Capability_DB = client.Database("Core").Collection("Capability")
-	utils.Log("Successfully setup mongo capability database collections: ", true)
+	utils.Log("Successfully setup mongo capability database collections: ", false)
+
+	Core_Cookbooks_DB = client.Database("Core").Collection("Cookbooks")
+	utils.Log("Successfully setup mongo cookbooks database collections: ", false)
 }

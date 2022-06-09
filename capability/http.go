@@ -47,7 +47,7 @@ func HTTP_JSON_GetCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	caps := SELECT_Capability(bson.M{}, bson.M{})
 
 	for _, cap := range caps {
-		isCompatible, parsedCap := CMP_Entry_Capability(cap, entries[0])
+		isCompatible, parsedCap := MatchEntryToCapability(cap, entries[0])
 
 		if isCompatible {
 			result = append(result, parsedCap)
@@ -72,7 +72,7 @@ func HTTP_JSON_Run(w http.ResponseWriter, r *http.Request) {
 
 	json.Unmarshal([]byte(capabilityParam), &capability)
 
-	result := ProcessCapability(capability)
+	result := ExecuteCapability(capability)
 
 	json.NewEncoder(w).Encode(result)
 }
@@ -97,10 +97,10 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	isCompatible, parsedCap := CMP_Entry_Capability(cap, entries[0])
+	isCompatible, parsedCap := MatchEntryToCapability(cap, entries[0])
 
 	if isCompatible {
-		w.Write(ProcessCapability(parsedCap))
+		w.Write(ExecuteCapability(parsedCap))
 		return
 	}
 

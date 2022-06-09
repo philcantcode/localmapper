@@ -14,7 +14,11 @@ const (
 	CIDR // 192.168.0.0/24
 	IP6
 	MAC6
-	CPE // Common Platform Enumeration: cpe:/o:linux:linux_kernel:2.6.39
+	CPE          // Common Platform Enumeration: cpe:/o:linux:linux_kernel:2.6.39
+	CCI          // Common Capability Identifier
+	CCBI         // Common Cookbook Identifier
+	IP_RANGE_LOW // 192.168.0.0 - IP meant to be used in a range calculation but is a single IP
+	IP_RANGE_HIGH
 )
 
 func ReverseDataTypeLookup(datType DataType) string {

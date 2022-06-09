@@ -9,7 +9,9 @@ import (
 	"github.com/philcantcode/localmapper/utils"
 )
 
-func ProcessCapability(capability Capability) []byte {
+func ExecuteCapability(capability Capability) []byte {
+	utils.Log(fmt.Sprintf("Executing Capability: %s\n", capability.Name), true)
+
 	switch capability.Type {
 	case "nmap":
 		nmapRun := nmap.Execute(ParamsToArray(capability.Command.Params))
@@ -26,11 +28,14 @@ func ProcessCapability(capability Capability) []byte {
 	}
 }
 
-func CMP_Entry_Capability(capability Capability, entry cmdb.Entry) (bool, Capability) {
+/*
+	MatchEntryToCapability determines if a given entry can run a given capability
+*/
+func MatchEntryToCapability(capability Capability, entry cmdb.Entry) (bool, Capability) {
 	var success bool
 
 	for k, capParam := range capability.Command.Params {
-		success, capability.Command.Params[k] = CMP_CapabilityParam_Entry(capParam, entry.SysTags)
+		success, capability.Command.Params[k] = MatchParamToTag(capParam, entry.SysTags)
 
 		if !success {
 			return false, capability
@@ -41,10 +46,10 @@ func CMP_Entry_Capability(capability Capability, entry cmdb.Entry) (bool, Capabi
 }
 
 /*
-Determines if given a capability param {"Value": "","DataType": 1, "Default": ""}
-Is there any SysTags that can fulfil the Values
+	MatchParamToTag Determines if given a capability param {"Value": "","DataType": 1, "Default": ""}
+	Is there any SysTags that can fulfil the Values
 */
-func CMP_CapabilityParam_Entry(capParam Param, entryTags []cmdb.EntryTag) (bool, Param) {
+func MatchParamToTag(capParam Param, entryTags []cmdb.EntryTag) (bool, Param) {
 	// For each: {DataType.CMDB, DataType.IP}
 	for _, pType := range capParam.DataType {
 		// If the value is already set, move on

@@ -33,12 +33,12 @@ func EntryExists_ByIP(entry Entry) bool {
 }
 
 /*
-	Updates Inventory database entries by IP.
+	Updates both database entries by IP.
 
 	Finds the old entry result[0] and then updates the
 	values to the new entry.
 */
-func UpdateInventoryEntries_ByIP(entry Entry) bool {
+func UpdateEntriesTags_ByIP(entry Entry) bool {
 	tag, exists, _ := FindSysTag("IP", entry)
 
 	if !exists {
@@ -50,7 +50,7 @@ func UpdateInventoryEntries_ByIP(entry Entry) bool {
 		"systags.values": tag.Values[len(tag.Values)-1],
 	}
 
-	results := SELECT_ENTRY_Inventory(ipFilter, bson.M{})
+	results := SELECT_ENTRY_Joined(ipFilter, bson.M{})
 
 	if len(results) == 0 {
 		utils.Log(fmt.Sprintf("No match for (inventory): %s\n", tag.Values[len(tag.Values)-1]), false)
@@ -65,21 +65,23 @@ func UpdateInventoryEntries_ByIP(entry Entry) bool {
 
 	utils.Log(fmt.Sprintf("Match (Inventory): len: %d, IP: %+v\n", len(results), results), false)
 
+	// Parse SysTags and join them
 	for _, newTag := range entry.SysTags {
 		_, found, i := FindSysTag(newTag.Label, results[0])
 
 		if found {
-			results[0].SysTags[i].Values = newTag.Values
+			results[0].SysTags[i].Values = joinTagGroups(newTag.Label, results[0].SysTags[i].Values, newTag.Values)
 		} else {
 			results[0].SysTags = append(results[0].SysTags, newTag)
 		}
 	}
 
+	// Parse SysTags and join them
 	for _, newTag := range entry.UsrTags {
 		_, found, i := FindUsrTag(newTag.Label, results[0])
 
 		if found {
-			results[0].UsrTags[i].Values = newTag.Values
+			results[0].UsrTags[i].Values = joinTagGroups(newTag.Label, results[0].UsrTags[i].Values, newTag.Values)
 		} else {
 			results[0].UsrTags = append(results[0].UsrTags, newTag)
 		}
@@ -87,76 +89,51 @@ func UpdateInventoryEntries_ByIP(entry Entry) bool {
 
 	results[0].DateSeen = append(results[0].DateSeen, entry.DateSeen...)
 
-	utils.Log(fmt.Sprintf("Compartive update made for (inventory): %v\n", results[0].ID), false)
+	utils.Log(fmt.Sprintf("Compartive update made: %v\n", results[0].ID), false)
 	UPDATE_ENTRY_Inventory(results[0])
+
+	// Only update the metadata for the pending entry
+	results[0].Label = entry.Label
+	results[0].Desc = entry.Desc
+	results[0].CMDBType = entry.CMDBType
+	results[0].OSILayer = entry.OSILayer
+
+	UPDATE_ENTRY_Pending(results[0])
 
 	return true
 }
 
 /*
-	Updates Pending database entries
 
-	Finds the old entry result[0] and then updates the
-	values to the new entry.
-*/
-func UpdatePendingEntries_ByIP(entry Entry) bool {
-	tag, exists, _ := FindSysTag("IP", entry)
-
-	if !exists {
-		return false
+ */
+func joinTagGroups(label string, oldTags []string, newTags []string) []string {
+	if len(newTags) == 0 {
+		return oldTags
 	}
 
-	ipFilter := bson.M{
-		"systags.label":  "IP",
-		"systags.values": tag.Values[len(tag.Values)-1],
+	if len(oldTags) == 0 {
+		return newTags
 	}
 
-	results := SELECT_ENTRY_Pending(ipFilter, bson.M{})
-
-	if len(results) == 0 {
-		utils.Log(fmt.Sprintf("No match for (pending): %s\n", tag.Values[len(tag.Values)-1]), false)
-		return false
-	}
-
-	// Too many results returned, database corrupt
-	if len(results) > 1 {
-		utils.ErrorForceFatal(
-			fmt.Sprintf(
-				"While executing UpdateInventoryEntries the number of matched results > 1\n\nEntry: %+v\n\nMatched Cases: %+v", entry, results))
-	}
-
-	utils.Log(fmt.Sprintf("Match (Pending): len: %d, IP: %+v\n", len(results), results), false)
-
-	for _, newTag := range entry.SysTags {
-		_, found, i := FindSysTag(newTag.Label, results[0])
-
-		if found {
-			results[0].SysTags[i].Values = newTag.Values
-		} else {
-			results[0].SysTags = append(results[0].SysTags, newTag)
+	// Update old tags with new tags
+	switch label {
+	case "Ports", "Services": // Merge uniques
+		for _, val := range newTags {
+			if !utils.ArrayContains(val, oldTags) {
+				oldTags = append(oldTags, val)
+			}
 		}
-	}
-
-	for _, newTag := range entry.UsrTags {
-		_, found, i := FindUsrTag(newTag.Label, results[0])
-
-		if found {
-			results[0].UsrTags[i].Values = newTag.Values
-		} else {
-			results[0].UsrTags = append(results[0].UsrTags, newTag)
+	case "IP", "IP6", "MAC", "MAC6": // Append if last element not same
+		for _, val := range newTags {
+			if oldTags[len(oldTags)-1] != val {
+				oldTags = append(oldTags, val)
+			}
 		}
+	default: // Overwrite
+		oldTags = newTags
 	}
 
-	results[0].Label = entry.Label
-	results[0].Desc = entry.Desc
-	results[0].CMDBType = entry.CMDBType
-	results[0].OSILayer = entry.OSILayer
-	results[0].DateSeen = append(results[0].DateSeen, entry.DateSeen...)
-
-	utils.Log(fmt.Sprintf("Compartive update made for (pending): %v\n", results[0].ID), false)
-	UPDATE_ENTRY_Pending(results[0])
-
-	return true
+	return oldTags
 }
 
 type IdentityConfidence struct {

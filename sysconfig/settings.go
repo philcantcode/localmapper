@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	"github.com/philcantcode/localmapper/capability"
+	cookbook "github.com/philcantcode/localmapper/capability/cookbooks"
 	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/proposition"
 	"github.com/philcantcode/localmapper/utils"
@@ -33,8 +34,12 @@ func ExecuteCommand(id int) {
 		database.CMDB_Pending_DB.Drop(context.Background())
 		database.CMDB_Inventory_DB.Drop(context.Background())
 		database.Core_Proposition_DB.Drop(context.Background())
+		database.Core_Cookbooks_DB.Drop(context.Background())
 		database.Results_Nmap_DB.Drop(context.Background())
 		proposition.SetupJobs()
 		capability.InsertDefaultCapabilities()
+		cookbook.InsertDefaultCookbooks()
+	case 9:
+		database.Core_Cookbooks_DB.Drop(context.Background())
 	}
 }

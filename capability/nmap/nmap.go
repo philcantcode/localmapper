@@ -209,10 +209,9 @@ func interpret(nmapRun NmapRun) {
 
 		// Insert to pending or update both DBs
 		if cmdb.EntryExists_ByIP(entry) {
-			newInventoy := cmdb.UpdateInventoryEntries_ByIP(entry)
-			newPending := cmdb.UpdatePendingEntries_ByIP(entry)
+			entryUpdateSuccess := cmdb.UpdateEntriesTags_ByIP(entry)
 
-			if !newInventoy && !newPending {
+			if !entryUpdateSuccess {
 				utils.FatalAlert("Couldn't update inventory or pending in nmap")
 			}
 		} else {

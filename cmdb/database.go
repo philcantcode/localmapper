@@ -75,6 +75,15 @@ func SELECT_ENTRY_Pending(filter bson.M, projection bson.M) []Entry {
 	return results
 }
 
+func SELECT_ENTRY_Joined(filter bson.M, projection bson.M) []Entry {
+	results := []Entry{}
+
+	results = append(results, SELECT_ENTRY_Inventory(filter, projection)...)
+	results = append(results, SELECT_ENTRY_Pending(filter, projection)...)
+
+	return results
+}
+
 func UPDATE_ENTRY_Inventory(cmdb Entry) {
 	result, err := database.CMDB_Inventory_DB.ReplaceOne(context.Background(), bson.M{"_id": cmdb.ID}, cmdb)
 	utils.ErrorFatal("Couldn't UPDATE_ENTRY_Inventory", err)
