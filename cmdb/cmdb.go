@@ -3,7 +3,9 @@ package cmdb
 import (
 	"fmt"
 	"strconv"
+	"time"
 
+	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
 )
@@ -230,4 +232,40 @@ func CalcIdentityConfidenceScore(entry Entry) IdentityConfidence {
 	result.Average = result.Total / 6
 
 	return result
+}
+
+type TimeGraph struct {
+	Keys   []string
+	Values []int
+}
+
+func CalcTimeGraph(entry Entry) TimeGraph {
+	graph := TimeGraph{Keys: []string{}, Values: []int{}}
+
+	window := (time.Minute * 10)
+	nowDT, _ := time.Parse(local.DTF_DateTime, entry.DateSeen[0])
+	endDT, _ := time.Parse(local.DTF_DateTime, entry.DateSeen[len(entry.DateSeen)-1])
+	count := 1
+	dtInBlock := 0
+
+	graph.Keys = append(graph.Keys, nowDT.String())
+
+	for nowDT.Before(endDT) {
+		nowDT = nowDT.Add(window)
+
+		for _, dt := range entry.DateSeen[count : len(entry.DateSeen)-1] {
+			theDT, _ := time.Parse(local.DTF_DateTime, dt)
+
+			if theDT.Before(nowDT) {
+				dtInBlock++
+				count++
+			} else {
+				graph.Keys = append(graph.Keys, dt)
+				graph.Values = append(graph.Values, dtInBlock)
+				dtInBlock = 0
+			}
+		}
+	}
+
+	return graph
 }

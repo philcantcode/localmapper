@@ -52,6 +52,7 @@ func initServer() {
 	router.HandleFunc("/cmdb/pending/deny/all", cmdb.HTTP_Pending_DenyAll)
 	router.HandleFunc("/cmdb/pending/deny", cmdb.HTTP_Pending_Deny)
 	router.HandleFunc("/cmdb/identity-confidence/get/{id}", cmdb.HTTP_JSON_IdentityConfidence_Get)
+	router.HandleFunc("/cmdb/utils/date-time-graph/get/{id}", cmdb.HTTP_JSON_GetDateTimeGraph)
 
 	cors := handlers.CORS(
 		handlers.AllowedHeaders([]string{"content-type"}),

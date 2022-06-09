@@ -14,13 +14,17 @@ type DateTime struct {
 	DateTime string
 }
 
+const DTF_DDMMYYYY = "02-01-2006"
+const DTF_HHMMSS = "15:04:05"
+const DTF_DateTime = "02-01-2006 15:04:05"
+
 func GetDateTime() DateTime {
 	dt := time.Now()
 	dts := DateTime{}
 
-	dts.DDMMYYYY = dt.Format("02-01-2006")
-	dts.HHMMSS = dt.Format("15:04:05")
-	dts.DateTime = dt.Format("02-01-2006 15:04:05")
+	dts.DDMMYYYY = dt.Format(DTF_DDMMYYYY)
+	dts.HHMMSS = dt.Format(DTF_HHMMSS)
+	dts.DateTime = dt.Format(DTF_DateTime)
 
 	utils.Log("Returning the date & time.", false)
 

@@ -197,7 +197,7 @@ func interpret(nmapRun NmapRun) {
 			Desc:     "This device was discovered during an Nmap scan: " + nmapRun.Args,
 			OSILayer: 0,
 			CMDBType: cmdb.PENDING,
-			DateSeen: []string{nmapRun.StartStr},
+			DateSeen: []string{utils.Now()},
 			SysTags:  sysTags,
 		}
 

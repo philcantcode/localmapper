@@ -24,6 +24,8 @@ func main() {
 
 	// success, res := capability.CMP_Entry_Capability(cap[0], entry[0])
 
+	//fmt.Printf("> %+v\n", cmdb.CalcTimeGraph(cmdb.SELECT_ENTRY_Joined(bson.M{}, bson.M{})[4]))
+
 	// fmt.Println(success)
 
 	// fmt.Printf("%+v\n", res)

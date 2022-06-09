@@ -157,3 +157,15 @@ func HTTP_JSON_IdentityConfidence_Get(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(CalcIdentityConfidenceScore(results[0]))
 }
+
+/* HTTP_JSON_GetByID returns a CMDB element based on the {id} */
+func HTTP_JSON_GetDateTimeGraph(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	id := params["id"]
+
+	entry := SELECT_ENTRY_Joined(bson.M{"_id": database.EncodeID(id)}, bson.M{})
+
+	if len(entry) == 1 {
+		json.NewEncoder(w).Encode(CalcTimeGraph(entry[0]))
+	}
+}
