@@ -1,6 +1,7 @@
 package cookbook
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 
@@ -32,4 +33,8 @@ func HTTP_JSON_Run_Cookbook(w http.ResponseWriter, r *http.Request) {
 	ExecuteCookbook(cookbooks[0], entries[0].ID)
 
 	w.Write([]byte("200/Done"))
+}
+
+func HTTP_JSON_GetAll(w http.ResponseWriter, r *http.Request) {
+	json.NewEncoder(w).Encode(SELECT_Cookbook(bson.M{}, bson.M{}))
 }

@@ -29,6 +29,7 @@ func initServer() {
 	router.HandleFunc("/capability/update", capability.HTTP_JSON_Update)
 
 	router.HandleFunc("/cookbook/run/{ccbi}/{id}", cookbook.HTTP_JSON_Run_Cookbook)
+	router.HandleFunc("/cookbook/get/all", cookbook.HTTP_JSON_GetAll)
 
 	router.HandleFunc("/local/get-network-adapters", local.HTTP_JSON_GetNetworkAdapters)
 	router.HandleFunc("/local/get-os-info", local.HTTP_JSON_GetOSInfo)
