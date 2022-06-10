@@ -1,6 +1,9 @@
 package cookbook
 
-import "go.mongodb.org/mongo-driver/bson/primitive"
+import (
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+)
 
 type Cookbook struct {
 	ID         primitive.ObjectID `bson:"_id"`
@@ -12,9 +15,12 @@ type Cookbook struct {
 }
 
 /*
-	InsertDefaultCookbooks adds default capabilities to the database
+	FirstTimeSetup sets up any defaults necessary to run.
+	All items should perform checks so they don't corrupt
+	the database on subsiquent runs. Only when the database
+	is empty should the initial setups run.
 */
-func InsertDefaultCookbooks() {
+func FirstTimeSetup() {
 	localHostID := Cookbook{
 		CCBI:  "ccbi:discovery:local-hosts:default", // Common CookBook Identifier: ccbi:<category>:<label>:<edition>
 		Label: "Local Host Identification",
@@ -26,5 +32,7 @@ func InsertDefaultCookbooks() {
 		SearchKeys: []string{"Ports", "OS", "OSGen", "OSVendor", "MAC", "HostName"},
 	}
 
-	INSERT_Cookbook(localHostID)
+	if len(SELECT_Cookbook(bson.M{}, bson.M{})) == 0 {
+		INSERT_Cookbook(localHostID)
+	}
 }

@@ -20,6 +20,7 @@ func initServer() {
 
 	router.HandleFunc("/system/execute/action/{id}", system.HTTP_JSON_ExecuteAction)
 	router.HandleFunc("/system/get-logs", system.HTTP_JSON_GetLogs)
+	router.HandleFunc("/system/utils/restore", system.HTTP_JSON_Restore)
 
 	router.HandleFunc("/capability/run/cmdb-compatible/{cmbd_id}/{capability_id}", capability.HTTP_JSON_RunCMDBCompatible)
 	router.HandleFunc("/capability/run", capability.HTTP_JSON_Run)
@@ -27,9 +28,11 @@ func initServer() {
 	router.HandleFunc("/capability/get/cmdb-compatible/{id}", capability.HTTP_JSON_GetCMDBCompatible)
 	router.HandleFunc("/capability/get/{id}", capability.HTTP_JSON_GetByID)
 	router.HandleFunc("/capability/update", capability.HTTP_JSON_Update)
+	router.HandleFunc("/capability/utils/restore", capability.HTTP_JSON_Restore)
 
 	router.HandleFunc("/cookbook/run/{ccbi}/{id}", cookbook.HTTP_JSON_Run_Cookbook)
 	router.HandleFunc("/cookbook/get/all", cookbook.HTTP_JSON_GetAll)
+	router.HandleFunc("/cookbook/utils/restore", cookbook.HTTP_JSON_Restore)
 
 	router.HandleFunc("/local/get-network-adapters", local.HTTP_JSON_GetNetworkAdapters)
 	router.HandleFunc("/local/get-os-info", local.HTTP_JSON_GetOSInfo)
@@ -50,8 +53,10 @@ func initServer() {
 	router.HandleFunc("/cmdb/pending/approve", cmdb.HTTP_Pending_Approve)
 	router.HandleFunc("/cmdb/pending/deny/all", cmdb.HTTP_Pending_DenyAll)
 	router.HandleFunc("/cmdb/pending/deny", cmdb.HTTP_Pending_Deny)
+
 	router.HandleFunc("/cmdb/identity-confidence/get/{id}", cmdb.HTTP_JSON_IdentityConfidence_Get)
 	router.HandleFunc("/cmdb/utils/date-time-graph/get/{id}", cmdb.HTTP_JSON_GetDateTimeGraph)
+	router.HandleFunc("/cmdb/utils/restore", cmdb.HTTP_JSON_Restore)
 
 	cors := handlers.CORS(
 		handlers.AllowedHeaders([]string{"content-type"}),

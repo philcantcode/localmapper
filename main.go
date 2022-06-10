@@ -1,8 +1,13 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/go-ole/go-ole"
 	"github.com/go-ole/go-ole/oleutil"
+	"github.com/philcantcode/localmapper/capability"
+	"github.com/philcantcode/localmapper/capability/cookbook"
+	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/proposition"
 	"github.com/philcantcode/localmapper/system"
 )
@@ -17,6 +22,9 @@ func main() {
 
 	// Load all initial setup jobs here
 	proposition.FirstTimeSetup()
+	capability.FirstTimeSetup()
+	cookbook.FirstTimeSetup()
+	cmdb.FirstTimeSetup()
 
 	// Initialise the web API
 	initServer()
@@ -56,4 +64,37 @@ func omiTest() {
 
 		println(asString.ToString())
 	}
+}
+
+func ExecuteCommand(id int) {
+	system.Log(fmt.Sprintf("Executing System Command: %d", id), true)
+
+	// switch id {
+	// case 1:
+	// 	system.Core_Capability_DB.Drop(context.Background())
+	// case 2:
+	// 	system.CMDB_Pending_DB.Drop(context.Background())
+	// case 3:
+	// 	system.CMDB_Inventory_DB.Drop(context.Background())
+	// case 4:
+	// 	system.Core_Proposition_DB.Drop(context.Background())
+	// case 5:
+	// 	system.Results_Nmap_DB.Drop(context.Background())
+	// case 6:
+	// 	proposition.FirstTimeSetup()
+	// case 7:
+	// 	capability.InsertDefaultCapabilities()
+	// case 8:
+	// 	system.Core_Capability_DB.Drop(context.Background())
+	// 	system.CMDB_Pending_DB.Drop(context.Background())
+	// 	system.CMDB_Inventory_DB.Drop(context.Background())
+	// 	system.Core_Proposition_DB.Drop(context.Background())
+	// 	system.Core_Cookbooks_DB.Drop(context.Background())
+	// 	system.Results_Nmap_DB.Drop(context.Background())
+	// 	proposition.FirstTimeSetup()
+	// 	capability.InsertDefaultCapabilities()
+	// 	cookbook.InsertDefaultCookbooks()
+	// case 9:
+	// 	system.Core_Cookbooks_DB.Drop(context.Background())
+	// }
 }

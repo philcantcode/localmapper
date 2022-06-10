@@ -120,6 +120,10 @@ func FirstTimeSetup() {
 			Key:   "mongo-port",
 			Value: "27017",
 		},
+		{
+			Key:   "date-seen-graph-mins-val",
+			Value: "60",
+		},
 	}
 
 	for _, setting := range settings {

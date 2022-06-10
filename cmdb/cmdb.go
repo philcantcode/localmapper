@@ -238,7 +238,10 @@ func CalcIdentityConfidenceScore(entry Entry) IdentityConfidence {
 func CalcTimeGraph(entry Entry) TimeGraph {
 	graph := TimeGraph{Keys: []string{}, Values: []int{}}
 
-	window := (time.Minute * 60)
+	windowMinute, err := strconv.Atoi(system.Get("date-seen-graph-mins-val"))
+	system.Fatal("Couldn't convert date-seen-graph-mins-val settings to int", err)
+
+	window := time.Duration(int64(time.Minute) * int64(windowMinute))
 	nowDT, _ := time.Parse(local.DTF_DateTime, entry.DateSeen[0])
 	endDT, _ := time.Parse(local.DTF_DateTime, entry.DateSeen[len(entry.DateSeen)-1])
 	processedBlocks := 1
@@ -271,4 +274,54 @@ func CalcTimeGraph(entry Entry) TimeGraph {
 	}
 
 	return graph
+}
+
+func FirstTimeSetup() {
+	if len(SELECT_ENTRY_Inventory(bson.M{}, bson.M{})) > 0 {
+		return
+	}
+
+	vlan1 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 1", "desc": "Default VLAN"}, bson.M{})
+
+	if len(vlan1) == 0 {
+		lowIP := EntryTag{Label: "LowIP", DataType: system.IP_RANGE_LOW, Values: []string{"10.0.0.0"}}
+		highIP := EntryTag{Label: "HighIP", DataType: system.IP_RANGE_HIGH, Values: []string{"10.255.255.255"}}
+		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
+
+		newVlan := Entry{Label: "Private Range 1", Desc: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
+		INSERT_ENTRY_Inventory(newVlan)
+	}
+
+	vlan2 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 2", "desc": "Default VLAN"}, bson.M{})
+
+	if len(vlan2) == 0 {
+		lowIP := EntryTag{Label: "LowIP", DataType: system.IP_RANGE_LOW, Values: []string{"172.16.0.0"}}
+		highIP := EntryTag{Label: "HighIP", DataType: system.IP_RANGE_HIGH, Values: []string{"172.31.255.255"}}
+		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
+
+		newVlan := Entry{Label: "Private Range 2", Desc: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
+		INSERT_ENTRY_Inventory(newVlan)
+	}
+
+	vlan3 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 3", "desc": "Default VLAN"}, bson.M{})
+
+	if len(vlan3) == 0 {
+		lowIP := EntryTag{Label: "LowIP", DataType: system.IP_RANGE_LOW, Values: []string{"192.168.0.0"}}
+		highIP := EntryTag{Label: "HighIP", DataType: system.IP_RANGE_HIGH, Values: []string{"192.168.255.255"}}
+		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
+
+		newVlan := Entry{Label: "Private Range 3", Desc: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
+		INSERT_ENTRY_Inventory(newVlan)
+	}
+
+	vlan4 := SELECT_ENTRY_Inventory(bson.M{"label": "Test Home", "desc": "Test VLAN"}, bson.M{})
+
+	if len(vlan4) == 0 {
+		lowIP := EntryTag{Label: "LowIP", DataType: system.IP_RANGE_LOW, Values: []string{"192.168.1.0"}}
+		highIP := EntryTag{Label: "HighIP", DataType: system.IP_RANGE_HIGH, Values: []string{"192.168.1.255"}}
+		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
+
+		newVlan := Entry{Label: "Test Home", Desc: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
+		INSERT_ENTRY_Inventory(newVlan)
+	}
 }

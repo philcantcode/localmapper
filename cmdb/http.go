@@ -1,6 +1,7 @@
 package cmdb
 
 import (
+	"context"
 	"encoding/json"
 	"net/http"
 	"strconv"
@@ -168,4 +169,17 @@ func HTTP_JSON_GetDateTimeGraph(w http.ResponseWriter, r *http.Request) {
 	if len(entry) == 1 {
 		json.NewEncoder(w).Encode(CalcTimeGraph(entry[0]))
 	}
+}
+
+/*
+	HTTP_JSON_Restore restores the system settings and databases
+	to factory defaults.
+*/
+func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
+	system.CMDB_Inventory_DB.Drop(context.Background()) // Drop inventory
+	system.CMDB_Pending_DB.Drop(context.Background())   // Drop pending
+
+	FirstTimeSetup() // Restore capabilities
+
+	w.Write([]byte("200/Done"))
 }

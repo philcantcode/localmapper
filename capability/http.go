@@ -1,6 +1,7 @@
 package capability
 
 import (
+	"context"
 	"encoding/json"
 	"net/http"
 
@@ -104,4 +105,16 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	}
 
 	system.Force("HTTP_JSON_RunCMDBCompatible was not compatible", true)
+}
+
+/*
+	HTTP_JSON_Restore restores the system settings and databases
+	to factory defaults.
+*/
+func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
+	system.Core_Capability_DB.Drop(context.Background()) // Drop capabilities
+
+	FirstTimeSetup() // Restore capabilities
+
+	w.Write([]byte("200/Done"))
 }

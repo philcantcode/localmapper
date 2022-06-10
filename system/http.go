@@ -1,6 +1,7 @@
 package system
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -27,4 +28,17 @@ func HTTP_JSON_ExecuteAction(w http.ResponseWriter, r *http.Request) {
 /* HTTP_JSON_GetLogs returns all logs */
 func HTTP_JSON_GetLogs(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(SELECT_LogEntry(bson.M{}, bson.M{}))
+}
+
+/*
+	HTTP_JSON_Restore restores the system settings and databases
+	to factory defaults.
+*/
+func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
+	System_Logs_DB.Drop(context.Background()) // Drop the logs table
+	DELETE_Settings_All()                     // Delete all settings
+
+	FirstTimeSetup() // Perform first time setup
+
+	w.Write([]byte("200/Done"))
 }

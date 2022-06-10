@@ -1,6 +1,7 @@
 package cookbook
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -36,4 +37,16 @@ func HTTP_JSON_Run_Cookbook(w http.ResponseWriter, r *http.Request) {
 
 func HTTP_JSON_GetAll(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(SELECT_Cookbook(bson.M{}, bson.M{}))
+}
+
+/*
+	HTTP_JSON_Restore restores the system settings and databases
+	to factory defaults.
+*/
+func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
+	system.Core_Cookbooks_DB.Drop(context.Background()) // Drop cookbooks
+
+	FirstTimeSetup() // Restore cookbooks
+
+	w.Write([]byte("200/Done"))
 }
