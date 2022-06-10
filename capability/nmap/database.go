@@ -10,7 +10,7 @@ import (
 )
 
 func INSERT_Nmap(nmapResult NmapRun) {
-	system.Log("Attempting to Insert_Network_Nmap", false)
+	system.Log("Attempting to INSERT_Nmap", false)
 
 	insertResult, err := system.Results_Nmap_DB.InsertOne(context.Background(), nmapResult)
 

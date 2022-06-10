@@ -18,7 +18,8 @@ func initServer() {
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/config/{id}", system.HTTP_JSON_Settings)
+	router.HandleFunc("/system/execute/action/{id}", system.HTTP_JSON_ExecuteAction)
+	router.HandleFunc("/system/get-logs", system.HTTP_JSON_GetLogs)
 
 	router.HandleFunc("/capability/run/cmdb-compatible/{cmbd_id}/{capability_id}", capability.HTTP_JSON_RunCMDBCompatible)
 	router.HandleFunc("/capability/run", capability.HTTP_JSON_Run)
@@ -33,7 +34,6 @@ func initServer() {
 	router.HandleFunc("/local/get-network-adapters", local.HTTP_JSON_GetNetworkAdapters)
 	router.HandleFunc("/local/get-os-info", local.HTTP_JSON_GetOSInfo)
 	router.HandleFunc("/local/get-date-time", local.HTTP_JSON_GetDateTime)
-	router.HandleFunc("/local/get-logs", local.HTTP_JSON_GetLogs)
 	router.HandleFunc("/local/get-default-ip-gateway", local.HTTP_JSON_GetDefaultGatewayIP)
 
 	router.HandleFunc("/propositions/get-all", proposition.HTTP_JSON_GetPropositions)

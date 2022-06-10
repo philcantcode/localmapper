@@ -46,3 +46,8 @@ type EntryTag struct {
 	DataType system.DataType
 	Values   []string
 }
+
+type TimeGraph struct {
+	Keys   []string
+	Values []int
+}

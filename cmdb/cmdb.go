@@ -235,37 +235,39 @@ func CalcIdentityConfidenceScore(entry Entry) IdentityConfidence {
 	return result
 }
 
-type TimeGraph struct {
-	Keys   []string
-	Values []int
-}
-
 func CalcTimeGraph(entry Entry) TimeGraph {
 	graph := TimeGraph{Keys: []string{}, Values: []int{}}
 
-	window := (time.Minute * 10)
+	window := (time.Minute * 60)
 	nowDT, _ := time.Parse(local.DTF_DateTime, entry.DateSeen[0])
 	endDT, _ := time.Parse(local.DTF_DateTime, entry.DateSeen[len(entry.DateSeen)-1])
-	count := 1
-	dtInBlock := 0
+	processedBlocks := 1
+	entriesInBlock := 0
+	timeBlockCount := 0
 
-	graph.Keys = append(graph.Keys, nowDT.String())
+	// Push the first value of DateTime to get things started
+	graph.Keys = append(graph.Keys, nowDT.Format(local.DTF_DateTime))
 
 	for nowDT.Before(endDT) {
-		nowDT = nowDT.Add(window)
+		nowDT = nowDT.Add(window) // Add 1 duration step to it
 
-		for _, dt := range entry.DateSeen[count : len(entry.DateSeen)-1] {
-			theDT, _ := time.Parse(local.DTF_DateTime, dt)
+		for _, dt := range entry.DateSeen[processedBlocks:] {
+			subDT, _ := time.Parse(local.DTF_DateTime, dt)
 
-			if theDT.Before(nowDT) {
-				dtInBlock++
-				count++
+			if subDT.Before(nowDT) {
+				entriesInBlock++
 			} else {
-				graph.Keys = append(graph.Keys, dt)
-				graph.Values = append(graph.Values, dtInBlock)
-				dtInBlock = 0
+				break
 			}
+
+			processedBlocks++
 		}
+
+		graph.Keys = append(graph.Keys, nowDT.Format(local.DTF_DateTime))
+		graph.Values = append(graph.Values, entriesInBlock)
+
+		entriesInBlock = 0
+		timeBlockCount++
 	}
 
 	return graph

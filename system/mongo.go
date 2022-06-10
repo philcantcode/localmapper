@@ -21,6 +21,8 @@ var Core_Jobs_DB *mongo.Collection
 var Core_Capability_DB *mongo.Collection
 var Core_Cookbooks_DB *mongo.Collection
 
+var MONGO_INITIALISED = false
+
 func InitMongo() {
 	var err error
 
@@ -70,5 +72,7 @@ func InitMongo() {
 	Log("Successfully setup mongo cookbooks database collections: ", false)
 
 	System_Logs_DB = client.Database("System").Collection("Logs")
-	Log("Successfully setup mongo system logs database collections: ", false)
+	Log("Successfully setup mongo system logs database collections: ", true)
+
+	MONGO_INITIALISED = true
 }
