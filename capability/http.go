@@ -6,8 +6,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/philcantcode/localmapper/cmdb"
-	"github.com/philcantcode/localmapper/database"
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
@@ -18,7 +17,7 @@ func HTTP_JSON_Update(w http.ResponseWriter, r *http.Request) {
 	var capability Capability
 
 	err := json.Unmarshal([]byte(capabilityParam), &capability)
-	utils.ErrorFatal("Error converting capability (json string) > capability (struct)", err)
+	system.Fatal("Error converting capability (json string) > capability (struct)", err)
 
 	UPDATE_Capability(capability)
 	w.WriteHeader(200)
@@ -36,11 +35,11 @@ func HTTP_JSON_GetCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	result := []Capability{}
 	entries := []cmdb.Entry{}
 
-	entries = append(entries, cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
-	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
+	entries = append(entries, cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)
+	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)
 
 	if len(entries) != 1 {
-		utils.ErrorContextLog("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
+		system.Force("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
 		return
 	}
 
@@ -61,7 +60,7 @@ func HTTP_JSON_GetByID(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	id := params["id"]
 
-	capabilities := SELECT_Capability(bson.M{"_id": database.EncodeID(id)}, bson.M{})
+	capabilities := SELECT_Capability(bson.M{"_id": system.EncodeID(id)}, bson.M{})
 	json.NewEncoder(w).Encode(capabilities[0])
 }
 
@@ -86,14 +85,14 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	cmbd_id := params["cmbd_id"]
 	cap_id := params["capability_id"]
 
-	cap := SELECT_Capability(bson.M{"_id": database.EncodeID(cap_id)}, bson.M{})[0]
+	cap := SELECT_Capability(bson.M{"_id": system.EncodeID(cap_id)}, bson.M{})[0]
 	entries := []cmdb.Entry{}
 
-	entries = append(entries, cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(cmbd_id)}, bson.M{})...)
-	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": database.EncodeID(cmbd_id)}, bson.M{})...)
+	entries = append(entries, cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": system.EncodeID(cmbd_id)}, bson.M{})...)
+	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(cmbd_id)}, bson.M{})...)
 
 	if len(entries) != 1 {
-		utils.ErrorContextLog("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
+		system.Force("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
 		return
 	}
 
@@ -104,5 +103,5 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	utils.ErrorContextLog("HTTP_JSON_RunCMDBCompatible was not compatible", true)
+	system.Force("HTTP_JSON_RunCMDBCompatible was not compatible", true)
 }

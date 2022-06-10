@@ -3,35 +3,22 @@ package main
 import (
 	"github.com/go-ole/go-ole"
 	"github.com/go-ole/go-ole/oleutil"
-	"github.com/philcantcode/localmapper/database"
 	"github.com/philcantcode/localmapper/proposition"
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 )
 
 func main() {
-	utils.LoadGlobalConfigs()
+	// Load settings & config database
+	system.InitSqlite()
+	system.FirstTimeSetup()
 
-	database.InitSqlite()
-	database.InitMongo()
+	// Load application database
+	system.InitMongo()
 
-	proposition.SetupJobs()
+	// Load all initial setup jobs here
+	proposition.FirstTimeSetup()
 
-	//capability.TEST_GENERATE_CAPABILITIES()
-	//omiTest()
-
-	// entry := cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID("629f6d27f33e5892933865a4")}, bson.M{})
-	// cap := capability.SELECT_Capability(bson.M{"_id": database.EncodeID("629f808b3fb3d4ad934eef87")}, bson.M{})
-
-	// success, res := capability.CMP_Entry_Capability(cap[0], entry[0])
-
-	//fmt.Printf("> %+v\n", cmdb.CalcTimeGraph(cmdb.SELECT_ENTRY_Joined(bson.M{}, bson.M{})[4]))
-
-	// fmt.Println(success)
-
-	// fmt.Printf("%+v\n", res)
-
-	// os.Exit(0)
-
+	// Initialise the web API
 	initServer()
 }
 

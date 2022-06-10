@@ -4,19 +4,18 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/philcantcode/localmapper/database"
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 func INSERT_Nmap(nmapResult NmapRun) {
-	utils.Log("Attempting to Insert_Network_Nmap", false)
+	system.Log("Attempting to Insert_Network_Nmap", false)
 
-	insertResult, err := database.Results_Nmap_DB.InsertOne(context.Background(), nmapResult)
+	insertResult, err := system.Results_Nmap_DB.InsertOne(context.Background(), nmapResult)
 
-	utils.ErrorFatal("Couldn't Insert_Network_Nmap", err)
-	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), true)
+	system.Fatal("Couldn't Insert_Network_Nmap", err)
+	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), true)
 }
 
 /* SELECT_Nmap takes in a:
@@ -24,8 +23,8 @@ func INSERT_Nmap(nmapResult NmapRun) {
    2. projection bson.M{"version": 1} to limit the fields returned
 */
 func SELECT_Nmap(filter bson.M, projection bson.M) []NmapRun {
-	cursor, err := database.Results_Nmap_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
-	utils.ErrorFatal("Couldn't FilterNetworkMap", err)
+	cursor, err := system.Results_Nmap_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
+	system.Fatal("Couldn't FilterNetworkMap", err)
 	defer cursor.Close(context.Background())
 
 	var results []NmapRun
@@ -34,7 +33,7 @@ func SELECT_Nmap(filter bson.M, projection bson.M) []NmapRun {
 		var nmapRun NmapRun
 
 		err = cursor.Decode(&nmapRun)
-		utils.ErrorFatal("Couldn't decode application.nmap.SelectAllNetworkNmap", err)
+		system.Fatal("Couldn't decode application.nmap.SelectAllNetworkNmap", err)
 
 		results = append(results, nmapRun)
 	}

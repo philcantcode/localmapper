@@ -1,10 +1,9 @@
-package database
+package system
 
 import (
 	"context"
 	"fmt"
 
-	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readpref"
@@ -13,6 +12,7 @@ import (
 // Connection URI
 var uri string
 var client *mongo.Client
+var System_Logs_DB *mongo.Collection
 var Results_Nmap_DB *mongo.Collection
 var CMDB_Inventory_DB *mongo.Collection
 var CMDB_Pending_DB *mongo.Collection
@@ -24,47 +24,51 @@ var Core_Cookbooks_DB *mongo.Collection
 func InitMongo() {
 	var err error
 
-	utils.Log("Attempting to connect MongoDB to: "+uri, false)
-
-	if utils.Configs["MONGO_PASSWORD_REQUIRED"] == "1" {
+	if Get("mongo-password-req") == "1" {
 		uri = fmt.Sprintf("mongodb://%s:%s@%s:%s",
-			utils.Configs["MONGO_USER"],
-			utils.Configs["MONGO_PASSWORD"],
-			utils.Configs["MONGO_IP"],
-			utils.Configs["MONGO_PORT"])
+			Get("mongo-user"),
+			Get("mongo-password"),
+			Get("mongo-ip"),
+			Get("mongo-port"))
 	} else {
 		uri = fmt.Sprintf("mongodb://%s:%s",
-			utils.Configs["MONGO_IP"],
-			utils.Configs["MONGO_PORT"])
+			Get("mongo-ip"),
+			Get("mongo-port"))
 	}
+
+	Log("Attempting to connect MongoDB to: "+uri, true)
 
 	// Create a new client and connect to the server
 	client, err = mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
-	utils.ErrorFatal("MongoDB couldn't make initial connection to "+uri, err)
+	Fatal("MongoDB couldn't make initial connection to "+uri, err)
 
 	// Ping the primary
 	err = client.Ping(context.TODO(), readpref.Primary())
-	utils.ErrorFatal("MongoDB couldn't ping "+uri, err)
-	utils.Log("Successfully connected MongoDB to: "+uri, false)
+	Fatal("Can't reach mongo at: "+uri, err)
+
+	Log("Successfully connected MongoDB to: "+uri, false)
 
 	Results_Nmap_DB = client.Database("Results").Collection("Nmap")
-	utils.Log("Successfully setup mongo nmap database collections: ", false)
+	Log("Successfully setup mongo nmap database collections: ", false)
 
 	CMDB_Inventory_DB = client.Database("CMDB").Collection("Inventory")
-	utils.Log("Successfully setup mongo Inventory database collections: ", false)
+	Log("Successfully setup mongo Inventory database collections: ", false)
 
 	CMDB_Pending_DB = client.Database("CMDB").Collection("Pending")
-	utils.Log("Successfully setup mongo Pending database collections: ", false)
+	Log("Successfully setup mongo Pending database collections: ", false)
 
 	Core_Proposition_DB = client.Database("Core").Collection("Proposition")
-	utils.Log("Successfully setup mongo Proposition database collections: ", false)
+	Log("Successfully setup mongo Proposition database collections: ", false)
 
 	Core_Jobs_DB = client.Database("Core").Collection("Jobs")
-	utils.Log("Successfully setup mongo Jobs database collections: ", false)
+	Log("Successfully setup mongo Jobs database collections: ", false)
 
 	Core_Capability_DB = client.Database("Core").Collection("Capability")
-	utils.Log("Successfully setup mongo capability database collections: ", false)
+	Log("Successfully setup mongo capability database collections: ", false)
 
 	Core_Cookbooks_DB = client.Database("Core").Collection("Cookbooks")
-	utils.Log("Successfully setup mongo cookbooks database collections: ", false)
+	Log("Successfully setup mongo cookbooks database collections: ", false)
+
+	System_Logs_DB = client.Database("System").Collection("Logs")
+	Log("Successfully setup mongo system logs database collections: ", false)
 }

@@ -1,7 +1,7 @@
 package capability
 
 import (
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
@@ -22,11 +22,11 @@ type Command struct {
 }
 
 type Param struct {
-	Flag     string           // Flag (e.g., -s)
-	Value    string           // Set value
-	Desc     string           // Contextual info about the flag
-	DataType []utils.DataType // e.g., IP, IP Range, String
-	Default  string           // Default value that will be used if no value provided
+	Flag     string            // Flag (e.g., -s)
+	Value    string            // Set value
+	Desc     string            // Contextual info about the flag
+	DataType []system.DataType // e.g., IP, IP Range, String
+	Default  string            // Default value that will be used if no value provided
 }
 
 func ParamsToArray(params []Param) []string {
@@ -61,35 +61,35 @@ func InsertDefaultCapabilities() {
 				{
 					Desc:     "UDP Scan",
 					Flag:     "-sU",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "Run Script",
 					Flag:     "--script",
-					DataType: []utils.DataType{utils.STRING},
+					DataType: []system.DataType{system.STRING},
 					Value:    "nbstat.nse",
 					Default:  "nbstat.nse",
 				},
 				{
 					Desc:     "Target",
 					Flag:     "",
-					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					DataType: []system.DataType{system.CIDR, system.IP},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "Port 137",
 					Flag:     "-p137",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "XML Output",
 					Flag:     "-oX",
-					DataType: []utils.DataType{utils.STRING},
+					DataType: []system.DataType{system.STRING},
 					Value:    "-",
 					Default:  "-",
 				},
@@ -109,28 +109,28 @@ func InsertDefaultCapabilities() {
 				{
 					Desc:     "Disable Port Scan Flag",
 					Flag:     "-sn",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "Target",
 					Flag:     "",
-					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					DataType: []system.DataType{system.CIDR, system.IP},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "System DNS Flag",
 					Flag:     "--system-dns",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "XML Output",
 					Flag:     "-oX",
-					DataType: []utils.DataType{utils.STRING},
+					DataType: []system.DataType{system.STRING},
 					Value:    "-",
 					Default:  "-",
 				},
@@ -150,21 +150,21 @@ func InsertDefaultCapabilities() {
 				{
 					Desc:     "Disable Port Scan Flag",
 					Flag:     "-sn",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "IP CIDR Target",
 					Flag:     "",
-					DataType: []utils.DataType{utils.CIDR},
+					DataType: []system.DataType{system.CIDR},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "XML Output",
 					Flag:     "-oX",
-					DataType: []utils.DataType{utils.STRING},
+					DataType: []system.DataType{system.STRING},
 					Value:    "-",
 					Default:  "-",
 				},
@@ -184,28 +184,28 @@ func InsertDefaultCapabilities() {
 				{
 					Desc:     "Stealth Scan Flag",
 					Flag:     "-sS",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "Disable Ping Flag",
 					Flag:     "-Pn",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "Target",
 					Flag:     "",
-					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					DataType: []system.DataType{system.CIDR, system.IP},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "XML Output",
 					Flag:     "-oX",
-					DataType: []utils.DataType{utils.STRING},
+					DataType: []system.DataType{system.STRING},
 					Value:    "-",
 					Default:  "-",
 				},
@@ -225,34 +225,34 @@ func InsertDefaultCapabilities() {
 				{
 					Desc:     "OS Scan Flag",
 					Flag:     "-O",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "Disable Ping Flag",
 					Flag:     "-Pn",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				}, {
 					Desc:     "Slows Down Scan",
 					Flag:     "--max-rate",
-					DataType: []utils.DataType{utils.INTEGER},
+					DataType: []system.DataType{system.INTEGER},
 					Value:    "100",
 					Default:  "100",
 				},
 				{
 					Desc:     "Target",
 					Flag:     "",
-					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					DataType: []system.DataType{system.CIDR, system.IP},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "XML Output",
 					Flag:     "-oX",
-					DataType: []utils.DataType{utils.STRING},
+					DataType: []system.DataType{system.STRING},
 					Value:    "-",
 					Default:  "-",
 				},
@@ -272,28 +272,28 @@ func InsertDefaultCapabilities() {
 				{
 					Desc:     "Connect Scan Flag",
 					Flag:     "-sT",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "Disable Ping Flag",
 					Flag:     "-Pn",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "IP Target",
 					Flag:     "",
-					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					DataType: []system.DataType{system.CIDR, system.IP},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "XML Output",
 					Flag:     "-oX",
-					DataType: []utils.DataType{utils.STRING},
+					DataType: []system.DataType{system.STRING},
 					Value:    "-",
 					Default:  "-",
 				},
@@ -313,28 +313,28 @@ func InsertDefaultCapabilities() {
 				{
 					Desc:     "Disable Port Scan Flag",
 					Flag:     "-sn",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "ARP Flag",
 					Flag:     "-PU",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "IP Target",
 					Flag:     "",
-					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					DataType: []system.DataType{system.CIDR, system.IP},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "XML Output",
 					Flag:     "-oX",
-					DataType: []utils.DataType{utils.STRING},
+					DataType: []system.DataType{system.STRING},
 					Value:    "-",
 					Default:  "-",
 				},
@@ -356,42 +356,42 @@ func InsertDefaultCapabilities() {
 				{
 					Desc:     "UDP Scan Flag",
 					Flag:     "-sU",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "Stealth Scan Flag",
 					Flag:     "-sS",
-					DataType: []utils.DataType{utils.EMPTY},
+					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "Script Flag",
 					Flag:     "--script",
-					DataType: []utils.DataType{utils.STRING},
+					DataType: []system.DataType{system.STRING},
 					Value:    "smb-os-discovery.nse",
 					Default:  "smb-os-discovery.nse",
 				},
 				{
 					Desc:     "Port Flag",
 					Flag:     "-p",
-					DataType: []utils.DataType{utils.STRING},
+					DataType: []system.DataType{system.STRING},
 					Value:    "U:137,T:139",
 					Default:  "U:137,T:139",
 				},
 				{
 					Desc:     "IP Target",
 					Flag:     "",
-					DataType: []utils.DataType{utils.CIDR, utils.IP},
+					DataType: []system.DataType{system.CIDR, system.IP},
 					Value:    "",
 					Default:  "",
 				},
 				{
 					Desc:     "XML Output",
 					Flag:     "-oX",
-					DataType: []utils.DataType{utils.STRING},
+					DataType: []system.DataType{system.STRING},
 					Value:    "-",
 					Default:  "-",
 				},

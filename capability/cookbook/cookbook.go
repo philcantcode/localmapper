@@ -5,6 +5,7 @@ import (
 
 	"github.com/philcantcode/localmapper/capability"
 	"github.com/philcantcode/localmapper/cmdb"
+	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -14,7 +15,7 @@ import (
 	ExecuteCookbook runs a passed cookbook
 */
 func ExecuteCookbook(book Cookbook, entryID primitive.ObjectID) {
-	utils.Log("Attempting to execute cookbook: "+book.Label, false)
+	system.Log("Attempting to execute cookbook: "+book.Label, false)
 
 	capList := capability.SELECT_Capability(bson.M{}, bson.M{})
 
@@ -25,7 +26,7 @@ func ExecuteCookbook(book Cookbook, entryID primitive.ObjectID) {
 
 		// Ensure only 1 capability returned
 		if len(caps) != 1 {
-			utils.ErrorContextLog(
+			system.Force(
 				fmt.Sprintf(
 					"Incorrect number (%d) of returned for CCI: %s",
 					len(caps), cci), true)
@@ -34,7 +35,7 @@ func ExecuteCookbook(book Cookbook, entryID primitive.ObjectID) {
 
 		// Ensure only 1 entry returned
 		if len(entries) != 1 {
-			utils.ErrorContextLog(
+			system.Force(
 				fmt.Sprintf(
 					"Incorrect number (%d) of returned for entries: %s",
 					len(entries), entryID), true)
@@ -44,7 +45,7 @@ func ExecuteCookbook(book Cookbook, entryID primitive.ObjectID) {
 		isMatch, cap := capability.MatchEntryToCapability(caps[0], entries[0])
 
 		if isMatch {
-			utils.Log("Matched entry found, performing capability", false)
+			system.Log("Matched entry found, performing capability", false)
 			capability.ExecuteCapability(cap)
 		}
 	}
@@ -64,7 +65,7 @@ func ExecuteCookbook(book Cookbook, entryID primitive.ObjectID) {
 
 					// Ensure only 1 entry returned
 					if len(entries) != 1 {
-						utils.ErrorContextLog(
+						system.Force(
 							fmt.Sprintf(
 								"Incorrect number (%d) of returned for entries: %s",
 								len(entries), entryID), true)
@@ -74,7 +75,7 @@ func ExecuteCookbook(book Cookbook, entryID primitive.ObjectID) {
 					isMatch, cap := capability.MatchEntryToCapability(cap, entries[0])
 
 					if isMatch {
-						utils.Log("Matched entry found (using searchKey), performing capability", false)
+						system.Log("Matched entry found (using searchKey), performing capability", false)
 						capability.ExecuteCapability(cap)
 					}
 				}

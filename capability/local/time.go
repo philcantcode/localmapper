@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 )
 
 type DateTime struct {
@@ -26,7 +26,7 @@ func GetDateTime() DateTime {
 	dts.HHMMSS = dt.Format(DTF_HHMMSS)
 	dts.DateTime = dt.Format(DTF_DateTime)
 
-	utils.Log("Returning the date & time.", false)
+	system.Log("Returning the date & time.", false)
 
 	return dts
 }

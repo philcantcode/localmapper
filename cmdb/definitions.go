@@ -1,7 +1,7 @@
 package cmdb
 
 import (
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
@@ -43,6 +43,6 @@ type Entry struct {
 type EntryTag struct {
 	Label    string
 	Desc     string
-	DataType utils.DataType
+	DataType system.DataType
 	Values   []string
 }

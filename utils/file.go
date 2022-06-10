@@ -57,36 +57,6 @@ func ClearFile(path string) {
 	}
 }
 
-func AppendLine(line string, path string) {
-	f, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-
-	if err != nil {
-		log.Println(err)
-	}
-
-	defer f.Close()
-	if _, err := f.WriteString(line + "\n"); err != nil {
-		log.Println(err)
-	}
-
-	f.Close()
-}
-
-func AppendJson(line string, path string) {
-	f, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-
-	if err != nil {
-		log.Println(err)
-	}
-
-	defer f.Close()
-	if _, err := f.WriteString(line + "\n"); err != nil {
-		log.Println(err)
-	}
-
-	f.Close()
-}
-
 func CreateFile(path string) {
 	f, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 

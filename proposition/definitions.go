@@ -1,7 +1,7 @@
 package proposition
 
 import (
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
@@ -18,6 +18,6 @@ type Proposition struct {
 type Predicate struct {
 	Label    string
 	Value    string
-	DataType utils.DataType
+	DataType system.DataType
 	Options  []string
 }

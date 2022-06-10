@@ -7,7 +7,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/philcantcode/localmapper/capability/local"
-	"github.com/philcantcode/localmapper/database"
+	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
 )
@@ -39,7 +39,7 @@ func HTTP_JSON_GetByType(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	typeStr := params["type"]
 	typeNum, err := strconv.Atoi(typeStr)
-	utils.ErrorLog("Couldn't convert CMDBType to int32: "+typeStr, err, true)
+	system.Error("Couldn't convert CMDBType to int32: "+typeStr, err)
 
 	json.NewEncoder(w).Encode(SELECT_ENTRY_Inventory(bson.M{"cmdbtype": int32(typeNum)}, bson.M{}))
 }
@@ -50,7 +50,7 @@ func HTTP_JSON_GetByID(w http.ResponseWriter, r *http.Request) {
 	id := params["id"]
 	device := []Entry{}
 
-	utils.Log("HTTP request made for: "+id, false)
+	system.Log("HTTP request made for: "+id, false)
 
 	if id == "" {
 		json.NewEncoder(w).Encode(SELECT_ENTRY_Inventory(bson.M{}, bson.M{}))
@@ -58,8 +58,8 @@ func HTTP_JSON_GetByID(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// The inventory ID was a device
-	device = append(device, SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
-	device = append(device, SELECT_ENTRY_Pending(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
+	device = append(device, SELECT_ENTRY_Inventory(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)
+	device = append(device, SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)
 
 	if len(device) > 0 {
 		json.NewEncoder(w).Encode(device)
@@ -79,34 +79,34 @@ func HTTP_INSERT_Pending_Vlan(w http.ResponseWriter, r *http.Request) {
 	cmdbType := r.FormValue("CMDBType")
 
 	cmdbTypeInt, err := strconv.Atoi(cmdbType)
-	utils.ErrorLog("Couldn't convert CMDBType to int", err, true)
+	system.Error("Couldn't convert CMDBType to int", err)
 
 	if !utils.ValidateIP(lowIP) {
-		utils.ErrorContextLog("LowIP not valid in cmdb.HTTP_INSERT_Pending", true)
+		system.Force("LowIP not valid in cmdb.HTTP_INSERT_Pending", true)
 		return
 	}
 
 	if !utils.ValidateIP(highIP) {
-		utils.ErrorContextLog("HighIP not valid in cmdb.HTTP_INSERT_Pending", true)
+		system.Force("HighIP not valid in cmdb.HTTP_INSERT_Pending", true)
 		return
 	}
 
 	if !utils.ValidateString(label) {
-		utils.ErrorContextLog("Label not valid in cmdb.HTTP_INSERT_Pending", true)
+		system.Force("Label not valid in cmdb.HTTP_INSERT_Pending", true)
 		return
 	}
 
 	if !utils.ValidateString(desc) {
-		utils.ErrorContextLog("Desc not valid in cmdb.HTTP_INSERT_Pending", true)
+		system.Force("Desc not valid in cmdb.HTTP_INSERT_Pending", true)
 		return
 	}
 
 	cidrArr, err := utils.IPv4RangeToCIDRRange(lowIP, highIP)
-	utils.ErrorLog("Couldn't create CIDR", err, true)
+	system.Error("Couldn't create CIDR", err)
 
-	highIpTag := EntryTag{Label: "LowIP", DataType: utils.IP, Values: []string{lowIP}}
-	lowIpTag := EntryTag{Label: "HighIP", DataType: utils.IP, Values: []string{highIP}}
-	cidr := EntryTag{Label: "CIDR", DataType: utils.CIDR, Values: cidrArr}
+	highIpTag := EntryTag{Label: "LowIP", DataType: system.IP, Values: []string{lowIP}}
+	lowIpTag := EntryTag{Label: "HighIP", DataType: system.IP, Values: []string{highIP}}
+	cidr := EntryTag{Label: "CIDR", DataType: system.CIDR, Values: cidrArr}
 	entry := Entry{Label: label, Desc: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{local.GetDateTime().DateTime}, SysTags: []EntryTag{lowIpTag, highIpTag, cidr}, UsrTags: []EntryTag{}}
 
 	INSERT_ENTRY_Pending(entry)
@@ -117,8 +117,8 @@ func HTTP_INSERT_Pending_Vlan(w http.ResponseWriter, r *http.Request) {
 func HTTP_Pending_Approve(w http.ResponseWriter, r *http.Request) {
 	id := r.FormValue("ID")
 
-	pending := SELECT_ENTRY_Pending(bson.M{"_id": database.EncodeID(id)}, bson.M{})[0]
-	pending.SysTags = append(pending.SysTags, EntryTag{Label: "Verified", DataType: utils.BOOL, Values: []string{"1"}})
+	pending := SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})[0]
+	pending.SysTags = append(pending.SysTags, EntryTag{Label: "Verified", DataType: system.BOOL, Values: []string{"1"}})
 
 	INSERT_ENTRY_Inventory(pending)
 	DELETE_ENTRY_Pending(pending)
@@ -127,7 +127,7 @@ func HTTP_Pending_Approve(w http.ResponseWriter, r *http.Request) {
 func HTTP_Pending_Deny(w http.ResponseWriter, r *http.Request) {
 	id := r.FormValue("ID")
 
-	pending := SELECT_ENTRY_Pending(bson.M{"_id": database.EncodeID(id)}, bson.M{})[0]
+	pending := SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})[0]
 
 	DELETE_ENTRY_Pending(pending)
 }
@@ -146,11 +146,11 @@ func HTTP_JSON_IdentityConfidence_Get(w http.ResponseWriter, r *http.Request) {
 
 	results := []Entry{}
 
-	results = append(results, SELECT_ENTRY_Inventory(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
-	results = append(results, SELECT_ENTRY_Pending(bson.M{"_id": database.EncodeID(id)}, bson.M{})...)
+	results = append(results, SELECT_ENTRY_Inventory(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)
+	results = append(results, SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)
 
 	if len(results) != 1 {
-		utils.ErrorContextLog("Incorrect number of results returned for IdentityConfidence IP", true)
+		system.Force("Incorrect number of results returned for IdentityConfidence IP", true)
 		w.Write([]byte("404/Failure"))
 		return
 	}
@@ -163,7 +163,7 @@ func HTTP_JSON_GetDateTimeGraph(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	id := params["id"]
 
-	entry := SELECT_ENTRY_Joined(bson.M{"_id": database.EncodeID(id)}, bson.M{})
+	entry := SELECT_ENTRY_Joined(bson.M{"_id": system.EncodeID(id)}, bson.M{})
 
 	if len(entry) == 1 {
 		json.NewEncoder(w).Encode(CalcTimeGraph(entry[0]))

@@ -4,10 +4,10 @@ import (
 	"fmt"
 
 	"github.com/philcantcode/localmapper/capability"
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 )
 
 func RunPingCommand(capability capability.Capability) {
-	utils.Log(fmt.Sprintf("Attempting to Ping: %v", capability), true)
+	system.Log(fmt.Sprintf("Attempting to Ping: %v", capability), true)
 
 }

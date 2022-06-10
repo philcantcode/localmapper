@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/philcantcode/localmapper/database"
+	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
@@ -14,7 +14,7 @@ func HTTP_None_AcceptDefault(w http.ResponseWriter, r *http.Request) {
 	ID := r.PostFormValue("ID")
 
 	// Set the result to accept by default
-	prop := SELECT_Propositions(bson.M{"_id": database.EncodeID(ID)}, bson.M{})[0]
+	prop := SELECT_Propositions(bson.M{"_id": system.EncodeID(ID)}, bson.M{})[0]
 	prop.Status = 1
 
 	processProposition(prop)

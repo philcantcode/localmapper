@@ -6,24 +6,23 @@ import (
 
 	"github.com/philcantcode/localmapper/capability/nmap"
 	"github.com/philcantcode/localmapper/cmdb"
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 )
 
 func ExecuteCapability(capability Capability) []byte {
-	utils.Log(fmt.Sprintf("Executing Capability: %s\n", capability.Name), true)
+	system.Log(fmt.Sprintf("Executing Capability: %s\n", capability.Name), true)
 
 	switch capability.Type {
 	case "nmap":
 		nmapRun := nmap.Execute(ParamsToArray(capability.Command.Params))
 		nmap.INSERT_Nmap(nmapRun)
-		utils.PrintLog(utils.PrettyPrintToStr(nmapRun))
 
 		result, err := json.Marshal(nmapRun)
-		utils.ErrorLog("Couldn't marshal nmaprun", err, true)
+		system.Error("Couldn't marshal nmaprun", err)
 
 		return result
 	default:
-		utils.ErrorForceFatal(fmt.Sprintf("No capability type to run in Capability.ProcessCapability: %v", capability))
+		system.Force(fmt.Sprintf("No capability type to run in Capability.ProcessCapability: %v", capability), true)
 		return nil
 	}
 }
@@ -58,7 +57,7 @@ func MatchParamToTag(capParam Param, entryTags []cmdb.EntryTag) (bool, Param) {
 		}
 
 		// Skip empty tags that don't require input
-		if pType == utils.EMPTY {
+		if pType == system.EMPTY {
 			return true, capParam
 		}
 

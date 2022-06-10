@@ -7,7 +7,7 @@ import (
 	"net/http"
 
 	"github.com/jackpal/gateway"
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 )
 
 type DefaultIPGateway struct {
@@ -46,7 +46,7 @@ func GetNetworkAdapters() []NetworkAdapter {
 		adapters = append(adapters, adapter)
 	}
 
-	utils.Log("Getting a list of network adapters & IP addresses.", false)
+	system.Log("Getting a list of network adapters & IP addresses.", false)
 
 	return adapters
 }
@@ -62,7 +62,7 @@ func GenerateListOfGatewaysFromNetworkAdapters() []NetworkAdapter {
 		gateway := []byte{ip[0], ip[1], ip[2], 1}
 
 		netAdapters[key].IP = string(net.IPv4(ip[0], ip[1], ip[2], 1).String())
-		utils.Log(fmt.Sprintf("Calculating gateway: %d -> %d", ip, gateway), false)
+		system.Log(fmt.Sprintf("Calculating gateway: %d -> %d", ip, gateway), false)
 	}
 
 	return netAdapters
@@ -77,10 +77,10 @@ func HTTP_JSON_GetNetworkAdapters(w http.ResponseWriter, r *http.Request) {
 
 func GetDefaultIPGateway() DefaultIPGateway {
 	defaultIP, err := gateway.DiscoverInterface()
-	utils.ErrorFatal("Could not find the default IP", err)
+	system.Fatal("Could not find the default IP", err)
 
 	defaultGateway, err := gateway.DiscoverGateway()
-	utils.ErrorFatal("Could not find the default Gateway", err)
+	system.Fatal("Could not find the default Gateway", err)
 
 	gatewayIP := DefaultIPGateway{DefaultIP: defaultIP.String(), DefaultGateway: defaultGateway.String()}
 

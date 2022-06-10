@@ -1,11 +1,11 @@
-package sysconfig
+package system
 
 import (
+	"fmt"
 	"net/http"
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/philcantcode/localmapper/utils"
 )
 
 func HTTP_JSON_Settings(w http.ResponseWriter, r *http.Request) {
@@ -13,9 +13,11 @@ func HTTP_JSON_Settings(w http.ResponseWriter, r *http.Request) {
 	idstr := params["id"]
 
 	id, err := strconv.Atoi(idstr)
-	utils.ErrorLog("Couldn't convert ID to int32: "+idstr, err, true)
+	Fatal("Couldn't convert ID to int32: "+idstr, err)
 
-	ExecuteCommand(id)
+	fmt.Println(id)
+	fmt.Println("FIX ME::: " + idstr)
+	//ExecuteCommand(id)
 
 	w.Write([]byte("200/Done"))
 }

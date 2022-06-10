@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/philcantcode/localmapper/capability/local"
+	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
 )
@@ -55,17 +56,17 @@ func UpdateEntriesTags_ByIP(entry Entry) bool {
 	results := SELECT_ENTRY_Joined(ipFilter, bson.M{})
 
 	if len(results) == 0 {
-		utils.Log(fmt.Sprintf("No match for (inventory): %s\n", tag.Values[len(tag.Values)-1]), false)
+		system.Log(fmt.Sprintf("No match for (inventory): %s\n", tag.Values[len(tag.Values)-1]), false)
 		return false
 	}
 
 	if len(results) > 1 { // Too many results returned, database corrupt
-		utils.ErrorForceFatal(
+		system.Force(
 			fmt.Sprintf(
-				"While executing UpdateInventoryEntries the number of matched results > 1\n\nEntry: %+v\n\nMatched Cases: %+v", entry, results))
+				"While executing UpdateInventoryEntries the number of matched results > 1\n\nEntry: %+v\n\nMatched Cases: %+v", entry, results), true)
 	}
 
-	utils.Log(fmt.Sprintf("Match (Inventory): len: %d, IP: %+v\n", len(results), results), false)
+	system.Log(fmt.Sprintf("Match (Inventory): len: %d, IP: %+v\n", len(results), results), false)
 
 	// Parse SysTags and join them
 	for _, newTag := range entry.SysTags {
@@ -91,7 +92,7 @@ func UpdateEntriesTags_ByIP(entry Entry) bool {
 
 	results[0].DateSeen = append(results[0].DateSeen, entry.DateSeen...)
 
-	utils.Log(fmt.Sprintf("Compartive update made: %v\n", results[0].ID), false)
+	system.Log(fmt.Sprintf("Compartive update made: %v\n", results[0].ID), false)
 	UPDATE_ENTRY_Inventory(results[0])
 
 	// Only update the metadata for the pending entry
@@ -198,7 +199,7 @@ func CalcIdentityConfidenceScore(entry Entry) IdentityConfidence {
 
 	if hasVendorACC && hasOSVendor {
 		vAccInt, err := strconv.Atoi(vendorACC.Values[0])
-		utils.ErrorFatal("Couldn't convert CMDBType to int", err)
+		system.Fatal("Couldn't convert CMDBType to int", err)
 
 		result.Vendor += (vAccInt / 2)
 	}

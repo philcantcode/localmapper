@@ -4,20 +4,19 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/philcantcode/localmapper/database"
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 func INSERT_Proposition(proposition Proposition) {
-	utils.Log("Attempting to INSERT_Proposition", false)
+	system.Log("Attempting to INSERT_Proposition", false)
 	proposition.ID = primitive.NewObjectID()
-	insertResult, err := database.Core_Proposition_DB.InsertOne(context.Background(), proposition)
+	insertResult, err := system.Core_Proposition_DB.InsertOne(context.Background(), proposition)
 
-	utils.ErrorFatal("Couldn't INSERT_Proposition", err)
-	utils.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
+	system.Fatal("Couldn't INSERT_Proposition", err)
+	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 }
 
 /* SELECT_Capability takes in a:
@@ -25,8 +24,8 @@ func INSERT_Proposition(proposition Proposition) {
    2. projection bson.M{"version": 1} to limit the fields returned
 */
 func SELECT_Propositions(filter bson.M, projection bson.M) []Proposition {
-	cursor, err := database.Core_Proposition_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
-	utils.ErrorFatal("Couldn't SELECT_Propositions", err)
+	cursor, err := system.Core_Proposition_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
+	system.Fatal("Couldn't SELECT_Propositions", err)
 	defer cursor.Close(context.Background())
 
 	results := []Proposition{}
@@ -35,7 +34,7 @@ func SELECT_Propositions(filter bson.M, projection bson.M) []Proposition {
 		var prop Proposition
 
 		err = cursor.Decode(&prop)
-		utils.ErrorFatal("Couldn't decode SELECT_Propositions", err)
+		system.Fatal("Couldn't decode SELECT_Propositions", err)
 
 		results = append(results, prop)
 	}
@@ -49,8 +48,8 @@ Status:
 1 = Complete
 2 = Disabled */
 func UPDATE_Proposition(proposition Proposition) {
-	result, err := database.Core_Proposition_DB.ReplaceOne(context.Background(), bson.M{"_id": proposition.ID}, proposition)
-	utils.ErrorFatal("Couldn't UPDATE_Proposition", err)
+	result, err := system.Core_Proposition_DB.ReplaceOne(context.Background(), bson.M{"_id": proposition.ID}, proposition)
+	system.Fatal("Couldn't UPDATE_Proposition", err)
 
-	utils.Log(fmt.Sprintf("UPDATE_Proposition ID: %s, Result: %d\n", proposition.ID, result.ModifiedCount), false)
+	system.Log(fmt.Sprintf("UPDATE_Proposition ID: %s, Result: %d\n", proposition.ID, result.ModifiedCount), false)
 }

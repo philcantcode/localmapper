@@ -6,20 +6,19 @@ import (
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/philcantcode/localmapper/capability"
-	cookbook "github.com/philcantcode/localmapper/capability/cookbooks"
+	"github.com/philcantcode/localmapper/capability/cookbook"
 	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/proposition"
-	"github.com/philcantcode/localmapper/sysconfig"
-	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/system"
 )
 
 func initServer() {
-	utils.Log("Hosting Server at http://localhost:"+utils.Configs["SERVER_PORT"], true)
+	system.Log("Hosting Server at http://localhost:"+system.Get("server-port"), true)
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/config/{id}", sysconfig.HTTP_JSON_Settings)
+	router.HandleFunc("/config/{id}", system.HTTP_JSON_Settings)
 
 	router.HandleFunc("/capability/run/cmdb-compatible/{cmbd_id}/{capability_id}", capability.HTTP_JSON_RunCMDBCompatible)
 	router.HandleFunc("/capability/run", capability.HTTP_JSON_Run)
@@ -65,5 +64,5 @@ func initServer() {
 
 	router.PathPrefix("/").Handler(http.StripPrefix("/", fileServer))
 
-	http.ListenAndServe(":"+utils.Configs["SERVER_PORT"], cors(router))
+	http.ListenAndServe(":"+system.Get("server-port"), cors(router))
 }

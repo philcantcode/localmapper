@@ -7,20 +7,21 @@ import (
 	"strconv"
 
 	"github.com/philcantcode/localmapper/cmdb"
+	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/utils"
 )
 
 // Execute takes a list of parameters to execute against NMAP
 func Execute(params []string) NmapRun {
-	utils.Log(fmt.Sprintf("Attempting to run Nmap Command: %s > %v", "nmap", params), true)
+	system.Log(fmt.Sprintf("Attempting to run Nmap Command: %s > %v", "nmap", params), true)
 	resultByte, err := exec.Command("nmap", params...).CombinedOutput()
-	utils.ErrorFatal(fmt.Sprintf("Error returned running a command: %s > %v", "nmap", params), err)
+	system.Fatal(fmt.Sprintf("Error returned running a command: %s > %v", "nmap", params), err)
 
-	utils.Log("Converting from []byte to NmapRun struct", false)
+	system.Log("Converting from []byte to NmapRun struct", false)
 
 	var nmapRun NmapRun
 	err = xml.Unmarshal(resultByte, &nmapRun)
-	utils.ErrorLog("Couldn't unmarshal result from Nmap console", err, true)
+	system.Error("Couldn't unmarshal result from Nmap console", err)
 
 	interpret(nmapRun)
 
@@ -35,14 +36,14 @@ func interpret(nmapRun NmapRun) {
 		ports := cmdb.EntryTag{
 			Label:    "Ports",
 			Desc:     "Open Ports",
-			DataType: utils.INTEGER,
+			DataType: system.INTEGER,
 			Values:   []string{},
 		}
 
 		services := cmdb.EntryTag{
 			Label:    "Services",
 			Desc:     "Open Services",
-			DataType: utils.STRING,
+			DataType: system.STRING,
 			Values:   []string{},
 		}
 
@@ -60,37 +61,37 @@ func interpret(nmapRun NmapRun) {
 
 		vendorTags := cmdb.EntryTag{
 			Label:    "MACVendor",
-			DataType: utils.STRING,
+			DataType: system.STRING,
 			Values:   []string{},
 		}
 
 		osFamily := cmdb.EntryTag{
 			Label:    "OS",
-			DataType: utils.STRING,
+			DataType: system.STRING,
 			Values:   []string{},
 		}
 
 		osGen := cmdb.EntryTag{
 			Label:    "OSGen",
-			DataType: utils.STRING,
+			DataType: system.STRING,
 			Values:   []string{},
 		}
 
 		osAccuracy := cmdb.EntryTag{
 			Label:    "OSAccuracy",
-			DataType: utils.INTEGER,
+			DataType: system.INTEGER,
 			Values:   []string{},
 		}
 
 		osVendor := cmdb.EntryTag{
 			Label:    "OSVendor",
-			DataType: utils.STRING,
+			DataType: system.STRING,
 			Values:   []string{},
 		}
 
 		osCPE := cmdb.EntryTag{
 			Label:    "CPE",
-			DataType: utils.STRING,
+			DataType: system.STRING,
 			Values:   []string{},
 		}
 
@@ -126,7 +127,7 @@ func interpret(nmapRun NmapRun) {
 			if address.AddrType == "ipv4" {
 				sysTags = append(sysTags, cmdb.EntryTag{
 					Label:    "IP",
-					DataType: utils.IP,
+					DataType: system.IP,
 					Values:   []string{address.Addr},
 				})
 			}
@@ -134,7 +135,7 @@ func interpret(nmapRun NmapRun) {
 			if address.AddrType == "mac" {
 				sysTags = append(sysTags, cmdb.EntryTag{
 					Label:    "MAC",
-					DataType: utils.MAC,
+					DataType: system.MAC,
 					Values:   []string{address.Addr},
 				})
 			}
@@ -181,7 +182,7 @@ func interpret(nmapRun NmapRun) {
 		if len(host.Hostnames) > 0 {
 			hostNameTag := cmdb.EntryTag{
 				Label:    "HostName",
-				DataType: utils.STRING,
+				DataType: system.STRING,
 				Values:   []string{},
 			}
 
@@ -212,7 +213,7 @@ func interpret(nmapRun NmapRun) {
 			entryUpdateSuccess := cmdb.UpdateEntriesTags_ByIP(entry)
 
 			if !entryUpdateSuccess {
-				utils.FatalAlert("Couldn't update inventory or pending in nmap")
+				system.Force("Couldn't update inventory or pending in nmap", true)
 			}
 		} else {
 			cmdb.INSERT_ENTRY_Pending(entry)
