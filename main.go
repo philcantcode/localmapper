@@ -26,6 +26,9 @@ func main() {
 	cookbook.FirstTimeSetup()
 	cmdb.FirstTimeSetup()
 
+	// Initialise CRON jobs
+	cookbook.InitialiseAllSchedules()
+
 	// Initialise the web API
 	initServer()
 }

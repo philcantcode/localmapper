@@ -23,7 +23,7 @@ func Log(context string, debug bool) {
 	INSERT_LogEntry(log)
 
 	if debug {
-		fmt.Printf("> %+v\n", log)
+		fmt.Printf("[%s] %s\n", log.Type, log.Context)
 	}
 }
 
@@ -32,7 +32,7 @@ func Error(context string, err error) {
 
 	if err != nil {
 		INSERT_LogEntry(log)
-		fmt.Printf("> %+v\n", log)
+		fmt.Printf("[%s] %s\n", log.Type, log.Context)
 	}
 }
 
@@ -40,7 +40,7 @@ func Fatal(context string, err error) {
 	log := LogEntry{Type: "Fatal", DateTime: utils.Now(), Context: context, Error: "err.Error()"}
 
 	if err != nil {
-		fmt.Printf("> %+v\n", log)
+		fmt.Printf("[%s] %s\n", log.Type, log.Context)
 		INSERT_LogEntry(log)
 		os.Exit(0)
 	}
@@ -52,10 +52,10 @@ func Force(context string, fatal bool) {
 	if fatal {
 		log.Type = "Fatal"
 		INSERT_LogEntry(log)
-		fmt.Printf("> %+v\n", log)
+		fmt.Printf("[%s] %s\n", log.Type, log.Context)
 		os.Exit(0)
 	}
 
 	INSERT_LogEntry(log)
-	fmt.Printf("> %+v\n", log)
+	fmt.Printf("[%s] %s\n", log.Type, log.Context)
 }

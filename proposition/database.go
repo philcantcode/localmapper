@@ -51,5 +51,5 @@ func UPDATE_Proposition(proposition Proposition) {
 	result, err := system.Core_Proposition_DB.ReplaceOne(context.Background(), bson.M{"_id": proposition.ID}, proposition)
 	system.Fatal("Couldn't UPDATE_Proposition", err)
 
-	system.Log(fmt.Sprintf("UPDATE_Proposition ID: %s, Result: %d\n", proposition.ID, result.ModifiedCount), false)
+	system.Log(fmt.Sprintf("UPDATE_Proposition ID: %s, Result: %d", proposition.ID, result.ModifiedCount), false)
 }

@@ -11,7 +11,7 @@ import (
 )
 
 func ExecuteCapability(capability Capability) []byte {
-	system.Log(fmt.Sprintf("Executing Capability: %s\n", capability.Name), true)
+	system.Log(fmt.Sprintf("Executing Capability: %s", capability.Name), true)
 
 	switch capability.Type {
 	case "nmap":
@@ -410,6 +410,53 @@ func FirstTimeSetup() {
 				},
 				{
 					Desc:     "IP Target",
+					Flag:     "",
+					DataType: []system.DataType{system.CIDR, system.IP},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "XML Output",
+					Flag:     "-oX",
+					DataType: []system.DataType{system.STRING},
+					Value:    "-",
+					Default:  "-",
+				},
+			},
+		},
+	}
+
+	svcDetection := Capability{
+		Type:       "nmap",
+		CCI:        "cci:nmap:svc-detection:default",
+		Name:       "Service Identification Scan",
+		Desc:       "Attempts to identify the service version of running services the host.",
+		ResultTags: []string{"OS", "OSGen", "OSVendor", "OSAccuracy"},
+		Command: Command{
+			Program: "nmap",
+			Params: []Param{
+				{
+					Desc:     "OS Scan Flag",
+					Flag:     "-O",
+					DataType: []system.DataType{system.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "Disable Ping Flag",
+					Flag:     "-Pn",
+					DataType: []system.DataType{system.EMPTY},
+					Value:    "",
+					Default:  "",
+				}, {
+					Desc:     "Slows Down Scan",
+					Flag:     "--max-rate",
+					DataType: []system.DataType{system.INTEGER},
+					Value:    "100",
+					Default:  "100",
+				},
+				{
+					Desc:     "Target",
 					Flag:     "",
 					DataType: []system.DataType{system.CIDR, system.IP},
 					Value:    "",

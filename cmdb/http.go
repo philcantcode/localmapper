@@ -110,7 +110,7 @@ func HTTP_INSERT_Pending_Vlan(w http.ResponseWriter, r *http.Request) {
 	cidr := EntryTag{Label: "CIDR", DataType: system.CIDR, Values: cidrArr}
 	entry := Entry{Label: label, Desc: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{local.GetDateTime().DateTime}, SysTags: []EntryTag{lowIpTag, highIpTag, cidr}, UsrTags: []EntryTag{}}
 
-	INSERT_ENTRY_Pending(entry)
+	insert_ENTRY_Pending(entry)
 
 	w.Write([]byte("200/Success"))
 }
@@ -121,7 +121,7 @@ func HTTP_Pending_Approve(w http.ResponseWriter, r *http.Request) {
 	pending := SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})[0]
 	pending.SysTags = append(pending.SysTags, EntryTag{Label: "Verified", DataType: system.BOOL, Values: []string{"1"}})
 
-	INSERT_ENTRY_Inventory(pending)
+	insert_ENTRY_Inventory(pending)
 	DELETE_ENTRY_Pending(pending)
 }
 
@@ -176,6 +176,7 @@ func HTTP_JSON_GetDateTimeGraph(w http.ResponseWriter, r *http.Request) {
 	to factory defaults.
 */
 func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
+	system.Log("Restoring CMDB to factory defaults", true)
 	system.CMDB_Inventory_DB.Drop(context.Background()) // Drop inventory
 	system.CMDB_Pending_DB.Drop(context.Background())   // Drop pending
 

@@ -18,6 +18,7 @@ const (
 	SERVER
 	ENDPOINT
 	PENDING
+	SELF
 )
 
 /* OSI Layer:

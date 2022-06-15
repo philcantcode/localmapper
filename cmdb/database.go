@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func INSERT_ENTRY_Inventory(entry Entry) {
+func insert_ENTRY_Inventory(entry Entry) {
 	system.Log("Attempting to INSERT_ENTRY_Inventory", false)
 
 	entry.ID = primitive.NewObjectID()
@@ -20,14 +20,14 @@ func INSERT_ENTRY_Inventory(entry Entry) {
 	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 }
 
-func INSERT_ENTRY_Pending(entry Entry) {
-	system.Log("Attempting to INSERT_ENTRY_Pending", false)
+func insert_ENTRY_Pending(entry Entry) {
+	system.Log("Attempting to insert_ENTRY_Pending", false)
 
 	// Otherwise, add it to pending
 	entry.ID = primitive.NewObjectID()
 	insertResult, err := system.CMDB_Pending_DB.InsertOne(context.Background(), entry)
 
-	system.Fatal("Couldn't INSERT_ENTRY_Pending", err)
+	system.Fatal("Couldn't insert_ENTRY_Pending", err)
 	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 }
 
@@ -87,14 +87,14 @@ func UPDATE_ENTRY_Inventory(cmdb Entry) {
 	result, err := system.CMDB_Inventory_DB.ReplaceOne(context.Background(), bson.M{"_id": cmdb.ID}, cmdb)
 	system.Fatal("Couldn't UPDATE_ENTRY_Inventory", err)
 
-	system.Log(fmt.Sprintf("UPDATE_ENTRY_Inventory ID: %s, Result: %d\n", cmdb.ID, result.ModifiedCount), false)
+	system.Log(fmt.Sprintf("UPDATE_ENTRY_Inventory ID: %s, Result: %d", cmdb.ID, result.ModifiedCount), false)
 }
 
 func UPDATE_ENTRY_Pending(cmdb Entry) {
 	result, err := system.CMDB_Pending_DB.ReplaceOne(context.Background(), bson.M{"_id": cmdb.ID}, cmdb)
 	system.Fatal("Couldn't UPDATE_ENTRY_Pending", err)
 
-	system.Log(fmt.Sprintf("UPDATE_ENTRY_Pending ID: %s, Result: %d\n", cmdb.ID, result.ModifiedCount), false)
+	system.Log(fmt.Sprintf("UPDATE_ENTRY_Pending ID: %s, Result: %d", cmdb.ID, result.ModifiedCount), false)
 }
 
 func DELETE_ENTRY_Pending(entry Entry) {

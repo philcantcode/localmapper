@@ -14,6 +14,7 @@ type Capability struct {
 	Desc          string             // Contextual description
 	DisplayFields []string           // For hiding results
 	ResultTags    []string           // The Result tags (e.g., IP, Port) gathered by this capability
+	Hidden        bool               // Hidden from the user
 }
 
 type Command struct {

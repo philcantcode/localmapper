@@ -35,6 +35,8 @@ func HTTP_JSON_GetLogs(w http.ResponseWriter, r *http.Request) {
 	to factory defaults.
 */
 func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
+	Log("Restoring system settings to factory defaults", true)
+
 	System_Logs_DB.Drop(context.Background()) // Drop the logs table
 	DELETE_Settings_All()                     // Delete all settings
 

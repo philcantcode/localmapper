@@ -45,8 +45,9 @@ func InitSqlite() {
 	// stmt, err = Con.Prepare(
 	// 	"CREATE TABLE IF NOT EXISTS Schedule" +
 	// 		"(id INTEGER PRIMARY KEY UNIQUE, " +
-	// 		"key TEXT, " +
-	// 		"value TEXT")
+	// 		"label TEXT, " +
+	// 		"desc TEXT, " +
+	// 		"ccbis TEXT")
 	// utils.ErrorLog("Couldn't create SQL database Settings", err, true)
 	// stmt.Exec()
 

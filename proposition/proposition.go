@@ -48,7 +48,7 @@ func processProposition(proposition Proposition) {
 			UsrTags:  usrTags,
 			SysTags:  sysTags}
 
-		cmdb.INSERT_ENTRY_Inventory(serverCMDB)
+		cmdb.UpdateOrInsert(serverCMDB)
 
 		UPDATE_Proposition(proposition)
 	}

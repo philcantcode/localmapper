@@ -26,7 +26,7 @@ func HTTP_JSON_Run_Cookbook(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if len(entries) != 1 {
-		system.Force(fmt.Sprintf("Wrong number of entries selected: %d\n", len(entries)), true)
+		system.Force(fmt.Sprintf("Wrong number of entries selected: %d", len(entries)), true)
 		return
 	}
 
@@ -44,6 +44,7 @@ func HTTP_JSON_GetAll(w http.ResponseWriter, r *http.Request) {
 	to factory defaults.
 */
 func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
+	system.Log("Restoring cookbooks to factory defaults", true)
 	system.Core_Cookbooks_DB.Drop(context.Background()) // Drop cookbooks
 
 	FirstTimeSetup() // Restore cookbooks

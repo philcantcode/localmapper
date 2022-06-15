@@ -208,15 +208,6 @@ func interpret(nmapRun NmapRun) {
 			entry.Label = tag.Values[0]
 		}
 
-		// Insert to pending or update both DBs
-		if cmdb.EntryExists_ByIP(entry) {
-			entryUpdateSuccess := cmdb.UpdateEntriesTags_ByIP(entry)
-
-			if !entryUpdateSuccess {
-				system.Force("Couldn't update inventory or pending in nmap", true)
-			}
-		} else {
-			cmdb.INSERT_ENTRY_Pending(entry)
-		}
+		cmdb.UpdateOrInsert(entry)
 	}
 }

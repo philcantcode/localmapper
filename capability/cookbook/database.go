@@ -38,3 +38,10 @@ func INSERT_Cookbook(book Cookbook) {
 	system.Fatal("Couldn't INSERT_Cookbook", err)
 	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 }
+
+func UPDATE(book Cookbook) {
+	result, err := system.Core_Cookbooks_DB.ReplaceOne(context.Background(), bson.M{"_id": book.ID}, book)
+	system.Fatal("Couldn't UPDATE Cookbook", err)
+
+	system.Log(fmt.Sprintf("UPDATE Cookbook ID: %s, Result: %d", book.ID, result.ModifiedCount), false)
+}

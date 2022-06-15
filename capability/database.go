@@ -21,7 +21,7 @@ func INSERT_Capability(capability Capability) {
 }
 
 func UPDATE_Capability(capability Capability) {
-	system.Log(fmt.Sprintf("Attempting to UPDATE_Capability (ID: %d)\n", capability.ID), true)
+	system.Log(fmt.Sprintf("Attempting to UPDATE_Capability (ID: %d)", capability.ID), true)
 
 	result, err := system.Core_Capability_DB.ReplaceOne(context.Background(), bson.M{"id": capability.ID}, capability)
 
@@ -44,7 +44,7 @@ func SELECT_Capability(filter bson.M, projection bson.M) []Capability {
 		var cap Capability
 
 		err = cursor.Decode(&cap)
-		system.Fatal("Couldn't decode SELECT_Capability", err)
+		system.Fatal("Couldn't decode SELECT_Capability: ", err)
 
 		results = append(results, cap)
 	}

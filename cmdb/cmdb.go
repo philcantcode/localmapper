@@ -41,7 +41,7 @@ func EntryExists_ByIP(entry Entry) bool {
 	Finds the old entry result[0] and then updates the
 	values to the new entry.
 */
-func UpdateEntriesTags_ByIP(entry Entry) bool {
+func updateEntriesTags_ByIP(entry Entry) bool {
 	tag, exists, _ := FindSysTag("IP", entry)
 
 	if !exists {
@@ -56,7 +56,7 @@ func UpdateEntriesTags_ByIP(entry Entry) bool {
 	results := SELECT_ENTRY_Joined(ipFilter, bson.M{})
 
 	if len(results) == 0 {
-		system.Log(fmt.Sprintf("No match for (inventory): %s\n", tag.Values[len(tag.Values)-1]), false)
+		system.Log(fmt.Sprintf("No match for (inventory): %s", tag.Values[len(tag.Values)-1]), false)
 		return false
 	}
 
@@ -66,7 +66,7 @@ func UpdateEntriesTags_ByIP(entry Entry) bool {
 				"While executing UpdateInventoryEntries the number of matched results > 1\n\nEntry: %+v\n\nMatched Cases: %+v", entry, results), true)
 	}
 
-	system.Log(fmt.Sprintf("Match (Inventory): len: %d, IP: %+v\n", len(results), results), false)
+	system.Log(fmt.Sprintf("Match (Inventory): len: %d, IP: %+v", len(results), results), false)
 
 	// Parse SysTags and join them
 	for _, newTag := range entry.SysTags {
@@ -92,7 +92,7 @@ func UpdateEntriesTags_ByIP(entry Entry) bool {
 
 	results[0].DateSeen = append(results[0].DateSeen, entry.DateSeen...)
 
-	system.Log(fmt.Sprintf("Compartive update made: %v\n", results[0].ID), false)
+	system.Log(fmt.Sprintf("Compartive update made: %v", results[0].ID), false)
 	UPDATE_ENTRY_Inventory(results[0])
 
 	// Only update the metadata for the pending entry
@@ -289,7 +289,7 @@ func FirstTimeSetup() {
 		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
 
 		newVlan := Entry{Label: "Private Range 1", Desc: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
-		INSERT_ENTRY_Inventory(newVlan)
+		insert_ENTRY_Inventory(newVlan)
 	}
 
 	vlan2 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 2", "desc": "Default VLAN"}, bson.M{})
@@ -300,7 +300,7 @@ func FirstTimeSetup() {
 		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
 
 		newVlan := Entry{Label: "Private Range 2", Desc: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
-		INSERT_ENTRY_Inventory(newVlan)
+		insert_ENTRY_Inventory(newVlan)
 	}
 
 	vlan3 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 3", "desc": "Default VLAN"}, bson.M{})
@@ -311,7 +311,7 @@ func FirstTimeSetup() {
 		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
 
 		newVlan := Entry{Label: "Private Range 3", Desc: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
-		INSERT_ENTRY_Inventory(newVlan)
+		insert_ENTRY_Inventory(newVlan)
 	}
 
 	vlan4 := SELECT_ENTRY_Inventory(bson.M{"label": "Test Home", "desc": "Test VLAN"}, bson.M{})
@@ -322,6 +322,30 @@ func FirstTimeSetup() {
 		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
 
 		newVlan := Entry{Label: "Test Home", Desc: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
-		INSERT_ENTRY_Inventory(newVlan)
+		insert_ENTRY_Inventory(newVlan)
+	}
+
+	vlan5 := SELECT_ENTRY_Inventory(bson.M{"label": "Olivers Home", "desc": "Test VLAN"}, bson.M{})
+
+	if len(vlan5) == 0 {
+		lowIP := EntryTag{Label: "LowIP", DataType: system.IP_RANGE_LOW, Values: []string{"192.168.0.0"}}
+		highIP := EntryTag{Label: "HighIP", DataType: system.IP_RANGE_HIGH, Values: []string{"192.168.0.255"}}
+		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
+
+		newVlan := Entry{Label: "Olivers Home", Desc: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
+		insert_ENTRY_Inventory(newVlan)
+	}
+}
+
+func UpdateOrInsert(entry Entry) {
+	// Insert to pending or update both DBs
+	if EntryExists_ByIP(entry) {
+		entryUpdateSuccess := updateEntriesTags_ByIP(entry)
+
+		if !entryUpdateSuccess {
+			system.Force("Couldn't update inventory or pending in CMDB", true)
+		}
+	} else {
+		insert_ENTRY_Pending(entry)
 	}
 }
