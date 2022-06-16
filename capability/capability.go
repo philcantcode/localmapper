@@ -437,7 +437,7 @@ func FirstTimeSetup() {
 			Params: []Param{
 				{
 					Desc:     "OS Scan Flag",
-					Flag:     "-O",
+					Flag:     "-sV",
 					DataType: []system.DataType{system.EMPTY},
 					Value:    "",
 					Default:  "",
@@ -482,5 +482,6 @@ func FirstTimeSetup() {
 		INSERT_Capability(stealthScan)
 		INSERT_Capability(arpScan)
 		INSERT_Capability(smbScriptScan)
+		INSERT_Capability(svcDetection)
 	}
 }

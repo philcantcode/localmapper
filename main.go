@@ -12,6 +12,12 @@ import (
 	"github.com/philcantcode/localmapper/system"
 )
 
+/*
+	Docker Build: docker build -t localmapper .
+	Docker Compose: docker-compose up -d
+	Docker Launch: docker exec -it localmapper-server_web_1 /bin/bash
+*/
+
 func main() {
 	// Load settings & config database
 	system.InitSqlite()

@@ -47,50 +47,67 @@ func interpret(nmapRun NmapRun) {
 			Values:   []string{},
 		}
 
+		products := cmdb.EntryTag{
+			Label:    "Products",
+			Desc:     "Detected products on ports",
+			DataType: system.STRING,
+			Values:   []string{},
+		}
+
 		for _, port := range host.Ports {
 			if port.State.State == "open" {
 				if !utils.ArrayContains(strconv.Itoa(port.PortId), ports.Values) {
 					ports.Values = append(ports.Values, strconv.Itoa(port.PortId))
 				}
 
-				if !utils.ArrayContains(port.Service.Name, services.Values) {
+				if !utils.ArrayContains(port.Service.Name, services.Values) && port.Service.Name != "" {
 					services.Values = append(services.Values, port.Service.Name)
+				}
+
+				if !utils.ArrayContains(port.Service.Product, products.Values) && port.Service.Product != "" {
+					products.Values = append(products.Values, port.Service.Product)
 				}
 			}
 		}
 
 		vendorTags := cmdb.EntryTag{
 			Label:    "MACVendor",
+			Desc:     "Vendor of the MAC code",
 			DataType: system.STRING,
 			Values:   []string{},
 		}
 
 		osFamily := cmdb.EntryTag{
 			Label:    "OS",
+			Desc:     "Operating System",
 			DataType: system.STRING,
 			Values:   []string{},
 		}
 
 		osGen := cmdb.EntryTag{
 			Label:    "OSGen",
+			Desc:     "Operating System Generation/Version",
 			DataType: system.STRING,
 			Values:   []string{},
 		}
 
 		osAccuracy := cmdb.EntryTag{
 			Label:    "OSAccuracy",
+			Desc:     "Confidence of Nmap detection",
 			DataType: system.INTEGER,
 			Values:   []string{},
 		}
 
 		osVendor := cmdb.EntryTag{
 			Label:    "OSVendor",
+			Desc:     "Vendor of detected OS",
 			DataType: system.STRING,
 			Values:   []string{},
 		}
 
 		osCPE := cmdb.EntryTag{
 			Label:    "CPE",
+			Desc:     "http://cpe.mitre.org/",
 			DataType: system.STRING,
 			Values:   []string{},
 		}
@@ -127,6 +144,7 @@ func interpret(nmapRun NmapRun) {
 			if address.AddrType == "ipv4" {
 				sysTags = append(sysTags, cmdb.EntryTag{
 					Label:    "IP",
+					Desc:     "IP4 Address",
 					DataType: system.IP,
 					Values:   []string{address.Addr},
 				})
@@ -135,6 +153,7 @@ func interpret(nmapRun NmapRun) {
 			if address.AddrType == "mac" {
 				sysTags = append(sysTags, cmdb.EntryTag{
 					Label:    "MAC",
+					Desc:     "Media Access Control",
 					DataType: system.MAC,
 					Values:   []string{address.Addr},
 				})
@@ -178,10 +197,15 @@ func interpret(nmapRun NmapRun) {
 			sysTags = append(sysTags, services)
 		}
 
+		if len(products.Values) > 0 {
+			sysTags = append(sysTags, products)
+		}
+
 		// Hostnames
 		if len(host.Hostnames) > 0 {
 			hostNameTag := cmdb.EntryTag{
 				Label:    "HostName",
+				Desc:     "Media Access Control",
 				DataType: system.STRING,
 				Values:   []string{},
 			}
