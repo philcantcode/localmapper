@@ -21,6 +21,13 @@ const (
 	IP_RANGE_HIGH
 )
 
+type Category string
+
+const (
+	DDOS      Category = "DDOS"
+	DISCOVERY Category = "DISCOVERY"
+)
+
 func ReverseDataTypeLookup(datType DataType) string {
 	switch datType {
 	case 0:

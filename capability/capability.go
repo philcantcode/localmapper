@@ -12,7 +12,7 @@ import (
 )
 
 var currentRoutines = 0
-var maxRoutines = 10
+var maxRoutines = 30
 var queue = make(chan Capability, maxRoutines)
 
 func QueueCapability(capability Capability) {
@@ -26,7 +26,7 @@ func ProcessCapabilityQueue() {
 			go func() {
 				currentRoutines++
 				cap := <-queue
-				ExecuteCapability(cap)
+				executeCapability(cap)
 				currentRoutines--
 			}()
 		}
@@ -35,7 +35,7 @@ func ProcessCapabilityQueue() {
 	}
 }
 
-func ExecuteCapability(capability Capability) []byte {
+func executeCapability(capability Capability) []byte {
 	system.Log(fmt.Sprintf("Executing Capability: %s", capability.Name), true)
 
 	switch capability.Type {
@@ -101,12 +101,62 @@ func MatchParamToTag(capParam Param, entryTags []cmdb.EntryTag) (bool, Param) {
 
 func FirstTimeSetup() {
 
+	// smurf6 := Capability{
+	// 	Type:       "thc-ipv6",
+	// 	CCI:        "cci:thc-ipv6:smurf6:default",
+	// 	Name:       "Smurf6 Denial of Service (DoS)",
+	// 	Desc:       "Attempts to DoS a host.",
+	// 	Category:   system.DDOS,
+	// 	ResultTags: []string{},
+	// 	Command: Command{
+	// 		Program: "atk6-smurf6",
+	// 		Params: []Param{
+	// 			{
+	// 				Desc:     "UDP Scan",
+	// 				Flag:     "-sU",
+	// 				DataType: []system.DataType{system.EMPTY},
+	// 				Value:    "",
+	// 				Default:  "",
+	// 			},
+	// 			{
+	// 				Desc:     "Run Script",
+	// 				Flag:     "--script",
+	// 				DataType: []system.DataType{system.STRING},
+	// 				Value:    "nbstat.nse",
+	// 				Default:  "nbstat.nse",
+	// 			},
+	// 			{
+	// 				Desc:     "Target",
+	// 				Flag:     "",
+	// 				DataType: []system.DataType{system.CIDR, system.IP},
+	// 				Value:    "",
+	// 				Default:  "",
+	// 			},
+	// 			{
+	// 				Desc:     "Port 137",
+	// 				Flag:     "-p137",
+	// 				DataType: []system.DataType{system.EMPTY},
+	// 				Value:    "",
+	// 				Default:  "",
+	// 			},
+	// 			{
+	// 				Desc:     "XML Output",
+	// 				Flag:     "-oX",
+	// 				DataType: []system.DataType{system.STRING},
+	// 				Value:    "-",
+	// 				Default:  "-",
+	// 			},
+	// 		},
+	// 	},
+	// }
+
 	netBiosScan := Capability{
 		Type:       "nmap",
 		CCI:        "cci:nmap:nbstat-netbios-script:default",
 		Name:       "nbstat NetBIOS",
 		Desc:       "Attempts to retrieve the target's NetBIOS names and MAC address.",
 		ResultTags: []string{"MAC"},
+		Category:   system.DISCOVERY,
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -155,6 +205,7 @@ func FirstTimeSetup() {
 		Name:       "System DNS Scan",
 		Desc:       "Use system DNS resolver configured on this host to identify private hostnames.",
 		ResultTags: []string{"HostName"},
+		Category:   system.DISCOVERY,
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -196,6 +247,7 @@ func FirstTimeSetup() {
 		CCI:        "cci:nmap:ping-sweep:default",
 		Desc:       "Perform a discovery Ping Sweep against an IP Range.",
 		ResultTags: []string{"IP"},
+		Category:   system.DISCOVERY,
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -230,6 +282,7 @@ func FirstTimeSetup() {
 		Name:       "Stealth Scan",
 		Desc:       "Scan thousands of ports on the target device.",
 		ResultTags: []string{"Ports"},
+		Category:   system.DISCOVERY,
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -271,6 +324,7 @@ func FirstTimeSetup() {
 		Name:       "OS Identification Scan",
 		Desc:       "Attempts to identify the operating system of the host.",
 		ResultTags: []string{"OS", "OSGen", "OSVendor", "OSAccuracy"},
+		Category:   system.DISCOVERY,
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -318,6 +372,7 @@ func FirstTimeSetup() {
 		Name:       "TCP Connect Scan",
 		Desc:       "TCP Connect Scan performs a full connection to the host.",
 		ResultTags: []string{"Ports"},
+		Category:   system.DISCOVERY,
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -359,6 +414,7 @@ func FirstTimeSetup() {
 		CCI:        "cci:nmap:arp:default",
 		Desc:       "Perform a scan of the local network using ARP.",
 		ResultTags: []string{"IP"},
+		Category:   system.DISCOVERY,
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -402,6 +458,7 @@ func FirstTimeSetup() {
 		CCI:        "cci:nmap:smb-os-discovery:default",
 		Desc:       "Attempts to determine the operating system, computer name, domain, workgroup, and current time over the SMB protocol (ports 445 or 139). This is done by starting a session with the anonymous account, in response to a session starting, the server will send back all this information.",
 		ResultTags: []string{"HostName"},
+		Category:   system.DISCOVERY,
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{
@@ -457,6 +514,7 @@ func FirstTimeSetup() {
 		Name:       "Service Identification Scan",
 		Desc:       "Attempts to identify the service version of running services the host.",
 		ResultTags: []string{"OS", "OSGen", "OSVendor", "OSAccuracy"},
+		Category:   system.DISCOVERY,
 		Command: Command{
 			Program: "nmap",
 			Params: []Param{

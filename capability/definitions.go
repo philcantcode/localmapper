@@ -9,12 +9,13 @@ type Capability struct {
 	ID            primitive.ObjectID `bson:"_id"`
 	CCI           string             // Common Capability Identifier = cci:<tool>:<label>:<edition>
 	Command       Command            // Program and params
-	Type          string             // e.g., nmap
-	Name          string             // Capability name "Ping Sweep"
-	Desc          string             // Contextual description
-	DisplayFields []string           // For hiding results
-	ResultTags    []string           // The Result tags (e.g., IP, Port) gathered by this capability
-	Hidden        bool               // Hidden from the user
+	Category      system.Category
+	Type          string   // e.g., nmap
+	Name          string   // Capability name "Ping Sweep"
+	Desc          string   // Contextual description
+	DisplayFields []string // For hiding results
+	ResultTags    []string // The Result tags (e.g., IP, Port) gathered by this capability
+	Hidden        bool     // Hidden from the user
 }
 
 type Command struct {

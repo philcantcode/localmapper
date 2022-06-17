@@ -23,7 +23,7 @@ type Schedule struct {
 	Label         string
 	Desc          string
 	Delay         time.Duration   // Time delay between runs
-	RescanDelay   time.Duration   // Time between re-scanning entries
+	RescanDelay   time.Duration   // Time between re-scanning entries once they've already been scanned
 	TargetGroups  []cmdb.CMDBType // ALL_PENDING, ALL_CMDB etc
 	TargetDevices []string        // Individual device IDs
 	ExclusionList []Exclusion     // Devices to not be scanned
