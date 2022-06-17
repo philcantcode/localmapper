@@ -1,6 +1,8 @@
 package system
 
 import (
+	"strconv"
+
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
@@ -13,6 +15,20 @@ func Get(key string) string {
 
 	Force("Couldn't retrieve key: "+key, true)
 	return ""
+}
+
+func GetInt(key string) int {
+	for _, k := range SELECT_Settings_All() {
+		if k.Key == key {
+			intKey, err := strconv.Atoi(k.Value)
+			Error("Couldn't convert key to int", err)
+
+			return intKey
+		}
+	}
+
+	Force("Couldn't retrieve key: "+key, true)
+	return -1
 }
 
 func EncodeID(id string) primitive.ObjectID {

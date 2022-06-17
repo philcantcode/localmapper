@@ -29,7 +29,7 @@ type Cookbook struct {
 func FirstTimeSetup() {
 	localHostID := Cookbook{
 		CCBI:  "ccbi:discovery:local-hosts:default", // Common CookBook Identifier: ccbi:<category>:<label>:<edition>
-		Label: "Local Host Identification",
+		Label: "Local Host Identification Coobook",
 		Desc:  "Gather Hostname, Ports, OS, MAC, etc, about a local host.",
 		CCIs: []string{
 			"cci:nmap:os-ident:default",
@@ -39,9 +39,10 @@ func FirstTimeSetup() {
 		Hidden:     false,
 		Schedule: []Schedule{
 			{
-				Label:    "Inventory Discovery",
-				Desc:     "Once an item is in the inventory, scan the devices for info reguleraly.",
-				Duration: time.Minute * 30,
+				Label:       "Inventory Discovery Schedule",
+				Desc:        "Once an item is in the inventory, scan the devices for info reguleraly.",
+				Delay:       time.Second * 10,
+				RescanDelay: time.Minute * 10,
 				TargetGroups: []cmdb.CMDBType{
 					cmdb.ENDPOINT,
 					cmdb.SERVER,
@@ -53,7 +54,7 @@ func FirstTimeSetup() {
 
 	pingNonDefaultVLANs := Cookbook{
 		CCBI:  "ccbi:discovery:ping-sweep-vlans:exclude-private-ranges", // Common CookBook Identifier: ccbi:<category>:<label>:<edition>
-		Label: "Ping all VLANs",
+		Label: "Ping all VLANs Cookbook",
 		Desc:  "Pings all known VLAN excluding the three big private ranges.",
 		CCIs: []string{
 			"cci:nmap:ping-sweep:default",
@@ -62,9 +63,10 @@ func FirstTimeSetup() {
 		Hidden:     true,
 		Schedule: []Schedule{
 			{
-				Label:    "Ping Sweep",
-				Desc:     "Ping all known VLANs, excluding the three big private ranges.",
-				Duration: time.Minute * 30,
+				Label:       "Ping Sweep Schedule",
+				Desc:        "Ping all known VLANs, excluding the three big private ranges.",
+				Delay:       time.Minute * 30,
+				RescanDelay: time.Minute * 20,
 				TargetGroups: []cmdb.CMDBType{
 					cmdb.VLAN,
 				},

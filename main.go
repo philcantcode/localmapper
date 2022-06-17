@@ -34,6 +34,7 @@ func main() {
 
 	// Initialise CRON jobs
 	cookbook.InitialiseAllSchedules()
+	go capability.ProcessCapabilityQueue()
 
 	// Initialise the web API
 	initServer()

@@ -1,26 +1,13 @@
 version: "3"
-# networks:
-#   physicalnet:
-#     driver: "ipvlan"
-#     driver_opts:
-#       parent: eth0 WiFi 2
-#     ipam:
-#       config:
-#         - subnet: "192.168.1.0/24"
-#           ip_range: "192.168.1.64/26"
-#           gateway: "192.168.1.1"
 services:
     server:
         image: localmapper
         command: tail -f /dev/null
         network_mode: host
-        # ports:
-        #   - 8008:8008 # host:container
+        extra_hosts:
+          - host.docker.internal:host-gateway
         volumes:
-          - C:\Users\Phil\Desktop\Golang Projects\localmapper-server:/src
-        # networks:
-        #   physicalnet:
-        #     ipv4_address: 192.168.1.88
+          - /home/phil/Desktop/GitHub/localmapper-server:/src
     mongodb:
         image: mongo:latest
         ports:
@@ -32,6 +19,6 @@ services:
         ports:
           - 80:80
         volumes: 
-          - E:\XAMPP\htdocs:/var/www/html/
+          - /home/phil/Desktop/GitHub/localmapper-web:/var/www/html/
 volumes: 
   mongodb-storage:

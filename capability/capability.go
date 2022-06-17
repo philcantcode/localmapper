@@ -3,12 +3,37 @@ package capability
 import (
 	"encoding/json"
 	"fmt"
+	"time"
 
 	"github.com/philcantcode/localmapper/capability/nmap"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson"
 )
+
+var currentRoutines = 0
+var maxRoutines = 10
+var queue = make(chan Capability, maxRoutines)
+
+func QueueCapability(capability Capability) {
+	system.Log(fmt.Sprintf("[Current Queue Size]: %d, adding: %s", len(queue), capability.Name), true)
+	queue <- capability
+}
+
+func ProcessCapabilityQueue() {
+	for {
+		if currentRoutines < maxRoutines {
+			go func() {
+				currentRoutines++
+				cap := <-queue
+				ExecuteCapability(cap)
+				currentRoutines--
+			}()
+		}
+
+		time.Sleep(1000)
+	}
+}
 
 func ExecuteCapability(capability Capability) []byte {
 	system.Log(fmt.Sprintf("Executing Capability: %s", capability.Name), true)
