@@ -150,6 +150,55 @@ func FirstTimeSetup() {
 	// 	},
 	// }
 
+	accCheck := Capability{
+		Type:       "acccheck",
+		CCI:        "cci:kali:acccheck:default",
+		Name:       "AC-Check Auth Guessing",
+		Desc:       "Connects to IPC and ADMIN shares using SMB to attempt logins.",
+		Category:   system.CREDENTIAL_ATTACK,
+		ResultTags: []string{},
+		Command: Command{
+			Program: "acccheck.pl",
+			Params: []Param{
+				{
+					Desc:     "Target",
+					Flag:     "-t",
+					DataType: []system.DataType{system.IP},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "Run Script",
+					Flag:     "--script",
+					DataType: []system.DataType{system.STRING},
+					Value:    "nbstat.nse",
+					Default:  "nbstat.nse",
+				},
+				{
+					Desc:     "Target",
+					Flag:     "",
+					DataType: []system.DataType{system.CIDR, system.IP},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "Port 137",
+					Flag:     "-p137",
+					DataType: []system.DataType{system.EMPTY},
+					Value:    "",
+					Default:  "",
+				},
+				{
+					Desc:     "XML Output",
+					Flag:     "-oX",
+					DataType: []system.DataType{system.STRING},
+					Value:    "-",
+					Default:  "-",
+				},
+			},
+		},
+	}
+
 	netBiosScan := Capability{
 		Type:       "nmap",
 		CCI:        "cci:nmap:nbstat-netbios-script:default",
