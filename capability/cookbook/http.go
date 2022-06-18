@@ -45,6 +45,8 @@ func HTTP_JSON_GetAll(w http.ResponseWriter, r *http.Request) {
 */
 func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 	system.Log("Restoring cookbooks to factory defaults", true)
+
+	DELETE_Cookbook(bson.M{})
 	system.Core_Cookbooks_DB.Drop(context.Background()) // Drop cookbooks
 
 	FirstTimeSetup() // Restore cookbooks

@@ -18,6 +18,12 @@ import (
 	Docker Launch: docker exec -it localmapper-server_web_1 /bin/bash
 */
 
+/*
+	If true, only the databases and server boots to allow
+	debugging and restoring the databases.
+*/
+const debugMode = false
+
 func main() {
 	// Load settings & config database
 	system.InitSqlite()
@@ -26,15 +32,17 @@ func main() {
 	// Load application database
 	system.InitMongo()
 
-	// Load all initial setup jobs here
-	proposition.FirstTimeSetup()
-	capability.FirstTimeSetup()
-	cookbook.FirstTimeSetup()
-	cmdb.FirstTimeSetup()
+	if !debugMode {
+		// Load all initial setup jobs here
+		proposition.FirstTimeSetup()
+		capability.FirstTimeSetup()
+		cookbook.FirstTimeSetup()
+		cmdb.FirstTimeSetup()
 
-	// Initialise CRON jobs
-	cookbook.InitialiseAllSchedules()
-	go capability.ProcessCapabilityQueue()
+		// Initialise CRON jobs
+		cookbook.InitialiseAllSchedules()
+		go capability.ProcessCapabilityQueue()
+	}
 
 	// Initialise the web API
 	initServer()

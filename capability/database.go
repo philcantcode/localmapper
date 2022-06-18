@@ -51,3 +51,12 @@ func SELECT_Capability(filter bson.M, projection bson.M) []Capability {
 
 	return results
 }
+
+func DELETE_Capability(filter bson.M) {
+	system.Log("Attempting to DELETE_Capability", false)
+
+	insertResult, err := system.Core_Capability_DB.DeleteOne(context.Background(), filter)
+
+	system.Fatal("Couldn't DELETE_Capability", err)
+	system.Log(fmt.Sprintf("New Delete count: %d", insertResult.DeletedCount), false)
+}

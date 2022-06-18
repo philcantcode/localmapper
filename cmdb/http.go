@@ -42,7 +42,7 @@ func HTTP_JSON_GetByType(w http.ResponseWriter, r *http.Request) {
 	typeNum, err := strconv.Atoi(typeStr)
 	system.Error("Couldn't convert CMDBType to int32: "+typeStr, err)
 
-	json.NewEncoder(w).Encode(SELECT_ENTRY_Inventory(bson.M{"cmdbtype": int32(typeNum)}, bson.M{}))
+	json.NewEncoder(w).Encode(SELECT_ENTRY_Inventory(bson.M{"cmdbtype": typeNum}, bson.M{}))
 }
 
 /* HTTP_JSON_GetByID returns a CMDB element based on the {id} */
@@ -179,6 +179,7 @@ func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 	system.Log("Restoring CMDB to factory defaults", true)
 	system.CMDB_Inventory_DB.Drop(context.Background()) // Drop inventory
 	system.CMDB_Pending_DB.Drop(context.Background())   // Drop pending
+	system.Core_Proposition_DB.Drop(context.Background())
 
 	FirstTimeSetup() // Restore capabilities
 

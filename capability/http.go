@@ -115,6 +115,7 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 	system.Log("Restoring capabilities to factory defaults", true)
 
+	DELETE_Capability(bson.M{})
 	system.Core_Capability_DB.Drop(context.Background()) // Drop capabilities
 
 	FirstTimeSetup() // Restore capabilities

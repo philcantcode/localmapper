@@ -63,7 +63,7 @@ func setupSelfIdentity() {
 }
 
 func recalcualteVlanCIDR() {
-	entries := cmdb.SELECT_ENTRY_Inventory(bson.M{"cmdbtype": int32(cmdb.VLAN)}, bson.M{})
+	entries := cmdb.SELECT_ENTRY_Inventory(bson.M{"cmdbtype": cmdb.VLAN}, bson.M{})
 
 	for _, entry := range entries {
 		// Check CMDB entry is of type VLAN

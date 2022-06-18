@@ -45,3 +45,12 @@ func UPDATE(book Cookbook) {
 
 	system.Log(fmt.Sprintf("UPDATE Cookbook ID: %s, Result: %d", book.ID, result.ModifiedCount), false)
 }
+
+func DELETE_Cookbook(filter bson.M) {
+	system.Log("Attempting to DELETE_Cookbook", false)
+
+	insertResult, err := system.Core_Cookbooks_DB.DeleteOne(context.Background(), filter)
+
+	system.Fatal("Couldn't DELETE_Cookbook", err)
+	system.Log(fmt.Sprintf("New Delete count: %d", insertResult.DeletedCount), false)
+}
