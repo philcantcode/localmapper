@@ -27,8 +27,8 @@ func processProposition(proposition Proposition) {
 					sysTags = append(sysTags, cmdb.EntryTag{Label: "MAC6", DataType: system.MAC6, Values: []string{net.MAC6}})
 				}
 
-				if net.Name != "" {
-					sysTags = append(sysTags, cmdb.EntryTag{Label: "NetAdapter", DataType: system.STRING, Values: []string{net.Name}})
+				if net.Label != "" {
+					sysTags = append(sysTags, cmdb.EntryTag{Label: "NetAdapter", DataType: system.STRING, Values: []string{net.Label}})
 				}
 
 				if net.IP6 != "" {
@@ -40,13 +40,13 @@ func processProposition(proposition Proposition) {
 		time := []string{local.GetDateTime().DateTime}
 
 		serverCMDB := cmdb.Entry{
-			Label:    "Local-Mapper Server (local)",
-			OSILayer: 7,
-			Desc:     "The local-mapper backend server.",
-			DateSeen: time,
-			CMDBType: cmdb.SERVER,
-			UsrTags:  usrTags,
-			SysTags:  sysTags}
+			Label:       "Local-Mapper Server (local)",
+			OSILayer:    7,
+			Description: "The local-mapper backend server.",
+			DateSeen:    time,
+			CMDBType:    cmdb.SERVER,
+			UsrTags:     usrTags,
+			SysTags:     sysTags}
 
 		cmdb.UpdateOrInsert(serverCMDB)
 

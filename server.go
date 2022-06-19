@@ -26,6 +26,8 @@ func initServer() {
 	router.HandleFunc("/capability/run", capability.HTTP_JSON_Run)
 	router.HandleFunc("/capability/get/all", capability.HTTP_JSON_GetAll)
 	router.HandleFunc("/capability/get/new", capability.HTTP_JSON_GetNew)
+	router.HandleFunc("/capability/get/new/command", capability.HTTP_JSON_GetNew_Command)
+	router.HandleFunc("/capability/get/new/param", capability.HTTP_JSON_GetNew_Param)
 	router.HandleFunc("/capability/get/cmdb-compatible/{id}", capability.HTTP_JSON_GetCMDBCompatible)
 	router.HandleFunc("/capability/get/{id}", capability.HTTP_JSON_GetByID)
 	router.HandleFunc("/capability/update", capability.HTTP_JSON_Update)

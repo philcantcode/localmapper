@@ -34,24 +34,24 @@ func interpret(nmapRun NmapRun) {
 		sysTags := []cmdb.EntryTag{}
 
 		ports := cmdb.EntryTag{
-			Label:    "Ports",
-			Desc:     "Open Ports",
-			DataType: system.INTEGER,
-			Values:   []string{},
+			Label:       "Ports",
+			Description: "Open Ports",
+			DataType:    system.INTEGER,
+			Values:      []string{},
 		}
 
 		services := cmdb.EntryTag{
-			Label:    "Services",
-			Desc:     "Open Services",
-			DataType: system.STRING,
-			Values:   []string{},
+			Label:       "Services",
+			Description: "Open Services",
+			DataType:    system.STRING,
+			Values:      []string{},
 		}
 
 		products := cmdb.EntryTag{
-			Label:    "Products",
-			Desc:     "Detected products on ports",
-			DataType: system.STRING,
-			Values:   []string{},
+			Label:       "Products",
+			Description: "Detected products on ports",
+			DataType:    system.STRING,
+			Values:      []string{},
 		}
 
 		for _, port := range host.Ports {
@@ -71,45 +71,45 @@ func interpret(nmapRun NmapRun) {
 		}
 
 		vendorTags := cmdb.EntryTag{
-			Label:    "MACVendor",
-			Desc:     "Vendor of the MAC code",
-			DataType: system.STRING,
-			Values:   []string{},
+			Label:       "MACVendor",
+			Description: "Vendor of the MAC code",
+			DataType:    system.STRING,
+			Values:      []string{},
 		}
 
 		osFamily := cmdb.EntryTag{
-			Label:    "OS",
-			Desc:     "Operating System",
-			DataType: system.STRING,
-			Values:   []string{},
+			Label:       "OS",
+			Description: "Operating System",
+			DataType:    system.STRING,
+			Values:      []string{},
 		}
 
 		osGen := cmdb.EntryTag{
-			Label:    "OSGen",
-			Desc:     "Operating System Generation/Version",
-			DataType: system.STRING,
-			Values:   []string{},
+			Label:       "OSGen",
+			Description: "Operating System Generation/Version",
+			DataType:    system.STRING,
+			Values:      []string{},
 		}
 
 		osAccuracy := cmdb.EntryTag{
-			Label:    "OSAccuracy",
-			Desc:     "Confidence of Nmap detection",
-			DataType: system.INTEGER,
-			Values:   []string{},
+			Label:       "OSAccuracy",
+			Description: "Confidence of Nmap detection",
+			DataType:    system.INTEGER,
+			Values:      []string{},
 		}
 
 		osVendor := cmdb.EntryTag{
-			Label:    "OSVendor",
-			Desc:     "Vendor of detected OS",
-			DataType: system.STRING,
-			Values:   []string{},
+			Label:       "OSVendor",
+			Description: "Vendor of detected OS",
+			DataType:    system.STRING,
+			Values:      []string{},
 		}
 
 		osCPE := cmdb.EntryTag{
-			Label:    "CPE",
-			Desc:     "http://cpe.mitre.org/",
-			DataType: system.STRING,
-			Values:   []string{},
+			Label:       "CPE",
+			Description: "http://cpe.mitre.org/",
+			DataType:    system.STRING,
+			Values:      []string{},
 		}
 
 		if len(host.Os.OsMatches) > 0 {
@@ -143,19 +143,19 @@ func interpret(nmapRun NmapRun) {
 		for _, address := range host.Addresses {
 			if address.AddrType == "ipv4" {
 				sysTags = append(sysTags, cmdb.EntryTag{
-					Label:    "IP",
-					Desc:     "IP4 Address",
-					DataType: system.IP,
-					Values:   []string{address.Addr},
+					Label:       "IP",
+					Description: "IP4 Address",
+					DataType:    system.IP,
+					Values:      []string{address.Addr},
 				})
 			}
 
 			if address.AddrType == "mac" {
 				sysTags = append(sysTags, cmdb.EntryTag{
-					Label:    "MAC",
-					Desc:     "Media Access Control",
-					DataType: system.MAC,
-					Values:   []string{address.Addr},
+					Label:       "MAC",
+					Description: "Media Access Control",
+					DataType:    system.MAC,
+					Values:      []string{address.Addr},
 				})
 			}
 
@@ -204,10 +204,10 @@ func interpret(nmapRun NmapRun) {
 		// Hostnames
 		if len(host.Hostnames) > 0 {
 			hostNameTag := cmdb.EntryTag{
-				Label:    "HostName",
-				Desc:     "Media Access Control",
-				DataType: system.STRING,
-				Values:   []string{},
+				Label:       "HostName",
+				Description: "Media Access Control",
+				DataType:    system.STRING,
+				Values:      []string{},
 			}
 
 			for _, name := range host.Hostnames {
@@ -218,12 +218,12 @@ func interpret(nmapRun NmapRun) {
 		}
 
 		entry := cmdb.Entry{
-			Label:    "Nmap Discovered Device",
-			Desc:     "This device was discovered during an Nmap scan: " + nmapRun.Args,
-			OSILayer: 0,
-			CMDBType: cmdb.PENDING,
-			DateSeen: []string{utils.Now()},
-			SysTags:  sysTags,
+			Label:       "Nmap Discovered Device",
+			Description: "This device was discovered during an Nmap scan: " + nmapRun.Args,
+			OSILayer:    0,
+			CMDBType:    cmdb.PENDING,
+			DateSeen:    []string{utils.Now()},
+			SysTags:     sysTags,
 		}
 
 		tag, exists, _ := cmdb.FindSysTag("HostName", entry)

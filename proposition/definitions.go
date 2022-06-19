@@ -6,13 +6,13 @@ import (
 )
 
 type Proposition struct {
-	ID        primitive.ObjectID `bson:"_id"`
-	Type      string
-	DateTime  string
-	Desc      string
-	Predicate Predicate
-	Status    int // 0 = Open, 1 = Accepted, 2 = Deleted
-	User      int
+	ID          primitive.ObjectID `bson:"_id"`
+	Type        string
+	DateTime    string
+	Description string
+	Predicate   Predicate
+	Status      int // 0 = Open, 1 = Accepted, 2 = Deleted
+	User        int
 }
 
 type Predicate struct {

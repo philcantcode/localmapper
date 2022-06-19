@@ -10,14 +10,14 @@ import (
 )
 
 type Cookbook struct {
-	ID         primitive.ObjectID `bson:"_id"`
-	CCBI       string             // Common CookBook Identifier
-	Label      string
-	Desc       string
-	CCIs       []string   // List of Common Capability IDs to run
-	SearchKeys []string   // List of Labels {Port, IP, OS} to search for
-	Schedule   []Schedule // Schedule info
-	Hidden     bool       // Hidden from the user
+	ID          primitive.ObjectID `bson:"_id"`
+	CCBI        string             // Common CookBook Identifier
+	Label       string
+	Description string
+	CCIs        []string   // List of Common Capability IDs to run
+	SearchKeys  []string   // List of Labels {Port, IP, OS} to search for
+	Schedule    []Schedule // Schedule info
+	Hidden      bool       // Hidden from the user
 }
 
 /*
@@ -28,9 +28,9 @@ type Cookbook struct {
 */
 func FirstTimeSetup() {
 	localHostID := Cookbook{
-		CCBI:  "ccbi:discovery:local-hosts:default", // Common CookBook Identifier: ccbi:<category>:<label>:<edition>
-		Label: "Local Host Identification Coobook",
-		Desc:  "Gather Hostname, Ports, OS, MAC, etc, about a local host.",
+		CCBI:        "ccbi:discovery:local-hosts:default", // Common CookBook Identifier: ccbi:<category>:<label>:<edition>
+		Label:       "Local Host Identification Coobook",
+		Description: "Gather Hostname, Ports, OS, MAC, etc, about a local host.",
 		CCIs: []string{
 			"cci:nmap:os-ident:default",
 			"cci:nmap:sys-dns:default",
@@ -53,9 +53,9 @@ func FirstTimeSetup() {
 	}
 
 	pingNonDefaultVLANs := Cookbook{
-		CCBI:  "ccbi:discovery:ping-sweep-vlans:exclude-private-ranges", // Common CookBook Identifier: ccbi:<category>:<label>:<edition>
-		Label: "Ping all VLANs Cookbook",
-		Desc:  "Pings all known VLAN excluding the three big private ranges.",
+		CCBI:        "ccbi:discovery:ping-sweep-vlans:exclude-private-ranges", // Common CookBook Identifier: ccbi:<category>:<label>:<edition>
+		Label:       "Ping all VLANs Cookbook",
+		Description: "Pings all known VLAN excluding the three big private ranges.",
 		CCIs: []string{
 			"cci:nmap:ping-sweep:default",
 		},

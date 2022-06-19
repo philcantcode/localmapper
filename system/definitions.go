@@ -2,6 +2,7 @@ package system
 
 type DataType string
 type Category string
+type Interpreter string
 
 const (
 	EMPTY         DataType = "EMPTY"
@@ -25,6 +26,11 @@ const (
 const (
 	DDOS      Category = "DDOS"
 	DISCOVERY Category = "DISCOVERY"
+)
+
+const (
+	UNIVERSAL Interpreter = "UNIVERSAL"
+	NMAP      Interpreter = "NMAP"
 )
 
 func FirstTimeSetup() {

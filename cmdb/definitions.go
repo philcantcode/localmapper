@@ -30,22 +30,22 @@ const (
    2 - L2 switches, Bridges
    1 - Hubs, repeaters, modems */
 type Entry struct {
-	ID       primitive.ObjectID `bson:"_id"`
-	Label    string
-	Desc     string
-	CMDBType CMDBType
-	OSILayer int        // 1 - 7
-	DateSeen []string   //[] Array of dates seen
-	UsrTags  []EntryTag // [Project-X, Bob's Server] etc
-	SysTags  []EntryTag // [IP: xxx, MAC: xxx, URL: xxx] etc
+	ID          primitive.ObjectID `bson:"_id"`
+	Label       string
+	Description string
+	CMDBType    CMDBType
+	OSILayer    int        // 1 - 7
+	DateSeen    []string   //[] Array of dates seen
+	UsrTags     []EntryTag // [Project-X, Bob's Server] etc
+	SysTags     []EntryTag // [IP: xxx, MAC: xxx, URL: xxx] etc
 	//TODO: implement histories for tracking changes
 }
 
 type EntryTag struct {
-	Label    string
-	Desc     string
-	DataType system.DataType
-	Values   []string
+	Label       string
+	Description string
+	DataType    system.DataType
+	Values      []string
 }
 
 type TimeGraph struct {

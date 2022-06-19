@@ -16,11 +16,11 @@ type DefaultIPGateway struct {
 }
 
 type NetworkAdapter struct {
-	Name string
-	IP   string
-	IP6  string
-	MAC  string
-	MAC6 string
+	Label string
+	IP    string
+	IP6   string
+	MAC   string
+	MAC6  string
 }
 
 func GetNetworkAdapters() []NetworkAdapter {
@@ -31,7 +31,7 @@ func GetNetworkAdapters() []NetworkAdapter {
 	for _, i := range ifaces {
 		addrs, _ := i.Addrs()
 
-		adapter := NetworkAdapter{Name: i.Name, MAC: i.HardwareAddr.String()}
+		adapter := NetworkAdapter{Label: i.Name, MAC: i.HardwareAddr.String()}
 
 		for _, addr := range addrs {
 			switch v := addr.(type) {

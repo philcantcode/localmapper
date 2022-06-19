@@ -125,7 +125,6 @@ func InitialiseAllSchedules() {
 				}
 
 				tracking[sidx].IsRunning = false
-				// time.Sleep(3000)
 			}))
 
 			cronny.Start()

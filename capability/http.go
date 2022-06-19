@@ -124,16 +124,13 @@ func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 }
 
 func HTTP_JSON_GetNew(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(
-		Capability{
-			DisplayFields: []string{},
-			ResultTags:    []string{},
-			Command: Command{
-				Params: []Param{
-					{
-						DataType: []system.DataType{},
-					},
-				},
-			},
-		})
+	json.NewEncoder(w).Encode(Capability{})
+}
+
+func HTTP_JSON_GetNew_Command(w http.ResponseWriter, r *http.Request) {
+	json.NewEncoder(w).Encode(Command{})
+}
+
+func HTTP_JSON_GetNew_Param(w http.ResponseWriter, r *http.Request) {
+	json.NewEncoder(w).Encode(Param{})
 }

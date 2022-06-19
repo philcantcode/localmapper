@@ -108,7 +108,7 @@ func HTTP_INSERT_Pending_Vlan(w http.ResponseWriter, r *http.Request) {
 	highIpTag := EntryTag{Label: "LowIP", DataType: system.IP, Values: []string{lowIP}}
 	lowIpTag := EntryTag{Label: "HighIP", DataType: system.IP, Values: []string{highIP}}
 	cidr := EntryTag{Label: "CIDR", DataType: system.CIDR, Values: cidrArr}
-	entry := Entry{Label: label, Desc: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{local.GetDateTime().DateTime}, SysTags: []EntryTag{lowIpTag, highIpTag, cidr}, UsrTags: []EntryTag{}}
+	entry := Entry{Label: label, Description: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{local.GetDateTime().DateTime}, SysTags: []EntryTag{lowIpTag, highIpTag, cidr}, UsrTags: []EntryTag{}}
 
 	insert_ENTRY_Pending(entry)
 
