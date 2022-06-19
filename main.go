@@ -32,8 +32,8 @@ func main() {
 	// Load application database
 	system.InitMongo()
 
+	// Load all initial setup jobs here
 	if !debugMode {
-		// Load all initial setup jobs here
 		proposition.FirstTimeSetup()
 		capability.FirstTimeSetup()
 		cookbook.FirstTimeSetup()

@@ -25,6 +25,7 @@ func initServer() {
 	router.HandleFunc("/capability/run/cmdb-compatible/{cmbd_id}/{capability_id}", capability.HTTP_JSON_RunCMDBCompatible)
 	router.HandleFunc("/capability/run", capability.HTTP_JSON_Run)
 	router.HandleFunc("/capability/get/all", capability.HTTP_JSON_GetAll)
+	router.HandleFunc("/capability/get/new", capability.HTTP_JSON_GetNew)
 	router.HandleFunc("/capability/get/cmdb-compatible/{id}", capability.HTTP_JSON_GetCMDBCompatible)
 	router.HandleFunc("/capability/get/{id}", capability.HTTP_JSON_GetByID)
 	router.HandleFunc("/capability/update", capability.HTTP_JSON_Update)
@@ -32,6 +33,7 @@ func initServer() {
 
 	router.HandleFunc("/cookbook/run/{ccbi}/{id}", cookbook.HTTP_JSON_Run_Cookbook)
 	router.HandleFunc("/cookbook/get/all", cookbook.HTTP_JSON_GetAll)
+	router.HandleFunc("/cookbook/get/new", cookbook.HTTP_JSON_GetNew)
 	router.HandleFunc("/cookbook/utils/restore", cookbook.HTTP_JSON_Restore)
 
 	router.HandleFunc("/local/get-network-adapters", local.HTTP_JSON_GetNetworkAdapters)

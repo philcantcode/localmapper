@@ -122,3 +122,18 @@ func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 
 	w.Write([]byte("200/Done"))
 }
+
+func HTTP_JSON_GetNew(w http.ResponseWriter, r *http.Request) {
+	json.NewEncoder(w).Encode(
+		Capability{
+			DisplayFields: []string{},
+			ResultTags:    []string{},
+			Command: Command{
+				Params: []Param{
+					{
+						DataType: []system.DataType{},
+					},
+				},
+			},
+		})
+}
