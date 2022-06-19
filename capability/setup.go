@@ -56,57 +56,36 @@ func FirstTimeSetup() {
 	// 	},
 	// }
 
-	// accCheck := Capability{
-	// 	Type:       "acccheck",
-	// 	CCI:        "cci:kali:acccheck:default",
-	// 	Name:       "AC-Check Auth Guessing",
-	// 	Desc:       "Connects to IPC and ADMIN shares using SMB to attempt logins.",
-	// 	Category:   system.DDOS,
-	// 	ResultTags: []string{},
-	// 	Command: Command{
-	// 		Program: "acccheck.pl",
-	// 		Params: []Param{
-	// 			{
-	// 				Desc:     "Target",
-	// 				Flag:     "-t",
-	// 				DataType: []system.DataType{system.IP},
-	// 				Value:    "",
-	// 				Default:  "",
-	// 			},
-	// 			{
-	// 				Desc:     "Run Script",
-	// 				Flag:     "--script",
-	// 				DataType: []system.DataType{system.STRING},
-	// 				Value:    "nbstat.nse",
-	// 				Default:  "nbstat.nse",
-	// 			},
-	// 			{
-	// 				Desc:     "Target",
-	// 				Flag:     "",
-	// 				DataType: []system.DataType{system.CIDR, system.IP},
-	// 				Value:    "",
-	// 				Default:  "",
-	// 			},
-	// 			{
-	// 				Desc:     "Port 137",
-	// 				Flag:     "-p137",
-	// 				DataType: []system.DataType{system.EMPTY},
-	// 				Value:    "",
-	// 				Default:  "",
-	// 			},
-	// 			{
-	// 				Desc:     "XML Output",
-	// 				Flag:     "-oX",
-	// 				DataType: []system.DataType{system.STRING},
-	// 				Value:    "-",
-	// 				Default:  "-",
-	// 			},
-	// 		},
-	// 	},
-	// }
+	nbtScan := Capability{
+		Interpreter: system.NBTSCAN,
+		CCI:         "cci:kali:nbtscan:default",
+		Label:       "NBTScan NetBIOS Scanner",
+		Description: "Scan networks for NetBIOS name information.",
+		Category:    system.DISCOVERY,
+		ResultTags:  []string{},
+		Command: Command{
+			Program: "nbtscan",
+			Params: []Param{
+				{
+					Description: "Target",
+					Flag:        "",
+					DataType:    []system.DataType{system.IP, system.CIDR},
+					Value:       "",
+					Default:     "",
+				},
+				{
+					Description: "Output Style - Comma separated",
+					Flag:        "-s",
+					DataType:    []system.DataType{system.STRING},
+					Value:       ",",
+					Default:     ",",
+				},
+			},
+		},
+	}
 
 	netBiosScan := Capability{
-		Type:        "nmap",
+		Interpreter: system.NMAP,
 		CCI:         "cci:nmap:nbstat-netbios-script:default",
 		Label:       "nbstat NetBIOS",
 		Description: "Attempts to retrieve the target's NetBIOS names and MAC address.",
@@ -155,7 +134,7 @@ func FirstTimeSetup() {
 	}
 
 	sysDNSScan := Capability{
-		Type:        "nmap",
+		Interpreter: system.NMAP,
 		CCI:         "cci:nmap:sys-dns:default",
 		Label:       "System DNS Scan",
 		Description: "Use system DNS resolver configured on this host to identify private hostnames.",
@@ -197,7 +176,7 @@ func FirstTimeSetup() {
 	}
 
 	pingSweep := Capability{
-		Type:        "nmap",
+		Interpreter: system.NMAP,
 		Label:       "Ping Sweep",
 		CCI:         "cci:nmap:ping-sweep:default",
 		Description: "Perform a discovery Ping Sweep against an IP Range.",
@@ -232,7 +211,7 @@ func FirstTimeSetup() {
 	}
 
 	stealthScan := Capability{
-		Type:        "nmap",
+		Interpreter: system.NMAP,
 		CCI:         "cci:nmap:stealth:default",
 		Label:       "Stealth Scan",
 		Description: "Scan thousands of ports on the target device.",
@@ -274,7 +253,7 @@ func FirstTimeSetup() {
 	}
 
 	osIdent := Capability{
-		Type:        "nmap",
+		Interpreter: system.NMAP,
 		CCI:         "cci:nmap:os-ident:default",
 		Label:       "OS Identification Scan",
 		Description: "Attempts to identify the operating system of the host.",
@@ -322,7 +301,7 @@ func FirstTimeSetup() {
 	}
 
 	connectScan := Capability{
-		Type:        "nmap",
+		Interpreter: system.NMAP,
 		CCI:         "cci:nmap:tcp-connect:default",
 		Label:       "TCP Connect Scan",
 		Description: "TCP Connect Scan performs a full connection to the host.",
@@ -364,7 +343,7 @@ func FirstTimeSetup() {
 	}
 
 	arpScan := Capability{
-		Type:        "nmap",
+		Interpreter: system.NMAP,
 		Label:       "APR Scan",
 		CCI:         "cci:nmap:arp:default",
 		Description: "Perform a scan of the local network using ARP.",
@@ -408,7 +387,7 @@ func FirstTimeSetup() {
 	// nmap IP -sU -sS --script smb-os-discovery.nse -p U:137,T:139
 
 	smbScriptScan := Capability{
-		Type:        "nmap",
+		Interpreter: system.NMAP,
 		Label:       "SMB OS Discovery",
 		CCI:         "cci:nmap:smb-os-discovery:default",
 		Description: "Attempts to determine the operating system, computer name, domain, workgroup, and current time over the SMB protocol (ports 445 or 139). This is done by starting a session with the anonymous account, in response to a session starting, the server will send back all this information.",
@@ -464,7 +443,7 @@ func FirstTimeSetup() {
 	}
 
 	svcDetection := Capability{
-		Type:        "nmap",
+		Interpreter: system.NMAP,
 		CCI:         "cci:nmap:svc-detection:default",
 		Label:       "Service Identification Scan",
 		Description: "Attempts to identify the service version of running services the host.",
@@ -521,5 +500,6 @@ func FirstTimeSetup() {
 		INSERT_Capability(arpScan)
 		INSERT_Capability(smbScriptScan)
 		INSERT_Capability(svcDetection)
+		INSERT_Capability(nbtScan)
 	}
 }

@@ -5,8 +5,12 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/philcantcode/localmapper/capability/acccheck"
+	"github.com/philcantcode/localmapper/capability/local"
+	"github.com/philcantcode/localmapper/capability/nbtscan"
 	"github.com/philcantcode/localmapper/capability/nmap"
 	"github.com/philcantcode/localmapper/cmdb"
+	"github.com/philcantcode/localmapper/interpreter"
 	"github.com/philcantcode/localmapper/system"
 )
 
@@ -37,17 +41,37 @@ func ProcessCapabilityQueue() {
 func executeCapability(capability Capability) []byte {
 	system.Log(fmt.Sprintf("Executing Capability: %s", capability.Label), true)
 
-	switch capability.Type {
-	case "nmap":
-		nmapRun := nmap.Execute(ParamsToArray(capability.Command.Params))
+	switch capability.Interpreter {
+	case system.NMAP:
+		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
+
+		nmapRun := nmap.Interpret(resultBytes)
 		nmap.INSERT_Nmap(nmapRun)
 
 		result, err := json.Marshal(nmapRun)
 		system.Error("Couldn't marshal nmaprun", err)
 
 		return result
+	case system.UNIVERSAL:
+		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
+
+		return interpreter.UniversalExec(resultBytes)
+	case system.ACCCHECK:
+		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
+		result := acccheck.Interpret(resultBytes)
+
+		return result
+	case system.NBTSCAN:
+		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
+		results := nbtscan.Interpret(resultBytes)
+
+		for _, res := range results {
+			nbtscan.INSERT_NbtScan(res)
+		}
+
+		return nil
 	default:
-		system.Force(fmt.Sprintf("No capability type to run in Capability.ProcessCapability: %v", capability), true)
+		system.Force(fmt.Sprintf("No capability interpreter available for: %+v", capability), true)
 		return nil
 	}
 }

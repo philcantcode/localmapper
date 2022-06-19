@@ -31,6 +31,8 @@ const (
 const (
 	UNIVERSAL Interpreter = "UNIVERSAL"
 	NMAP      Interpreter = "NMAP"
+	ACCCHECK  Interpreter = "ACCCHECK"
+	NBTSCAN   Interpreter = "NBTSCAN"
 )
 
 func FirstTimeSetup() {

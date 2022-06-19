@@ -11,8 +11,12 @@ RUN apt-get install net-tools -y
 RUN apt-get install iputils-ping -y
 RUN apt-get install ca-certificates -y
 
-# Golang
+# Lanuages
 RUN apt-get install golang -y
+RUN apt-get install python2 -y
 
 # Tools
 RUN apt-get install nmap -y
+RUN apt-get install braa -y
+RUN apt-get install dmitry -y
+RUN apt-get install nbtscan -y

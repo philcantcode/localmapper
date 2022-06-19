@@ -31,6 +31,7 @@ func main() {
 
 	// Load application database
 	system.InitMongo()
+	system.SetupTools()
 
 	// Load all initial setup jobs here
 	if !debugMode {

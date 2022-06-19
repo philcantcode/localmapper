@@ -14,6 +14,8 @@ var uri string
 var client *mongo.Client
 var System_Logs_DB *mongo.Collection
 var Results_Nmap_DB *mongo.Collection
+var Results_Nbscan_DB *mongo.Collection
+var Results_Misc_DB *mongo.Collection
 var CMDB_Inventory_DB *mongo.Collection
 var CMDB_Pending_DB *mongo.Collection
 var Core_Proposition_DB *mongo.Collection
@@ -50,9 +52,6 @@ func InitMongo() {
 
 	Log("Successfully connected MongoDB to: "+uri, false)
 
-	Results_Nmap_DB = client.Database("Results").Collection("Nmap")
-	Log("Successfully setup mongo nmap database collections: ", false)
-
 	CMDB_Inventory_DB = client.Database("CMDB").Collection("Inventory")
 	Log("Successfully setup mongo Inventory database collections: ", false)
 
@@ -73,6 +72,15 @@ func InitMongo() {
 
 	System_Logs_DB = client.Database("System").Collection("Logs")
 	Log("Successfully setup mongo system logs database collections: ", true)
+
+	Results_Misc_DB = client.Database("Results").Collection("Misc")
+	Log("Successfully setup mongo results misc database collections: ", true)
+
+	Results_Nmap_DB = client.Database("Results").Collection("Nmap")
+	Log("Successfully setup mongo nmap database collections: ", false)
+
+	Results_Nbscan_DB = client.Database("Results").Collection("Nbtscan")
+	Log("Successfully setup mongo nbtscan database collections: ", false)
 
 	MONGO_INITIALISED = true
 }

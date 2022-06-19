@@ -41,6 +41,7 @@ func Fatal(context string, err error) {
 
 	if err != nil {
 		fmt.Printf("[%s] %s\n", log.Type, log.Context)
+		fmt.Println(err)
 		INSERT_LogEntry(log)
 		os.Exit(0)
 	}

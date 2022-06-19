@@ -11,7 +11,7 @@ type Capability struct {
 	CCI           string             // Common Capability Identifier = cci:<tool>:<label>:<edition>
 	Description   string             // Contextual description
 	Category      system.Category
-	Type          system.Interpreter
+	Interpreter   system.Interpreter
 	Hidden        bool     // Hidden from the user
 	DisplayFields []string // For hiding results
 	ResultTags    []string // The Result tags (e.g., IP, Port) gathered by this capability

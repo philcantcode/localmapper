@@ -2,8 +2,6 @@ package nmap
 
 import (
 	"encoding/xml"
-	"fmt"
-	"os/exec"
 	"strconv"
 
 	"github.com/philcantcode/localmapper/cmdb"
@@ -12,23 +10,23 @@ import (
 )
 
 // Execute takes a list of parameters to execute against NMAP
-func Execute(params []string) NmapRun {
-	system.Log(fmt.Sprintf("Attempting to run Nmap Command: %s > %v", "nmap", params), true)
-	resultByte, err := exec.Command("nmap", params...).CombinedOutput()
-	system.Fatal(fmt.Sprintf("Error returned running a command: %s > %v", "nmap", params), err)
-
+func Interpret(resultByte []byte) NmapRun {
 	system.Log("Converting from []byte to NmapRun struct", false)
 
 	var nmapRun NmapRun
-	err = xml.Unmarshal(resultByte, &nmapRun)
+	err := xml.Unmarshal(resultByte, &nmapRun)
 	system.Error("Couldn't unmarshal result from Nmap console", err)
 
-	interpret(nmapRun)
+	extractValues(nmapRun)
 
 	return nmapRun
 }
 
-func interpret(nmapRun NmapRun) {
+/*
+	extractValues takes in an nmapRun and extracts
+	relevant variabels.
+*/
+func extractValues(nmapRun NmapRun) {
 	// For each host
 	for _, host := range nmapRun.Hosts {
 		sysTags := []cmdb.EntryTag{}
