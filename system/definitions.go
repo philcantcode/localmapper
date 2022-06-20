@@ -21,6 +21,7 @@ const (
 	CCBI          DataType = "CCBI"         // Common Cookbook Identifier
 	IP_RANGE_LOW  DataType = "IP_RANGE_LOW" // 192.168.0.0 - IP meant to be used in a range calculation but is a single IP
 	IP_RANGE_HIGH DataType = "IP_RANGE_HIGH"
+	USERNAME      DataType = "USERNAME"
 )
 
 const (

@@ -10,23 +10,25 @@ import (
 )
 
 // Execute takes a list of parameters to execute against NMAP
-func Interpret(resultByte []byte) NmapRun {
+func ProcessResults(resultByte []byte) NmapRun {
 	system.Log("Converting from []byte to NmapRun struct", false)
 
 	var nmapRun NmapRun
 	err := xml.Unmarshal(resultByte, &nmapRun)
 	system.Error("Couldn't unmarshal result from Nmap console", err)
 
-	extractValues(nmapRun)
-
 	return nmapRun
 }
 
+func StoreResults(result NmapRun) {
+	INSERT_Nmap(result)
+}
+
 /*
-	extractValues takes in an nmapRun and extracts
+	ConvertToEntry takes in an nmapRun and extracts
 	relevant variabels.
 */
-func extractValues(nmapRun NmapRun) {
+func ConvertToEntry(nmapRun NmapRun) {
 	// For each host
 	for _, host := range nmapRun.Hosts {
 		sysTags := []cmdb.EntryTag{}

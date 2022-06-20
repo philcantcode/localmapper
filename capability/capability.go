@@ -1,7 +1,6 @@
 package capability
 
 import (
-	"encoding/json"
 	"fmt"
 	"time"
 
@@ -10,16 +9,15 @@ import (
 	"github.com/philcantcode/localmapper/capability/nbtscan"
 	"github.com/philcantcode/localmapper/capability/nmap"
 	"github.com/philcantcode/localmapper/cmdb"
-	"github.com/philcantcode/localmapper/interpreter"
 	"github.com/philcantcode/localmapper/system"
 )
 
 var currentRoutines = 0
-var maxRoutines = 30
+var maxRoutines = 50
 var queue = make(chan Capability, maxRoutines)
 
 func QueueCapability(capability Capability) {
-	system.Log(fmt.Sprintf("[Current Queue Size]: %d, adding: %s", len(queue), capability.Label), true)
+	system.Log(fmt.Sprintf("[Capability Queue]: %d/%d, adding: %s", len(queue), maxRoutines, capability.Label), true)
 	queue <- capability
 }
 
@@ -38,41 +36,34 @@ func ProcessCapabilityQueue() {
 	}
 }
 
-func executeCapability(capability Capability) []byte {
+/*
+	executeCapability executes a capability then attempts to process the result.
+	Each result type must implement a "ProcessResults()" function to pack the
+	byte[] into a struct and then a "StoreResults()" function to store it in the
+	relevant databases.
+*/
+func executeCapability(capability Capability) {
 	system.Log(fmt.Sprintf("Executing Capability: %s", capability.Label), true)
 
 	switch capability.Interpreter {
 	case system.NMAP:
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
-
-		nmapRun := nmap.Interpret(resultBytes)
-		nmap.INSERT_Nmap(nmapRun)
-
-		result, err := json.Marshal(nmapRun)
-		system.Error("Couldn't marshal nmaprun", err)
-
-		return result
+		nmapRun := nmap.ProcessResults(resultBytes)
+		nmap.ConvertToEntry(nmapRun)
+		nmap.StoreResults(nmapRun)
 	case system.UNIVERSAL:
-		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
-
-		return interpreter.UniversalExec(resultBytes)
+		local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
 	case system.ACCCHECK:
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
-		result := acccheck.Interpret(resultBytes)
-
-		return result
+		result := acccheck.ProcessResults(resultBytes)
+		acccheck.StoreResults(result)
 	case system.NBTSCAN:
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
-		results := nbtscan.Interpret(resultBytes)
-
-		for _, res := range results {
-			nbtscan.INSERT_NbtScan(res)
-		}
-
-		return nil
+		nbtScan := nbtscan.ProcessResults(resultBytes)
+		nbtscan.ConvertToEntry(nbtScan)
+		nbtscan.StoreResults(nbtScan)
 	default:
 		system.Force(fmt.Sprintf("No capability interpreter available for: %+v", capability), true)
-		return nil
 	}
 }
 

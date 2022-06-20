@@ -6,7 +6,7 @@ import (
 )
 
 // Output: print"\n        SUCCESS.... connected to $singleIp with username:'$singleUser' and password:'$singlePass'\n";
-func Interpret(resultBytes []byte) []byte {
+func ProcessResults(resultBytes []byte) []byte {
 	ipRegex, _ := regexp.Compile(`\b(?:(?:2(?:[0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9])\.){3}(?:(?:2([0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9]))\b`)
 	usrPassRegex, _ := regexp.Compile(`'[^']*'`)
 
@@ -20,6 +20,10 @@ func Interpret(resultBytes []byte) []byte {
 	return []byte("aababa")
 }
 
+func StoreResults(result []byte) {
+
+}
+
 func Test() {
 	out := ""
 
@@ -29,5 +33,5 @@ func Test() {
 
 	fmt.Println(out)
 
-	Interpret([]byte(out))
+	ProcessResults([]byte(out))
 }
