@@ -30,7 +30,7 @@ func HTTP_JSON_Run_Cookbook(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	ExecuteCookbook(cookbooks[0], entries[0].ID)
+	cookbooks[0].ExecuteOnEntry(entries[0].ID)
 
 	w.Write([]byte("200/Done"))
 }

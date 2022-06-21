@@ -12,9 +12,9 @@ import (
 )
 
 /*
-	ExecuteCookbook runs a passed cookbook
+	ExecuteOnEntry runs a cookbook against a given entry
 */
-func ExecuteCookbook(book Cookbook, entryID primitive.ObjectID) {
+func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
 	system.Log("Attempting to execute cookbook: "+book.Label, true)
 	capsInBook := []string{} // Keep track of capabilities already run so don't run them twice in 1 cookbook
 
@@ -43,11 +43,11 @@ func ExecuteCookbook(book Cookbook, entryID primitive.ObjectID) {
 			return
 		}
 
-		isMatch, cap := capability.MatchEntryToCapability(caps[0], entries[0])
+		isMatch, cap := caps[0].ExtractCompabileTags(entries[0])
 
 		if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsInBook) {
 			system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", caps[0].Label, entries[0].Label), true)
-			capability.QueueCapability(cap)
+			cap.QueueCapability()
 			capsInBook = append(capsInBook, cap.ID.Hex())
 		} else {
 			system.Log(fmt.Sprintf("Can't execute capability [%s] against [%s], not a match", caps[0].Label, entries[0].Label), true)
@@ -76,11 +76,11 @@ func ExecuteCookbook(book Cookbook, entryID primitive.ObjectID) {
 						return
 					}
 
-					isMatch, cap := capability.MatchEntryToCapability(cap, entries[0])
+					isMatch, cap := cap.ExtractCompabileTags(entries[0])
 
 					if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsInBook) {
 						system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", cap.Label, entries[0].Label), true)
-						capability.QueueCapability(cap)
+						cap.QueueCapability()
 						capsInBook = append(capsInBook, cap.ID.Hex())
 					}
 				}

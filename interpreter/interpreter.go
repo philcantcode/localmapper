@@ -1,6 +1,6 @@
 package interpreter
 
-func UniversalExec(resultBytes []byte) []byte {
+func ProcessResults(resultBytes []byte) []byte {
 
 	return nil // return json
 }

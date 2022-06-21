@@ -101,7 +101,7 @@ func InitialiseAllSchedules() {
 
 					if !isExcluded && hasTimePassed {
 						system.Log(fmt.Sprintf("Starting Schedule: %s (ccbi: %s) > %s", jSchedule.Label, jBook.CCBI, targ[0].Label), true)
-						ExecuteCookbook(jBook, targ[0].ID)
+						jBook.ExecuteOnEntry(targ[0].ID)
 					} else {
 						system.Log(fmt.Sprintf("Skipping %s because [ON EXCLUSION LIST: %t] [SUITABLE TIME PASSED: %t]\n", targ[0].Label, isExcluded, hasTimePassed), false)
 					}
@@ -117,7 +117,7 @@ func InitialiseAllSchedules() {
 
 						if !isExcluded && hasTimePassed {
 							system.Log(fmt.Sprintf("Starting Schedule: %s (ccbi: %s) > %s", jSchedule.Label, jBook.CCBI, entry.Label), true)
-							ExecuteCookbook(jBook, entry.ID)
+							jBook.ExecuteOnEntry(entry.ID)
 						} else {
 							system.Log(fmt.Sprintf("Skipping %s because [ON EXCLUSION LIST: %t] [SUITABLE TIME PASSED: %t]", entry.Label, isExcluded, hasTimePassed), false)
 						}

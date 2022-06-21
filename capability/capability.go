@@ -15,14 +15,23 @@ import (
 var currentRoutines = 0
 var maxRoutines = 50
 var queue = make(chan Capability, maxRoutines)
+var stopCapability = false
 
-func QueueCapability(capability Capability) {
+func (capability Capability) QueueCapability() {
 	system.Log(fmt.Sprintf("[Capability Queue]: %d/%d, adding: %s", len(queue), maxRoutines, capability.Label), true)
 	queue <- capability
 }
 
+/*
+	ProcessCapabilityQueue should be called once at the start
+	of the application to start the capability processing.
+*/
 func ProcessCapabilityQueue() {
 	for {
+		if stopCapability {
+			break
+		}
+
 		if currentRoutines < maxRoutines {
 			go func() {
 				currentRoutines++
@@ -34,6 +43,17 @@ func ProcessCapabilityQueue() {
 
 		time.Sleep(1000)
 	}
+}
+
+/*
+	StopCapabilityQueue breaks out of the processing loop
+	so you must call ProcessCapabilityQueue again to resume.
+
+	It allows currently running capabilities to finish.
+*/
+func StopCapabilityQueue() {
+	stopCapability = true
+	system.Log("Stopping queue, currently processing jobs will continue", false)
 }
 
 /*
@@ -49,8 +69,8 @@ func executeCapability(capability Capability) {
 	case system.NMAP:
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
 		nmapRun := nmap.ProcessResults(resultBytes)
-		nmap.ConvertToEntry(nmapRun)
-		nmap.StoreResults(nmapRun)
+		nmapRun.ConvertToEntry()
+		nmapRun.StoreResults()
 	case system.UNIVERSAL:
 		local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
 	case system.ACCCHECK:
@@ -68,13 +88,14 @@ func executeCapability(capability Capability) {
 }
 
 /*
-	MatchEntryToCapability determines if a given entry can run a given capability
+	ExtractCompabileTags takes a given entry and attempts to match the parameters of the capability
+	with compatible tags from the entry.
 */
-func MatchEntryToCapability(capability Capability, entry cmdb.Entry) (bool, Capability) {
+func (capability Capability) ExtractCompabileTags(entry cmdb.Entry) (bool, Capability) {
 	var success bool
 
 	for k, capParam := range capability.Command.Params {
-		success, capability.Command.Params[k] = MatchParamToTag(capParam, entry.SysTags)
+		success, capability.Command.Params[k] = capParam.extractCompatibleParams(entry.SysTags)
 
 		if !success {
 			return false, capability
@@ -85,10 +106,10 @@ func MatchEntryToCapability(capability Capability, entry cmdb.Entry) (bool, Capa
 }
 
 /*
-	MatchParamToTag Determines if given a capability param {"Value": "","DataType": 1, "Default": ""}
+	extractCompatibleParams Determines if given a capability param {"Value": "","DataType": 1, "Default": ""}
 	Is there any SysTags that can fulfil the Values
 */
-func MatchParamToTag(capParam Param, entryTags []cmdb.EntryTag) (bool, Param) {
+func (capParam Param) extractCompatibleParams(entryTags []cmdb.EntryTag) (bool, Param) {
 	// For each: {DataType.CMDB, DataType.IP}
 	for _, pType := range capParam.DataType {
 		// If the value is already set, move on

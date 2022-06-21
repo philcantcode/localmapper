@@ -20,7 +20,7 @@ func ProcessResults(resultByte []byte) NmapRun {
 	return nmapRun
 }
 
-func StoreResults(result NmapRun) {
+func (result NmapRun) StoreResults() {
 	INSERT_Nmap(result)
 }
 
@@ -28,7 +28,7 @@ func StoreResults(result NmapRun) {
 	ConvertToEntry takes in an nmapRun and extracts
 	relevant variabels.
 */
-func ConvertToEntry(nmapRun NmapRun) {
+func (nmapRun NmapRun) ConvertToEntry() {
 	// For each host
 	for _, host := range nmapRun.Hosts {
 		sysTags := []cmdb.EntryTag{}
