@@ -36,21 +36,21 @@ func (nmapRun NmapRun) ConvertToEntry() {
 		ports := cmdb.EntryTag{
 			Label:       "Ports",
 			Description: "Open Ports",
-			DataType:    system.INTEGER,
+			DataType:    system.DataType_INTEGER,
 			Values:      []string{},
 		}
 
 		services := cmdb.EntryTag{
 			Label:       "Services",
 			Description: "Open Services",
-			DataType:    system.STRING,
+			DataType:    system.DataType_STRING,
 			Values:      []string{},
 		}
 
 		products := cmdb.EntryTag{
 			Label:       "Products",
 			Description: "Detected products on ports",
-			DataType:    system.STRING,
+			DataType:    system.DataType_STRING,
 			Values:      []string{},
 		}
 
@@ -73,42 +73,42 @@ func (nmapRun NmapRun) ConvertToEntry() {
 		vendorTags := cmdb.EntryTag{
 			Label:       "MACVendor",
 			Description: "Vendor of the MAC code",
-			DataType:    system.STRING,
+			DataType:    system.DataType_STRING,
 			Values:      []string{},
 		}
 
 		osFamily := cmdb.EntryTag{
 			Label:       "OS",
 			Description: "Operating System",
-			DataType:    system.STRING,
+			DataType:    system.DataType_STRING,
 			Values:      []string{},
 		}
 
 		osGen := cmdb.EntryTag{
 			Label:       "OSGen",
 			Description: "Operating System Generation/Version",
-			DataType:    system.STRING,
+			DataType:    system.DataType_STRING,
 			Values:      []string{},
 		}
 
 		osAccuracy := cmdb.EntryTag{
 			Label:       "OSAccuracy",
 			Description: "Confidence of Nmap detection",
-			DataType:    system.INTEGER,
+			DataType:    system.DataType_INTEGER,
 			Values:      []string{},
 		}
 
 		osVendor := cmdb.EntryTag{
 			Label:       "OSVendor",
 			Description: "Vendor of detected OS",
-			DataType:    system.STRING,
+			DataType:    system.DataType_STRING,
 			Values:      []string{},
 		}
 
 		osCPE := cmdb.EntryTag{
 			Label:       "CPE",
 			Description: "http://cpe.mitre.org/",
-			DataType:    system.STRING,
+			DataType:    system.DataType_STRING,
 			Values:      []string{},
 		}
 
@@ -145,7 +145,7 @@ func (nmapRun NmapRun) ConvertToEntry() {
 				sysTags = append(sysTags, cmdb.EntryTag{
 					Label:       "IP",
 					Description: "IP4 Address",
-					DataType:    system.IP,
+					DataType:    system.DataType_IP,
 					Values:      []string{address.Addr},
 				})
 			}
@@ -154,7 +154,7 @@ func (nmapRun NmapRun) ConvertToEntry() {
 				sysTags = append(sysTags, cmdb.EntryTag{
 					Label:       "MAC",
 					Description: "Media Access Control",
-					DataType:    system.MAC,
+					DataType:    system.DataType_MAC,
 					Values:      []string{address.Addr},
 				})
 			}
@@ -206,7 +206,7 @@ func (nmapRun NmapRun) ConvertToEntry() {
 			hostNameTag := cmdb.EntryTag{
 				Label:       "HostName",
 				Description: "Media Access Control",
-				DataType:    system.STRING,
+				DataType:    system.DataType_STRING,
 				Values:      []string{},
 			}
 

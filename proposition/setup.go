@@ -56,7 +56,7 @@ func setupSelfIdentity() {
 		optionIPs = append(optionIPs, ip.IP)
 	}
 
-	propItem := Predicate{Label: "Server IP", Value: local.GetDefaultIPGateway().DefaultIP, DataType: system.IP, Options: optionIPs}
+	propItem := Predicate{Label: "Server IP", Value: local.GetDefaultIPGateway().DefaultIP, DataType: system.DataType_IP, Options: optionIPs}
 	prop := Proposition{Type: "local-net-iface", DateTime: local.GetDateTime().DateTime, Description: "Please choose the IP address for this server.", Predicate: propItem}
 
 	INSERT_Proposition(prop)
@@ -86,9 +86,9 @@ func recalcualteVlanCIDR() {
 		_, found, index := cmdb.FindSysTag("CIDR", entry)
 
 		if found {
-			entry.SysTags[index] = cmdb.EntryTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.CIDR, Values: cidr}
+			entry.SysTags[index] = cmdb.EntryTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.DataType_CIDR, Values: cidr}
 		} else {
-			entry.SysTags = append(entry.SysTags, cmdb.EntryTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.CIDR, Values: cidr})
+			entry.SysTags = append(entry.SysTags, cmdb.EntryTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.DataType_CIDR, Values: cidr})
 		}
 
 		cmdb.UPDATE_ENTRY_Inventory(entry)

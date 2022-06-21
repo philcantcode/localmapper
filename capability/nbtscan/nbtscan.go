@@ -54,7 +54,7 @@ func ConvertToEntry(results []NBTScan) {
 			tag := cmdb.EntryTag{
 				Label:       "IP",
 				Description: "IPv4 Address",
-				DataType:    system.IP,
+				DataType:    system.DataType_IP,
 				Values: []string{
 					res.IP,
 				},
@@ -67,7 +67,7 @@ func ConvertToEntry(results []NBTScan) {
 			tag := cmdb.EntryTag{
 				Label:       "MAC",
 				Description: "MAC Address",
-				DataType:    system.MAC,
+				DataType:    system.DataType_MAC,
 				Values: []string{
 					res.MAC,
 				},
@@ -80,7 +80,7 @@ func ConvertToEntry(results []NBTScan) {
 			tag := cmdb.EntryTag{
 				Label:       "NetBIOS Name",
 				Description: "NetBIOS HostName",
-				DataType:    system.STRING,
+				DataType:    system.DataType_STRING,
 				Values: []string{
 					res.NetBIOSName,
 				},
@@ -93,7 +93,7 @@ func ConvertToEntry(results []NBTScan) {
 			tag := cmdb.EntryTag{
 				Label:       "HostName",
 				Description: "System HostName",
-				DataType:    system.STRING,
+				DataType:    system.DataType_STRING,
 				Values: []string{
 					res.Server,
 				},
@@ -106,7 +106,7 @@ func ConvertToEntry(results []NBTScan) {
 			tag := cmdb.EntryTag{
 				Label:       "Username",
 				Description: "System Usernames",
-				DataType:    system.USERNAME,
+				DataType:    system.DataType_USERNAME,
 				Values: []string{
 					res.Username,
 				},

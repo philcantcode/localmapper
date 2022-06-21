@@ -238,7 +238,7 @@ func CalcIdentityConfidenceScore(entry Entry) IdentityConfidence {
 func CalcTimeGraph(entry Entry) TimeGraph {
 	graph := TimeGraph{Keys: []string{}, Values: []int{}}
 
-	windowMinute, err := strconv.Atoi(system.Get("date-seen-graph-mins-val"))
+	windowMinute, err := strconv.Atoi(system.GetConfig("date-seen-graph-mins-val"))
 	system.Fatal("Couldn't convert date-seen-graph-mins-val settings to int", err)
 
 	window := time.Duration(int64(time.Minute) * int64(windowMinute))
@@ -284,9 +284,9 @@ func FirstTimeSetup() {
 	vlan1 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 1", "desc": "Default VLAN"}, bson.M{})
 
 	if len(vlan1) == 0 {
-		lowIP := EntryTag{Label: "LowIP", DataType: system.IP_RANGE_LOW, Values: []string{"10.0.0.0"}}
-		highIP := EntryTag{Label: "HighIP", DataType: system.IP_RANGE_HIGH, Values: []string{"10.255.255.255"}}
-		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
+		lowIP := EntryTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"10.0.0.0"}}
+		highIP := EntryTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"10.255.255.255"}}
+		sysDefault := EntryTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
 		newVlan := Entry{Label: "Private Range 1", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
 		insert_ENTRY_Inventory(newVlan)
@@ -295,9 +295,9 @@ func FirstTimeSetup() {
 	vlan2 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 2", "desc": "Default VLAN"}, bson.M{})
 
 	if len(vlan2) == 0 {
-		lowIP := EntryTag{Label: "LowIP", DataType: system.IP_RANGE_LOW, Values: []string{"172.16.0.0"}}
-		highIP := EntryTag{Label: "HighIP", DataType: system.IP_RANGE_HIGH, Values: []string{"172.31.255.255"}}
-		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
+		lowIP := EntryTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"172.16.0.0"}}
+		highIP := EntryTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"172.31.255.255"}}
+		sysDefault := EntryTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
 		newVlan := Entry{Label: "Private Range 2", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
 		insert_ENTRY_Inventory(newVlan)
@@ -306,9 +306,9 @@ func FirstTimeSetup() {
 	vlan3 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 3", "desc": "Default VLAN"}, bson.M{})
 
 	if len(vlan3) == 0 {
-		lowIP := EntryTag{Label: "LowIP", DataType: system.IP_RANGE_LOW, Values: []string{"192.168.0.0"}}
-		highIP := EntryTag{Label: "HighIP", DataType: system.IP_RANGE_HIGH, Values: []string{"192.168.255.255"}}
-		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
+		lowIP := EntryTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"192.168.0.0"}}
+		highIP := EntryTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"192.168.255.255"}}
+		sysDefault := EntryTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
 		newVlan := Entry{Label: "Private Range 3", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
 		insert_ENTRY_Inventory(newVlan)
@@ -317,9 +317,9 @@ func FirstTimeSetup() {
 	vlan4 := SELECT_ENTRY_Inventory(bson.M{"label": "Test Home", "desc": "Test VLAN"}, bson.M{})
 
 	if len(vlan4) == 0 {
-		lowIP := EntryTag{Label: "LowIP", DataType: system.IP_RANGE_LOW, Values: []string{"192.168.1.0"}}
-		highIP := EntryTag{Label: "HighIP", DataType: system.IP_RANGE_HIGH, Values: []string{"192.168.1.255"}}
-		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
+		lowIP := EntryTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"192.168.1.0"}}
+		highIP := EntryTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"192.168.1.255"}}
+		sysDefault := EntryTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
 		newVlan := Entry{Label: "Test Home", Description: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
 		insert_ENTRY_Inventory(newVlan)
@@ -328,9 +328,9 @@ func FirstTimeSetup() {
 	vlan5 := SELECT_ENTRY_Inventory(bson.M{"label": "Olivers Home", "desc": "Test VLAN"}, bson.M{})
 
 	if len(vlan5) == 0 {
-		lowIP := EntryTag{Label: "LowIP", DataType: system.IP_RANGE_LOW, Values: []string{"192.168.0.0"}}
-		highIP := EntryTag{Label: "HighIP", DataType: system.IP_RANGE_HIGH, Values: []string{"192.168.0.255"}}
-		sysDefault := EntryTag{Label: "SysDefault", DataType: system.BOOL, Values: []string{"1"}}
+		lowIP := EntryTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"192.168.0.0"}}
+		highIP := EntryTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"192.168.0.255"}}
+		sysDefault := EntryTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
 		newVlan := Entry{Label: "Olivers Home", Description: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
 		insert_ENTRY_Inventory(newVlan)

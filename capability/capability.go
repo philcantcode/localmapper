@@ -66,18 +66,20 @@ func executeCapability(capability Capability) {
 	system.Log(fmt.Sprintf("Executing Capability: %s", capability.Label), true)
 
 	switch capability.Interpreter {
-	case system.NMAP:
+	case system.Interpreter_NMAP:
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
 		nmapRun := nmap.ProcessResults(resultBytes)
 		nmapRun.ConvertToEntry()
 		nmapRun.StoreResults()
-	case system.UNIVERSAL:
-		local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
-	case system.ACCCHECK:
+	case system.Interpreter_UNIVERSAL:
+		res := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
+
+		system.Log("UNIVERSAL RESULT : "+string(res), true)
+	case system.Interpreter_ACCCHECK:
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
 		result := acccheck.ProcessResults(resultBytes)
 		acccheck.StoreResults(result)
-	case system.NBTSCAN:
+	case system.Interpreter_NBTSCAN:
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
 		nbtScan := nbtscan.ProcessResults(resultBytes)
 		nbtscan.ConvertToEntry(nbtScan)
@@ -112,13 +114,18 @@ func (capability Capability) ExtractCompabileTags(entry cmdb.Entry) (bool, Capab
 func (capParam Param) extractCompatibleParams(entryTags []cmdb.EntryTag) (bool, Param) {
 	// For each: {DataType.CMDB, DataType.IP}
 	for _, pType := range capParam.DataType {
-		// If the value is already set, move on
-		if capParam.Value != "" {
+		// If the value is already set, or there's an available default, move on
+		if capParam.Value != "" || capParam.Default != "" {
+
+			if capParam.Value == "" {
+				capParam.Value = capParam.Default
+			}
+
 			return true, capParam
 		}
 
 		// Skip empty tags that don't require input
-		if pType == system.EMPTY {
+		if pType == system.DataType_EMPTY {
 			return true, capParam
 		}
 

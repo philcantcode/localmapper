@@ -12,27 +12,27 @@ func processProposition(proposition Proposition) {
 		sysTags := []cmdb.EntryTag{}
 		usrTags := []cmdb.EntryTag{}
 
-		sysTags = append(sysTags, cmdb.EntryTag{Label: "Verified", DataType: system.BOOL, Values: []string{"1"}})
-		sysTags = append(sysTags, cmdb.EntryTag{Label: "Identity", DataType: system.STRING, Values: []string{"local"}})
+		sysTags = append(sysTags, cmdb.EntryTag{Label: "Verified", DataType: system.DataType_BOOL, Values: []string{"1"}})
+		sysTags = append(sysTags, cmdb.EntryTag{Label: "Identity", DataType: system.DataType_STRING, Values: []string{"local"}})
 
-		sysTags = append(sysTags, cmdb.EntryTag{Label: "IP", DataType: system.IP, Values: []string{proposition.Predicate.Value}})
+		sysTags = append(sysTags, cmdb.EntryTag{Label: "IP", DataType: system.DataType_IP, Values: []string{proposition.Predicate.Value}})
 
 		for _, net := range local.GetNetworkAdapters() {
 			if net.IP == proposition.Predicate.Value {
 				if net.MAC != "" {
-					sysTags = append(sysTags, cmdb.EntryTag{Label: "MAC", DataType: system.MAC, Values: []string{net.MAC}})
+					sysTags = append(sysTags, cmdb.EntryTag{Label: "MAC", DataType: system.DataType_MAC, Values: []string{net.MAC}})
 				}
 
 				if net.MAC6 != "" {
-					sysTags = append(sysTags, cmdb.EntryTag{Label: "MAC6", DataType: system.MAC6, Values: []string{net.MAC6}})
+					sysTags = append(sysTags, cmdb.EntryTag{Label: "MAC6", DataType: system.DataType_MAC6, Values: []string{net.MAC6}})
 				}
 
 				if net.Label != "" {
-					sysTags = append(sysTags, cmdb.EntryTag{Label: "NetAdapter", DataType: system.STRING, Values: []string{net.Label}})
+					sysTags = append(sysTags, cmdb.EntryTag{Label: "NetAdapter", DataType: system.DataType_STRING, Values: []string{net.Label}})
 				}
 
 				if net.IP6 != "" {
-					sysTags = append(sysTags, cmdb.EntryTag{Label: "IP6", DataType: system.IP6, Values: []string{net.IP6}})
+					sysTags = append(sysTags, cmdb.EntryTag{Label: "IP6", DataType: system.DataType_IP6, Values: []string{net.IP6}})
 				}
 			}
 		}

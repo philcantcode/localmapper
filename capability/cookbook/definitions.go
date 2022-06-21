@@ -73,15 +73,15 @@ func FirstTimeSetup() {
 				ExclusionList: []Exclusion{
 					{
 						Value:    "10.0.0.0/8",
-						DataType: system.CIDR,
+						DataType: system.DataType_CIDR,
 					},
 					{
 						Value:    "172.16.0.0/12",
-						DataType: system.CIDR,
+						DataType: system.DataType_CIDR,
 					},
 					{
 						Value:    "192.168.0.0/16",
-						DataType: system.CIDR,
+						DataType: system.DataType_CIDR,
 					},
 				},
 			},

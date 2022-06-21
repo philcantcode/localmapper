@@ -29,6 +29,7 @@ type Param struct {
 	Description string            // Contextual info about the flag
 	DataType    []system.DataType // e.g., IP, IP Range, String
 	Default     string            // Default value that will be used if no value provided
+	Options     []string          // Options the user may choose from
 }
 
 func ParamsToArray(params []Param) []string {

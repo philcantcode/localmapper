@@ -5,35 +5,36 @@ type Category string
 type Interpreter string
 
 const (
-	EMPTY         DataType = "EMPTY"
-	IP            DataType = "IP"
-	IP_RANGE      DataType = "IP_RANGE" // 192.168.0.0 - 192.168.0.1
-	MAC           DataType = "MAC"
-	INTEGER       DataType = "INTEGER"
-	DECIMAL       DataType = "DECIMAL"
-	BOOL          DataType = "BOOL" // 1 or 0
-	STRING        DataType = "STRING"
-	CIDR          DataType = "CIDR" // 192.168.0.0/24
-	IP6           DataType = "IP6"
-	MAC6          DataType = "MAC6"
-	CPE           DataType = "CPE"          // Common Platform Enumeration: cpe:/o:linux:linux_kernel:2.6.39
-	CCI           DataType = "CCI"          // Common Capability Identifier
-	CCBI          DataType = "CCBI"         // Common Cookbook Identifier
-	IP_RANGE_LOW  DataType = "IP_RANGE_LOW" // 192.168.0.0 - IP meant to be used in a range calculation but is a single IP
-	IP_RANGE_HIGH DataType = "IP_RANGE_HIGH"
-	USERNAME      DataType = "USERNAME"
+	DataType_EMPTY         DataType = "EMPTY"
+	DataType_IP            DataType = "IP"
+	DataType_IP_RANGE      DataType = "IP_RANGE" // 192.168.0.0 - 192.168.0.1
+	DataType_MAC           DataType = "MAC"
+	DataType_INTEGER       DataType = "INTEGER"
+	DataType_DECIMAL       DataType = "DECIMAL"
+	DataType_BOOL          DataType = "BOOL" // 1 or 0
+	DataType_STRING        DataType = "STRING"
+	DataType_CIDR          DataType = "CIDR" // 192.168.0.0/24
+	DataType_IP6           DataType = "IP6"
+	DataType_MAC6          DataType = "MAC6"
+	DataType_CPE           DataType = "CPE"          // Common Platform Enumeration: cpe:/o:linux:linux_kernel:2.6.39
+	DataType_CCI           DataType = "CCI"          // Common Capability Identifier
+	DataType_CCBI          DataType = "CCBI"         // Common Cookbook Identifier
+	DataType_IP_RANGE_LOW  DataType = "IP_RANGE_LOW" // 192.168.0.0 - IP meant to be used in a range calculation but is a single IP
+	DataType_IP_RANGE_HIGH DataType = "IP_RANGE_HIGH"
+	DataType_USERNAME      DataType = "USERNAME"
 )
 
 const (
-	DDOS      Category = "DDOS"
-	DISCOVERY Category = "DISCOVERY"
+	Category_DDOS       Category = "DDOS"
+	Category_DISCOVERY  Category = "DISCOVERY"
+	Category_BRUTEFORCE Category = "BRUTEFORCE"
 )
 
 const (
-	UNIVERSAL Interpreter = "UNIVERSAL"
-	NMAP      Interpreter = "NMAP"
-	ACCCHECK  Interpreter = "ACCCHECK"
-	NBTSCAN   Interpreter = "NBTSCAN"
+	Interpreter_UNIVERSAL Interpreter = "UNIVERSAL"
+	Interpreter_NMAP      Interpreter = "NMAP"
+	Interpreter_ACCCHECK  Interpreter = "ACCCHECK"
+	Interpreter_NBTSCAN   Interpreter = "NBTSCAN"
 )
 
 func FirstTimeSetup() {

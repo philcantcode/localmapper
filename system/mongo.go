@@ -28,16 +28,16 @@ var MONGO_INITIALISED = false
 func InitMongo() {
 	var err error
 
-	if Get("mongo-password-req") == "1" {
+	if GetConfig("mongo-password-req") == "1" {
 		uri = fmt.Sprintf("mongodb://%s:%s@%s:%s",
-			Get("mongo-user"),
-			Get("mongo-password"),
-			Get("mongo-ip"),
-			Get("mongo-port"))
+			GetConfig("mongo-user"),
+			GetConfig("mongo-password"),
+			GetConfig("mongo-ip"),
+			GetConfig("mongo-port"))
 	} else {
 		uri = fmt.Sprintf("mongodb://%s:%s",
-			Get("mongo-ip"),
-			Get("mongo-port"))
+			GetConfig("mongo-ip"),
+			GetConfig("mongo-port"))
 	}
 
 	Log("Attempting to connect MongoDB to: "+uri, true)

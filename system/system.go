@@ -6,7 +6,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-func Get(key string) string {
+func GetConfig(key string) string {
 	for _, k := range SELECT_Settings_All() {
 		if k.Key == key {
 			return k.Value

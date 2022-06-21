@@ -5,6 +5,7 @@ RUN mkdir /src
 
 # Basic tools
 RUN apt-get install nano -y
+RUN apt-get install p7zip-full -y
 
 # Network tools
 RUN apt-get install net-tools -y
@@ -20,3 +21,4 @@ RUN apt-get install nmap -y
 RUN apt-get install braa -y
 RUN apt-get install dmitry -y
 RUN apt-get install nbtscan -y
+RUN apt-get install hydra -y

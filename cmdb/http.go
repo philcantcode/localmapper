@@ -105,9 +105,9 @@ func HTTP_INSERT_Pending_Vlan(w http.ResponseWriter, r *http.Request) {
 	cidrArr, err := utils.IPv4RangeToCIDRRange(lowIP, highIP)
 	system.Error("Couldn't create CIDR", err)
 
-	highIpTag := EntryTag{Label: "LowIP", DataType: system.IP, Values: []string{lowIP}}
-	lowIpTag := EntryTag{Label: "HighIP", DataType: system.IP, Values: []string{highIP}}
-	cidr := EntryTag{Label: "CIDR", DataType: system.CIDR, Values: cidrArr}
+	highIpTag := EntryTag{Label: "LowIP", DataType: system.DataType_IP, Values: []string{lowIP}}
+	lowIpTag := EntryTag{Label: "HighIP", DataType: system.DataType_IP, Values: []string{highIP}}
+	cidr := EntryTag{Label: "CIDR", DataType: system.DataType_CIDR, Values: cidrArr}
 	entry := Entry{Label: label, Description: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{local.GetDateTime().DateTime}, SysTags: []EntryTag{lowIpTag, highIpTag, cidr}, UsrTags: []EntryTag{}}
 
 	insert_ENTRY_Pending(entry)
@@ -119,7 +119,7 @@ func HTTP_Pending_Approve(w http.ResponseWriter, r *http.Request) {
 	id := r.FormValue("ID")
 
 	pending := SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})[0]
-	pending.SysTags = append(pending.SysTags, EntryTag{Label: "Verified", DataType: system.BOOL, Values: []string{"1"}})
+	pending.SysTags = append(pending.SysTags, EntryTag{Label: "Verified", DataType: system.DataType_BOOL, Values: []string{"1"}})
 
 	insert_ENTRY_Inventory(pending)
 	DELETE_ENTRY_Pending(pending)

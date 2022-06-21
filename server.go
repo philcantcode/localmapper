@@ -14,7 +14,7 @@ import (
 )
 
 func initServer() {
-	system.Log("Hosting Server at http://localhost:"+system.Get("server-port"), true)
+	system.Log("Hosting Server at http://localhost:"+system.GetConfig("server-port"), true)
 
 	router := mux.NewRouter()
 
@@ -73,5 +73,5 @@ func initServer() {
 
 	router.PathPrefix("/").Handler(http.StripPrefix("/", fileServer))
 
-	http.ListenAndServe(":"+system.Get("server-port"), cors(router))
+	http.ListenAndServe(":"+system.GetConfig("server-port"), cors(router))
 }

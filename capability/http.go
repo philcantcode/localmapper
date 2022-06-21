@@ -83,14 +83,14 @@ and finds any matching capabilities given the CMDB SysTags
 */
 func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
-	cmbd_id := params["cmbd_id"]
+	cmdb_id := params["cmbd_id"]
 	cap_id := params["capability_id"]
 
 	cap := SELECT_Capability(bson.M{"_id": system.EncodeID(cap_id)}, bson.M{})[0]
 	entries := []cmdb.Entry{}
 
-	entries = append(entries, cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": system.EncodeID(cmbd_id)}, bson.M{})...)
-	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(cmbd_id)}, bson.M{})...)
+	entries = append(entries, cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": system.EncodeID(cmdb_id)}, bson.M{})...)
+	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(cmdb_id)}, bson.M{})...)
 
 	if len(entries) != 1 {
 		system.Force("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
