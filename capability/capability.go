@@ -10,6 +10,7 @@ import (
 	"github.com/philcantcode/localmapper/capability/nmap"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/system"
+	"github.com/philcantcode/localmapper/utils"
 )
 
 var currentRoutines = 0
@@ -90,12 +91,36 @@ func executeCapability(capability Capability) {
 }
 
 /*
-	ExtractCompabileTags takes a given entry and attempts to match the parameters of the capability
+	CheckCompatability takes a given entry and attempts to match the parameters of the capability
 	with compatible tags from the entry.
 */
-func (capability Capability) ExtractCompabileTags(entry cmdb.Entry) (bool, Capability) {
+func (capability Capability) CheckCompatability(entry cmdb.Entity) (bool, Capability) {
 	var success bool
 
+	// Check the capability preconditions
+outer:
+	for _, precon := range capability.Preconditions {
+		preconSatisfied := false
+
+		for _, sysTags := range entry.SysTags {
+			// Label and DataType matches
+			if precon.Label == sysTags.Label && precon.DataType == sysTags.DataType {
+				for _, preconVal := range precon.Values {
+					if utils.ArrayContains(preconVal, sysTags.Values) {
+						preconSatisfied = true
+						continue outer
+					}
+				}
+			}
+		}
+
+		// Precondition not satisffied
+		if !preconSatisfied {
+			return false, capability
+		}
+	}
+
+	// Check the command paramters
 	for k, capParam := range capability.Command.Params {
 		success, capability.Command.Params[k] = capParam.extractCompatibleParams(entry.SysTags)
 
@@ -111,7 +136,7 @@ func (capability Capability) ExtractCompabileTags(entry cmdb.Entry) (bool, Capab
 	extractCompatibleParams Determines if given a capability param {"Value": "","DataType": 1, "Default": ""}
 	Is there any SysTags that can fulfil the Values
 */
-func (capParam Param) extractCompatibleParams(entryTags []cmdb.EntryTag) (bool, Param) {
+func (capParam Param) extractCompatibleParams(entryTags []cmdb.EntityTag) (bool, Param) {
 	// For each: {DataType.CMDB, DataType.IP}
 	for _, pType := range capParam.DataType {
 		// If the value is already set, or there's an available default, move on

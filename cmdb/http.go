@@ -25,7 +25,7 @@ func HTTP_JSON_GetLocal(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	json.NewEncoder(w).Encode(Entry{})
+	json.NewEncoder(w).Encode(Entity{})
 }
 
 func HTTP_JSON_Inventory_GetAll(w http.ResponseWriter, r *http.Request) {
@@ -49,7 +49,7 @@ func HTTP_JSON_GetByType(w http.ResponseWriter, r *http.Request) {
 func HTTP_JSON_GetByID(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	id := params["id"]
-	device := []Entry{}
+	device := []Entity{}
 
 	system.Log("HTTP request made for: "+id, false)
 
@@ -68,7 +68,7 @@ func HTTP_JSON_GetByID(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Not found return array of empty values
-	json.NewEncoder(w).Encode([]Entry{})
+	json.NewEncoder(w).Encode([]Entity{})
 }
 
 //TODO: Add validation
@@ -105,10 +105,10 @@ func HTTP_INSERT_Pending_Vlan(w http.ResponseWriter, r *http.Request) {
 	cidrArr, err := utils.IPv4RangeToCIDRRange(lowIP, highIP)
 	system.Error("Couldn't create CIDR", err)
 
-	highIpTag := EntryTag{Label: "LowIP", DataType: system.DataType_IP, Values: []string{lowIP}}
-	lowIpTag := EntryTag{Label: "HighIP", DataType: system.DataType_IP, Values: []string{highIP}}
-	cidr := EntryTag{Label: "CIDR", DataType: system.DataType_CIDR, Values: cidrArr}
-	entry := Entry{Label: label, Description: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{local.GetDateTime().DateTime}, SysTags: []EntryTag{lowIpTag, highIpTag, cidr}, UsrTags: []EntryTag{}}
+	highIpTag := EntityTag{Label: "LowIP", DataType: system.DataType_IP, Values: []string{lowIP}}
+	lowIpTag := EntityTag{Label: "HighIP", DataType: system.DataType_IP, Values: []string{highIP}}
+	cidr := EntityTag{Label: "CIDR", DataType: system.DataType_CIDR, Values: cidrArr}
+	entry := Entity{Label: label, Description: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{local.GetDateTime().DateTime}, SysTags: []EntityTag{lowIpTag, highIpTag, cidr}, UsrTags: []EntityTag{}}
 
 	insert_ENTRY_Pending(entry)
 
@@ -119,7 +119,7 @@ func HTTP_Pending_Approve(w http.ResponseWriter, r *http.Request) {
 	id := r.FormValue("ID")
 
 	pending := SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})[0]
-	pending.SysTags = append(pending.SysTags, EntryTag{Label: "Verified", DataType: system.DataType_BOOL, Values: []string{"1"}})
+	pending.SysTags = append(pending.SysTags, EntityTag{Label: "Verified", DataType: system.DataType_BOOL, Values: []string{"1"}})
 
 	insert_ENTRY_Inventory(pending)
 	DELETE_ENTRY_Pending(pending)
@@ -145,7 +145,7 @@ func HTTP_JSON_IdentityConfidence_Get(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	id := params["id"]
 
-	results := []Entry{}
+	results := []Entity{}
 
 	results = append(results, SELECT_ENTRY_Inventory(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)
 	results = append(results, SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)

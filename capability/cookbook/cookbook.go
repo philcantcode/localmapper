@@ -43,7 +43,7 @@ func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
 			return
 		}
 
-		isMatch, cap := caps[0].ExtractCompabileTags(entries[0])
+		isMatch, cap := caps[0].CheckCompatability(entries[0])
 
 		if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsInBook) {
 			system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", caps[0].Label, entries[0].Label), true)
@@ -76,7 +76,7 @@ func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
 						return
 					}
 
-					isMatch, cap := cap.ExtractCompabileTags(entries[0])
+					isMatch, cap := cap.CheckCompatability(entries[0])
 
 					if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsInBook) {
 						system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", cap.Label, entries[0].Label), true)

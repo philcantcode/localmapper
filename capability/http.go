@@ -34,7 +34,7 @@ func HTTP_JSON_GetCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	id := params["id"]
 	result := []Capability{}
-	entries := []cmdb.Entry{}
+	entries := []cmdb.Entity{}
 
 	entries = append(entries, cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)
 	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)
@@ -47,7 +47,7 @@ func HTTP_JSON_GetCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	caps := SELECT_Capability(bson.M{}, bson.M{})
 
 	for _, cap := range caps {
-		isCompatible, parsedCap := cap.ExtractCompabileTags(entries[0])
+		isCompatible, parsedCap := cap.CheckCompatability(entries[0])
 
 		if isCompatible {
 			result = append(result, parsedCap)
@@ -87,7 +87,7 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	cap_id := params["capability_id"]
 
 	cap := SELECT_Capability(bson.M{"_id": system.EncodeID(cap_id)}, bson.M{})[0]
-	entries := []cmdb.Entry{}
+	entries := []cmdb.Entity{}
 
 	entries = append(entries, cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": system.EncodeID(cmdb_id)}, bson.M{})...)
 	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(cmdb_id)}, bson.M{})...)
@@ -97,7 +97,7 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	isCompatible, parsedCap := cap.ExtractCompabileTags(entries[0])
+	isCompatible, parsedCap := cap.CheckCompatability(entries[0])
 
 	if isCompatible {
 		parsedCap.QueueCapability()

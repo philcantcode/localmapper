@@ -22,6 +22,10 @@ const (
 	DataType_IP_RANGE_LOW  DataType = "IP_RANGE_LOW" // 192.168.0.0 - IP meant to be used in a range calculation but is a single IP
 	DataType_IP_RANGE_HIGH DataType = "IP_RANGE_HIGH"
 	DataType_USERNAME      DataType = "USERNAME"
+	DataType_PORT          DataType = "PORT"     // 1 - 65,535
+	DataType_PROTOCOL      DataType = "PROTOCOL" // SSH, SNMP, HTTP, SOCKS5
+	DataType_PRODUCT       DataType = "PRODUCT"  // HP Generic Scan Gateway, Amazon Whisperplay DIAL REST servic, Netatalk
+	DataType_VENDOR        DataType = "VENDOR"
 )
 
 const (

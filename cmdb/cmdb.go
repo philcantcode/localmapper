@@ -15,9 +15,9 @@ import (
 	EntryExistsSomewhere returns true if an entry exists either
 	Inventory OR Pending
 */
-func EntryExists_ByIP(entry Entry) bool {
+func EntryExists_ByIP(entry Entity) bool {
 	tag, exists, _ := FindSysTag("IP", entry)
-	result := []Entry{}
+	result := []Entity{}
 
 	if !exists {
 		return false
@@ -41,7 +41,7 @@ func EntryExists_ByIP(entry Entry) bool {
 	Finds the old entry result[0] and then updates the
 	values to the new entry.
 */
-func updateEntriesTags_ByIP(entry Entry) bool {
+func updateEntriesTags_ByIP(entry Entity) bool {
 	tag, exists, _ := FindSysTag("IP", entry)
 
 	if !exists {
@@ -155,7 +155,7 @@ type IdentityConfidence struct {
 	CalcIdentityConfidenceScore returns an structure of confidences for various
 	values known about the device.
 */
-func CalcIdentityConfidenceScore(entry Entry) IdentityConfidence {
+func CalcIdentityConfidenceScore(entry Entity) IdentityConfidence {
 	result := IdentityConfidence{IP: 0, MAC: 0, HostName: 0, Vendor: 0, OS: 0, DateSeen: 0, Average: 0}
 
 	// IP4 weighted 80%, divided by the number of past changes
@@ -235,7 +235,7 @@ func CalcIdentityConfidenceScore(entry Entry) IdentityConfidence {
 	return result
 }
 
-func CalcTimeGraph(entry Entry) TimeGraph {
+func CalcTimeGraph(entry Entity) TimeGraph {
 	graph := TimeGraph{Keys: []string{}, Values: []int{}}
 
 	windowMinute, err := strconv.Atoi(system.GetConfig("date-seen-graph-mins-val"))
@@ -284,60 +284,60 @@ func FirstTimeSetup() {
 	vlan1 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 1", "desc": "Default VLAN"}, bson.M{})
 
 	if len(vlan1) == 0 {
-		lowIP := EntryTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"10.0.0.0"}}
-		highIP := EntryTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"10.255.255.255"}}
-		sysDefault := EntryTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
+		lowIP := EntityTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"10.0.0.0"}}
+		highIP := EntityTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"10.255.255.255"}}
+		sysDefault := EntityTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
-		newVlan := Entry{Label: "Private Range 1", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
+		newVlan := Entity{Label: "Private Range 1", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntityTag{lowIP, highIP, sysDefault}}
 		insert_ENTRY_Inventory(newVlan)
 	}
 
 	vlan2 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 2", "desc": "Default VLAN"}, bson.M{})
 
 	if len(vlan2) == 0 {
-		lowIP := EntryTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"172.16.0.0"}}
-		highIP := EntryTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"172.31.255.255"}}
-		sysDefault := EntryTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
+		lowIP := EntityTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"172.16.0.0"}}
+		highIP := EntityTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"172.31.255.255"}}
+		sysDefault := EntityTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
-		newVlan := Entry{Label: "Private Range 2", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
+		newVlan := Entity{Label: "Private Range 2", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntityTag{lowIP, highIP, sysDefault}}
 		insert_ENTRY_Inventory(newVlan)
 	}
 
 	vlan3 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 3", "desc": "Default VLAN"}, bson.M{})
 
 	if len(vlan3) == 0 {
-		lowIP := EntryTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"192.168.0.0"}}
-		highIP := EntryTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"192.168.255.255"}}
-		sysDefault := EntryTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
+		lowIP := EntityTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"192.168.0.0"}}
+		highIP := EntityTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"192.168.255.255"}}
+		sysDefault := EntityTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
-		newVlan := Entry{Label: "Private Range 3", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
+		newVlan := Entity{Label: "Private Range 3", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntityTag{lowIP, highIP, sysDefault}}
 		insert_ENTRY_Inventory(newVlan)
 	}
 
 	vlan4 := SELECT_ENTRY_Inventory(bson.M{"label": "Test Home", "desc": "Test VLAN"}, bson.M{})
 
 	if len(vlan4) == 0 {
-		lowIP := EntryTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"192.168.1.0"}}
-		highIP := EntryTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"192.168.1.255"}}
-		sysDefault := EntryTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
+		lowIP := EntityTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"192.168.1.0"}}
+		highIP := EntityTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"192.168.1.255"}}
+		sysDefault := EntityTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
-		newVlan := Entry{Label: "Test Home", Description: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
+		newVlan := Entity{Label: "Test Home", Description: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntityTag{lowIP, highIP, sysDefault}}
 		insert_ENTRY_Inventory(newVlan)
 	}
 
 	vlan5 := SELECT_ENTRY_Inventory(bson.M{"label": "Olivers Home", "desc": "Test VLAN"}, bson.M{})
 
 	if len(vlan5) == 0 {
-		lowIP := EntryTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"192.168.0.0"}}
-		highIP := EntryTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"192.168.0.255"}}
-		sysDefault := EntryTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
+		lowIP := EntityTag{Label: "LowIP", DataType: system.DataType_IP_RANGE_LOW, Values: []string{"192.168.0.0"}}
+		highIP := EntityTag{Label: "HighIP", DataType: system.DataType_IP_RANGE_HIGH, Values: []string{"192.168.0.255"}}
+		sysDefault := EntityTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
-		newVlan := Entry{Label: "Olivers Home", Description: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntryTag{lowIP, highIP, sysDefault}}
+		newVlan := Entity{Label: "Olivers Home", Description: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntityTag{lowIP, highIP, sysDefault}}
 		insert_ENTRY_Inventory(newVlan)
 	}
 }
 
-func UpdateOrInsert(entry Entry) {
+func UpdateOrInsert(entry Entity) {
 	// Insert to pending or update both DBs
 	if EntryExists_ByIP(entry) {
 		entryUpdateSuccess := updateEntriesTags_ByIP(entry)

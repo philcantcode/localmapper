@@ -29,19 +29,19 @@ const (
    3 - Routers, L3 switches
    2 - L2 switches, Bridges
    1 - Hubs, repeaters, modems */
-type Entry struct {
+type Entity struct {
 	ID          primitive.ObjectID `bson:"_id"`
 	Label       string
 	Description string
 	CMDBType    CMDBType
-	OSILayer    int        // 1 - 7
-	DateSeen    []string   //[] Array of dates seen
-	UsrTags     []EntryTag // [Project-X, Bob's Server] etc
-	SysTags     []EntryTag // [IP: xxx, MAC: xxx, URL: xxx] etc
+	OSILayer    int         // 1 - 7
+	DateSeen    []string    //[] Array of dates seen
+	UsrTags     []EntityTag // [Project-X, Bob's Server] etc
+	SysTags     []EntityTag // [IP: xxx, MAC: xxx, URL: xxx] etc
 	//TODO: implement histories for tracking changes
 }
 
-type EntryTag struct {
+type EntityTag struct {
 	Label       string
 	Description string
 	DataType    system.DataType

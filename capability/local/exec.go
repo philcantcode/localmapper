@@ -23,6 +23,7 @@ func Execute(prog string, params []string) []byte {
 
 	cmd := exec.Command(prog, params...)
 	cmdReader, err := cmd.StdoutPipe()
+	resultBytes := []byte{}
 
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "Error creating StdoutPipe for Cmd", err)
@@ -33,7 +34,10 @@ func Execute(prog string, params []string) []byte {
 
 	go func() {
 		for scanner.Scan() {
-			fmt.Printf("\t > %s\n", scanner.Text())
+			resByte := scanner.Bytes()
+
+			resultBytes = append(resultBytes, resByte...)
+			//fmt.Printf("\t > %s\n", string(resByte))
 		}
 	}()
 
@@ -52,5 +56,5 @@ func Execute(prog string, params []string) []byte {
 
 	//system.Fatal(fmt.Sprintf("Error returned in local.Execute running a command: %s > %v", prog, params), err)
 
-	return scanner.Bytes()
+	return resultBytes
 }

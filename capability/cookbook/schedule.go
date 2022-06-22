@@ -135,7 +135,7 @@ func InitialiseAllSchedules() {
 /*
 	isExcluded searches the SysTags for any exclusion values
 */
-func isExcluded(entry cmdb.Entry, exclusions []Exclusion) bool {
+func isExcluded(entry cmdb.Entity, exclusions []Exclusion) bool {
 	for _, tag := range entry.SysTags {
 		for _, excl := range exclusions {
 			// If the DataTypes match and exclue value in tags array

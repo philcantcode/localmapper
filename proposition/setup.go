@@ -86,9 +86,9 @@ func recalcualteVlanCIDR() {
 		_, found, index := cmdb.FindSysTag("CIDR", entry)
 
 		if found {
-			entry.SysTags[index] = cmdb.EntryTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.DataType_CIDR, Values: cidr}
+			entry.SysTags[index] = cmdb.EntityTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.DataType_CIDR, Values: cidr}
 		} else {
-			entry.SysTags = append(entry.SysTags, cmdb.EntryTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.DataType_CIDR, Values: cidr})
+			entry.SysTags = append(entry.SysTags, cmdb.EntityTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.DataType_CIDR, Values: cidr})
 		}
 
 		cmdb.UPDATE_ENTRY_Inventory(entry)

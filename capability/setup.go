@@ -1,6 +1,7 @@
 package capability
 
 import (
+	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson"
 )
@@ -90,7 +91,7 @@ func FirstTimeSetup() {
 				{
 					Description: "Protocol Type",
 					Flag:        "",
-					DataType:    []system.DataType{system.DataType_STRING},
+					DataType:    []system.DataType{system.DataType_PROTOCOL, system.DataType_STRING},
 					Value:       "snmp",
 					Default:     "snmp",
 				},
@@ -104,8 +105,16 @@ func FirstTimeSetup() {
 		Label:       "Brute Force SSH",
 		Description: "Brute force against SSH using various wordlists.",
 		Category:    system.Category_BRUTEFORCE,
-		ResultTags:  []string{},
-		Hidden:      false,
+		Preconditions: []cmdb.EntityTag{
+			{
+				Label:       "Ports",
+				Description: "Check that the SSH port is open",
+				DataType:    system.DataType_PORT,
+				Values:      []string{"22"},
+			},
+		},
+		ResultTags: []string{},
+		Hidden:     false,
 		Command: Command{
 			Program: "hydra",
 			Params: []Param{
@@ -159,7 +168,7 @@ func FirstTimeSetup() {
 				{
 					Description: "Protocol Type",
 					Flag:        "",
-					DataType:    []system.DataType{system.DataType_STRING},
+					DataType:    []system.DataType{system.DataType_PROTOCOL},
 					Value:       "ssh",
 					Default:     "ssh",
 				},
