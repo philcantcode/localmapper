@@ -21,8 +21,9 @@ type Capability struct {
 }
 
 type Command struct {
-	Program string  // e.g., nmap
-	Params  []Param // List of parameters to be supplied
+	Program   string  // e.g., nmap
+	RiskLevel int     // 0 - 10
+	Params    []Param // List of parameters to be supplied
 }
 
 type Param struct {
@@ -31,7 +32,14 @@ type Param struct {
 	Description string            // Contextual info about the flag
 	DataType    []system.DataType // e.g., IP, IP Range, String
 	Default     string            // Default value that will be used if no value provided
-	Options     []string          // Options the user may choose from
+	Options     []ParamOpt        // Options the user may choose from
+}
+
+type ParamOpt struct {
+	Label     string
+	Value     string
+	FileSize  string
+	RiskLevel int // 0 - 10
 }
 
 func ParamsToArray(params []Param) []string {

@@ -27,8 +27,12 @@ func ProcessResults(resultByte []byte) NmapRun {
 	return nmapRun
 }
 
-func (result NmapRun) StoreResults() {
-	INSERT_Nmap(result)
+func (result NmapRun) StoreResults() string {
+	return INSERT_Nmap(result)
+}
+
+func WriteResultToDisk(res []byte, fileName string) {
+	utils.CreateAndWriteFile(system.GetConfig("nmap-results-dir")+"/"+fileName+".txt", string(res))
 }
 
 /*

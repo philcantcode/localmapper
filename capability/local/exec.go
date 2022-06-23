@@ -5,24 +5,23 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"time"
 
 	"github.com/philcantcode/localmapper/system"
 )
 
-// func Execute(prog string, params []string) []byte {
-// 	system.Log(fmt.Sprintf("Attempting local.Execute: %s > %v", prog, params), true)
-
-// 	resultByte, err := exec.Command(prog, params...).CombinedOutput()
-// 	system.Fatal(fmt.Sprintf("Error returned in local.Execute running a command: %s > %v", prog, params), err)
-
-// 	return resultByte
-// }
+type ExecResult struct {
+	Label    string
+	DateTime time.Time
+	Output   []string
+}
 
 func Execute(prog string, params []string) []byte {
 	system.Log(fmt.Sprintf("Attempting local.Execute: %s > %v", prog, params), true)
 
 	cmd := exec.Command(prog, params...)
 	cmdReader, err := cmd.StdoutPipe()
+
 	resultBytes := []byte{}
 
 	if err != nil {

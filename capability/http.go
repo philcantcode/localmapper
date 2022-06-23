@@ -3,7 +3,9 @@ package capability
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"net/http"
+	"strconv"
 
 	"github.com/gorilla/mux"
 	"github.com/philcantcode/localmapper/cmdb"
@@ -83,18 +85,35 @@ and finds any matching capabilities given the CMDB SysTags
 */
 func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
+	r.ParseForm()
 	cmdb_id := params["cmbd_id"]
 	cap_id := params["capability_id"]
 
 	cap := SELECT_Capability(bson.M{"_id": system.EncodeID(cap_id)}, bson.M{})[0]
 	entries := []cmdb.Entity{}
 
-	entries = append(entries, cmdb.SELECT_ENTRY_Inventory(bson.M{"_id": system.EncodeID(cmdb_id)}, bson.M{})...)
-	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(cmdb_id)}, bson.M{})...)
+	entries = append(entries, cmdb.SELECT_ENTRY_Joined(bson.M{"_id": system.EncodeID(cmdb_id)}, bson.M{})...)
 
 	if len(entries) != 1 {
 		system.Force("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
 		return
+	}
+
+	/*
+		Parse the POST params which are just options KEY VALUE pairs
+		The key is the flag, the value[0] is the index of the desired option.
+	*/
+	for key, val := range r.PostForm {
+		optID, err := strconv.Atoi(val[0])
+		system.Error("Could not convert Option ID to int", err)
+
+		fmt.Println(val)
+
+		for idx, param := range cap.Command.Params {
+			if param.Flag == key {
+				cap.Command.Params[idx].Value = param.Options[optID].Value
+			}
+		}
 	}
 
 	isCompatible, parsedCap := cap.CheckCompatability(entries[0])

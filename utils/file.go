@@ -57,12 +57,24 @@ func ClearFile(path string) {
 	}
 }
 
-func CreateFile(path string) {
+func CreateAndWriteFile(path string, contents string) {
 	f, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
+	f.WriteString(contents)
+
 	f.Close()
+}
+
+func DirExists(path string) bool {
+	_, err := os.Stat(path)
+
+	if err == nil {
+		return true
+	}
+
+	return false
 }

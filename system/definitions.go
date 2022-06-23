@@ -26,6 +26,7 @@ const (
 	DataType_PROTOCOL      DataType = "PROTOCOL" // SSH, SNMP, HTTP, SOCKS5
 	DataType_PRODUCT       DataType = "PRODUCT"  // HP Generic Scan Gateway, Amazon Whisperplay DIAL REST servic, Netatalk
 	DataType_VENDOR        DataType = "VENDOR"
+	DataType_FILE_PATH     DataType = "FILE_PATH"
 )
 
 const (

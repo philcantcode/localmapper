@@ -4,8 +4,10 @@ RUN apt-get update
 RUN mkdir /src
 
 # Basic tools
+RUN apt-get install git -y
 RUN apt-get install nano -y
 RUN apt-get install p7zip-full -y
+RUN apt-get install software-properties-common -y
 
 # Network tools
 RUN apt-get install net-tools -y

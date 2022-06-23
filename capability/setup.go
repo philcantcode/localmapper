@@ -71,14 +71,34 @@ func FirstTimeSetup() {
 				{
 					Description: "Password File",
 					Flag:        "-P",
-					DataType:    []system.DataType{system.DataType_STRING},
+					DataType:    []system.DataType{system.DataType_FILE_PATH},
 					Value:       "",
 					Default:     "/localmapper/wordlists/passwords/500-worst-passwords.txt",
-					Options: []string{
-						"/localmapper/wordlists/passwords/twitter-banned.txt",
-						"/localmapper/wordlists/passwords/500-worst-passwords.txt",
-						"/localmapper/wordlists/passwords/john.txt",
-						"/localmapper/wordlists/passwords/rockyou.txt",
+					Options: []ParamOpt{
+						{
+							Label:     "Passwords banned on Twitter",
+							Value:     "/localmapper/wordlists/passwords/twitter-banned.txt",
+							FileSize:  "2.8 KB",
+							RiskLevel: 7,
+						},
+						{
+							Label:     "500 Worst Passwords",
+							Value:     "/localmapper/wordlists/passwords/500-worst-passwords.txt",
+							FileSize:  "3.5 KB",
+							RiskLevel: 7,
+						},
+						{
+							Label:     "John the Ripper Password List",
+							Value:     "/localmapper/wordlists/passwords/john.txt",
+							FileSize:  "22 KB",
+							RiskLevel: 7,
+						},
+						{
+							Label:     "RockYou Password List",
+							Value:     "/localmapper/wordlists/passwords/rockyou.txt",
+							FileSize:  "134 MB",
+							RiskLevel: 7,
+						},
 					},
 				},
 				{
@@ -119,29 +139,69 @@ func FirstTimeSetup() {
 			Program: "hydra",
 			Params: []Param{
 				{
-					Description: "Usernames",
+					Description: "Username Wordlist",
 					Flag:        "-L",
-					DataType:    []system.DataType{system.DataType_USERNAME},
+					DataType:    []system.DataType{system.DataType_FILE_PATH},
 					Value:       "",
 					Default:     "/localmapper/wordlists/usernames/top-usernames-shortlist.txt",
-					Options: []string{
-						"/localmapper/wordlists/usernames/top-usernames-shortlist.txt",
-						"/localmapper/wordlists/usernames/usernames.txt",
-						"/localmapper/wordlists/usernames/xato-net-10-million-usernames-dup.txt",
-						"/localmapper/wordlists/usernames/xato-net-10-million-usernames-full.txt",
+					Options: []ParamOpt{
+						{
+							Label:     "Top Usernames (shortlist)",
+							Value:     "/localmapper/wordlists/usernames/top-usernames-shortlist.txt",
+							FileSize:  "118 Bytes",
+							RiskLevel: 7,
+						},
+						{
+							Label:     "Top Usernames",
+							Value:     "/localmapper/wordlists/usernames/usernames.txt",
+							FileSize:  "814 KB",
+							RiskLevel: 7,
+						},
+						{
+							Label:     "Top Usernames from 10 Million List",
+							Value:     "/localmapper/wordlists/usernames/xato-net-10-million-usernames-dup.txt",
+							FileSize:  "5 MB",
+							RiskLevel: 7,
+						},
+						{
+							Label:     "10 Million Usernames",
+							Value:     "/localmapper/wordlists/usernames/xato-net-10-million-usernames-full.txt",
+							FileSize:  "82 MB",
+							RiskLevel: 7,
+						},
 					},
 				},
 				{
-					Description: "Password File",
+					Description: "Password Wordlist",
 					Flag:        "-P",
 					DataType:    []system.DataType{system.DataType_STRING},
 					Value:       "",
 					Default:     "/localmapper/wordlists/passwords/500-worst-passwords.txt",
-					Options: []string{
-						"/localmapper/wordlists/passwords/twitter-banned.txt",
-						"/localmapper/wordlists/passwords/500-worst-passwords.txt",
-						"/localmapper/wordlists/passwords/john.txt",
-						"/localmapper/wordlists/passwords/rockyou.txt",
+					Options: []ParamOpt{
+						{
+							Label:     "Passwords banned on Twitter",
+							Value:     "/localmapper/wordlists/passwords/twitter-banned.txt",
+							FileSize:  "2.8 KB",
+							RiskLevel: 7,
+						},
+						{
+							Label:     "500 Worst Passwords",
+							Value:     "/localmapper/wordlists/passwords/500-worst-passwords.txt",
+							FileSize:  "3.5 KB",
+							RiskLevel: 7,
+						},
+						{
+							Label:     "John the Ripper Password List",
+							Value:     "/localmapper/wordlists/passwords/john.txt",
+							FileSize:  "22 KB",
+							RiskLevel: 7,
+						},
+						{
+							Label:     "RockYou Password List",
+							Value:     "/localmapper/wordlists/passwords/rockyou.txt",
+							FileSize:  "134 MB",
+							RiskLevel: 7,
+						},
 					},
 				},
 				{

@@ -9,13 +9,15 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func INSERT_Nmap(nmapResult NmapRun) {
+func INSERT_Nmap(nmapResult NmapRun) string {
 	system.Log("Attempting to INSERT_Nmap", false)
 
 	insertResult, err := system.Results_Nmap_DB.InsertOne(context.Background(), nmapResult)
 
 	system.Fatal("Couldn't Insert_Network_Nmap", err)
 	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), true)
+
+	return insertResult.InsertedID.(string)
 }
 
 /* SELECT_Nmap takes in a:

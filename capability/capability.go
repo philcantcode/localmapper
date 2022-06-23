@@ -71,10 +71,10 @@ func executeCapability(capability Capability) {
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
 		nmapRun := nmap.ProcessResults(resultBytes)
 		nmapRun.ConvertToEntry()
-		nmapRun.StoreResults()
+		resID := nmapRun.StoreResults()
+		nmap.WriteResultToDisk(resultBytes, resID)
 	case system.Interpreter_UNIVERSAL:
 		res := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
-
 		system.Log("UNIVERSAL RESULT : "+string(res), true)
 	case system.Interpreter_ACCCHECK:
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
@@ -97,7 +97,7 @@ func executeCapability(capability Capability) {
 func (capability Capability) CheckCompatability(entry cmdb.Entity) (bool, Capability) {
 	var success bool
 
-	// Check the capability preconditions
+	// Check the capability preconditions are satisified, 1 from each group must be satisified
 outer:
 	for _, precon := range capability.Preconditions {
 		preconSatisfied := false
