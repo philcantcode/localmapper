@@ -8,6 +8,7 @@ RUN apt-get install git -y
 RUN apt-get install nano -y
 RUN apt-get install p7zip-full -y
 RUN apt-get install software-properties-common -y
+RUN apt-get install libxml2-utils -y
 
 # Network tools
 RUN apt-get install net-tools -y

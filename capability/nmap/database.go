@@ -6,6 +6,7 @@ import (
 
 	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
@@ -17,7 +18,7 @@ func INSERT_Nmap(nmapResult NmapRun) string {
 	system.Fatal("Couldn't Insert_Network_Nmap", err)
 	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), true)
 
-	return insertResult.InsertedID.(string)
+	return insertResult.InsertedID.(primitive.ObjectID).Hex()
 }
 
 /* SELECT_Nmap takes in a:

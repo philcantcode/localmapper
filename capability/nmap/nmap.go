@@ -31,8 +31,11 @@ func (result NmapRun) StoreResults() string {
 	return INSERT_Nmap(result)
 }
 
-func WriteResultToDisk(res []byte, fileName string) {
-	utils.CreateAndWriteFile(system.GetConfig("nmap-results-dir")+"/"+fileName+".txt", string(res))
+func WriteResultToDisk(res []byte, fileName string) string {
+	path := system.GetConfig("nmap-results-dir") + "/" + fileName + ".txt"
+	utils.CreateAndWriteFile(path, string(res))
+
+	return path
 }
 
 /*

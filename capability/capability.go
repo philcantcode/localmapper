@@ -8,13 +8,15 @@ import (
 	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/capability/nbtscan"
 	"github.com/philcantcode/localmapper/capability/nmap"
+	"github.com/philcantcode/localmapper/capability/searchsploit"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/utils"
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 var currentRoutines = 0
-var maxRoutines = 50
+var maxRoutines = 8
 var queue = make(chan Capability, maxRoutines)
 var stopCapability = false
 
@@ -36,13 +38,16 @@ func ProcessCapabilityQueue() {
 		if currentRoutines < maxRoutines {
 			go func() {
 				currentRoutines++
+
 				cap := <-queue
 				executeCapability(cap)
+				system.Log(fmt.Sprintf("[Capability Queue]: %d/%d", len(queue), maxRoutines), true)
+
 				currentRoutines--
 			}()
 		}
 
-		time.Sleep(1000)
+		time.Sleep(3000)
 	}
 }
 
@@ -72,7 +77,18 @@ func executeCapability(capability Capability) {
 		nmapRun := nmap.ProcessResults(resultBytes)
 		nmapRun.ConvertToEntry()
 		resID := nmapRun.StoreResults()
-		nmap.WriteResultToDisk(resultBytes, resID)
+		path := nmap.WriteResultToDisk(resultBytes, resID)
+
+		// Run results through searchsploit
+		searchsploit := SELECT_Capability(bson.M{"cci": "cci:searchsploit:nmap:json"}, bson.M{})
+
+		if len(searchsploit) != 1 {
+			system.Force("Couldn't find cci:searchsploit:nmap:json", false)
+			return
+		}
+
+		searchsploit[0].Command.Params[0].Value = path
+		go searchsploit[0].QueueCapability()
 	case system.Interpreter_UNIVERSAL:
 		res := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
 		system.Log("UNIVERSAL RESULT : "+string(res), true)
@@ -85,6 +101,13 @@ func executeCapability(capability Capability) {
 		nbtScan := nbtscan.ProcessResults(resultBytes)
 		nbtscan.ConvertToEntry(nbtScan)
 		nbtscan.StoreResults(nbtScan)
+	case system.Interpreter_SEARCHSPLOIT:
+		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
+		exploitDB := searchsploit.ProcessResults(resultBytes)
+
+		for _, exp := range exploitDB {
+			exp.StoreResults()
+		}
 	default:
 		system.Force(fmt.Sprintf("No capability interpreter available for: %+v", capability), true)
 	}

@@ -57,6 +57,35 @@ func FirstTimeSetup() {
 	// 	},
 	// }
 
+	searchsploitNMAP := Capability{
+		Interpreter: system.Interpreter_SEARCHSPLOIT,
+		CCI:         "cci:searchsploit:nmap:json",
+		Label:       "Searchsploit Query NMAP Result",
+		Description: "Performs a searchsploit query on an XML NMAP result file.",
+		Category:    system.Category_RESEARCH,
+		ResultTags:  []string{},
+		Hidden:      true,
+		Command: Command{
+			Program: "searchsploit",
+			Params: []Param{
+				{
+					Description: "NMAP XML FIle",
+					Flag:        "--nmap",
+					DataType:    []system.DataType{system.DataType_FILE_PATH},
+					Value:       "",
+					Default:     "",
+				},
+				{
+					Description: "JSON Output",
+					Flag:        "--json",
+					DataType:    []system.DataType{system.DataType_EMPTY},
+					Value:       "",
+					Default:     "",
+				},
+			},
+		},
+	}
+
 	hydraSNMP := Capability{
 		Interpreter: system.Interpreter_UNIVERSAL,
 		CCI:         "cci:hydra:bruteforce:snmp",
@@ -671,6 +700,7 @@ func FirstTimeSetup() {
 	}
 
 	if len(SELECT_Capability(bson.M{}, bson.M{})) == 0 {
+		INSERT_Capability(searchsploitNMAP)
 		INSERT_Capability(netBiosScan)
 		INSERT_Capability(sysDNSScan)
 		INSERT_Capability(pingSweep)

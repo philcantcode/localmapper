@@ -14,6 +14,7 @@ var uri string
 var client *mongo.Client
 var System_Logs_DB *mongo.Collection
 var Results_Nmap_DB *mongo.Collection
+var Results_Searchsploit_DB *mongo.Collection
 var Results_Nbscan_DB *mongo.Collection
 var Results_Misc_DB *mongo.Collection
 var CMDB_Inventory_DB *mongo.Collection
@@ -75,6 +76,9 @@ func InitMongo() {
 
 	Results_Misc_DB = client.Database("Results").Collection("Misc")
 	Log("Successfully setup mongo results misc database collections: ", true)
+
+	Results_Searchsploit_DB = client.Database("Results").Collection("Searchsploit")
+	Log("Successfully setup mongo results searchsploit database collections: ", true)
 
 	Results_Nmap_DB = client.Database("Results").Collection("Nmap")
 	Log("Successfully setup mongo nmap database collections: ", false)

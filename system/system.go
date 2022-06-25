@@ -6,6 +6,8 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
+var SystemJobs = []ScheduledJob{}
+
 func GetConfig(key string) string {
 	for _, k := range SELECT_Settings_All() {
 		if k.Key == key {

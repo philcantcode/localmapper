@@ -35,7 +35,8 @@ func SetupTools() {
 	execute("./res/apps/acccheck/acccheck.pl", nil)
 
 	// Update tools
-	execute("searchsploit -u", nil)
+	Log("All tools setup correctly, running updates concurrently", true)
+	go execute("searchsploit -u", nil)
 }
 
 /*
@@ -72,8 +73,8 @@ func installSearchsploit() {
 		execute(fmt.Sprintf("git -C %s clone https://github.com/offensive-security/exploitdb.git", GetConfig("external-resources-path")), nil)
 	}
 
-	execute(fmt.Sprintf("ln -sf %s/searchsploit /usr/bin/searchsploit", installPath), nil)
 	execute(fmt.Sprintf("sed -i 's:/opt/exploitdb:%s:g' %s/.searchsploit_rc", installPath, installPath), nil) // Replace /opt path with our path
+	execute(fmt.Sprintf("ln -sf %s/searchsploit /usr/bin/searchsploit", installPath), nil)
 }
 
 func setupNmapDir() {
@@ -135,11 +136,6 @@ func execute(command string, ctrlParams []string) []byte {
 	}
 
 	err = cmd.Wait()
-
-	if err != nil {
-		fmt.Fprintln(os.Stderr, "Error waiting Cmd", err)
-		os.Exit(0)
-	}
 
 	//system.Fatal(fmt.Sprintf("Error returned in local.Execute running a command: %s > %v", prog, params), err)
 

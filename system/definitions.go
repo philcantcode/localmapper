@@ -1,5 +1,7 @@
 package system
 
+import "time"
+
 type DataType string
 type Category string
 type Interpreter string
@@ -33,13 +35,15 @@ const (
 	Category_DDOS       Category = "DDOS"
 	Category_DISCOVERY  Category = "DISCOVERY"
 	Category_BRUTEFORCE Category = "BRUTEFORCE"
+	Category_RESEARCH   Category = "RESEARCH"
 )
 
 const (
-	Interpreter_UNIVERSAL Interpreter = "UNIVERSAL"
-	Interpreter_NMAP      Interpreter = "NMAP"
-	Interpreter_ACCCHECK  Interpreter = "ACCCHECK"
-	Interpreter_NBTSCAN   Interpreter = "NBTSCAN"
+	Interpreter_UNIVERSAL    Interpreter = "UNIVERSAL"
+	Interpreter_NMAP         Interpreter = "NMAP"
+	Interpreter_ACCCHECK     Interpreter = "ACCCHECK"
+	Interpreter_NBTSCAN      Interpreter = "NBTSCAN"
+	Interpreter_SEARCHSPLOIT Interpreter = "SEARCHSPLOIT"
 )
 
 func FirstTimeSetup() {
@@ -117,4 +121,11 @@ func FirstTimeSetup() {
 	for _, setting := range settings {
 		INSERT_Settings(setting.Key, setting.Value)
 	}
+}
+
+type ScheduledJob struct {
+	Label     string
+	StartTime time.Time
+	EndTime   time.Time
+	Status    string
 }
