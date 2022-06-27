@@ -6,7 +6,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-func FirstTimeSetup() {
+func Init() {
 
 	// smurf6 := Capability{
 	// 	Type:       "thc-ipv6",

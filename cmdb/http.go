@@ -180,7 +180,7 @@ func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 	system.CMDB_Pending_DB.Drop(context.Background())   // Drop pending
 	system.Core_Proposition_DB.Drop(context.Background())
 
-	FirstTimeSetup() // Restore capabilities
+	Init() // Restore capabilities
 
 	w.Write([]byte("200/Done"))
 }

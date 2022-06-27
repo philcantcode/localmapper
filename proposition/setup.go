@@ -8,7 +8,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-func FirstTimeSetup() {
+func Init() {
 	setupSelfIdentity()
 	recalcualteVlanCIDR()
 }

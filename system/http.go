@@ -40,7 +40,7 @@ func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 	System_Logs_DB.Drop(context.Background()) // Drop the logs table
 	DELETE_Settings_All()                     // Delete all settings
 
-	FirstTimeSetup() // Perform first time setup
+	Init() // Perform first time setup
 
 	w.Write([]byte("200/Done"))
 }

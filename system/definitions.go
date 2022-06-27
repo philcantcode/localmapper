@@ -46,7 +46,7 @@ const (
 	Interpreter_SEARCHSPLOIT Interpreter = "SEARCHSPLOIT"
 )
 
-func FirstTimeSetup() {
+func Init() {
 	if len(SELECT_Settings_All()) > 0 {
 		return
 	}

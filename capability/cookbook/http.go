@@ -49,7 +49,7 @@ func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 	DELETE_Cookbook(bson.M{})
 	system.Core_Cookbooks_DB.Drop(context.Background()) // Drop cookbooks
 
-	FirstTimeSetup() // Restore cookbooks
+	Init() // Restore cookbooks
 
 	w.Write([]byte("200/Done"))
 }

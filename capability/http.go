@@ -137,7 +137,7 @@ func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 	DELETE_Capability(bson.M{})
 	system.Core_Capability_DB.Drop(context.Background()) // Drop capabilities
 
-	FirstTimeSetup() // Restore capabilities
+	Init() // Restore capabilities
 
 	w.Write([]byte("200/Done"))
 }

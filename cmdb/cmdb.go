@@ -275,7 +275,7 @@ func CalcTimeGraph(entry Entity) TimeGraph {
 	return graph
 }
 
-func FirstTimeSetup() {
+func Init() {
 	if len(SELECT_ENTRY_Inventory(bson.M{}, bson.M{})) > 0 {
 		return
 	}

@@ -33,7 +33,7 @@ func HTTP_JSON_GetPropositions(w http.ResponseWriter, r *http.Request) {
 func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 	system.Core_Proposition_DB.Drop(context.Background()) // Drop propositions
 
-	FirstTimeSetup() // Restore capabilities
+	Init() // Restore capabilities
 
 	w.Write([]byte("200/Done"))
 }
