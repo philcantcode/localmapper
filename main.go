@@ -25,12 +25,33 @@ import (
 */
 const debugMode = false
 
+type Jedi interface {
+	HasForce() bool
+	something() bool
+}
+
+type knight struct {
+	Jedi
+}
+
+func (k *knight) HasForce() {
+	fmt.Println("aa")
+}
+
+func () something() {
+	fmt.Println("bbb")
+}
+
 func main() {
+
+	v := knight{}
+
+	v.HasForce()
+	v.something()
+
 	// Load settings & config database
 	system.InitSqlite()
-	system.FirstTimeSetup()
-
-	// Load application database
+	system.Init()
 	system.InitMongo()
 
 	// Load all initial setup jobs here
@@ -40,10 +61,10 @@ func main() {
 
 		local.CheckSelfIdentity()
 
-		proposition.FirstTimeSetup()
-		capability.FirstTimeSetup()
-		cookbook.FirstTimeSetup()
-		cmdb.FirstTimeSetup()
+		proposition.Init()
+		capability.Init()
+		cookbook.Init()
+		cmdb.Init()
 
 		// Initialise CRON jobs
 		cookbook.InitialiseAllSchedules()
