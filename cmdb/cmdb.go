@@ -5,7 +5,6 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
@@ -16,7 +15,7 @@ import (
 	Inventory OR Pending
 */
 func EntryExists_ByIP(entry Entity) bool {
-	tag, exists, _ := FindSysTag("IP", entry)
+	tag, exists, _ := entry.FindSysTag("IP")
 	result := []Entity{}
 
 	if !exists {
@@ -42,7 +41,7 @@ func EntryExists_ByIP(entry Entity) bool {
 	values to the new entry.
 */
 func updateEntriesTags_ByIP(entry Entity) bool {
-	tag, exists, _ := FindSysTag("IP", entry)
+	tag, exists, _ := entry.FindSysTag("IP")
 
 	if !exists {
 		return false
@@ -61,7 +60,7 @@ func updateEntriesTags_ByIP(entry Entity) bool {
 	}
 
 	if len(results) > 1 { // Too many results returned, database corrupt
-		system.Force(
+		system.Warning(
 			fmt.Sprintf(
 				"While executing UpdateInventoryEntries the number of matched results > 1\n\nEntry: %+v\n\nMatched Cases: %+v", entry, results), true)
 	}
@@ -70,7 +69,7 @@ func updateEntriesTags_ByIP(entry Entity) bool {
 
 	// Parse SysTags and join them
 	for _, newTag := range entry.SysTags {
-		_, found, i := FindSysTag(newTag.Label, results[0])
+		_, found, i := results[0].FindSysTag(newTag.Label)
 
 		if found {
 			results[0].SysTags[i].Values = joinTagGroups(newTag.Label, results[0].SysTags[i].Values, newTag.Values)
@@ -159,43 +158,43 @@ func CalcIdentityConfidenceScore(entry Entity) IdentityConfidence {
 	result := IdentityConfidence{IP: 0, MAC: 0, HostName: 0, Vendor: 0, OS: 0, DateSeen: 0, Average: 0}
 
 	// IP4 weighted 80%, divided by the number of past changes
-	ipTag, found, _ := FindSysTag("IP", entry)
+	ipTag, found, _ := entry.FindSysTag("IP")
 
 	if found {
 		result.IP += (80 / len(ipTag.Values))
 	}
 
 	// IP6 weigthed 20%, divided by the number of past changes
-	ip6Tag, found, _ := FindSysTag("IP6", entry)
+	ip6Tag, found, _ := entry.FindSysTag("IP6")
 
 	if found {
 		result.IP += (20 / len(ip6Tag.Values))
 	}
 
 	// MAC weighted 80%, divided by the number of past changes
-	macTag, found, _ := FindSysTag("MAC", entry)
+	macTag, found, _ := entry.FindSysTag("MAC")
 
 	if found {
 		result.MAC += (80 / len(macTag.Values))
 	}
 
 	// MAC6 weigthed 20%, divided by the number of past changes
-	mac6Tag, found, _ := FindSysTag("MAC6", entry)
+	mac6Tag, found, _ := entry.FindSysTag("MAC6")
 
 	if found {
 		result.MAC += (20 / len(mac6Tag.Values))
 	}
 
 	// Host Name weigthed 100%, divided by the number of past changes
-	hostNameTag, found, _ := FindSysTag("HostName", entry)
+	hostNameTag, found, _ := entry.FindSysTag("HostName")
 
 	if found {
 		result.HostName = (100 / len(hostNameTag.Values))
 	}
 
-	_, hasMACVendor, _ := FindSysTag("MACVendor", entry)
-	_, hasOSVendor, _ := FindSysTag("OSVendor", entry)
-	vendorACC, hasVendorACC, _ := FindSysTag("OSAccuracy", entry)
+	_, hasMACVendor, _ := entry.FindSysTag("MACVendor")
+	_, hasOSVendor, _ := entry.FindSysTag("OSVendor")
+	vendorACC, hasVendorACC, _ := entry.FindSysTag("OSAccuracy")
 
 	if hasVendorACC && hasOSVendor {
 		vAccInt, err := strconv.Atoi(vendorACC.Values[0])
@@ -208,7 +207,7 @@ func CalcIdentityConfidenceScore(entry Entity) IdentityConfidence {
 		result.Vendor += 50
 	}
 
-	_, found, _ = FindSysTag("OS", entry)
+	_, found, _ = entry.FindSysTag("OS")
 
 	if found {
 		result.OS = 100
@@ -242,20 +241,20 @@ func CalcTimeGraph(entry Entity) TimeGraph {
 	system.Fatal("Couldn't convert date-seen-graph-mins-val settings to int", err)
 
 	window := time.Duration(int64(time.Minute) * int64(windowMinute))
-	nowDT, _ := time.Parse(local.DTF_DateTime, entry.DateSeen[0])
-	endDT, _ := time.Parse(local.DTF_DateTime, entry.DateSeen[len(entry.DateSeen)-1])
+	nowDT, _ := time.Parse(utils.DTF_DateTime, entry.DateSeen[0])
+	endDT, _ := time.Parse(utils.DTF_DateTime, entry.DateSeen[len(entry.DateSeen)-1])
 	processedBlocks := 1
 	entriesInBlock := 0
 	timeBlockCount := 0
 
 	// Push the first value of DateTime to get things started
-	graph.Keys = append(graph.Keys, nowDT.Format(local.DTF_DateTime))
+	graph.Keys = append(graph.Keys, nowDT.Format(utils.DTF_DateTime))
 
 	for nowDT.Before(endDT) {
 		nowDT = nowDT.Add(window) // Add 1 duration step to it
 
 		for _, dt := range entry.DateSeen[processedBlocks:] {
-			subDT, _ := time.Parse(local.DTF_DateTime, dt)
+			subDT, _ := time.Parse(utils.DTF_DateTime, dt)
 
 			if subDT.Before(nowDT) {
 				entriesInBlock++
@@ -266,7 +265,7 @@ func CalcTimeGraph(entry Entity) TimeGraph {
 			processedBlocks++
 		}
 
-		graph.Keys = append(graph.Keys, nowDT.Format(local.DTF_DateTime))
+		graph.Keys = append(graph.Keys, nowDT.Format(utils.DTF_DateTime))
 		graph.Values = append(graph.Values, entriesInBlock)
 
 		entriesInBlock = 0
@@ -343,7 +342,7 @@ func UpdateOrInsert(entry Entity) {
 		entryUpdateSuccess := updateEntriesTags_ByIP(entry)
 
 		if !entryUpdateSuccess {
-			system.Force("Couldn't update inventory or pending in CMDB", true)
+			system.Warning("Couldn't update inventory or pending in CMDB", true)
 		}
 	} else {
 		insert_ENTRY_Pending(entry)

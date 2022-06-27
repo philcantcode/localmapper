@@ -27,7 +27,7 @@ func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
 
 		// Ensure only 1 capability returned
 		if len(caps) != 1 {
-			system.Force(
+			system.Warning(
 				fmt.Sprintf(
 					"Incorrect number (%d) of returned for CCI: %s",
 					len(caps), cci), true)
@@ -36,7 +36,7 @@ func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
 
 		// Ensure only 1 entry returned
 		if len(entries) != 1 {
-			system.Force(
+			system.Warning(
 				fmt.Sprintf(
 					"Incorrect number (%d) of returned for entries: %s",
 					len(entries), entryID), true)
@@ -69,7 +69,7 @@ func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
 
 					// Ensure only 1 entry returned
 					if len(entries) != 1 {
-						system.Force(
+						system.Warning(
 							fmt.Sprintf(
 								"Incorrect number (%d) of returned for entries: %s",
 								len(entries), entryID), true)

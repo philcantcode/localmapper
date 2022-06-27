@@ -52,3 +52,33 @@ type TimeGraph struct {
 	Keys   []string
 	Values []int
 }
+
+/*
+	PushToFront moves a particular tag to the front
+	of the list
+*/
+func (tag EntityTag) PushToFront(value string) EntityTag {
+
+	newValues := []string{}
+
+	for idx, val := range tag.Values {
+		if val == value {
+			newValues = append(newValues, val)
+
+			for i, v := range tag.Values {
+				if i == idx {
+					continue
+				}
+
+				newValues = append(newValues, v)
+			}
+
+			tag.Values = newValues
+			return tag
+		}
+	}
+
+	system.Warning("Couldn't find tag value to PushToFront", false)
+
+	return tag
+}

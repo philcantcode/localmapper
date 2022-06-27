@@ -21,7 +21,7 @@ func setupSelfIdentity() {
 
 	// Check if server is already in the database
 	for _, entry := range entries {
-		ident, found, _ := cmdb.FindSysTag("Identity", entry)
+		ident, found, _ := entry.FindSysTag("Identity")
 
 		if found && utils.ArrayContains("local", ident.Values) {
 			system.Log("Identity local already found in CMDB", true)
@@ -57,7 +57,7 @@ func setupSelfIdentity() {
 	}
 
 	propItem := Predicate{Label: "Server IP", Value: local.GetDefaultIPGateway().DefaultIP, DataType: system.DataType_IP, Options: optionIPs}
-	prop := Proposition{Type: "local-net-iface", DateTime: local.GetDateTime().DateTime, Description: "Please choose the IP address for this server.", Predicate: propItem}
+	prop := Proposition{Type: "local-net-iface", DateTime: utils.GetDateTime().DateTime, Description: "Please choose the IP address for this server.", Predicate: propItem}
 
 	INSERT_Proposition(prop)
 }
@@ -71,8 +71,8 @@ func recalcualteVlanCIDR() {
 			continue
 		}
 
-		lowIP, lowFound, _ := cmdb.FindSysTag("LowIP", entry)
-		highIP, highFound, _ := cmdb.FindSysTag("HighIP", entry)
+		lowIP, lowFound, _ := entry.FindSysTag("LowIP")
+		highIP, highFound, _ := entry.FindSysTag("HighIP")
 
 		// Check that both of the user tags for the IPs are set
 		if !lowFound && !highFound {
@@ -83,7 +83,7 @@ func recalcualteVlanCIDR() {
 		system.Error("Couldn't generate CIDR for: "+entry.Label, err)
 
 		// Remove old CMDB tags so new one can be calcualted
-		_, found, index := cmdb.FindSysTag("CIDR", entry)
+		_, found, index := entry.FindSysTag("CIDR")
 
 		if found {
 			entry.SysTags[index] = cmdb.EntityTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.DataType_CIDR, Values: cidr}

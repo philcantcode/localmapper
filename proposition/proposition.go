@@ -4,6 +4,7 @@ import (
 	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/system"
+	"github.com/philcantcode/localmapper/utils"
 )
 
 func processProposition(proposition Proposition) {
@@ -37,7 +38,7 @@ func processProposition(proposition Proposition) {
 			}
 		}
 
-		time := []string{local.GetDateTime().DateTime}
+		time := []string{utils.GetDateTime().DateTime}
 
 		serverCMDB := cmdb.Entity{
 			Label:       "Local-Mapper Server (local)",

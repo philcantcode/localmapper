@@ -116,6 +116,26 @@ func FirstTimeSetup() {
 			Key:   "date-seen-graph-mins-val",
 			Value: "60",
 		},
+		{
+			Key:   "delete-local-resources",
+			Value: "0",
+		},
+		{
+			Key:   "wordlist-extract-path",
+			Value: "/localmapper/wordlists",
+		},
+		{
+			Key:   "wordlist-path",
+			Value: "res/wordlists/wordlists.7z",
+		},
+		{
+			Key:   "external-resources-path",
+			Value: "/localmapper",
+		},
+		{
+			Key:   "nmap-results-dir",
+			Value: "/localmapper/nmap-results",
+		},
 	}
 
 	for _, setting := range settings {

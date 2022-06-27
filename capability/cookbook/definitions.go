@@ -41,8 +41,8 @@ func FirstTimeSetup() {
 			{
 				Label:       "Inventory Discovery Schedule",
 				Desc:        "Once an item is in the inventory, scan the devices for info reguleraly.",
-				Delay:       time.Second * 120,
-				RescanDelay: time.Minute * 10,
+				Delay:       time.Minute * 10,
+				RescanDelay: time.Minute * 20,
 				TargetGroups: []cmdb.CMDBType{
 					cmdb.ENDPOINT,
 					cmdb.SERVER,

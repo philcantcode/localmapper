@@ -1,7 +1,7 @@
 package cmdb
 
 // FindSysTag returns the found tag or an empty tag
-func FindSysTag(label string, entry Entity) (EntityTag, bool, int) {
+func (entry Entity) FindSysTag(label string) (EntityTag, bool, int) {
 	for index, entryTag := range entry.SysTags {
 		if entryTag.Label == label {
 			return entryTag, true, index

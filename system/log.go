@@ -47,11 +47,11 @@ func Fatal(context string, err error) {
 	}
 }
 
-func Force(context string, fatal bool) {
-	log := LogEntry{Type: "Error", DateTime: utils.Now(), Context: context, Error: ""}
+func Warning(context string, fatal bool) {
+	log := LogEntry{Type: "Warning", DateTime: utils.Now(), Context: context, Error: ""}
 
 	if fatal {
-		log.Type = "Fatal"
+		log.Type = "Fatal Warning"
 		INSERT_LogEntry(log)
 		fmt.Printf("[%s] %s\n", log.Type, log.Context)
 		os.Exit(0)

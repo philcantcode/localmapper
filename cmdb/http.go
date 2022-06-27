@@ -7,7 +7,6 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
@@ -18,7 +17,7 @@ func HTTP_JSON_GetLocal(w http.ResponseWriter, r *http.Request) {
 	entries := SELECT_ENTRY_Inventory(bson.M{}, bson.M{})
 
 	for _, entry := range entries {
-		sysTag, exists, _ := FindSysTag("Identity", entry)
+		sysTag, exists, _ := entry.FindSysTag("Identity")
 		if exists && utils.ArrayContains("local", sysTag.Values) {
 			json.NewEncoder(w).Encode(entry)
 			return
@@ -83,22 +82,22 @@ func HTTP_INSERT_Pending_Vlan(w http.ResponseWriter, r *http.Request) {
 	system.Error("Couldn't convert CMDBType to int", err)
 
 	if !utils.ValidateIP(lowIP) {
-		system.Force("LowIP not valid in cmdb.HTTP_INSERT_Pending", true)
+		system.Warning("LowIP not valid in cmdb.HTTP_INSERT_Pending", true)
 		return
 	}
 
 	if !utils.ValidateIP(highIP) {
-		system.Force("HighIP not valid in cmdb.HTTP_INSERT_Pending", true)
+		system.Warning("HighIP not valid in cmdb.HTTP_INSERT_Pending", true)
 		return
 	}
 
 	if !utils.ValidateString(label) {
-		system.Force("Label not valid in cmdb.HTTP_INSERT_Pending", true)
+		system.Warning("Label not valid in cmdb.HTTP_INSERT_Pending", true)
 		return
 	}
 
 	if !utils.ValidateString(desc) {
-		system.Force("Desc not valid in cmdb.HTTP_INSERT_Pending", true)
+		system.Warning("Desc not valid in cmdb.HTTP_INSERT_Pending", true)
 		return
 	}
 
@@ -108,7 +107,7 @@ func HTTP_INSERT_Pending_Vlan(w http.ResponseWriter, r *http.Request) {
 	highIpTag := EntityTag{Label: "LowIP", DataType: system.DataType_IP, Values: []string{lowIP}}
 	lowIpTag := EntityTag{Label: "HighIP", DataType: system.DataType_IP, Values: []string{highIP}}
 	cidr := EntityTag{Label: "CIDR", DataType: system.DataType_CIDR, Values: cidrArr}
-	entry := Entity{Label: label, Description: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{local.GetDateTime().DateTime}, SysTags: []EntityTag{lowIpTag, highIpTag, cidr}, UsrTags: []EntityTag{}}
+	entry := Entity{Label: label, Description: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{utils.GetDateTime().DateTime}, SysTags: []EntityTag{lowIpTag, highIpTag, cidr}, UsrTags: []EntityTag{}}
 
 	insert_ENTRY_Pending(entry)
 
@@ -151,7 +150,7 @@ func HTTP_JSON_IdentityConfidence_Get(w http.ResponseWriter, r *http.Request) {
 	results = append(results, SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)
 
 	if len(results) != 1 {
-		system.Force("Incorrect number of results returned for IdentityConfidence IP", true)
+		system.Warning("Incorrect number of results returned for IdentityConfidence IP", true)
 		w.Write([]byte("404/Failure"))
 		return
 	}

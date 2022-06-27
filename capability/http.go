@@ -42,7 +42,7 @@ func HTTP_JSON_GetCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	entries = append(entries, cmdb.SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})...)
 
 	if len(entries) != 1 {
-		system.Force("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
+		system.Warning("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
 		return
 	}
 
@@ -95,7 +95,7 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	entries = append(entries, cmdb.SELECT_ENTRY_Joined(bson.M{"_id": system.EncodeID(cmdb_id)}, bson.M{})...)
 
 	if len(entries) != 1 {
-		system.Force("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
+		system.Warning("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)
 		return
 	}
 
@@ -124,7 +124,7 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	system.Force("HTTP_JSON_RunCMDBCompatible was not compatible", true)
+	system.Warning("HTTP_JSON_RunCMDBCompatible was not compatible", true)
 }
 
 /*

@@ -21,12 +21,12 @@ func HTTP_JSON_Run_Cookbook(w http.ResponseWriter, r *http.Request) {
 	entries := cmdb.SELECT_ENTRY_Joined(bson.M{"_id": system.EncodeID(id)}, bson.M{})
 
 	if len(cookbooks) != 1 {
-		system.Force("Wrong number of cookbooks selected", true)
+		system.Warning("Wrong number of cookbooks selected", true)
 		return
 	}
 
 	if len(entries) != 1 {
-		system.Force(fmt.Sprintf("Wrong number of entries selected: %d", len(entries)), true)
+		system.Warning(fmt.Sprintf("Wrong number of entries selected: %d", len(entries)), true)
 		return
 	}
 

@@ -91,7 +91,7 @@ func InitialiseAllSchedules() {
 					targ := cmdb.SELECT_ENTRY_Joined(bson.M{"_id": system.EncodeID(targID)}, bson.M{})
 
 					if len(targ) != 1 {
-						system.Force(fmt.Sprintf("Incorrect number of targets returned (%d) for %s", len(targ), targID), true)
+						system.Warning(fmt.Sprintf("Incorrect number of targets returned (%d) for %s", len(targ), targID), true)
 					}
 
 					// Check whether suitable time has past between last entry scan

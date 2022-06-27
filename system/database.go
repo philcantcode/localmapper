@@ -40,6 +40,15 @@ func DELETE_Settings_All() {
 	stmt.Close()
 }
 
+func DELETE_Logs() {
+	Log("Attempting to DELETE_Logs", false)
+
+	insertResult, err := System_Logs_DB.DeleteMany(context.Background(), bson.M{})
+
+	Fatal("Couldn't DELETE_Logs", err)
+	Log(fmt.Sprintf("New Delete count: %d", insertResult.DeletedCount), false)
+}
+
 func INSERT_Settings(key string, value string) {
 	stmt, err := Con.Prepare("INSERT INTO `Settings` (`key`, `value`) VALUES (?, ?);")
 	Fatal("Couldn't INSERT Into Settings", err)

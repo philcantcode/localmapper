@@ -7,7 +7,10 @@ import (
 	"net/http"
 
 	"github.com/jackpal/gateway"
+	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/system"
+	"github.com/philcantcode/localmapper/utils"
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 type DefaultIPGateway struct {
@@ -90,4 +93,25 @@ func GetDefaultIPGateway() DefaultIPGateway {
 /* HTTP_JSON_GetDefaultGatewayIP both the deafult IP and the Gateway */
 func HTTP_JSON_GetDefaultGatewayIP(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(GetDefaultIPGateway())
+}
+
+func CheckSelfIdentity() {
+	ip := GetDefaultIPGateway().DefaultIP
+	local := cmdb.SELECT_ENTRY_Joined(bson.M{"systags.label": "Identity"}, bson.M{})
+
+	for _, entity := range local {
+		identTag, _, _ := entity.FindSysTag("Identity")
+		ipTag, ipTagFound, ipIdx := entity.FindSysTag("IP")
+		newEntity := entity
+
+		if utils.ArrayContains("local", identTag.Values) && ipTagFound {
+
+			if !utils.ArrayContains(ip, ipTag.Values) {
+				newEntity.SysTags[ipIdx].Values = append(newEntity.SysTags[ipIdx].Values, ip)
+			}
+
+			newEntity.SysTags[ipIdx] = newEntity.SysTags[ipIdx].PushToFront(ip)
+			cmdb.UpdateOrInsert(newEntity)
+		}
+	}
 }

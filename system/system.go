@@ -15,7 +15,7 @@ func GetConfig(key string) string {
 		}
 	}
 
-	Force("Couldn't retrieve key: "+key, true)
+	Warning("Couldn't retrieve key: "+key, true)
 	return ""
 }
 
@@ -29,7 +29,7 @@ func GetInt(key string) int {
 		}
 	}
 
-	Force("Couldn't retrieve key: "+key, true)
+	Warning("Couldn't retrieve key: "+key, true)
 	return -1
 }
 

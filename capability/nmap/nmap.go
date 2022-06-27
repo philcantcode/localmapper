@@ -240,7 +240,7 @@ func (nmapRun NmapRun) ConvertToEntry() {
 			SysTags:     sysTags,
 		}
 
-		tag, exists, _ := cmdb.FindSysTag("HostName", entry)
+		tag, exists, _ := entry.FindSysTag("HostName")
 
 		if exists {
 			entry.Label = tag.Values[0]

@@ -83,7 +83,7 @@ func executeCapability(capability Capability) {
 		searchsploit := SELECT_Capability(bson.M{"cci": "cci:searchsploit:nmap:json"}, bson.M{})
 
 		if len(searchsploit) != 1 {
-			system.Force("Couldn't find cci:searchsploit:nmap:json", false)
+			system.Warning("Couldn't find cci:searchsploit:nmap:json", false)
 			return
 		}
 
@@ -109,7 +109,7 @@ func executeCapability(capability Capability) {
 			exp.StoreResults()
 		}
 	default:
-		system.Force(fmt.Sprintf("No capability interpreter available for: %+v", capability), true)
+		system.Warning(fmt.Sprintf("No capability interpreter available for: %+v", capability), true)
 	}
 }
 
