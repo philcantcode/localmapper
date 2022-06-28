@@ -1,5 +1,5 @@
 # OS Setup
-FROM ubuntu:latest
+FROM ubuntu:kinetic
 RUN apt-get update
 RUN mkdir /src
 
