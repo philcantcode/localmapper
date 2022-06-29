@@ -34,6 +34,9 @@ func initServer() {
 	router.HandleFunc("/capability/get/{id}", capability.HTTP_JSON_GetByID)
 	router.HandleFunc("/capability/update", capability.HTTP_JSON_Update)
 	router.HandleFunc("/capability/utils/restore", capability.HTTP_JSON_Restore)
+	router.HandleFunc("/capability/manager/get-tracking", capability.HTTP_JSON_Lifecycle_Manager_List_All)
+	router.HandleFunc("/capability/utils/date-time-graph", capability.HTTP_JSON_GetJobsDateTimeGraph)
+	router.HandleFunc("/capability/utils/date-job-type-graph", capability.HTTP_JSON_Lifecycle_Manager_JobTypes)
 
 	router.HandleFunc("/cookbook/run/{ccbi}/{id}", cookbook.HTTP_JSON_Run_Cookbook)
 	router.HandleFunc("/cookbook/get/all", cookbook.HTTP_JSON_GetAll)

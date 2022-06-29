@@ -114,7 +114,7 @@ func Init() {
 		},
 		{
 			Key:   "date-seen-graph-mins-val",
-			Value: "60",
+			Value: "10",
 		},
 		{
 			Key:   "delete-local-resources",

@@ -41,7 +41,7 @@ func Init() {
 			{
 				Label:       "Inventory Discovery Schedule",
 				Desc:        "Once an item is in the inventory, scan the devices for info reguleraly.",
-				Delay:       time.Minute * 2,
+				Delay:       time.Minute * 1,
 				RescanDelay: time.Minute * 10,
 				TargetGroups: []cmdb.CMDBType{
 					cmdb.ENDPOINT,
@@ -66,7 +66,7 @@ func Init() {
 				Label:       "Ping Sweep Schedule",
 				Desc:        "Ping all known VLANs, excluding the three big private ranges.",
 				Delay:       time.Minute * 30,
-				RescanDelay: time.Minute * 20,
+				RescanDelay: time.Minute * 120,
 				TargetGroups: []cmdb.CMDBType{
 					cmdb.VLAN,
 				},

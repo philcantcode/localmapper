@@ -6,10 +6,12 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
+	"time"
 
 	"github.com/gorilla/mux"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/system"
+	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
@@ -157,4 +159,50 @@ func HTTP_JSON_GetNew_Command(w http.ResponseWriter, r *http.Request) {
 
 func HTTP_JSON_GetNew_Param(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(Param{})
+}
+
+func HTTP_JSON_Lifecycle_Manager_List_All(w http.ResponseWriter, r *http.Request) {
+
+	// Get a running value for duration
+	for i := range managementStore {
+		if managementStore[i].Tracking.Status != Status_Done {
+
+			managementStore[i].Tracking.RuntimeDuration = time.Now().Sub(managementStore[i].Tracking.RuntimeStart)
+			managementStore[i].Tracking.ExecDuration = time.Now().Sub(managementStore[i].Tracking.ExecStart)
+
+			managementStore[i].Tracking.RuntimeDurationPrint = utils.FormatDuration(managementStore[i].Tracking.RuntimeDuration)
+			managementStore[i].Tracking.ExecDurationPrint = utils.FormatDuration(managementStore[i].Tracking.ExecDuration)
+		}
+	}
+
+	json.NewEncoder(w).Encode(managementStore)
+}
+
+func HTTP_JSON_Lifecycle_Manager_JobTypes(w http.ResponseWriter, r *http.Request) {
+
+	jobTypeGraphDatas := []JobTypeGraph{}
+
+	// Get a running value for duration
+	for _, v := range managementStore {
+		name := v.Capability.Label
+		found := false
+
+		for idx, k := range jobTypeGraphDatas {
+			if k.Name == name {
+				jobTypeGraphDatas[idx].Value++
+				found = true
+				break
+			}
+		}
+
+		if !found {
+			jobTypeGraphDatas = append(jobTypeGraphDatas, JobTypeGraph{Name: name, Value: 1})
+		}
+	}
+
+	json.NewEncoder(w).Encode(jobTypeGraphDatas)
+}
+
+func HTTP_JSON_GetJobsDateTimeGraph(w http.ResponseWriter, r *http.Request) {
+	json.NewEncoder(w).Encode(CalcJobsTimeGraph())
 }
