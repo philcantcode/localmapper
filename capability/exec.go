@@ -1,24 +1,13 @@
-package local
+package capability
 
 import (
 	"bufio"
-	"fmt"
 	"os/exec"
-	"time"
 
 	"github.com/philcantcode/localmapper/system"
 )
 
-type ExecResult struct {
-	Label    string
-	DateTime time.Time
-	Output   []string
-	Result   int
-}
-
-func Execute(prog string, params []string) []byte {
-	system.Log(fmt.Sprintf("Attempting local.Execute: %s %v", prog, params), true)
-
+func execute(prog string, params []string) []byte {
 	cmd := exec.Command(prog, params...)
 	cmdReader, err := cmd.StdoutPipe()
 	system.Fatal("Couldn't prepare command", err)

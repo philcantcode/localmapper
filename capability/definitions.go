@@ -42,10 +42,10 @@ type ParamOpt struct {
 	RiskLevel int // 0 - 10
 }
 
-func ParamsToArray(params []Param) []string {
+func (cap Capability) ParamsToArray() []string {
 	var paramArr []string
 
-	for _, param := range params {
+	for _, param := range cap.Command.Params {
 		// If the flag is NOT empty, add the flag
 		if param.Flag != "" {
 			paramArr = append(paramArr, param.Flag)

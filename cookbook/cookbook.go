@@ -47,7 +47,11 @@ func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
 
 		if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsInBook) {
 			system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", caps[0].Label, entries[0].Label), true)
-			cap.QueueCapability()
+
+			manager := capability.Lifecycle{}
+			manager.SetCapability(cap)
+			manager.Start()
+
 			capsInBook = append(capsInBook, cap.ID.Hex())
 		} else {
 			system.Log(fmt.Sprintf("Can't execute capability [%s] against [%s], not a match", caps[0].Label, entries[0].Label), true)
@@ -80,7 +84,11 @@ func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
 
 					if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsInBook) {
 						system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", cap.Label, entries[0].Label), true)
-						cap.QueueCapability()
+
+						manager := capability.Lifecycle{}
+						manager.SetCapability(cap)
+						manager.Start()
+
 						capsInBook = append(capsInBook, cap.ID.Hex())
 					}
 				}

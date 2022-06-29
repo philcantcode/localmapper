@@ -1,5 +1,5 @@
 # OS Setup
-FROM ubuntu:latest
+FROM ubuntu:kinetic
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get update --fix-missing

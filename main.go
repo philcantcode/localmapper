@@ -6,8 +6,8 @@ import (
 	"github.com/go-ole/go-ole"
 	"github.com/go-ole/go-ole/oleutil"
 	"github.com/philcantcode/localmapper/capability"
-	"github.com/philcantcode/localmapper/capability/cookbook"
 	"github.com/philcantcode/localmapper/cmdb"
+	"github.com/philcantcode/localmapper/cookbook"
 	"github.com/philcantcode/localmapper/local"
 	"github.com/philcantcode/localmapper/proposition"
 	"github.com/philcantcode/localmapper/system"
@@ -44,7 +44,7 @@ func main() {
 
 	// Initialise CRON jobs
 	cookbook.InitialiseAllSchedules()
-	go capability.ProcessCapabilityQueue()
+	go capability.InitCapabilityLifecycleManager()
 
 	// Initialise the web API
 	initServer()

@@ -74,7 +74,9 @@ func HTTP_JSON_Run(w http.ResponseWriter, r *http.Request) {
 
 	json.Unmarshal([]byte(capabilityParam), &capability)
 
-	capability.QueueCapability()
+	manager := Lifecycle{}
+	manager.SetCapability(capability)
+	manager.Start()
 
 	json.NewEncoder(w).Encode("200/Done")
 }
@@ -119,7 +121,10 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	isCompatible, parsedCap := cap.CheckCompatability(entries[0])
 
 	if isCompatible {
-		parsedCap.QueueCapability()
+		manager := Lifecycle{}
+		manager.SetCapability(parsedCap)
+		manager.Start()
+
 		w.Write([]byte("200/Done"))
 		return
 	}

@@ -29,7 +29,7 @@ func Execute(command string) []byte {
 	Fatal("Couldn't start exec.Start", err)
 
 	err = cmd.Wait()
-	Fatal("Couldn't wait exec.Wait", err)
+	Error("Couldn't wait exec.Wait", err)
 
 	return resultBytes
 }
