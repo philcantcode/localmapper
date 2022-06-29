@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func insert_searchsploit(result ExploitDB) string {
+func (result ExploitDB) Insert() string {
 	system.Log("Attempting to INSERT_Searchsploit", false)
 	insertResult, err := system.Results_Searchsploit_DB.InsertOne(context.Background(), result)
 
@@ -20,7 +20,7 @@ func insert_searchsploit(result ExploitDB) string {
 	return insertResult.InsertedID.(primitive.ObjectID).Hex()
 }
 
-func select_searchsploit(filter bson.M, projection bson.M) []ExploitDB {
+func Select(filter bson.M, projection bson.M) []ExploitDB {
 	cursor, err := system.Results_Searchsploit_DB.Find(context.Background(), filter, options.Find().SetProjection(projection))
 	system.Fatal("Couldn't SELECT_Searchsploit", err)
 	defer cursor.Close(context.Background())
@@ -39,7 +39,7 @@ func select_searchsploit(filter bson.M, projection bson.M) []ExploitDB {
 	return results
 }
 
-func delete_searchsploit(filter bson.M) {
+func Delete(filter bson.M) {
 	system.Log("Attempting to delete_searchsploit", false)
 
 	insertResult, err := system.Results_Searchsploit_DB.DeleteMany(context.Background(), filter)

@@ -1,11 +1,8 @@
 package system
 
 import (
-	"bufio"
 	"fmt"
 	"os"
-	"os/exec"
-	"time"
 
 	"github.com/philcantcode/localmapper/utils"
 )
@@ -21,22 +18,18 @@ func SetupTools() {
 		cleanup()
 	}
 
-	// TODO: Check that programs exist
-
+	setupDirectories()
 	unpackWordlists()
 	installKatoolin()
 	installSearchsploit()
-	setupNmapDir()
 
 	// execute("katoolin", []string{"2", "1", "22"})
 
-	// Acc check, set permissions then execute
-	execute("chmod +x ./res/apps/acccheck/acccheck.pl", nil)
-	execute("./res/apps/acccheck/acccheck.pl", nil)
+	// Acc check, set permissions
+	Execute("chmod +x ./res/apps/acccheck/acccheck.pl")
 
 	// Update tools
-	Log("All tools setup correctly, running updates concurrently", true)
-	go execute("searchsploit -u", nil)
+	Log("All tools setup correctly", true)
 }
 
 /*
@@ -50,7 +43,7 @@ func unpackWordlists() {
 		return // wordlist already unpacked
 	}
 
-	res := execute(fmt.Sprintf("7z x -y %s -o%s", GetConfig("wordlist-path"), GetConfig("external-resources-path")), nil)
+	res := Execute(fmt.Sprintf("7z x -y %s -o%s", GetConfig("wordlist-path"), GetConfig("external-resources-path")))
 	Log(fmt.Sprintf("Unzipped wordlist to %s, result: %s", GetConfig("external-resources-path"), string(res)), true)
 }
 
@@ -59,85 +52,45 @@ func installKatoolin() {
 		return
 	}
 
-	execute("add-apt-repository universe -y", nil)
-	execute(fmt.Sprintf("git -C %s clone https://github.com/LionSec/katoolin.git", GetConfig("external-resources-path")), nil)
-	execute(fmt.Sprintf("mv %s/katoolin/katoolin.py /usr/bin/katoolin", GetConfig("external-resources-path")), nil)
-	execute("chmod +x /usr/bin/katoolin", nil)
-	execute("update-alternatives --install /usr/bin/python python /usr/bin/python2 1", nil)
+	Execute("add-apt-repository universe -y")
+	Execute(fmt.Sprintf("git -C %s clone https://github.com/LionSec/katoolin.git", GetConfig("external-resources-path")))
+	Execute(fmt.Sprintf("mv %s/katoolin/katoolin.py /usr/bin/katoolin", GetConfig("external-resources-path")))
+	Execute("chmod +x /usr/bin/katoolin")
+	Execute("update-alternatives --install /usr/bin/python python /usr/bin/python2 1")
 }
 
 func installSearchsploit() {
 	installPath := GetConfig("external-resources-path") + "/exploitdb"
 
 	if !utils.DirExists(installPath) {
-		execute(fmt.Sprintf("git -C %s clone https://github.com/offensive-security/exploitdb.git", GetConfig("external-resources-path")), nil)
+		Execute(fmt.Sprintf("git -C %s clone https://github.com/offensive-security/exploitdb.git", GetConfig("external-resources-path")))
 	}
 
-	execute(fmt.Sprintf("sed -i 's:/opt/exploitdb:%s:g' %s/.searchsploit_rc", installPath, installPath), nil) // Replace /opt path with our path
-	execute(fmt.Sprintf("ln -sf %s/searchsploit /usr/bin/searchsploit", installPath), nil)
+	Execute(fmt.Sprintf("sed -i 's:/opt/exploitdb:%s:g' %s/.searchsploit_rc", installPath, installPath)) // Replace /opt path with our path
+	Execute(fmt.Sprintf("ln -sf %s/searchsploit /usr/bin/searchsploit", installPath))
+
+	go Execute("searchsploit -u")
 }
 
-func setupNmapDir() {
-	path := GetConfig("nmap-results-dir")
+func setupDirectories() {
+	//Nmap directory
+	path := GetConfig("external-resources-path")
 
-	if utils.DirExists(path) {
-		return
+	if !utils.DirExists(path) {
+		Execute("mkdir " + path)
 	}
 
-	execute("mkdir "+path, nil)
+	// Nmap directory
+	path = GetConfig("nmap-results-dir")
+
+	if !utils.DirExists(path) {
+		Execute("mkdir " + path)
+	}
 }
 
 /*
 	cleanup removes the /localmapper folder
 */
 func cleanup() {
-	execute(fmt.Sprintf("rm -rf %s", GetConfig("external-resources-path")), nil)
-}
-
-func execute(command string, ctrlParams []string) []byte {
-	Log("system.execute running: "+command, true)
-
-	cmd := exec.Command("/bin/sh", "-c", command)
-	cmdReader, err := cmd.StdoutPipe()
-	cmdWriter, err := cmd.StdinPipe()
-
-	resultBytes := []byte{}
-
-	if err != nil {
-		fmt.Fprintln(os.Stderr, "Error creating StdoutPipe for Cmd", err)
-		os.Exit(0)
-	}
-
-	scanner := bufio.NewScanner(cmdReader)
-
-	go func() {
-		for scanner.Scan() {
-			resByte := scanner.Bytes()
-
-			resultBytes = append(resultBytes, resByte...)
-			fmt.Println(string(resByte))
-		}
-	}()
-
-	err = cmd.Start()
-	if err != nil {
-		fmt.Fprintln(os.Stderr, "Error starting Cmd", err)
-		os.Exit(0)
-	}
-
-	if ctrlParams != nil {
-		for _, param := range ctrlParams {
-			Log("Running parameter: "+param, true)
-			cmdWriter.Write([]byte(param))
-			time.Sleep(2 * time.Second)
-		}
-
-		cmd.Process.Signal(os.Kill)
-	}
-
-	err = cmd.Wait()
-
-	//system.Fatal(fmt.Sprintf("Error returned in local.Execute running a command: %s > %v", prog, params), err)
-
-	return resultBytes
+	Execute(fmt.Sprintf("rm -rf %s", GetConfig("external-resources-path")))
 }

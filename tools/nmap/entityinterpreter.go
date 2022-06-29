@@ -1,8 +1,6 @@
 package nmap
 
 import (
-	"encoding/xml"
-	"fmt"
 	"strconv"
 
 	"github.com/philcantcode/localmapper/cmdb"
@@ -10,39 +8,14 @@ import (
 	"github.com/philcantcode/localmapper/utils"
 )
 
-// Execute takes a list of parameters to execute against NMAP
-func ProcessResults(resultByte []byte) NmapRun {
-	system.Log("Converting from []byte to NmapRun struct", false)
-
-	var nmapRun NmapRun
-	err := xml.Unmarshal(resultByte, &nmapRun)
-
-	if err != nil {
-		fmt.Println(string(resultByte))
-		fmt.Println(err)
-	}
-
-	system.Error("Couldn't unmarshal result from Nmap console", err)
-
-	return nmapRun
-}
-
-func (result NmapRun) StoreResults() string {
-	return INSERT_Nmap(result)
-}
-
-func WriteResultToDisk(res []byte, fileName string) string {
-	path := system.GetConfig("nmap-results-dir") + "/" + fileName + ".txt"
-	utils.CreateAndWriteFile(path, string(res))
-
-	return path
-}
-
 /*
-	ConvertToEntry takes in an nmapRun and extracts
+	ExtractEntity takes in an nmapRun and extracts
 	relevant variabels.
 */
-func (nmapRun NmapRun) ConvertToEntry() {
+func (nmapRun NmapRun) ExtractEntities() []cmdb.Entity {
+
+	entities := []cmdb.Entity{}
+
 	// For each host
 	for _, host := range nmapRun.Hosts {
 		sysTags := []cmdb.EntityTag{}
@@ -178,7 +151,6 @@ func (nmapRun NmapRun) ConvertToEntry() {
 			}
 		}
 
-		// Check that they're not empty.
 		if len(vendorTags.Values) > 0 {
 			sysTags = append(sysTags, vendorTags)
 		}
@@ -246,6 +218,8 @@ func (nmapRun NmapRun) ConvertToEntry() {
 			entry.Label = tag.Values[0]
 		}
 
-		cmdb.UpdateOrInsert(entry)
+		entities = append(entities, entry)
 	}
+
+	return entities
 }

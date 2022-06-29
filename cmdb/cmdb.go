@@ -336,7 +336,11 @@ func Init() {
 	}
 }
 
-func UpdateOrInsert(entry Entity) {
+/*
+	UpdateOrInsert either updates the entity by IP if found
+	or inserts a new entity
+*/
+func (entry Entity) UpdateOrInsert() {
 	// Insert to pending or update both DBs
 	if EntryExists_ByIP(entry) {
 		entryUpdateSuccess := updateEntriesTags_ByIP(entry)

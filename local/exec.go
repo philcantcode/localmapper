@@ -3,7 +3,6 @@ package local
 import (
 	"bufio"
 	"fmt"
-	"os"
 	"os/exec"
 	"time"
 
@@ -14,20 +13,17 @@ type ExecResult struct {
 	Label    string
 	DateTime time.Time
 	Output   []string
+	Result   int
 }
 
 func Execute(prog string, params []string) []byte {
-	system.Log(fmt.Sprintf("Attempting local.Execute: %s > %v", prog, params), true)
+	system.Log(fmt.Sprintf("Attempting local.Execute: %s %v", prog, params), true)
 
 	cmd := exec.Command(prog, params...)
 	cmdReader, err := cmd.StdoutPipe()
+	system.Fatal("Couldn't prepare command", err)
 
 	resultBytes := []byte{}
-
-	if err != nil {
-		fmt.Fprintln(os.Stderr, "Error creating StdoutPipe for Cmd", err)
-		os.Exit(0)
-	}
 
 	scanner := bufio.NewScanner(cmdReader)
 
@@ -41,19 +37,10 @@ func Execute(prog string, params []string) []byte {
 	}()
 
 	err = cmd.Start()
-	if err != nil {
-		fmt.Fprintln(os.Stderr, "Error starting Cmd", err)
-		os.Exit(0)
-	}
+	system.Fatal("Couldn't start command", err)
 
 	err = cmd.Wait()
-
-	if err != nil {
-		fmt.Fprintln(os.Stderr, "Error waiting Cmd", err)
-		os.Exit(0)
-	}
-
-	//system.Fatal(fmt.Sprintf("Error returned in local.Execute running a command: %s > %v", prog, params), err)
+	system.Fatal("Couldn't wait on command", err)
 
 	return resultBytes
 }

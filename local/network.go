@@ -111,7 +111,7 @@ func CheckSelfIdentity() {
 			}
 
 			newEntity.SysTags[ipIdx] = newEntity.SysTags[ipIdx].PushToFront(ip)
-			cmdb.UpdateOrInsert(newEntity)
+			newEntity.UpdateOrInsert()
 		}
 	}
 }

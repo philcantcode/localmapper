@@ -1,16 +1,17 @@
 package capability
 
 import (
+	"encoding/xml"
 	"fmt"
+	"strings"
 	"time"
 
-	"github.com/philcantcode/localmapper/capability/acccheck"
-	"github.com/philcantcode/localmapper/capability/local"
-	"github.com/philcantcode/localmapper/capability/nbtscan"
-	"github.com/philcantcode/localmapper/capability/nmap"
-	"github.com/philcantcode/localmapper/capability/searchsploit"
 	"github.com/philcantcode/localmapper/cmdb"
+	"github.com/philcantcode/localmapper/local"
 	"github.com/philcantcode/localmapper/system"
+	"github.com/philcantcode/localmapper/tools/nbtscan"
+	"github.com/philcantcode/localmapper/tools/nmap"
+	"github.com/philcantcode/localmapper/tools/searchsploit"
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
 )
@@ -74,10 +75,23 @@ func executeCapability(capability Capability) {
 	switch capability.Interpreter {
 	case system.Interpreter_NMAP:
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
-		nmapRun := nmap.ProcessResults(resultBytes)
-		nmapRun.ConvertToEntry()
-		resID := nmapRun.StoreResults()
-		path := nmap.WriteResultToDisk(resultBytes, resID)
+
+		// Convert to NmapRun type
+		var nmapRun nmap.NmapRun
+		err := xml.Unmarshal(resultBytes, &nmapRun)
+		system.Error("Couldn't unmarshal []bytes to NmapRun", err)
+
+		// Add to database and write to file (path)
+		dbID := nmapRun.Insert()
+		path := fmt.Sprintf("%s/%s.txt", system.GetConfig("nmap-results-dir"), dbID)
+		utils.CreateAndWriteFile(path, string(resultBytes))
+
+		// Convert to entry and insert
+		entities := nmapRun.ExtractEntities()
+
+		for _, entity := range entities {
+			entity.UpdateOrInsert()
+		}
 
 		// Run results through searchsploit
 		searchsploit := SELECT_Capability(bson.M{"cci": "cci:searchsploit:nmap:json"}, bson.M{})
@@ -89,25 +103,46 @@ func executeCapability(capability Capability) {
 
 		searchsploit[0].Command.Params[0].Value = path
 		go searchsploit[0].QueueCapability()
-	case system.Interpreter_UNIVERSAL:
-		res := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
-		system.Log("UNIVERSAL RESULT : "+string(res), true)
-	case system.Interpreter_ACCCHECK:
-		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
-		result := acccheck.ProcessResults(resultBytes)
-		acccheck.StoreResults(result)
 	case system.Interpreter_NBTSCAN:
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
-		nbtScan := nbtscan.ProcessResults(resultBytes)
-		nbtscan.ConvertToEntry(nbtScan)
-		nbtscan.StoreResults(nbtScan)
+
+		resultStrings := string(resultBytes)
+		resultArr := strings.Split(resultStrings, "\n")
+
+		for _, line := range resultArr {
+			lineArr := strings.Split(line, ",")
+
+			if len(lineArr) >= 5 {
+				nbtEntry := nbtscan.NBTScan{
+					IP:          strings.TrimSpace(lineArr[0]),
+					NetBIOSName: strings.TrimSpace(lineArr[1]),
+					Server:      strings.TrimSpace(lineArr[2]),
+					Username:    strings.TrimSpace(lineArr[3]),
+					MAC:         strings.TrimSpace(lineArr[4]),
+				}
+
+				nbtEntry.Insert()
+				entities := nbtEntry.ExtractEntities()
+
+				for _, entity := range entities {
+					entity.UpdateOrInsert()
+				}
+			}
+		}
 	case system.Interpreter_SEARCHSPLOIT:
 		resultBytes := local.Execute(capability.Command.Program, ParamsToArray(capability.Command.Params))
-		exploitDB := searchsploit.ProcessResults(resultBytes)
+		exploitDBs := searchsploit.ExtractExploitDB(resultBytes)
 
-		for _, exp := range exploitDB {
-			exp.StoreResults()
+		for _, exploit := range exploitDBs {
+
+			// Don't input where the exact search has been done before
+			if len(searchsploit.Select(bson.M{"search": exploit.Search}, bson.M{})) != 0 {
+				searchsploit.Delete(bson.M{"search": exploit.Search})
+			}
+
+			exploit.Insert()
 		}
+
 	default:
 		system.Warning(fmt.Sprintf("No capability interpreter available for: %+v", capability), true)
 	}

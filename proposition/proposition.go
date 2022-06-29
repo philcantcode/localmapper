@@ -1,8 +1,8 @@
 package proposition
 
 import (
-	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/cmdb"
+	"github.com/philcantcode/localmapper/local"
 	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/utils"
 )
@@ -49,7 +49,7 @@ func processProposition(proposition Proposition) {
 			UsrTags:     usrTags,
 			SysTags:     sysTags}
 
-		cmdb.UpdateOrInsert(serverCMDB)
+		serverCMDB.UpdateOrInsert()
 
 		UPDATE_Proposition(proposition)
 	}

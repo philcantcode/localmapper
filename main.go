@@ -7,8 +7,8 @@ import (
 	"github.com/go-ole/go-ole/oleutil"
 	"github.com/philcantcode/localmapper/capability"
 	"github.com/philcantcode/localmapper/capability/cookbook"
-	"github.com/philcantcode/localmapper/capability/local"
 	"github.com/philcantcode/localmapper/cmdb"
+	"github.com/philcantcode/localmapper/local"
 	"github.com/philcantcode/localmapper/proposition"
 	"github.com/philcantcode/localmapper/system"
 )
@@ -25,51 +25,26 @@ import (
 */
 const debugMode = false
 
-type Jedi interface {
-	HasForce() bool
-	something() bool
-}
-
-type knight struct {
-	Jedi
-}
-
-func (k *knight) HasForce() {
-	fmt.Println("aa")
-}
-
-func () something() {
-	fmt.Println("bbb")
-}
-
 func main() {
-
-	v := knight{}
-
-	v.HasForce()
-	v.something()
-
 	// Load settings & config database
 	system.InitSqlite()
 	system.Init()
 	system.InitMongo()
 
 	// Load all initial setup jobs here
-	if !debugMode {
-		system.DELETE_Logs()
-		system.SetupTools()
+	system.DELETE_Logs()
+	system.SetupTools()
 
-		local.CheckSelfIdentity()
+	local.CheckSelfIdentity()
 
-		proposition.Init()
-		capability.Init()
-		cookbook.Init()
-		cmdb.Init()
+	proposition.Init()
+	capability.Init()
+	cookbook.Init()
+	cmdb.Init()
 
-		// Initialise CRON jobs
-		cookbook.InitialiseAllSchedules()
-		go capability.ProcessCapabilityQueue()
-	}
+	// Initialise CRON jobs
+	cookbook.InitialiseAllSchedules()
+	go capability.ProcessCapabilityQueue()
 
 	// Initialise the web API
 	initServer()

@@ -7,7 +7,7 @@ import (
 	"github.com/philcantcode/localmapper/system"
 )
 
-func INSERT_NbtScan(nbtscan NBTScan) {
+func (nbtscan NBTScan) Insert() {
 	system.Log("Attempting to INSERT_NbtScan", false)
 
 	insertResult, err := system.Results_Nbscan_DB.InsertOne(context.Background(), nbtscan)
