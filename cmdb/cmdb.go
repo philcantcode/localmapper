@@ -52,7 +52,7 @@ func updateEntriesTags_ByIP(entry Entity) bool {
 		"systags.values": tag.Values[len(tag.Values)-1],
 	}
 
-	results := SELECT_ENTRY_Joined(ipFilter, bson.M{})
+	results := SELECT_Entities_Joined(ipFilter, bson.M{})
 
 	if len(results) == 0 {
 		system.Log(fmt.Sprintf("No match for (inventory): %s", tag.Values[len(tag.Values)-1]), false)
@@ -92,7 +92,7 @@ func updateEntriesTags_ByIP(entry Entity) bool {
 	results[0].DateSeen = append(results[0].DateSeen, entry.DateSeen...)
 
 	system.Log(fmt.Sprintf("Compartive update made: %v", results[0].ID), false)
-	UPDATE_ENTRY_Inventory(results[0])
+	results[0].UPDATE_ENTRY_Inventory()
 
 	// Only update the metadata for the pending entry
 	results[0].Label = entry.Label
@@ -100,7 +100,7 @@ func updateEntriesTags_ByIP(entry Entity) bool {
 	results[0].CMDBType = entry.CMDBType
 	results[0].OSILayer = entry.OSILayer
 
-	UPDATE_ENTRY_Pending(results[0])
+	results[0].UPDATE_ENTRY_Pending()
 
 	return true
 }
@@ -288,7 +288,7 @@ func Init() {
 		sysDefault := EntityTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
 		newVlan := Entity{Label: "Private Range 1", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntityTag{lowIP, highIP, sysDefault}}
-		insert_ENTRY_Inventory(newVlan)
+		newVlan.InsertInventory()
 	}
 
 	vlan2 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 2", "desc": "Default VLAN"}, bson.M{})
@@ -299,7 +299,7 @@ func Init() {
 		sysDefault := EntityTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
 		newVlan := Entity{Label: "Private Range 2", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntityTag{lowIP, highIP, sysDefault}}
-		insert_ENTRY_Inventory(newVlan)
+		newVlan.InsertInventory()
 	}
 
 	vlan3 := SELECT_ENTRY_Inventory(bson.M{"label": "Private Range 3", "desc": "Default VLAN"}, bson.M{})
@@ -310,7 +310,7 @@ func Init() {
 		sysDefault := EntityTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
 		newVlan := Entity{Label: "Private Range 3", Description: "Default VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntityTag{lowIP, highIP, sysDefault}}
-		insert_ENTRY_Inventory(newVlan)
+		newVlan.InsertInventory()
 	}
 
 	vlan4 := SELECT_ENTRY_Inventory(bson.M{"label": "Test Home", "desc": "Test VLAN"}, bson.M{})
@@ -321,7 +321,7 @@ func Init() {
 		sysDefault := EntityTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
 		newVlan := Entity{Label: "Test Home", Description: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntityTag{lowIP, highIP, sysDefault}}
-		insert_ENTRY_Inventory(newVlan)
+		newVlan.InsertInventory()
 	}
 
 	vlan5 := SELECT_ENTRY_Inventory(bson.M{"label": "Olivers Home", "desc": "Test VLAN"}, bson.M{})
@@ -332,13 +332,13 @@ func Init() {
 		sysDefault := EntityTag{Label: "SysDefault", DataType: system.DataType_BOOL, Values: []string{"1"}}
 
 		newVlan := Entity{Label: "Olivers Home", Description: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntityTag{lowIP, highIP, sysDefault}}
-		insert_ENTRY_Inventory(newVlan)
+		newVlan.InsertInventory()
 	}
 }
 
 /*
 	UpdateOrInsert either updates the entity by IP if found
-	or inserts a new entity
+	or inserts a new entity. Causes DATE_SEEN to be updated
 */
 func (entry Entity) UpdateOrInsert() {
 	// Insert to pending or update both DBs
@@ -349,6 +349,6 @@ func (entry Entity) UpdateOrInsert() {
 			system.Warning("Couldn't update inventory or pending in CMDB", true)
 		}
 	} else {
-		insert_ENTRY_Pending(entry)
+		entry.InsertPending()
 	}
 }

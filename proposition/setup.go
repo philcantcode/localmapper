@@ -57,7 +57,7 @@ func setupSelfIdentity() {
 	}
 
 	propItem := Predicate{Label: "Server IP", Value: local.GetDefaultIPGateway().DefaultIP, DataType: system.DataType_IP, Options: optionIPs}
-	prop := Proposition{Type: "local-net-iface", DateTime: utils.GetDateTime().DateTime, Description: "Please choose the IP address for this server.", Predicate: propItem}
+	prop := Proposition{Type: Proposition_LOCAL_IDENTITY, DateTime: utils.GetDateTime().DateTime, Description: "Please choose the IP address for this server.", Predicate: propItem}
 
 	INSERT_Proposition(prop)
 }
@@ -91,6 +91,6 @@ func recalcualteVlanCIDR() {
 			entry.SysTags = append(entry.SysTags, cmdb.EntityTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.DataType_CIDR, Values: cidr})
 		}
 
-		cmdb.UPDATE_ENTRY_Inventory(entry)
+		entry.UPDATE_ENTRY_Inventory()
 	}
 }

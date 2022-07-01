@@ -18,7 +18,7 @@ func HTTP_JSON_Run_Cookbook(w http.ResponseWriter, r *http.Request) {
 	id := params["id"]
 
 	cookbooks := SELECT_Cookbook(bson.M{"ccbi": ccbi}, bson.M{})
-	entries := cmdb.SELECT_ENTRY_Joined(bson.M{"_id": system.EncodeID(id)}, bson.M{})
+	entries := cmdb.SELECT_Entities_Joined(bson.M{"_id": system.EncodeID(id)}, bson.M{})
 
 	if len(cookbooks) != 1 {
 		system.Warning("Wrong number of cookbooks selected", true)
@@ -30,7 +30,7 @@ func HTTP_JSON_Run_Cookbook(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	cookbooks[0].ExecuteOnEntry(entries[0].ID)
+	cookbooks[0].RunBookOnEntity(entries[0].ID)
 
 	w.Write([]byte("200/Done"))
 }

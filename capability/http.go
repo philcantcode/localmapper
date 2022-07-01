@@ -96,7 +96,7 @@ func HTTP_JSON_RunCMDBCompatible(w http.ResponseWriter, r *http.Request) {
 	cap := SELECT_Capability(bson.M{"_id": system.EncodeID(cap_id)}, bson.M{})[0]
 	entries := []cmdb.Entity{}
 
-	entries = append(entries, cmdb.SELECT_ENTRY_Joined(bson.M{"_id": system.EncodeID(cmdb_id)}, bson.M{})...)
+	entries = append(entries, cmdb.SELECT_Entities_Joined(bson.M{"_id": system.EncodeID(cmdb_id)}, bson.M{})...)
 
 	if len(entries) != 1 {
 		system.Warning("Too many results returned in HTTP_JSON_GetCMDBCompatible", true)

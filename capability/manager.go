@@ -142,7 +142,7 @@ func (lc *Lifecycle) recordsManagement() {
 
 	// NMAP
 	if lc.Capability.Interpreter == system.Interpreter_NMAP {
-		lc.DatabaseInsertID = lc.nmapRun.Insert()
+		lc.DatabaseInsertID = lc.nmapRun.INSERT()
 
 		// Write to nmap output directory
 		lc.ResultFilePath = fmt.Sprintf("%s/%s.txt", system.GetConfig("nmap-results-dir"), lc.DatabaseInsertID)

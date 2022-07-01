@@ -95,9 +95,13 @@ func HTTP_JSON_GetDefaultGatewayIP(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(GetDefaultIPGateway())
 }
 
+/*
+	CheckSelfIdentity checks to see if the default IP matches the one on file
+	if it doesn't, the IP gets updated
+*/
 func CheckSelfIdentity() {
 	ip := GetDefaultIPGateway().DefaultIP
-	local := cmdb.SELECT_ENTRY_Joined(bson.M{"systags.label": "Identity"}, bson.M{})
+	local := cmdb.SELECT_Entities_Joined(bson.M{"systags.label": "Identity"}, bson.M{})
 
 	for _, entity := range local {
 		identTag, _, _ := entity.FindSysTag("Identity")
@@ -111,7 +115,9 @@ func CheckSelfIdentity() {
 			}
 
 			newEntity.SysTags[ipIdx] = newEntity.SysTags[ipIdx].PushToFront(ip)
-			newEntity.UpdateOrInsert()
+
+			newEntity.UPDATE_ENTRY_Inventory()
+			newEntity.UPDATE_ENTRY_Pending()
 		}
 	}
 }

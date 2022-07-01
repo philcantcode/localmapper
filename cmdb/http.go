@@ -109,7 +109,7 @@ func HTTP_INSERT_Pending_Vlan(w http.ResponseWriter, r *http.Request) {
 	cidr := EntityTag{Label: "CIDR", DataType: system.DataType_CIDR, Values: cidrArr}
 	entry := Entity{Label: label, Description: desc, OSILayer: 2, CMDBType: CMDBType(cmdbTypeInt), DateSeen: []string{utils.GetDateTime().DateTime}, SysTags: []EntityTag{lowIpTag, highIpTag, cidr}, UsrTags: []EntityTag{}}
 
-	insert_ENTRY_Pending(entry)
+	entry.InsertPending()
 
 	w.Write([]byte("200/Success"))
 }
@@ -120,7 +120,7 @@ func HTTP_Pending_Approve(w http.ResponseWriter, r *http.Request) {
 	pending := SELECT_ENTRY_Pending(bson.M{"_id": system.EncodeID(id)}, bson.M{})[0]
 	pending.SysTags = append(pending.SysTags, EntityTag{Label: "Verified", DataType: system.DataType_BOOL, Values: []string{"1"}})
 
-	insert_ENTRY_Inventory(pending)
+	pending.InsertInventory()
 	DELETE_ENTRY_Pending(pending)
 }
 
@@ -163,7 +163,7 @@ func HTTP_JSON_GetDateTimeGraph(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	id := params["id"]
 
-	entry := SELECT_ENTRY_Joined(bson.M{"_id": system.EncodeID(id)}, bson.M{})
+	entry := SELECT_Entities_Joined(bson.M{"_id": system.EncodeID(id)}, bson.M{})
 
 	if len(entry) == 1 {
 		json.NewEncoder(w).Encode(CalcTimeGraph(entry[0]))

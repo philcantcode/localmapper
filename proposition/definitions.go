@@ -5,9 +5,15 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
+type PropType string
+
+const (
+	Proposition_LOCAL_IDENTITY PropType = "LOCAL_IDENTITY"
+)
+
 type Proposition struct {
 	ID          primitive.ObjectID `bson:"_id"`
-	Type        string
+	Type        PropType
 	DateTime    string
 	Description string
 	Predicate   Predicate

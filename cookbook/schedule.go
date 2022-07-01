@@ -88,7 +88,7 @@ func InitialiseAllSchedules() {
 				tracking[sidx].IsRunning = true
 
 				for _, targID := range jSchedule.TargetDevices {
-					targ := cmdb.SELECT_ENTRY_Joined(bson.M{"_id": system.EncodeID(targID)}, bson.M{})
+					targ := cmdb.SELECT_Entities_Joined(bson.M{"_id": system.EncodeID(targID)}, bson.M{})
 
 					if len(targ) != 1 {
 						system.Warning(fmt.Sprintf("Incorrect number of targets returned (%d) for %s", len(targ), targID), true)
@@ -101,14 +101,14 @@ func InitialiseAllSchedules() {
 
 					if !isExcluded && hasTimePassed {
 						system.Log(fmt.Sprintf("Starting Schedule: %s (ccbi: %s) > %s", jSchedule.Label, jBook.CCBI, targ[0].Label), true)
-						jBook.ExecuteOnEntry(targ[0].ID)
+						jBook.RunBookOnEntity(targ[0].ID)
 					} else {
 						system.Log(fmt.Sprintf("Skipping %s because [ON EXCLUSION LIST: %t] [SUITABLE TIME PASSED: %t]\n", targ[0].Label, isExcluded, hasTimePassed), false)
 					}
 				}
 
 				for _, targGroup := range jSchedule.TargetGroups {
-					for _, entry := range cmdb.SELECT_ENTRY_Joined(bson.M{"cmdbtype": targGroup}, bson.M{}) {
+					for _, entry := range cmdb.SELECT_Entities_Joined(bson.M{"cmdbtype": targGroup}, bson.M{}) {
 
 						// Check whether suitable time has past between last entry scan
 						var hasTimePassed bool
@@ -117,7 +117,7 @@ func InitialiseAllSchedules() {
 
 						if !isExcluded && hasTimePassed {
 							system.Log(fmt.Sprintf("Starting Schedule: %s (ccbi: %s) > %s", jSchedule.Label, jBook.CCBI, entry.Label), true)
-							jBook.ExecuteOnEntry(entry.ID)
+							jBook.RunBookOnEntity(entry.ID)
 						} else {
 							system.Log(fmt.Sprintf("Skipping %s because [ON EXCLUSION LIST: %t] [SUITABLE TIME PASSED: %t]", entry.Label, isExcluded, hasTimePassed), false)
 						}

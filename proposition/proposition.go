@@ -9,7 +9,7 @@ import (
 
 func processProposition(proposition Proposition) {
 	switch proposition.Type {
-	case "local-net-iface":
+	case Proposition_LOCAL_IDENTITY:
 		sysTags := []cmdb.EntityTag{}
 		usrTags := []cmdb.EntityTag{}
 
@@ -47,10 +47,10 @@ func processProposition(proposition Proposition) {
 			DateSeen:    time,
 			CMDBType:    cmdb.SERVER,
 			UsrTags:     usrTags,
-			SysTags:     sysTags}
+			SysTags:     sysTags,
+		}
 
-		serverCMDB.UpdateOrInsert()
-
+		serverCMDB.InsertInventory()
 		UPDATE_Proposition(proposition)
 	}
 }

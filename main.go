@@ -31,20 +31,23 @@ func main() {
 	system.Init()
 	system.InitMongo()
 
-	// Load all initial setup jobs here
-	system.DELETE_Logs()
-	system.SetupTools()
+	if !debugMode {
+		// Load all initial setup jobs here
+		system.DELETE_Logs()
+		system.SetupTools()
 
-	local.CheckSelfIdentity()
+		local.CheckSelfIdentity()
 
-	proposition.Init()
-	capability.Init()
-	cookbook.Init()
-	cmdb.Init()
+		proposition.Init()
+		capability.Init()
+		cookbook.Init()
+		cmdb.Init()
 
-	// Initialise CRON jobs
-	cookbook.InitialiseAllSchedules()
-	go capability.InitCapabilityLifecycleManager()
+		// Initialise CRON jobs
+		cookbook.InitialiseAllSchedules()
+		go capability.InitCapabilityLifecycleManager()
+
+	}
 
 	// Initialise the web API
 	initServer()

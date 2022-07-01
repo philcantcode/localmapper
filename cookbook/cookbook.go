@@ -12,17 +12,17 @@ import (
 )
 
 /*
-	ExecuteOnEntry runs a cookbook against a given entry
+	RunBookOnEntity runs a cookbook against a given entry
 */
-func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
+func (book Cookbook) RunBookOnEntity(entryID primitive.ObjectID) {
 	system.Log("Attempting to execute cookbook: "+book.Label, true)
-	capsInBook := []string{} // Keep track of capabilities already run so don't run them twice in 1 cookbook
+	capsRunPreviously := []string{} // Keep track of capabilities already run so don't run them twice in 1 cookbook
 
 	capList := capability.SELECT_Capability(bson.M{}, bson.M{})
 
 	for _, cci := range book.CCIs {
 		// Select the entry and capability given an id and cci
-		entries := cmdb.SELECT_ENTRY_Joined(bson.M{"_id": entryID}, bson.M{})
+		entities := cmdb.SELECT_Entities_Joined(bson.M{"_id": entryID}, bson.M{})
 		caps := capability.SELECT_Capability(bson.M{"cci": cci}, bson.M{})
 
 		// Ensure only 1 capability returned
@@ -35,26 +35,26 @@ func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
 		}
 
 		// Ensure only 1 entry returned
-		if len(entries) != 1 {
+		if len(entities) != 1 {
 			system.Warning(
 				fmt.Sprintf(
 					"Incorrect number (%d) of returned for entries: %s",
-					len(entries), entryID), true)
+					len(entities), entryID), true)
 			return
 		}
 
-		isMatch, cap := caps[0].CheckCompatability(entries[0])
+		isMatch, cap := caps[0].CheckCompatability(entities[0])
 
-		if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsInBook) {
-			system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", caps[0].Label, entries[0].Label), true)
+		if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsRunPreviously) {
+			system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", caps[0].Label, entities[0].Label), true)
 
 			manager := capability.Lifecycle{}
 			manager.SetCapability(cap)
 			manager.Start()
 
-			capsInBook = append(capsInBook, cap.ID.Hex())
+			capsRunPreviously = append(capsRunPreviously, cap.ID.Hex())
 		} else {
-			system.Log(fmt.Sprintf("Can't execute capability [%s] against [%s], not a match", caps[0].Label, entries[0].Label), true)
+			system.Log(fmt.Sprintf("Can't execute capability [%s] against [%s], not a match", caps[0].Label, entities[0].Label), true)
 		}
 	}
 
@@ -69,7 +69,7 @@ func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
 			if !utils.ArrayContains(cap.CCI, book.CCIs) {
 				if utils.ArrayContains(key, cap.ResultTags) {
 					// Reselect, last pass through might of updated tags
-					entries := cmdb.SELECT_ENTRY_Joined(bson.M{"_id": entryID}, bson.M{})
+					entries := cmdb.SELECT_Entities_Joined(bson.M{"_id": entryID}, bson.M{})
 
 					// Ensure only 1 entry returned
 					if len(entries) != 1 {
@@ -82,14 +82,14 @@ func (book Cookbook) ExecuteOnEntry(entryID primitive.ObjectID) {
 
 					isMatch, cap := cap.CheckCompatability(entries[0])
 
-					if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsInBook) {
+					if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsRunPreviously) {
 						system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", cap.Label, entries[0].Label), true)
 
 						manager := capability.Lifecycle{}
 						manager.SetCapability(cap)
 						manager.Start()
 
-						capsInBook = append(capsInBook, cap.ID.Hex())
+						capsRunPreviously = append(capsRunPreviously, cap.ID.Hex())
 					}
 				}
 			}
