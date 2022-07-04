@@ -12,6 +12,7 @@ import (
 	"github.com/philcantcode/localmapper/local"
 	"github.com/philcantcode/localmapper/proposition"
 	"github.com/philcantcode/localmapper/system"
+	"github.com/philcantcode/localmapper/tools/nmap"
 	"github.com/philcantcode/localmapper/utils"
 )
 
@@ -66,6 +67,8 @@ func initServer() {
 	router.HandleFunc("/cmdb/identity-confidence/get/{id}", cmdb.HTTP_JSON_IdentityConfidence_Get)
 	router.HandleFunc("/cmdb/utils/date-time-graph/get/{id}", cmdb.HTTP_JSON_GetDateTimeGraph)
 	router.HandleFunc("/cmdb/utils/restore", cmdb.HTTP_JSON_Restore)
+
+	router.HandleFunc("/tools/nmap/select-logs", nmap.HTTP_SELECT_Logs)
 
 	cors := handlers.CORS(
 		handlers.AllowedHeaders([]string{"content-type"}),
