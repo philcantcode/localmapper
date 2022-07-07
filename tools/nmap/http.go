@@ -2,7 +2,6 @@ package nmap
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -39,8 +38,5 @@ func HTTP_SELECT_Logs(w http.ResponseWriter, r *http.Request) {
 	}
 
 	results := SELECT(filterBson, projBson)
-
-	fmt.Printf("RETUNRING LEN: %d\n", len(results))
-
 	json.NewEncoder(w).Encode(results)
 }
