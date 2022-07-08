@@ -8,7 +8,8 @@ import (
 type PropType string
 
 const (
-	Proposition_LOCAL_IDENTITY PropType = "LOCAL_IDENTITY"
+	Proposition_Local_Identity       PropType = "LOCAL_IDENTITY"
+	Proposition_IP_Identity_Conflict PropType = "IP_IDENTITY_CONFLICT"
 )
 
 type Proposition struct {

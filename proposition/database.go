@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func INSERT_Proposition(proposition Proposition) {
+func (proposition Proposition) Insert() {
 	system.Log("Attempting to INSERT_Proposition", false)
 	proposition.ID = primitive.NewObjectID()
 	insertResult, err := system.Core_Proposition_DB.InsertOne(context.Background(), proposition)
@@ -47,7 +47,7 @@ Status:
 0 = Open
 1 = Complete
 2 = Disabled */
-func UPDATE_Proposition(proposition Proposition) {
+func (proposition Proposition) Update() {
 	result, err := system.Core_Proposition_DB.ReplaceOne(context.Background(), bson.M{"_id": proposition.ID}, proposition)
 	system.Fatal("Couldn't UPDATE_Proposition", err)
 

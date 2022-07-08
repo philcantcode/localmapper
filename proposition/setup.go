@@ -11,6 +11,7 @@ import (
 func Init() {
 	setupSelfIdentity()
 	recalcualteVlanCIDR()
+
 }
 
 // setupSelfIdentity initialises IPs and local variables
@@ -46,7 +47,7 @@ func setupSelfIdentity() {
 
 	for _, prop := range props {
 		prop.Status = 2
-		UPDATE_Proposition(prop)
+		prop.Update()
 	}
 
 	// Create the new proposition to guess the local IP
@@ -57,9 +58,9 @@ func setupSelfIdentity() {
 	}
 
 	propItem := Predicate{Label: "Server IP", Value: local.GetDefaultIPGateway().DefaultIP, DataType: system.DataType_IP, Options: optionIPs}
-	prop := Proposition{Type: Proposition_LOCAL_IDENTITY, DateTime: utils.GetDateTime().DateTime, Description: "Please choose the IP address for this server.", Predicate: propItem}
+	prop := Proposition{Type: Proposition_Local_Identity, DateTime: utils.GetDateTime().DateTime, Description: "Please choose the IP address for this server.", Predicate: propItem}
 
-	INSERT_Proposition(prop)
+	prop.Insert()
 }
 
 func recalcualteVlanCIDR() {
