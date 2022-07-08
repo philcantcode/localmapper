@@ -1,8 +1,9 @@
 package proposition
 
 import (
+	"time"
+
 	"github.com/philcantcode/localmapper/system"
-	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 type PropType string
@@ -13,18 +14,27 @@ const (
 )
 
 type Proposition struct {
-	ID          primitive.ObjectID `bson:"_id"`
+	ID          string
 	Type        PropType
-	DateTime    string
+	DateTime    time.Time
 	Description string
-	Predicate   Predicate
-	Status      int // 0 = Open, 1 = Accepted, 2 = Deleted
-	User        int
+	Predicates  []Predicate
 }
 
 type Predicate struct {
 	Label    string
 	Value    string
 	DataType system.DataType
-	Options  []string
+	Chosen   bool
+}
+
+func (prop Proposition) getChosen() Predicate {
+	for _, pred := range prop.Predicates {
+		if pred.Chosen {
+			return pred
+		}
+	}
+
+	system.Warning("No predicate chosen", true)
+	return Predicate{}
 }

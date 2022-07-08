@@ -178,7 +178,6 @@ func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 	system.Log("Restoring CMDB to factory defaults", true)
 	system.CMDB_Inventory_DB.Drop(context.Background()) // Drop inventory
 	system.CMDB_Pending_DB.Drop(context.Background())   // Drop pending
-	system.Core_Proposition_DB.Drop(context.Background())
 
 	Init() // Restore capabilities
 

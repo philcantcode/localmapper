@@ -19,7 +19,6 @@ var Results_Nbscan_DB *mongo.Collection
 var Results_Misc_DB *mongo.Collection
 var CMDB_Inventory_DB *mongo.Collection
 var CMDB_Pending_DB *mongo.Collection
-var Core_Proposition_DB *mongo.Collection
 var Core_Jobs_DB *mongo.Collection
 var Core_Capability_DB *mongo.Collection
 var Core_Cookbooks_DB *mongo.Collection
@@ -58,9 +57,6 @@ func InitMongo() {
 
 	CMDB_Pending_DB = client.Database("CMDB").Collection("Pending")
 	Log("Successfully setup mongo Pending database collections: ", false)
-
-	Core_Proposition_DB = client.Database("Core").Collection("Proposition")
-	Log("Successfully setup mongo Proposition database collections: ", false)
 
 	Core_Jobs_DB = client.Database("Core").Collection("Jobs")
 	Log("Successfully setup mongo Jobs database collections: ", false)

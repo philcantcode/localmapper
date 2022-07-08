@@ -2,65 +2,15 @@ package proposition
 
 import (
 	"github.com/philcantcode/localmapper/cmdb"
-	"github.com/philcantcode/localmapper/local"
 	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
 func Init() {
-	setupSelfIdentity()
+	setupLocalIPIdentity()
 	recalcualteVlanCIDR()
 
-}
-
-// setupSelfIdentity initialises IPs and local variables
-func setupSelfIdentity() {
-	entries := cmdb.SELECT_ENTRY_Inventory(bson.M{}, bson.M{})
-	localInCMDB := false
-	propAlreadyExists := false
-
-	// Check if server is already in the database
-	for _, entry := range entries {
-		ident, found, _ := entry.FindSysTag("Identity")
-
-		if found && utils.ArrayContains("local", ident.Values) {
-			system.Log("Identity local already found in CMDB", true)
-			localInCMDB = true
-		}
-	}
-
-	props := SELECT_Propositions(bson.M{"type": "local-net-iface"}, bson.M{})
-
-	if len(props) > 0 {
-		system.Log("Proposition for self identity already exists", true)
-		propAlreadyExists = true
-	}
-
-	if localInCMDB {
-		return
-	}
-
-	if localInCMDB && propAlreadyExists {
-		return
-	}
-
-	for _, prop := range props {
-		prop.Status = 2
-		prop.Update()
-	}
-
-	// Create the new proposition to guess the local IP
-	optionIPs := []string{}
-
-	for _, ip := range local.GetNetworkAdapters() {
-		optionIPs = append(optionIPs, ip.IP)
-	}
-
-	propItem := Predicate{Label: "Server IP", Value: local.GetDefaultIPGateway().DefaultIP, DataType: system.DataType_IP, Options: optionIPs}
-	prop := Proposition{Type: Proposition_Local_Identity, DateTime: utils.GetDateTime().DateTime, Description: "Please choose the IP address for this server.", Predicate: propItem}
-
-	prop.Insert()
 }
 
 func recalcualteVlanCIDR() {

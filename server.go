@@ -50,7 +50,7 @@ func initServer() {
 	router.HandleFunc("/local/get-default-ip-gateway", local.HTTP_JSON_GetDefaultGatewayIP)
 
 	router.HandleFunc("/propositions/get-all", proposition.HTTP_JSON_GetPropositions)
-	router.HandleFunc("/propositions/accept-defaults", proposition.HTTP_None_AcceptDefault)
+	router.HandleFunc("/propositions/accept-defaults", proposition.HTTP_None_Process)
 
 	router.HandleFunc("/cmdb/inventory/get/local", cmdb.HTTP_JSON_GetLocal)
 	router.HandleFunc("/cmdb/inventory/get/all", cmdb.HTTP_JSON_Inventory_GetAll)
