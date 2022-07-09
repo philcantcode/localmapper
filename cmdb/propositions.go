@@ -76,6 +76,11 @@ func InitLocalIdentityProp() {
 		system.Warning("Too many propositions for self idetntity returned", true)
 	}
 
+	// Already exists
+	if len(entries) == 1 {
+		return
+	}
+
 	// There should only be one of them
 	if proposition.CheckPropTypeExists(proposition.Proposition_Local_Identity) {
 		return

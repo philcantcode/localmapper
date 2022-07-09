@@ -280,7 +280,6 @@ func CalcTimeGraph(entry Entity) TimeGraph {
 }
 
 func Init() {
-
 	InitLocalIdentityProp()
 	updateSelfIdentity()
 
@@ -445,20 +444,72 @@ func setLocalIdentityEntry(ip string) {
 
 func resolveIPConflict(action ConflictActions, ip string) {
 
-	if action == Action_MERGE_INTO_INVENTORY {
+	pending := SELECT_ENTRY_Pending(bson.M{"systags.label": "IP", "systags.values": ip}, bson.M{})[0]
+	inventory := SELECT_ENTRY_Inventory(bson.M{"systags.label": "IP", "systags.values": ip}, bson.M{})[0]
 
-		DELETE_ENTRY_Pending(SELECT_ENTRY_Pending(bson.M{"systags.label": "IP", "systags.values": ip}, bson.M{})[0])
+	if action == Action_MERGE_INTO_INVENTORY {
+		// Parse SysTags and join them
+		for _, newTag := range pending.SysTags {
+			_, found, i := inventory.FindSysTag(newTag.Label)
+
+			if found {
+				inventory.SysTags[i].Values = joinTagGroups(newTag.Label, inventory.SysTags[i].Values, newTag.Values)
+			} else {
+				inventory.SysTags = append(inventory.SysTags, newTag)
+			}
+		}
+
+		// Parse SysTags and join them
+		for _, newTag := range pending.UsrTags {
+			_, found, i := inventory.FindUsrTag(newTag.Label)
+
+			if found {
+				inventory.UsrTags[i].Values = joinTagGroups(newTag.Label, inventory.UsrTags[i].Values, newTag.Values)
+			} else {
+				inventory.UsrTags = append(inventory.UsrTags, newTag)
+			}
+		}
+
+		pending.UPDATE_ENTRY_Inventory()
+		DELETE_ENTRY_Pending(pending)
+		system.Log("Merged into Inventory", true)
 	}
 
 	if action == Action_MERGE_INTO_PENDING {
+		// Parse SysTags and join them
+		for _, newTag := range inventory.SysTags {
+			_, found, i := pending.FindSysTag(newTag.Label)
 
+			if found {
+				pending.SysTags[i].Values = joinTagGroups(newTag.Label, pending.SysTags[i].Values, newTag.Values)
+			} else {
+				pending.SysTags = append(pending.SysTags, newTag)
+			}
+		}
+
+		// Parse SysTags and join them
+		for _, newTag := range inventory.UsrTags {
+			_, found, i := pending.FindUsrTag(newTag.Label)
+
+			if found {
+				pending.UsrTags[i].Values = joinTagGroups(newTag.Label, pending.UsrTags[i].Values, newTag.Values)
+			} else {
+				pending.UsrTags = append(pending.UsrTags, newTag)
+			}
+		}
+
+		pending.UPDATE_ENTRY_Inventory()
+		DELETE_ENTRY_Inventory(inventory)
+		system.Log("Merged into Pending", true)
 	}
 
 	if action == Action_DELETE_INVENTORY_ENTRY {
-		DELETE_ENTRY_Inventory(SELECT_ENTRY_Inventory(bson.M{"systags.label": "IP", "systags.values": ip}, bson.M{})[0])
+		DELETE_ENTRY_Inventory(inventory)
+		system.Log("Deletd Inventory", true)
 	}
 
 	if action == Action_DELETE_PENDING_ENTRY {
-		DELETE_ENTRY_Pending(SELECT_ENTRY_Pending(bson.M{"systags.label": "IP", "systags.values": ip}, bson.M{})[0])
+		DELETE_ENTRY_Pending(pending)
+		system.Log("Deletd Pending", true)
 	}
 }

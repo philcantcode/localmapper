@@ -15,7 +15,7 @@ import (
 )
 
 var activeRoutines = 0
-var maxRoutines = 8
+var maxRoutines = 16
 var stopRoutines = false
 var lifecycleCounter = 0
 
