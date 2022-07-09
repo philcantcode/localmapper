@@ -206,3 +206,25 @@ func HTTP_JSON_Lifecycle_Manager_JobTypes(w http.ResponseWriter, r *http.Request
 func HTTP_JSON_GetJobsDateTimeGraph(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(CalcJobsTimeGraph())
 }
+
+func HTTP_JSON_GetJobStats(w http.ResponseWriter, r *http.Request) {
+
+	type Result struct {
+		Running int
+		Waiting int
+	}
+
+	res := Result{}
+
+	for _, job := range managementStore {
+		if job.Tracking.Status != Status_Done && job.Tracking.Status != Status_Waiting {
+			res.Running++
+		}
+
+		if job.Tracking.Status != Status_Done && job.Tracking.Status == Status_Waiting {
+			res.Waiting++
+		}
+	}
+
+	json.NewEncoder(w).Encode(res)
+}

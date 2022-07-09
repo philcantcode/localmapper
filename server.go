@@ -38,6 +38,7 @@ func initServer() {
 	router.HandleFunc("/capability/manager/get-tracking", capability.HTTP_JSON_Lifecycle_Manager_List_All)
 	router.HandleFunc("/capability/utils/date-time-graph", capability.HTTP_JSON_GetJobsDateTimeGraph)
 	router.HandleFunc("/capability/utils/date-job-type-graph", capability.HTTP_JSON_Lifecycle_Manager_JobTypes)
+	router.HandleFunc("/capability/jobs/get-stats", capability.HTTP_JSON_GetJobStats)
 
 	router.HandleFunc("/cookbook/run/{ccbi}/{id}", cookbook.HTTP_JSON_Run_Cookbook)
 	router.HandleFunc("/cookbook/get/all", cookbook.HTTP_JSON_GetAll)
@@ -50,8 +51,10 @@ func initServer() {
 	router.HandleFunc("/local/get-default-ip-gateway", local.HTTP_JSON_GetDefaultGatewayIP)
 
 	router.HandleFunc("/propositions/get-all", proposition.HTTP_JSON_GetPropositions)
-	router.HandleFunc("/propositions/resolve", proposition.HTTP_None_Resolve)
 	router.HandleFunc("/propositions/refresh", proposition.HTTP_None_Refresh)
+	router.HandleFunc("/propositions/get-count", proposition.HTTP_INT_GetPropositionCount)
+	router.HandleFunc("/propositions/resolve/local-identity", cmdb.HTTP_None_ResolveLocalIdentityProposition)
+	router.HandleFunc("/propositions/resolve/ip-conflict", cmdb.HTTP_None_ResolveIPConflict)
 
 	router.HandleFunc("/cmdb/inventory/get/local", cmdb.HTTP_JSON_GetLocal)
 	router.HandleFunc("/cmdb/inventory/get/all", cmdb.HTTP_JSON_Inventory_GetAll)

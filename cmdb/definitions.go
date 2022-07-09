@@ -82,3 +82,12 @@ func (tag EntityTag) PushToFront(value string) EntityTag {
 
 	return tag
 }
+
+type ConflictActions string
+
+const (
+	Action_MERGE_INTO_INVENTORY   ConflictActions = "Merge Into Inventory"
+	Action_MERGE_INTO_PENDING     ConflictActions = "Merge Into Pending"
+	Action_DELETE_PENDING_ENTRY   ConflictActions = "Delete Pending Entry"
+	Action_DELETE_INVENTORY_ENTRY ConflictActions = "Delete Inventory Entry"
+)

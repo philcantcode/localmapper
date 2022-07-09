@@ -7,6 +7,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
+	"github.com/philcantcode/localmapper/proposition"
 	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
@@ -182,4 +183,36 @@ func HTTP_JSON_Restore(w http.ResponseWriter, r *http.Request) {
 	Init() // Restore capabilities
 
 	w.Write([]byte("200/Done"))
+}
+
+func HTTP_None_ResolveLocalIdentityProposition(w http.ResponseWriter, r *http.Request) {
+	id := r.PostFormValue("ID")
+	value := r.PostFormValue("Value")
+
+	valueIdx, err := strconv.Atoi(value)
+	system.Error("Couldn't convert proposition value ID to int", err)
+
+	for i, prop := range proposition.Propositions {
+		if prop.ID == id {
+			setLocalIdentityEntry(proposition.Propositions[i].Predicates[valueIdx].Value)
+			proposition.Pop(valueIdx)
+			break
+		}
+	}
+}
+
+func HTTP_None_ResolveIPConflict(w http.ResponseWriter, r *http.Request) {
+	id := r.PostFormValue("ID")
+	value := r.PostFormValue("Value")
+
+	valueIdx, err := strconv.Atoi(value)
+	system.Error("Couldn't convert proposition value ID to int", err)
+
+	for _, prop := range proposition.Propositions {
+		if prop.ID == id {
+			resolveIPConflict(ConflictActions(prop.Predicates[valueIdx].Value), prop.GetEvidenceValue("Conflict IP"))
+			proposition.Pop(valueIdx)
+			break
+		}
+	}
 }

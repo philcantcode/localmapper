@@ -8,8 +8,6 @@ import (
 	"github.com/philcantcode/localmapper/capability"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/cookbook"
-	"github.com/philcantcode/localmapper/local"
-	"github.com/philcantcode/localmapper/proposition"
 	"github.com/philcantcode/localmapper/system"
 )
 
@@ -36,9 +34,6 @@ func main() {
 		system.DELETE_Logs()
 		system.SetupTools()
 
-		local.CheckSelfIdentity()
-
-		proposition.Init()
 		capability.Init()
 		cookbook.Init()
 		cmdb.Init()

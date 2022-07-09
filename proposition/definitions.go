@@ -17,22 +17,16 @@ type Proposition struct {
 	DateTime    string
 	Description string
 	Predicates  []Predicate
+	Evidence    []Evidence
 }
 
 type Predicate struct {
 	Label    string
 	Value    string
 	DataType system.DataType
-	Chosen   bool
 }
 
-func (prop Proposition) getChosen() Predicate {
-	for _, pred := range prop.Predicates {
-		if pred.Chosen {
-			return pred
-		}
-	}
-
-	system.Warning("No predicate chosen", true)
-	return Predicate{}
+type Evidence struct {
+	Label string
+	Value string
 }

@@ -19,6 +19,10 @@ type JobTypeGraph struct {
 func CalcJobsTimeGraph() TimeGraph {
 	graph := TimeGraph{Keys: []string{}, Values: []int{}}
 
+	if len(managementStore) == 0 {
+		return graph
+	}
+
 	windowMinute := 10
 
 	window := time.Duration(int64(time.Second) * int64(windowMinute))

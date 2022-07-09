@@ -5,6 +5,7 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/philcantcode/localmapper/local"
 	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/utils"
 	"go.mongodb.org/mongo-driver/bson"
@@ -62,7 +63,10 @@ func updateEntriesTags_ByIP(entry Entity) bool {
 	if len(results) > 1 { // Too many results returned, database corrupt
 		system.Warning(
 			fmt.Sprintf(
-				"While executing UpdateInventoryEntries the number of matched results > 1\n\nEntry: %+v\n\nMatched Cases: %+v", entry, results), true)
+				"While executing UpdateInventoryEntries the number of matched results > 1\n\nEntry: %+v\n\nMatched Cases: %+v", entry, results), false)
+
+		InitIPConflict(SELECT_ENTRY_Pending(ipFilter, bson.M{})[0], SELECT_ENTRY_Inventory(ipFilter, bson.M{})[0])
+		return false
 	}
 
 	system.Log(fmt.Sprintf("Match (Inventory): len: %d, IP: %+v", len(results), results), false)
@@ -80,7 +84,7 @@ func updateEntriesTags_ByIP(entry Entity) bool {
 
 	// Parse SysTags and join them
 	for _, newTag := range entry.UsrTags {
-		_, found, i := FindUsrTag(newTag.Label, results[0])
+		_, found, i := results[0].FindUsrTag(newTag.Label)
 
 		if found {
 			results[0].UsrTags[i].Values = joinTagGroups(newTag.Label, results[0].UsrTags[i].Values, newTag.Values)
@@ -276,6 +280,10 @@ func CalcTimeGraph(entry Entity) TimeGraph {
 }
 
 func Init() {
+
+	InitLocalIdentityProp()
+	updateSelfIdentity()
+
 	if len(SELECT_ENTRY_Inventory(bson.M{}, bson.M{})) > 0 {
 		return
 	}
@@ -334,6 +342,8 @@ func Init() {
 		newVlan := Entity{Label: "Olivers Home", Description: "Test VLAN", CMDBType: VLAN, OSILayer: 2, DateSeen: []string{utils.Now()}, SysTags: []EntityTag{lowIP, highIP, sysDefault}}
 		newVlan.InsertInventory()
 	}
+
+	recalcualteVlanCIDR()
 }
 
 /*
@@ -346,9 +356,109 @@ func (entry Entity) UpdateOrInsert() {
 		entryUpdateSuccess := updateEntriesTags_ByIP(entry)
 
 		if !entryUpdateSuccess {
-			system.Warning("Couldn't update inventory or pending in CMDB", true)
+			system.Warning("Couldn't update inventory or pending in CMDB", false)
 		}
 	} else {
 		entry.InsertPending()
+	}
+}
+
+func recalcualteVlanCIDR() {
+	entries := SELECT_ENTRY_Inventory(bson.M{"cmdbtype": VLAN}, bson.M{})
+
+	for _, entry := range entries {
+		// Check CMDB entry is of type VLAN
+		if entry.CMDBType != VLAN {
+			continue
+		}
+
+		lowIP, lowFound, _ := entry.FindSysTag("LowIP")
+		highIP, highFound, _ := entry.FindSysTag("HighIP")
+
+		// Check that both of the user tags for the IPs are set
+		if !lowFound && !highFound {
+			continue
+		}
+
+		cidr, err := utils.IPv4RangeToCIDRRange(lowIP.Values[0], highIP.Values[0])
+		system.Error("Couldn't generate CIDR for: "+entry.Label, err)
+
+		// Remove old CMDB tags so new one can be calcualted
+		_, found, index := entry.FindSysTag("CIDR")
+
+		if found {
+			entry.SysTags[index] = EntityTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.DataType_CIDR, Values: cidr}
+		} else {
+			entry.SysTags = append(entry.SysTags, EntityTag{Label: "CIDR", Description: "CIDR range for this VLAN.", DataType: system.DataType_CIDR, Values: cidr})
+		}
+
+		entry.UPDATE_ENTRY_Inventory()
+	}
+}
+
+/*
+	Given an IP, functional finds additional info and then
+	creates an inventory entry for the IP.
+*/
+func setLocalIdentityEntry(ip string) {
+	sysTags := []EntityTag{}
+	usrTags := []EntityTag{}
+
+	sysTags = append(sysTags, EntityTag{Label: "Verified", DataType: system.DataType_BOOL, Values: []string{"1"}})
+	sysTags = append(sysTags, EntityTag{Label: "Identity", DataType: system.DataType_STRING, Values: []string{"local"}})
+	sysTags = append(sysTags, EntityTag{Label: "IP", DataType: system.DataType_IP, Values: []string{ip}})
+
+	for _, net := range local.GetNetworkAdapters() {
+		if net.IP == ip {
+			if net.MAC != "" {
+				sysTags = append(sysTags, EntityTag{Label: "MAC", DataType: system.DataType_MAC, Values: []string{net.MAC}})
+			}
+
+			if net.MAC6 != "" {
+				sysTags = append(sysTags, EntityTag{Label: "MAC6", DataType: system.DataType_MAC6, Values: []string{net.MAC6}})
+			}
+
+			if net.Label != "" {
+				sysTags = append(sysTags, EntityTag{Label: "NetAdapter", DataType: system.DataType_STRING, Values: []string{net.Label}})
+			}
+
+			if net.IP6 != "" {
+				sysTags = append(sysTags, EntityTag{Label: "IP6", DataType: system.DataType_IP6, Values: []string{net.IP6}})
+			}
+		}
+	}
+
+	time := []string{utils.GetDateTime().DateTime}
+
+	serverCMDB := Entity{
+		Label:       "Local-Mapper Server",
+		OSILayer:    7,
+		Description: "The local-mapper backend server.",
+		DateSeen:    time,
+		CMDBType:    SERVER,
+		UsrTags:     usrTags,
+		SysTags:     sysTags,
+	}
+
+	serverCMDB.InsertInventory()
+}
+
+func resolveIPConflict(action ConflictActions, ip string) {
+
+	if action == Action_MERGE_INTO_INVENTORY {
+
+		DELETE_ENTRY_Pending(SELECT_ENTRY_Pending(bson.M{"systags.label": "IP", "systags.values": ip}, bson.M{})[0])
+	}
+
+	if action == Action_MERGE_INTO_PENDING {
+
+	}
+
+	if action == Action_DELETE_INVENTORY_ENTRY {
+		DELETE_ENTRY_Inventory(SELECT_ENTRY_Inventory(bson.M{"systags.label": "IP", "systags.values": ip}, bson.M{})[0])
+	}
+
+	if action == Action_DELETE_PENDING_ENTRY {
+		DELETE_ENTRY_Pending(SELECT_ENTRY_Pending(bson.M{"systags.label": "IP", "systags.values": ip}, bson.M{})[0])
 	}
 }

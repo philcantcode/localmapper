@@ -105,3 +105,12 @@ func DELETE_ENTRY_Pending(entry Entity) {
 	system.Fatal("Couldn't DELETE_ENTRY_Pending", err)
 	system.Log(fmt.Sprintf("New Delete count: %d", insertResult.DeletedCount), false)
 }
+
+func DELETE_ENTRY_Inventory(entry Entity) {
+	system.Log("Attempting to DELETE_ENTRY_Inventory", false)
+
+	insertResult, err := system.CMDB_Inventory_DB.DeleteOne(context.Background(), bson.M{"_id": entry.ID})
+
+	system.Fatal("Couldn't DELETE_ENTRY_Inventory", err)
+	system.Log(fmt.Sprintf("New Delete count: %d", insertResult.DeletedCount), false)
+}
