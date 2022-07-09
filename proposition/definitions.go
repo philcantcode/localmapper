@@ -1,8 +1,6 @@
 package proposition
 
 import (
-	"time"
-
 	"github.com/philcantcode/localmapper/system"
 )
 
@@ -16,7 +14,7 @@ const (
 type Proposition struct {
 	ID          string
 	Type        PropType
-	DateTime    time.Time
+	DateTime    string
 	Description string
 	Predicates  []Predicate
 }

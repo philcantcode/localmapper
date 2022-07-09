@@ -1,8 +1,6 @@
 package proposition
 
 import (
-	"time"
-
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/local"
 	"github.com/philcantcode/localmapper/system"
@@ -11,6 +9,12 @@ import (
 )
 
 func setupLocalIPIdentity() {
+	for _, prop := range propositions {
+		if prop.Type == Proposition_Local_Identity {
+			return
+		}
+	}
+
 	entries := cmdb.SELECT_ENTRY_Inventory(bson.M{"systags.label": "Identity", "systags.values": "local"}, bson.M{})
 
 	if len(entries) > 1 {
@@ -27,7 +31,7 @@ func setupLocalIPIdentity() {
 
 	proposition := Proposition{
 		Type:        Proposition_Local_Identity,
-		DateTime:    time.Now(),
+		DateTime:    utils.GetDateTime().DateTime,
 		Description: "Please choose the IP address for this server.",
 		Predicates: []Predicate{
 			{

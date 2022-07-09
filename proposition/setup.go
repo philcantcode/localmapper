@@ -10,7 +10,6 @@ import (
 func Init() {
 	setupLocalIPIdentity()
 	recalcualteVlanCIDR()
-
 }
 
 func recalcualteVlanCIDR() {
