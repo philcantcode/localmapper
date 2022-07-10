@@ -16,7 +16,7 @@ var Proposition = PropositionHandler{}
 
 /* HTTP_JSON_GetDefaultGatewayIP both the deafult IP and the Gateway */
 func (prop *PropositionHandler) HTTP_JSON_GetPropositions(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(proposition.Proposition{})
+	json.NewEncoder(w).Encode(proposition.Propositions)
 }
 
 func (prop *PropositionHandler) HTTP_None_Refresh(w http.ResponseWriter, r *http.Request) {

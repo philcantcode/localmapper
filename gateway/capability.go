@@ -1,4 +1,4 @@
-package compatability
+package gateway
 
 import (
 	"github.com/philcantcode/localmapper/capability"

@@ -8,7 +8,6 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/philcantcode/localmapper/local"
 	"github.com/philcantcode/localmapper/system"
-	"github.com/philcantcode/localmapper/tools/nmap"
 	"github.com/philcantcode/localmapper/webhandler"
 )
 
@@ -36,9 +35,10 @@ func initServer() {
 	// Jobs - GET
 	router.HandleFunc("/capability/jobs/get/stats", webhandler.Jobs.HTTP_JSON_GetStats)
 
-	// Compatability - GET
-	router.HandleFunc("/compatability/get/capabilities/{entityID}", webhandler.Compatability.HTTP_JSON_GET_Capability_ByEntityID)
-	router.HandleFunc("/compatability/run/capabilities/{entityID}/{capabilityID}", webhandler.Compatability.HTTP_NONE_RunCapability)
+	// Gateway - GET
+	router.HandleFunc("/compatability/get/capabilities/{entityID}", webhandler.Gateway.HTTP_JSON_GET_Capability_ByEntityID)
+	router.HandleFunc("/searchsploit/get/entity-vulnerabilities/{entityID}", webhandler.Gateway.HTTP_JSON_GetVulnerabilities)
+	router.HandleFunc("/compatability/run/capabilities/{entityID}/{capabilityID}", webhandler.Gateway.HTTP_NONE_RunCapability)
 
 	// System - GET
 	router.HandleFunc("/system/get-logs", webhandler.System.HTTP_JSON_GetLogs)
@@ -95,7 +95,8 @@ func initServer() {
 	// CMDB - UTILS
 	router.HandleFunc("/cmdb/utils/restore", webhandler.CMDB.HTTP_JSON_Restore)
 
-	router.HandleFunc("/tools/nmap/select-logs", nmap.HTTP_SELECT_Logs)
+	// CMDB - Tools
+	router.HandleFunc("/tools/nmap/select-logs", webhandler.Tools.HTTP_JSON_SELECT_Logs)
 
 	cors := handlers.CORS(
 		handlers.AllowedHeaders([]string{"content-type"}),

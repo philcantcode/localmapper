@@ -1,18 +1,19 @@
-package nmap
+package webhandler
 
 import (
 	"encoding/json"
 	"net/http"
 
+	"github.com/philcantcode/localmapper/tools/nmap"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-type KeyValue struct {
-	Key   string
-	Value string
+type ToolsHandler struct {
 }
 
-func HTTP_SELECT_Logs(w http.ResponseWriter, r *http.Request) {
+var Tools = ToolsHandler{}
+
+func (tool *ToolsHandler) HTTP_JSON_SELECT_Logs(w http.ResponseWriter, r *http.Request) {
 	filter := r.FormValue("filter")         // JSON {K:V}
 	projection := r.FormValue("projection") // JSON {K:V}
 
@@ -37,6 +38,6 @@ func HTTP_SELECT_Logs(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	results := SELECT(filterBson, projBson)
+	results := nmap.SELECT(filterBson, projBson)
 	json.NewEncoder(w).Encode(results)
 }

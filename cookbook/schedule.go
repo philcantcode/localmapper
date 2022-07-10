@@ -80,6 +80,7 @@ func InitialiseAllSchedules() {
 			jBook := book
 			jSchedule := schedule
 			cronny.AddJob("@every "+schedule.Delay.String(), cron.FuncJob(func() {
+
 				if tracking[sidx].IsRunning {
 					system.Log(fmt.Sprintf("Schedule [%s] already running, skipping.", jSchedule.Label), true)
 					return

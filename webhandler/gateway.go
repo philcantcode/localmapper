@@ -6,31 +6,31 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/philcantcode/localmapper/compatability"
+	"github.com/philcantcode/localmapper/gateway"
 	"github.com/philcantcode/localmapper/system"
 )
 
-type CompatabilityHandler struct {
+type GatewayHandler struct {
 }
 
-var Compatability = CompatabilityHandler{}
+var Gateway = GatewayHandler{}
 
 /*
 	HTTP_JSON_GetCMDBCompatible returns a list of capabilities that can be
 	run by a particular CMDB item given it's Tags
 */
-func (compat *CompatabilityHandler) HTTP_JSON_GET_Capability_ByEntityID(w http.ResponseWriter, r *http.Request) {
+func (compat *GatewayHandler) HTTP_JSON_GET_Capability_ByEntityID(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	id := params["entityID"]
 
-	json.NewEncoder(w).Encode(compatability.FindCompatibleCapabilitiesForEntity(id))
+	json.NewEncoder(w).Encode(gateway.FindCompatibleCapabilitiesForEntity(id))
 }
 
 /*
 	HTTP_NONE_RunCapability takes in 2 IDs for a capability and CMDB entry
 	and finds any matching capabilities given the CMDB SysTags
 */
-func (compat *CompatabilityHandler) HTTP_NONE_RunCapability(w http.ResponseWriter, r *http.Request) {
+func (compat *GatewayHandler) HTTP_NONE_RunCapability(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	r.ParseForm()
 	cmdb_id := params["entityID"]
@@ -48,5 +48,12 @@ func (compat *CompatabilityHandler) HTTP_NONE_RunCapability(w http.ResponseWrite
 		options[key] = optID
 	}
 
-	compatability.LaunchCapabilityForEntity(cap_id, cmdb_id, options)
+	gateway.LaunchCapabilityForEntity(cap_id, cmdb_id, options)
+}
+
+func (searchsploit *GatewayHandler) HTTP_JSON_GetVulnerabilities(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	entityID := params["entityID"]
+
+	json.NewEncoder(w).Encode(gateway.FindEntityVulnerabilities(entityID))
 }
