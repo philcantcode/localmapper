@@ -1,8 +1,6 @@
 package local
 
 import (
-	"encoding/json"
-	"net/http"
 	"runtime"
 )
 
@@ -32,9 +30,4 @@ func osVersion() string {
 
 func osArchitecture() string {
 	return runtime.GOARCH
-}
-
-/* HTTP_JSON_GetNetworkAdapters returns all operating system info */
-func HTTP_JSON_GetOSInfo(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(OSInfo())
 }

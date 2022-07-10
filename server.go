@@ -9,7 +9,6 @@ import (
 	"github.com/philcantcode/localmapper/local"
 	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/tools/nmap"
-	"github.com/philcantcode/localmapper/utils"
 	"github.com/philcantcode/localmapper/webhandler"
 )
 
@@ -58,10 +57,13 @@ func initServer() {
 	// Cookbooks - UTILS
 	router.HandleFunc("/cookbook/utils/restore", webhandler.Cookbooks.HTTP_JSON_Restore)
 
-	router.HandleFunc("/local/get-network-adapters", local.HTTP_JSON_GetNetworkAdapters)
-	router.HandleFunc("/local/get-os-info", local.HTTP_JSON_GetOSInfo)
-	router.HandleFunc("/local/get-date-time", utils.HTTP_JSON_GetDateTime)
-	router.HandleFunc("/local/get-default-ip-gateway", local.HTTP_JSON_GetDefaultGatewayIP)
+	// Local - GET
+	router.HandleFunc("/local/get-network-adapters", webhandler.Local.HTTP_JSON_GetNetworkAdapters)
+	router.HandleFunc("/local/get-os-info", webhandler.Local.HTTP_JSON_GetOSInfo)
+	router.HandleFunc("/local/get-default-ip-gateway", webhandler.Local.HTTP_JSON_GetDefaultGatewayIP)
+
+	// Utils - UTILS
+	router.HandleFunc("/utils/get-date-time", webhandler.Utils.HTTP_JSON_GetDateTime)
 
 	// Propositions - GET
 	router.HandleFunc("/propositions/get-all", webhandler.Proposition.HTTP_JSON_GetPropositions)
