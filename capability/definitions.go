@@ -1,7 +1,6 @@
 package capability
 
 import (
-	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
@@ -12,12 +11,19 @@ type Capability struct {
 	CCI           string             // Common Capability Identifier = cci:<tool>:<label>:<edition>
 	Description   string             // Contextual description
 	Category      system.Category
-	Preconditions []cmdb.EntityTag // Set of preconditions which need to be true for the capability to run
+	Preconditions []Precondition // Set of preconditions which need to be true for the capability to run
 	Interpreter   system.Interpreter
 	Hidden        bool     // Hidden from the user
 	DisplayFields []string // For hiding results
 	ResultTags    []string // The Result tags (e.g., IP, Port) gathered by this capability
 	Command       Command  // Program and params
+}
+
+type Precondition struct {
+	Label       string
+	Description string
+	DataType    system.DataType
+	Values      []string
 }
 
 type Command struct {

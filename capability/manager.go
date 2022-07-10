@@ -68,6 +68,12 @@ type Tracking struct {
 	Status               Status
 }
 
+func (cap Capability) LaunchLifecycleManager() {
+	manager := Lifecycle{}
+	manager.SetCapability(cap)
+	manager.Start()
+}
+
 func (lc *Lifecycle) SetCapability(capability Capability) {
 	lc.Tracking.Status = Status_Created
 	lc.Capability = capability

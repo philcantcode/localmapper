@@ -20,7 +20,7 @@ func INSERT_Capability(capability Capability) {
 	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 }
 
-func UPDATE_Capability(capability Capability) {
+func (capability *Capability) UPDATE_Capability() {
 	system.Log(fmt.Sprintf("Attempting to UPDATE_Capability (ID: %d)", capability.ID), true)
 
 	result, err := system.Core_Capability_DB.ReplaceOne(context.Background(), bson.M{"id": capability.ID}, capability)
@@ -59,4 +59,13 @@ func DELETE_Capability(filter bson.M) {
 
 	system.Fatal("Couldn't DELETE_Capability", err)
 	system.Log(fmt.Sprintf("New Delete count: %d", insertResult.DeletedCount), false)
+}
+
+func Restore() {
+	system.Log("Restoring capabilities to factory defaults", true)
+
+	DELETE_Capability(bson.M{})
+	system.Core_Capability_DB.Drop(context.Background()) // Drop capabilities
+
+	Init() // Restore capabilities
 }

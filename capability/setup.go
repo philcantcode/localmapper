@@ -1,7 +1,6 @@
 package capability
 
 import (
-	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/system"
 	"go.mongodb.org/mongo-driver/bson"
 )
@@ -154,7 +153,7 @@ func Init() {
 		Label:       "Brute Force SSH",
 		Description: "Brute force against SSH using various wordlists.",
 		Category:    system.Category_BRUTEFORCE,
-		Preconditions: []cmdb.EntityTag{
+		Preconditions: []Precondition{
 			{
 				Label:       "Ports",
 				Description: "Check that the SSH port is open",

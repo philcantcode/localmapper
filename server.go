@@ -6,7 +6,6 @@ import (
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
-	"github.com/philcantcode/localmapper/capability"
 	"github.com/philcantcode/localmapper/cmdb"
 	"github.com/philcantcode/localmapper/cookbook"
 	"github.com/philcantcode/localmapper/local"
@@ -14,6 +13,7 @@ import (
 	"github.com/philcantcode/localmapper/system"
 	"github.com/philcantcode/localmapper/tools/nmap"
 	"github.com/philcantcode/localmapper/utils"
+	"github.com/philcantcode/localmapper/webhandler"
 )
 
 func initServer() {
@@ -25,20 +25,27 @@ func initServer() {
 	router.HandleFunc("/system/get-logs", system.HTTP_JSON_GetLogs)
 	router.HandleFunc("/system/utils/restore", system.HTTP_JSON_Restore)
 
-	router.HandleFunc("/capability/run/cmdb-compatible/{cmbd_id}/{capability_id}", capability.HTTP_JSON_RunCMDBCompatible)
-	router.HandleFunc("/capability/run", capability.HTTP_JSON_Run)
-	router.HandleFunc("/capability/get/all", capability.HTTP_JSON_GetAll)
-	router.HandleFunc("/capability/get/new", capability.HTTP_JSON_GetNew)
-	router.HandleFunc("/capability/get/new/command", capability.HTTP_JSON_GetNew_Command)
-	router.HandleFunc("/capability/get/new/param", capability.HTTP_JSON_GetNew_Param)
-	router.HandleFunc("/capability/get/cmdb-compatible/{id}", capability.HTTP_JSON_GetCMDBCompatible)
-	router.HandleFunc("/capability/get/{id}", capability.HTTP_JSON_GetByID)
-	router.HandleFunc("/capability/update", capability.HTTP_JSON_Update)
-	router.HandleFunc("/capability/utils/restore", capability.HTTP_JSON_Restore)
-	router.HandleFunc("/capability/manager/get-tracking", capability.HTTP_JSON_Lifecycle_Manager_List_All)
-	router.HandleFunc("/capability/utils/date-time-graph", capability.HTTP_JSON_GetJobsDateTimeGraph)
-	router.HandleFunc("/capability/utils/date-job-type-graph", capability.HTTP_JSON_Lifecycle_Manager_JobTypes)
-	router.HandleFunc("/capability/jobs/get-stats", capability.HTTP_JSON_GetJobStats)
+	// Capability - GET
+	router.HandleFunc("/capability/get/all", webhandler.Capability.HTTP_JSON_GetAll)
+	router.HandleFunc("/capability/get/{id}", webhandler.Capability.HTTP_JSON_GetByID)
+	router.HandleFunc("/capability/get/new", webhandler.Capability.HTTP_JSON_BLANK_Capability)
+	router.HandleFunc("/capability/get/new/command", webhandler.Capability.HTTP_JSON_BLANK_Command)
+	router.HandleFunc("/capability/get/new/param", webhandler.Capability.HTTP_JSON_BLANK_Param)
+
+	// Capability - RUN
+	router.HandleFunc("/capability/run", webhandler.Capability.HTTP_NONE_Run)
+
+	// Capability - Utils
+	router.HandleFunc("/capability/utils/restore", webhandler.Capability.HTTP_NONE_Restore)
+
+	// Jobs - GET
+	router.HandleFunc("/capability/jobs/get/stats", webhandler.Jobs.HTTP_JSON_GetStats)
+
+	// Compatability - GET
+	router.HandleFunc("/compatability/get/capabilities/{entityID}", webhandler.Compatability.HTTP_JSON_GET_Capability_ByEntityID)
+	router.HandleFunc("/compatability/run/capabilities/{entityID}/{capabilityID}", webhandler.Compatability.HTTP_NONE_RunCapability)
+
+	router.HandleFunc("/capability/update", webhandler.Capability.HTTP_JSON_Update)
 
 	router.HandleFunc("/cookbook/run/{ccbi}/{id}", cookbook.HTTP_JSON_Run_Cookbook)
 	router.HandleFunc("/cookbook/get/all", cookbook.HTTP_JSON_GetAll)
