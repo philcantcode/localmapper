@@ -97,7 +97,7 @@ func (cmdb Entity) UPDATE_ENTRY_Pending() {
 	system.Log(fmt.Sprintf("UPDATE_ENTRY_Pending ID: %s, Result: %d", cmdb.ID, result.ModifiedCount), false)
 }
 
-func DELETE_ENTRY_Pending(entry Entity) {
+func (entry *Entity) DELETE_ENTRY_Pending() {
 	system.Log("Attempting to DELETE_ENTRY_Pending", false)
 
 	insertResult, err := system.CMDB_Pending_DB.DeleteOne(context.Background(), bson.M{"_id": entry.ID})
@@ -113,4 +113,12 @@ func DELETE_ENTRY_Inventory(entry Entity) {
 
 	system.Fatal("Couldn't DELETE_ENTRY_Inventory", err)
 	system.Log(fmt.Sprintf("New Delete count: %d", insertResult.DeletedCount), false)
+}
+
+func Restore() {
+	system.Log("Restoring CMDB to factory defaults", true)
+	system.CMDB_Inventory_DB.Drop(context.Background()) // Drop inventory
+	system.CMDB_Pending_DB.Drop(context.Background())   // Drop pending
+
+	Init() // Restore capabilities
 }

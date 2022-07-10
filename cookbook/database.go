@@ -54,3 +54,12 @@ func DELETE_Cookbook(filter bson.M) {
 	system.Fatal("Couldn't DELETE_Cookbook", err)
 	system.Log(fmt.Sprintf("New Delete count: %d", insertResult.DeletedCount), false)
 }
+
+func Restore() {
+	system.Log("Restoring cookbooks to factory defaults", true)
+
+	DELETE_Cookbook(bson.M{})
+	system.Core_Cookbooks_DB.Drop(context.Background()) // Drop cookbooks
+
+	Init() // Restore cookbooks
+}

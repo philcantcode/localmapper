@@ -48,11 +48,6 @@ type EntityTag struct {
 	Values      []string
 }
 
-type TimeGraph struct {
-	Keys   []string
-	Values []int
-}
-
 /*
 	PushToFront moves a particular tag to the front
 	of the list

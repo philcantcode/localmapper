@@ -110,3 +110,122 @@ func InitLocalIdentityProp() {
 
 	prop.Push()
 }
+
+/*
+	Given an IP, functional finds additional info and then
+	creates an inventory entry for the IP.
+*/
+func SetLocalIdentityEntry(ip string) {
+	sysTags := []EntityTag{}
+	usrTags := []EntityTag{}
+
+	sysTags = append(sysTags, EntityTag{Label: "Verified", DataType: system.DataType_BOOL, Values: []string{"1"}})
+	sysTags = append(sysTags, EntityTag{Label: "Identity", DataType: system.DataType_STRING, Values: []string{"local"}})
+	sysTags = append(sysTags, EntityTag{Label: "IP", DataType: system.DataType_IP, Values: []string{ip}})
+
+	for _, net := range local.GetNetworkAdapters() {
+		if net.IP == ip {
+			if net.MAC != "" {
+				sysTags = append(sysTags, EntityTag{Label: "MAC", DataType: system.DataType_MAC, Values: []string{net.MAC}})
+			}
+
+			if net.MAC6 != "" {
+				sysTags = append(sysTags, EntityTag{Label: "MAC6", DataType: system.DataType_MAC6, Values: []string{net.MAC6}})
+			}
+
+			if net.Label != "" {
+				sysTags = append(sysTags, EntityTag{Label: "NetAdapter", DataType: system.DataType_STRING, Values: []string{net.Label}})
+			}
+
+			if net.IP6 != "" {
+				sysTags = append(sysTags, EntityTag{Label: "IP6", DataType: system.DataType_IP6, Values: []string{net.IP6}})
+			}
+		}
+	}
+
+	time := []string{utils.GetDateTime().DateTime}
+
+	serverCMDB := Entity{
+		Label:       "Local-Mapper Server",
+		OSILayer:    7,
+		Description: "The local-mapper backend server.",
+		DateSeen:    time,
+		CMDBType:    SERVER,
+		UsrTags:     usrTags,
+		SysTags:     sysTags,
+	}
+
+	serverCMDB.InsertInventory()
+}
+
+func ResolveIPConflict(action ConflictActions, ip string) {
+
+	pending := SELECT_ENTRY_Pending(bson.M{"systags.label": "IP", "systags.values": ip}, bson.M{})[0]
+	inventory := SELECT_ENTRY_Inventory(bson.M{"systags.label": "IP", "systags.values": ip}, bson.M{})[0]
+
+	if action == Action_MERGE_INTO_INVENTORY {
+		// Parse SysTags and join them
+		for _, newTag := range pending.SysTags {
+			_, found, i := inventory.FindSysTag(newTag.Label)
+
+			if found {
+				inventory.SysTags[i].Values = joinTagGroups(newTag.Label, inventory.SysTags[i].Values, newTag.Values)
+			} else {
+				inventory.SysTags = append(inventory.SysTags, newTag)
+			}
+		}
+
+		// Parse SysTags and join them
+		for _, newTag := range pending.UsrTags {
+			_, found, i := inventory.FindUsrTag(newTag.Label)
+
+			if found {
+				inventory.UsrTags[i].Values = joinTagGroups(newTag.Label, inventory.UsrTags[i].Values, newTag.Values)
+			} else {
+				inventory.UsrTags = append(inventory.UsrTags, newTag)
+			}
+		}
+
+		pending.UPDATE_ENTRY_Inventory()
+		pending.DELETE_ENTRY_Pending()
+		system.Log("Merged into Inventory", true)
+	}
+
+	if action == Action_MERGE_INTO_PENDING {
+		// Parse SysTags and join them
+		for _, newTag := range inventory.SysTags {
+			_, found, i := pending.FindSysTag(newTag.Label)
+
+			if found {
+				pending.SysTags[i].Values = joinTagGroups(newTag.Label, pending.SysTags[i].Values, newTag.Values)
+			} else {
+				pending.SysTags = append(pending.SysTags, newTag)
+			}
+		}
+
+		// Parse SysTags and join them
+		for _, newTag := range inventory.UsrTags {
+			_, found, i := pending.FindUsrTag(newTag.Label)
+
+			if found {
+				pending.UsrTags[i].Values = joinTagGroups(newTag.Label, pending.UsrTags[i].Values, newTag.Values)
+			} else {
+				pending.UsrTags = append(pending.UsrTags, newTag)
+			}
+		}
+
+		pending.UPDATE_ENTRY_Inventory()
+		DELETE_ENTRY_Inventory(inventory)
+		system.Log("Merged into Pending", true)
+	}
+
+	if action == Action_DELETE_INVENTORY_ENTRY {
+		DELETE_ENTRY_Inventory(inventory)
+		system.Log("Deletd Inventory", true)
+	}
+
+	if action == Action_DELETE_PENDING_ENTRY {
+		pending.DELETE_ENTRY_Pending()
+		system.Log("Deletd Pending", true)
+	}
+}

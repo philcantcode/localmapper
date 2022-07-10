@@ -1,6 +1,7 @@
 package system
 
 import (
+	"context"
 	"strconv"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -38,4 +39,13 @@ func EncodeID(id string) primitive.ObjectID {
 	Error("Couldn't convert string ID to mongo ID Object", err)
 
 	return objID
+}
+
+func Restore() {
+	Log("Restoring system settings to factory defaults", true)
+
+	System_Logs_DB.Drop(context.Background()) // Drop the logs table
+	DELETE_Settings_All()                     // Delete all settings
+
+	Init() // Perform first time setup
 }
