@@ -97,6 +97,7 @@ func initServer() {
 
 	// CMDB - Tools
 	router.HandleFunc("/tools/nmap/select-logs", webhandler.Tools.HTTP_JSON_SELECT_Logs)
+	router.HandleFunc("/tools/searchsploit/get-exploit", webhandler.Tools.Searchsploit.HTTP_FILE_ServeFile)
 
 	cors := handlers.CORS(
 		handlers.AllowedHeaders([]string{"content-type"}),

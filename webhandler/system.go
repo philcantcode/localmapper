@@ -44,3 +44,10 @@ func (sys *SystemHandler) HTTP_JSON_Restore(w http.ResponseWriter, r *http.Reque
 
 	w.Write([]byte("200/Done"))
 }
+
+func (sys *SystemHandler) HTTP_FILE_ServeFile(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	file := params["file"]
+
+	http.ServeFile(w, r, file)
+}

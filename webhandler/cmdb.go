@@ -26,7 +26,14 @@ func (entity *CMDBHandler) HTTP_JSON_Pending_GetAll(w http.ResponseWriter, r *ht
 }
 
 func (entity *CMDBHandler) HTTP_JSON_GetLocal(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(cmdb.SELECT_ENTRY_Inventory(bson.M{"systags.label": "Identity", "systags.values": "local"}, bson.M{})[0])
+	local := cmdb.SELECT_ENTRY_Inventory(bson.M{"systags.label": "Identity", "systags.values": "local"}, bson.M{})
+
+	if len(local) != 1 {
+		json.NewEncoder(w).Encode(cmdb.Entity{})
+		return
+	}
+
+	json.NewEncoder(w).Encode(local[0])
 }
 
 func (entity *CMDBHandler) HTTP_JSON_GetByType(w http.ResponseWriter, r *http.Request) {
