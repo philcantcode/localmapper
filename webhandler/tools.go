@@ -63,7 +63,7 @@ func (sp *SearchsploitHandler) HTTP_FILE_ServeFile(w http.ResponseWriter, r *htt
 		system.Warning("Searchsploit path error, outside of dir", true)
 	}
 
-	system.Log("Searchsploit downloading file: "+installPath, true)
+	system.Log("Searchsploit downloading file: "+path, true)
 
 	http.ServeFile(w, r, path)
 }

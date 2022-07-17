@@ -17,11 +17,11 @@ func initServer() {
 	router := mux.NewRouter()
 
 	// Capability - GET
-	router.HandleFunc("/capability/get/all", webhandler.Capability.HTTP_JSON_GetAll)
-	router.HandleFunc("/capability/get/{id}", webhandler.Capability.HTTP_JSON_GetByID)
 	router.HandleFunc("/capability/get/new", webhandler.Capability.HTTP_JSON_BLANK_Capability)
 	router.HandleFunc("/capability/get/new/command", webhandler.Capability.HTTP_JSON_BLANK_Command)
 	router.HandleFunc("/capability/get/new/param", webhandler.Capability.HTTP_JSON_BLANK_Param)
+	router.HandleFunc("/capability/get/all", webhandler.Capability.HTTP_JSON_GetAll)
+	router.HandleFunc("/capability/get/{id}", webhandler.Capability.HTTP_JSON_GetByID)
 
 	// Capability - UPDATE
 	router.HandleFunc("/capability/update", webhandler.Capability.HTTP_JSON_Update)
