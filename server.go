@@ -100,6 +100,9 @@ func initServer() {
 	router.HandleFunc("/tools/nmap/select-logs", webhandler.Tools.HTTP_JSON_SELECT_Logs)
 	router.HandleFunc("/tools/searchsploit/get-exploit", webhandler.Tools.Searchsploit.HTTP_FILE_ServeFile)
 
+	// Feeds - GET
+	router.HandleFunc("/feeds/get/wordlists", webhandler.Feed.HTTP_JSON_GetWordlists)
+
 	cors := handlers.CORS(
 		handlers.AllowedHeaders([]string{"content-type"}),
 		handlers.AllowedOrigins([]string{"*"}),

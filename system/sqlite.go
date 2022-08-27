@@ -42,14 +42,28 @@ func InitSqlite() {
 		os.Exit(0)
 	}
 
-	// stmt, err = Con.Prepare(
-	// 	"CREATE TABLE IF NOT EXISTS Schedule" +
-	// 		"(id INTEGER PRIMARY KEY UNIQUE, " +
-	// 		"label TEXT, " +
-	// 		"desc TEXT, " +
-	// 		"ccbis TEXT")
-	// utils.ErrorLog("Couldn't create SQL database Settings", err, true)
-	// stmt.Exec()
+	stmt, err = Con.Prepare(
+		"CREATE TABLE IF NOT EXISTS Wordlists" +
+			"(id INTEGER PRIMARY KEY UNIQUE, " +
+			"label TEXT UNIQUE, " +
+			"description TEXT, " +
+			"path TEXT, " +
+			"type TEXT, " +
+			"size INT)")
+
+	if err != nil {
+		fmt.Println("Couldn't create SQL database Wordlists")
+		fmt.Println(err)
+		os.Exit(0)
+	}
+
+	_, err = stmt.Exec()
+
+	if err != nil {
+		fmt.Println("Couldn't execute SQL database Wordlists")
+		fmt.Println(err)
+		os.Exit(0)
+	}
 
 	stmt.Close()
 }
