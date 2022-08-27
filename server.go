@@ -86,6 +86,7 @@ func initServer() {
 
 	// CMDB - PUT
 	router.HandleFunc("/cmdb/inventory/put/vlan", webhandler.CMDB.HTTP_NONE_NewVLAN)
+	router.HandleFunc("/cmdb/update/title", webhandler.CMDB.HTTP_NONE_Update_Title)
 
 	// CMDB - Pending (Approve / Deny)
 	router.HandleFunc("/cmdb/pending/approve", webhandler.CMDB.HTTP_NONE_ApprovePending)
