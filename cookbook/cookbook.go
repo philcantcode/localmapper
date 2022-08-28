@@ -46,7 +46,7 @@ func (book Cookbook) RunBookOnEntity(entryID primitive.ObjectID) {
 		isMatch, cap := caps[0].CheckCompatability(entities[0])
 
 		if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsRunPreviously) {
-			system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", caps[0].Label, entities[0].Label), true)
+			system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", caps[0].Label, entities[0].Label), false)
 
 			manager := capability.Lifecycle{}
 			manager.SetCapability(cap)
@@ -83,7 +83,7 @@ func (book Cookbook) RunBookOnEntity(entryID primitive.ObjectID) {
 					isMatch, cap := cap.CheckCompatability(entries[0])
 
 					if isMatch && !utils.ArrayContains(cap.ID.Hex(), capsRunPreviously) {
-						system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", cap.Label, entries[0].Label), true)
+						system.Log(fmt.Sprintf("Executing capability [%s] against [%s]", cap.Label, entries[0].Label), false)
 
 						manager := capability.Lifecycle{}
 						manager.SetCapability(cap)

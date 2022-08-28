@@ -15,7 +15,7 @@ func (result ExploitDB) Insert() string {
 	insertResult, err := system.Results_Searchsploit_DB.InsertOne(context.Background(), result)
 
 	system.Fatal("Couldn't INSERT_Searchsploit", err)
-	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), true)
+	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 
 	return insertResult.InsertedID.(primitive.ObjectID).Hex()
 }

@@ -91,7 +91,7 @@ func (lc *Lifecycle) Start() string {
 	lc.Tracking.RuntimeStart = time.Now()
 	lc.Tracking.Command = fmt.Sprintf("%s %v", lc.Capability.Command.Program, lc.Capability.ParamsToArray())
 
-	system.Log(fmt.Sprintf("[Queue]: %d/%d, adding: %s", len(queue), maxRoutines, lc.Capability.Label), true)
+	system.Log(fmt.Sprintf("[Queue]: %d/%d, adding: %s", len(queue), maxRoutines, lc.Capability.Label), false)
 	queue <- lc
 
 	return "TRACKING ID"
@@ -100,7 +100,7 @@ func (lc *Lifecycle) Start() string {
 // 1 - Execution
 func (lc *Lifecycle) execute() {
 	lc.Tracking.Status = Status_Executing
-	system.Log(fmt.Sprintf("[Lifecycle Manager (%d)] Executing %s %v ...", lc.Tracking.ID, lc.Capability.Command.Program, lc.Capability.ParamsToArray()), true)
+	system.Log(fmt.Sprintf("[Lifecycle Manager (%d)] Executing %s %v ...", lc.Tracking.ID, lc.Capability.Command.Program, lc.Capability.ParamsToArray()), false)
 	lc.ResultBytes = execute(lc.Capability.Command.Program, lc.Capability.ParamsToArray())
 }
 
@@ -236,7 +236,7 @@ func InitCapabilityLifecycleManager() {
 				lc.Tracking.RuntimeDurationPrint = utils.FormatDuration(lc.Tracking.RuntimeDuration)
 				lc.Tracking.ExecDurationPrint = utils.FormatDuration(lc.Tracking.ExecDuration)
 				lc.Tracking.Status = Status_Done
-				system.Log(fmt.Sprintf("[Capability Queue]: %d/%d", len(queue), maxRoutines), true)
+				system.Log(fmt.Sprintf("[Capability Queue]: %d/%d", len(queue), maxRoutines), false)
 
 				activeRoutines--
 			}()

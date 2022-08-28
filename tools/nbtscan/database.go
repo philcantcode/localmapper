@@ -13,5 +13,5 @@ func (nbtscan NBTScan) Insert() {
 	insertResult, err := system.Results_Nbscan_DB.InsertOne(context.Background(), nbtscan)
 
 	system.Fatal("Couldn't INSERT_NbtScan", err)
-	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), true)
+	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 }
