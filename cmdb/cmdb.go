@@ -101,6 +101,12 @@ func updateEntriesTags_ByIP(entry Entity) bool {
 	results[0].CMDBType = entry.CMDBType
 	results[0].OSILayer = entry.OSILayer
 
+	tag, found, _ := entry.FindSysTag("HostName")
+
+	if found {
+		results[0].Label = tag.Values[len(tag.Values)-1]
+	}
+
 	results[0].UPDATE_ENTRY_Pending()
 
 	return true

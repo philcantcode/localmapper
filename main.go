@@ -21,7 +21,7 @@ import (
 	If true, only the databases and server boots to allow
 	debugging and restoring the databases.
 */
-const debugMode = false
+const debugMode = true
 
 func main() {
 	// Load settings & config database

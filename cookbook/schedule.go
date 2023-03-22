@@ -82,7 +82,7 @@ func InitialiseAllSchedules() {
 			cronny.AddJob("@every "+schedule.Delay.String(), cron.FuncJob(func() {
 
 				if tracking[sidx].IsRunning {
-					system.Log(fmt.Sprintf("Schedule [%s] already running, skipping.", jSchedule.Label), true)
+					system.Log(fmt.Sprintf("Schedule [%s] already running, skipping.", jSchedule.Label), false)
 					return
 				}
 
@@ -117,7 +117,7 @@ func InitialiseAllSchedules() {
 						isExcluded := isExcluded(entry, jSchedule.ExclusionList)
 
 						if !isExcluded && hasTimePassed {
-							system.Log(fmt.Sprintf("Starting Schedule: %s (ccbi: %s) > %s", jSchedule.Label, jBook.CCBI, entry.Label), true)
+							system.Log(fmt.Sprintf("Starting Schedule: %s (ccbi: %s) > %s", jSchedule.Label, jBook.CCBI, entry.Label), false)
 							jBook.RunBookOnEntity(entry.ID)
 						} else {
 							system.Log(fmt.Sprintf("Skipping %s because [ON EXCLUSION LIST: %t] [SUITABLE TIME PASSED: %t]", entry.Label, isExcluded, hasTimePassed), false)

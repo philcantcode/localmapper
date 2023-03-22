@@ -17,6 +17,21 @@ type CMDBHandler struct {
 
 var CMDB = CMDBHandler{}
 
+func (entity *CMDBHandler) HTTP_NONE_Update_Title(w http.ResponseWriter, r *http.Request) {
+	id := r.PostFormValue("cmdb_id")
+	title := r.PostFormValue("cmdb_title")
+
+	entities := cmdb.SELECT_Entities_Joined(bson.M{"_id": system.EncodeID(id)}, bson.M{})
+
+	if len(entities) == 1 {
+		entities[0].Label = title
+		entities[0].UPDATE_ENTRY_Inventory()
+		entities[0].UPDATE_ENTRY_Pending()
+	} else {
+		system.Warning("Couldn't update the CMDB title for "+title, false)
+	}
+}
+
 func (entity *CMDBHandler) HTTP_JSON_Inventory_GetAll(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(cmdb.SELECT_ENTRY_Inventory(bson.M{}, bson.M{}))
 }
@@ -26,7 +41,14 @@ func (entity *CMDBHandler) HTTP_JSON_Pending_GetAll(w http.ResponseWriter, r *ht
 }
 
 func (entity *CMDBHandler) HTTP_JSON_GetLocal(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(cmdb.SELECT_ENTRY_Inventory(bson.M{"systags.label": "Identity", "systags.values": "local"}, bson.M{})[0])
+	local := cmdb.SELECT_ENTRY_Inventory(bson.M{"systags.label": "Identity", "systags.values": "local"}, bson.M{})
+
+	if len(local) != 1 {
+		json.NewEncoder(w).Encode(cmdb.Entity{})
+		return
+	}
+
+	json.NewEncoder(w).Encode(local[0])
 }
 
 func (entity *CMDBHandler) HTTP_JSON_GetByType(w http.ResponseWriter, r *http.Request) {

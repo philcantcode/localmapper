@@ -37,7 +37,7 @@ func (nbtResult NBTScan) ExtractEntities() []cmdb.Entity {
 
 	if nbtResult.NetBIOSName != "" && nbtResult.NetBIOSName != "<unknown>" {
 		tag := cmdb.EntityTag{
-			Label:       "NetBIOS Name",
+			Label:       "HostName",
 			Description: "NetBIOS HostName",
 			DataType:    system.DataType_STRING,
 			Values: []string{

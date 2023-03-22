@@ -17,11 +17,11 @@ func initServer() {
 	router := mux.NewRouter()
 
 	// Capability - GET
-	router.HandleFunc("/capability/get/all", webhandler.Capability.HTTP_JSON_GetAll)
-	router.HandleFunc("/capability/get/{id}", webhandler.Capability.HTTP_JSON_GetByID)
 	router.HandleFunc("/capability/get/new", webhandler.Capability.HTTP_JSON_BLANK_Capability)
 	router.HandleFunc("/capability/get/new/command", webhandler.Capability.HTTP_JSON_BLANK_Command)
 	router.HandleFunc("/capability/get/new/param", webhandler.Capability.HTTP_JSON_BLANK_Param)
+	router.HandleFunc("/capability/get/all", webhandler.Capability.HTTP_JSON_GetAll)
+	router.HandleFunc("/capability/get/{id}", webhandler.Capability.HTTP_JSON_GetByID)
 
 	// Capability - UPDATE
 	router.HandleFunc("/capability/update", webhandler.Capability.HTTP_JSON_Update)
@@ -86,6 +86,7 @@ func initServer() {
 
 	// CMDB - PUT
 	router.HandleFunc("/cmdb/inventory/put/vlan", webhandler.CMDB.HTTP_NONE_NewVLAN)
+	router.HandleFunc("/cmdb/update/title", webhandler.CMDB.HTTP_NONE_Update_Title)
 
 	// CMDB - Pending (Approve / Deny)
 	router.HandleFunc("/cmdb/pending/approve", webhandler.CMDB.HTTP_NONE_ApprovePending)
@@ -97,6 +98,10 @@ func initServer() {
 
 	// CMDB - Tools
 	router.HandleFunc("/tools/nmap/select-logs", webhandler.Tools.HTTP_JSON_SELECT_Logs)
+	router.HandleFunc("/tools/searchsploit/get-exploit", webhandler.Tools.Searchsploit.HTTP_FILE_ServeFile)
+
+	// Feeds - GET
+	router.HandleFunc("/feeds/get/wordlists", webhandler.Feed.HTTP_JSON_GetWordlists)
 
 	cors := handlers.CORS(
 		handlers.AllowedHeaders([]string{"content-type"}),

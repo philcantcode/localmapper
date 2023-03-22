@@ -16,7 +16,7 @@ func (nmap NmapRun) INSERT() string {
 	insertResult, err := system.Results_Nmap_DB.InsertOne(context.Background(), nmap)
 
 	system.Fatal("Couldn't Insert_Network_Nmap", err)
-	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), true)
+	system.Log(fmt.Sprintf("New Insert at: %s", insertResult), false)
 
 	return insertResult.InsertedID.(primitive.ObjectID).Hex()
 }
